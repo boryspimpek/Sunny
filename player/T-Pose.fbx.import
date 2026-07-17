@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/T-Pose.fbx-36c286091a09025178476803a561586d.s
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="CharacterBody3D"
 nodes/root_name=""
 nodes/root_script=null
 nodes/apply_root_scale=true
