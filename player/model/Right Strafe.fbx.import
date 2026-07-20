@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bl1y5mimgekhb"
+uid="uid://d8tgrcgbu8s4"
 path="res://.godot/imported/Right Strafe.fbx-52c2a9e5ce2f39fc8f17293321a2d315.scn"
 
 [deps]
@@ -43,7 +43,7 @@ _subresources={
 "save_to_file/enabled": true,
 "save_to_file/fallback_path": "res://assets/animations/right_strafe.tres",
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "uid://cym7sdtpox1ue",
+"save_to_file/path": "uid://xpns44hcbpif",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,

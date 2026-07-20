@@ -51,7 +51,7 @@ func _physics_process(delta: float) -> void:
 
 	# 4. Obrót postaci w stronę ruchu i płynne przyspieszanie/hamowanie
 	if target_direction.length() > 0.01:
-		var target_angle: float = atan2(target_direction.x, target_direction.z) - global_rotation.y
+		var target_angle: float = spring_arm_pivot.global_rotation.y + PI - global_rotation.y
 		model.rotation.y = lerp_angle(model.rotation.y, target_angle, rotation_speed * delta)
 		velocity.x = move_toward(velocity.x, target_direction.x * max_speed, acceleration * delta)
 		velocity.z = move_toward(velocity.z, target_direction.z * max_speed, acceleration * delta)
@@ -63,6 +63,5 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 	# 6. Aktualizacja AnimationTree (mieszanie animacji idle/running)
-	var horizontal_velocity: Vector3 = Vector3(velocity.x, 0.0, velocity.z)
-	var blend_value: float = clamp(horizontal_velocity.length() / max_speed, 0.0, 1.0)
+	var blend_value := Vector2(input_dir.x, -input_dir.y)
 	animation_tree.set("parameters/blend_position", blend_value)

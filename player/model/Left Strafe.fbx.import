@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://x8ti4y6e8xoj"
+uid="uid://g7vtqa5dcrjk"
 path="res://.godot/imported/Left Strafe.fbx-3bd488446091f1c1e4d95caa2165be78.scn"
 
 [deps]
@@ -43,7 +43,7 @@ _subresources={
 "save_to_file/enabled": true,
 "save_to_file/fallback_path": "res://assets/animations/left_strafe.tres",
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "uid://cnk4el2he5grw",
+"save_to_file/path": "uid://033muyqox2bf",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,
