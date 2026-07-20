@@ -4,6 +4,7 @@ const PROJECTILE_SCENE: PackedScene = preload("res://scenes/projectile.tscn")
 
 # --- Parametry ruchu ---
 @export var max_speed: float = 5.0      # Maksymalna prędkość biegu
+@export var animation_reference_speed: float = 5.0
 @export var acceleration: float = 6.0   # Jak szybko postać przyspiesza
 @export var friction: float = 8.0       # Jak szybko postać się zatrzymuje
 @export var jump_strength: float = 8.0  # Siła skoku
@@ -39,6 +40,7 @@ var fire_cooldown := 0.0
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	animation_tree.process_callback = AnimationTree.ANIMATION_PROCESS_MANUAL
 	animation_tree.active = true
 	spring_arm.add_excluded_object(get_rid())
 	roll_hips_bone = model.find_bone("mixamorig_Hips")
@@ -49,6 +51,7 @@ func _play_action_animation(animation_name: StringName) -> void:
 		return
 
 	action_animation_playing = true
+	animation_player.speed_scale = 1.0
 	animation_tree.active = false
 	animation_player.play(animation_name)
 	if animation_name == &"Moves/roll" and roll_hips_bone != -1:
@@ -151,16 +154,25 @@ func _physics_process(delta: float) -> void:
 	if target_direction.length() > 0.01:
 		var target_angle: float = spring_arm_pivot.global_rotation.y + PI - global_rotation.y
 		model.rotation.y = lerp_angle(model.rotation.y, target_angle, rotation_speed * delta)
-		velocity.x = move_toward(velocity.x, target_direction.x * max_speed, acceleration * delta)
-		velocity.z = move_toward(velocity.z, target_direction.z * max_speed, acceleration * delta)
+		var current_direction := Vector2(velocity.x, velocity.z)
+		var desired_direction := Vector2(target_direction.x, target_direction.z)
+		if current_direction.dot(desired_direction) <= 0.0:
+			velocity.x = target_direction.x * max_speed
+			velocity.z = target_direction.z * max_speed
+		else:
+			velocity.x = move_toward(velocity.x, target_direction.x * max_speed, acceleration * delta)
+			velocity.z = move_toward(velocity.z, target_direction.z * max_speed, acceleration * delta)
 	else:
-		velocity.x = move_toward(velocity.x, 0.0, friction * delta)
-		velocity.z = move_toward(velocity.z, 0.0, friction * delta)
+		velocity.x = 0.0
+		velocity.z = 0.0
 
 	# 5. Wykonanie ruchu fizycznego
 	move_and_slide()
 
 	# 6. Aktualizacja AnimationTree (mieszanie animacji idle/running)
 	if not action_animation_playing:
+		var horizontal_speed := Vector2(velocity.x, velocity.z).length()
+		var animation_speed := maxf(horizontal_speed / animation_reference_speed, 1.0)
 		var blend_value := Vector2(input_dir.x, -input_dir.y)
 		animation_tree.set("parameters/blend_position", blend_value)
+		animation_tree.advance(delta * animation_speed)
