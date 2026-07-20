@@ -17,9 +17,13 @@ func _ready() -> void:
 		pitch = rotation.x
 		_snap_to_target()
 
+func _orbit_direction() -> Vector3:
+	var horizontal_direction := Vector3.FORWARD.rotated(Vector3.UP, yaw)
+	var local_right := Vector3.RIGHT.rotated(Vector3.UP, yaw)
+	return horizontal_direction.rotated(local_right, pitch)
+
 func _snap_to_target() -> void:
-	var direction := Vector3.FORWARD.rotated(Vector3.UP, yaw).rotated(Vector3.RIGHT, pitch)
-	global_position = target.global_position + direction * distance + Vector3.UP * height
+	global_position = target.global_position + _orbit_direction() * distance + Vector3.UP * height
 	look_at(target.global_position + Vector3.UP * 1.5, Vector3.UP)
 
 func _input(event: InputEvent) -> void:
@@ -32,7 +36,6 @@ func _process(delta: float) -> void:
 	if not target:
 		return
 
-	var direction := Vector3.FORWARD.rotated(Vector3.UP, yaw).rotated(Vector3.RIGHT, pitch)
-	var target_position := target.global_position + direction * distance + Vector3.UP * height
+	var target_position := target.global_position + _orbit_direction() * distance + Vector3.UP * height
 	global_position = global_position.lerp(target_position, smooth_speed * delta)
 	look_at(target.global_position + Vector3.UP * 1.5, Vector3.UP)

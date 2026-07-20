@@ -32,6 +32,7 @@ camera = NodePath("../Camera3D")
 transform = Transform3D(-1, 2.990035e-08, -8.2150535e-08, 0, 0.9396926, 0.34202012, 8.742278e-08, 0.34202012, -0.9396926, 0, 1.5, -10)
 script = ExtResource("2_0xm2m")
 target = NodePath("../player")
+distance = 1.635
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1612480161]
 transform = Transform3D(0.79547346, 0.50238717, 0.33886436, 0, -0.5591928, 0.82903755, 0.60598844, -0.65947735, -0.44482303, 0, 6.185, 0)
