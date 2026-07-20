@@ -4,6 +4,7 @@ const PROJECTILE_SCENE: PackedScene = preload("res://scenes/projectile.tscn")
 
 # --- Parametry ruchu ---
 @export var max_speed: float = 5.0      # Maksymalna prędkość biegu
+@export var combat_max_speed: float = 6.0
 @export var animation_reference_speed: float = 5.0
 @export var acceleration: float = 6.0   # Jak szybko postać przyspiesza
 @export var friction: float = 8.0       # Jak szybko postać się zatrzymuje
@@ -37,6 +38,7 @@ var roll_direction := Vector3.ZERO
 var roll_displacement_pending := Vector3.ZERO
 var roll_pivot_initial_position := Vector3.ZERO
 var fire_cooldown := 0.0
+var combat_mode := false
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
@@ -46,7 +48,7 @@ func _ready() -> void:
 	roll_hips_bone = model.find_bone("mixamorig_Hips")
 	animation_player.animation_finished.connect(_on_animation_finished)
 
-func _play_action_animation(animation_name: StringName) -> void:
+func _play_action_animation(animation_name: StringName, action_direction := Vector3.ZERO) -> void:
 	if action_animation_playing:
 		return
 
@@ -56,7 +58,8 @@ func _play_action_animation(animation_name: StringName) -> void:
 	animation_player.play(animation_name)
 	if animation_name == &"Moves/roll" and roll_hips_bone != -1:
 		animation_player.advance(0.0)
-		roll_direction = model.global_transform.basis.z.normalized()
+		roll_direction = action_direction.normalized() if not action_direction.is_zero_approx() else model.global_transform.basis.z.normalized()
+		model.global_rotation.y = atan2(roll_direction.x, roll_direction.z)
 		roll_pivot_initial_position = spring_arm_pivot.position
 		roll_root_motion_start = model.get_bone_global_pose(roll_hips_bone).origin
 
@@ -136,12 +139,8 @@ func _physics_process(delta: float) -> void:
 		if fire_cooldown <= 0.0:
 			_shoot()
 
-	# Skok
-	if Input.is_action_just_pressed("jump") and is_on_floor() and not action_animation_playing:
-		velocity.y = jump_strength
-		_play_action_animation(&"Moves/jump")
-	if Input.is_action_just_pressed("roll") and is_on_floor():
-		_play_action_animation(&"Moves/roll")
+	if Input.is_action_just_pressed("toggle_combat_mode"):
+		combat_mode = not combat_mode
 
 	# 2. Odczytanie wejścia od gracza (WASD)
 	var input_dir: Vector2 = Input.get_vector("move_left", "move_right", "move_forward", "move_back")
@@ -150,18 +149,34 @@ func _physics_process(delta: float) -> void:
 	var target_direction := Vector3(input_dir.x, 0.0, input_dir.y)
 	target_direction = target_direction.rotated(Vector3.UP, spring_arm_pivot.global_rotation.y)
 
+	# Skok
+	if Input.is_action_just_pressed("jump") and is_on_floor() and not action_animation_playing:
+		velocity.y = jump_strength
+		_play_action_animation(&"Moves/jump")
+	if Input.is_action_just_pressed("roll") and is_on_floor() and not action_animation_playing:
+		_play_action_animation(&"Moves/roll", target_direction)
+
 	# 4. Obrót postaci w stronę ruchu i płynne przyspieszanie/hamowanie
-	if target_direction.length() > 0.01:
-		var target_angle: float = spring_arm_pivot.global_rotation.y + PI - global_rotation.y
-		model.rotation.y = lerp_angle(model.rotation.y, target_angle, rotation_speed * delta)
+	if action_animation_playing and animation_player.current_animation == &"Moves/roll":
+		velocity.x = 0.0
+		velocity.z = 0.0
+	elif target_direction.length() > 0.01:
+		if not action_animation_playing:
+			if combat_mode:
+				var target_angle: float = spring_arm_pivot.global_rotation.y + PI - global_rotation.y
+				model.rotation.y = lerp_angle(model.rotation.y, target_angle, rotation_speed * delta)
+			else:
+				var movement_angle := atan2(target_direction.x, target_direction.z)
+				model.global_rotation.y = lerp_angle(model.global_rotation.y, movement_angle, rotation_speed * delta)
+		var current_max_speed := combat_max_speed if combat_mode else max_speed
 		var current_direction := Vector2(velocity.x, velocity.z)
 		var desired_direction := Vector2(target_direction.x, target_direction.z)
 		if current_direction.dot(desired_direction) <= 0.0:
-			velocity.x = target_direction.x * max_speed
-			velocity.z = target_direction.z * max_speed
+			velocity.x = target_direction.x * current_max_speed
+			velocity.z = target_direction.z * current_max_speed
 		else:
-			velocity.x = move_toward(velocity.x, target_direction.x * max_speed, acceleration * delta)
-			velocity.z = move_toward(velocity.z, target_direction.z * max_speed, acceleration * delta)
+			velocity.x = move_toward(velocity.x, target_direction.x * current_max_speed, acceleration * delta)
+			velocity.z = move_toward(velocity.z, target_direction.z * current_max_speed, acceleration * delta)
 	else:
 		velocity.x = 0.0
 		velocity.z = 0.0
@@ -173,6 +188,6 @@ func _physics_process(delta: float) -> void:
 	if not action_animation_playing:
 		var horizontal_speed := Vector2(velocity.x, velocity.z).length()
 		var animation_speed := maxf(horizontal_speed / animation_reference_speed, 1.0)
-		var blend_value := Vector2(input_dir.x, -input_dir.y)
+		var blend_value := Vector2(input_dir.x, -input_dir.y) if combat_mode else Vector2(0.0, 1.0 if not input_dir.is_zero_approx() else 0.0)
 		animation_tree.set("parameters/blend_position", blend_value)
 		animation_tree.advance(delta * animation_speed)
