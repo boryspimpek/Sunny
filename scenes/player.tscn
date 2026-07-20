@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://cvhepjq4wy760"]
 
-[ext_resource type="PackedScene" uid="uid://cqw1dfft2d3s" path="res://player/T-Pose.fbx" id="1_4flbx"]
+[ext_resource type="PackedScene" uid="uid://cqw1dfft2d3s" path="res://player/model/T-Pose.fbx" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://c882ymmsxn15t" path="res://scripts/player.gd" id="2_hqtel"]
 [ext_resource type="Animation" uid="uid://d1lybno2b1aqh" path="res://assets/animations/idle.tres" id="2_i3pqv"]
-[ext_resource type="Animation" uid="uid://6blgo50qsd2h" path="res://assets/animations/running.tres" id="3_hqtel"]
-[ext_resource type="Animation" uid="uid://f2mavfvqoc52" path="res://assets/animations/jump.tres" id="4_1jxqw"]
-[ext_resource type="Animation" uid="uid://isfnhpje7x6y" path="res://assets/animations/running_backward.tres" id="6_dw050"]
-[ext_resource type="Animation" uid="uid://dtehnw7yu56y5" path="res://assets/animations/stand_to_roll.tres" id="7_b26j0"]
+[ext_resource type="Animation" uid="uid://b8dd7l5vyoajl" path="res://assets/animations/running.tres" id="3_hqtel"]
+[ext_resource type="Animation" uid="uid://wjqaa1qm6wfx" path="res://assets/animations/jump.tres" id="4_1jxqw"]
+[ext_resource type="Animation" uid="uid://c56fpenem1qvb" path="res://assets/animations/running_backward.tres" id="6_dw050"]
+[ext_resource type="Animation" uid="uid://defnax5xkuiox" path="res://assets/animations/stand_to_roll.tres" id="7_b26j0"]
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sweqy"]
 _data = {
