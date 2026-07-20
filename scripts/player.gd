@@ -158,15 +158,16 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 
+	var combat_mode_held := Input.is_action_pressed("combat_mode")
+	if combat_mode != combat_mode_held:
+		combat_mode = combat_mode_held
+		_set_locomotion_animations(combat_mode)
+
 	fire_cooldown = maxf(fire_cooldown - delta, 0.0)
 	if combat_mode and Input.is_action_pressed("fire"):
 		_apply_aim_assist(delta)
 		if fire_cooldown <= 0.0:
 			_shoot()
-
-	if Input.is_action_just_pressed("toggle_combat_mode"):
-		combat_mode = not combat_mode
-		_set_locomotion_animations(combat_mode)
 
 	# 2. Odczytanie wejścia od gracza (WASD)
 	var input_dir: Vector2 = Input.get_vector("move_left", "move_right", "move_forward", "move_back")
