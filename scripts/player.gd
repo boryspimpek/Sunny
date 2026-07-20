@@ -32,6 +32,7 @@ var roll_pivot_initial_position := Vector3.ZERO
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	animation_tree.active = true
+	spring_arm.add_excluded_object(get_rid())
 	roll_hips_bone = model.find_bone("mixamorig_Hips")
 	animation_player.animation_finished.connect(_on_animation_finished)
 
