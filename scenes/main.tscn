@@ -23,7 +23,7 @@ mesh = SubResource("BoxMesh_h2yge")
 shape = SubResource("ConcavePolygonShape3D_1bvp3")
 
 [node name="player" parent="." unique_id=1015128258 node_paths=PackedStringArray("camera") instance=ExtResource("1_ig7tw")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.126, 8.81)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 8.81)
 camera = NodePath("../Camera3D")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1300961812]

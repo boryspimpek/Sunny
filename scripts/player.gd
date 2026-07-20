@@ -20,6 +20,7 @@ func _ready() -> void:
 	if camera == null:
 		camera = get_node_or_null("../Camera3D")
 
+	
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
