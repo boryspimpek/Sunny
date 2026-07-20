@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-const PROJECTILE_SCENE: PackedScene = preload("res://scenes/enemy projectile/projectile.tscn")
+const PROJECTILE_SCENE: PackedScene = preload("res://scenes/player/projectile.tscn")
 
 # --- Parametry ruchu ---
 @export var max_speed: float = 5.0      # Maksymalna prędkość biegu

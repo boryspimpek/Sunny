@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://g7vtqa5dcrjk"
-path="res://.godot/imported/Left Strafe.fbx-3bd488446091f1c1e4d95caa2165be78.scn"
+uid="uid://bqtdbsswqthvi"
+path="res://.godot/imported/Jump.fbx-9fada20bd3e8d6f69db7c3c1080fa3d1.scn"
 
 [deps]
 
-source_file="res://player/model/Left Strafe.fbx"
-dest_files=["res://.godot/imported/Left Strafe.fbx-3bd488446091f1c1e4d95caa2165be78.scn"]
+source_file="res://assets/animations/mixamo/Jump.fbx"
+dest_files=["res://.godot/imported/Jump.fbx-9fada20bd3e8d6f69db7c3c1080fa3d1.scn"]
 
 [params]
 
@@ -41,9 +41,9 @@ _subresources={
 "animations": {
 "mixamo_com": {
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/animations/left_strafe.tres",
+"save_to_file/fallback_path": "res://assets/animations/animation tres/jump.tres",
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "uid://033muyqox2bf",
+"save_to_file/path": "uid://wjqaa1qm6wfx",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,

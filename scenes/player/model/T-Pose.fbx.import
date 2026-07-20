@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cqw1dfft2d3s"
-path="res://.godot/imported/T-Pose.fbx-a031686ff6ac51f74703413c64d1f32a.scn"
+path="res://.godot/imported/T-Pose.fbx-4cba95dc4a6ade9b6f491f0d9a3a6232.scn"
 
 [deps]
 
-source_file="res://player/model/T-Pose.fbx"
-dest_files=["res://.godot/imported/T-Pose.fbx-a031686ff6ac51f74703413c64d1f32a.scn"]
+source_file="res://scenes/player/model/T-Pose.fbx"
+dest_files=["res://.godot/imported/T-Pose.fbx-4cba95dc4a6ade9b6f491f0d9a3a6232.scn"]
 
 [params]
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bldmjuscal88a"
-path="res://.godot/imported/Running Backward.fbx-27af3152c27bbf3f481fc51d38054110.scn"
+uid="uid://d8tgrcgbu8s4"
+path="res://.godot/imported/Right Strafe.fbx-80e75cfed06642796c85ce5e582428ce.scn"
 
 [deps]
 
-source_file="res://player/model/Running Backward.fbx"
-dest_files=["res://.godot/imported/Running Backward.fbx-27af3152c27bbf3f481fc51d38054110.scn"]
+source_file="res://assets/animations/mixamo/Right Strafe.fbx"
+dest_files=["res://.godot/imported/Right Strafe.fbx-80e75cfed06642796c85ce5e582428ce.scn"]
 
 [params]
 
@@ -41,9 +41,9 @@ _subresources={
 "animations": {
 "mixamo_com": {
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/animations/running_backward.tres",
+"save_to_file/fallback_path": "res://assets/animations/animation tres/right_strafe.tres",
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "uid://c56fpenem1qvb",
+"save_to_file/path": "uid://xpns44hcbpif",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,

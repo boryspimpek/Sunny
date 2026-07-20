@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dxl1hs86s1q0k"
-path="res://.godot/imported/Idle.fbx-ac8798b79475101c1ed7a0d3446b10ba.scn"
+path="res://.godot/imported/Idle.fbx-f943bc4e8deec7c7f2ea411c485fb6f4.scn"
 
 [deps]
 
-source_file="res://player/model/Idle.fbx"
-dest_files=["res://.godot/imported/Idle.fbx-ac8798b79475101c1ed7a0d3446b10ba.scn"]
+source_file="res://assets/animations/mixamo/Idle.fbx"
+dest_files=["res://.godot/imported/Idle.fbx-f943bc4e8deec7c7f2ea411c485fb6f4.scn"]
 
 [params]
 
@@ -41,7 +41,7 @@ _subresources={
 "animations": {
 "mixamo_com": {
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/animations/idle.tres",
+"save_to_file/fallback_path": "res://assets/animations/animation tres/idle.tres",
 "save_to_file/keep_custom_tracks": "",
 "save_to_file/path": "uid://d1lybno2b1aqh",
 "settings/loop_mode": 0,

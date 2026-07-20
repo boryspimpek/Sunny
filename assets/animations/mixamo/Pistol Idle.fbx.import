@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bn2u6388lgmt7"
-path="res://.godot/imported/Quick Roll To Run.fbx-db982e342afb32f155d88480d15a27a4.scn"
+uid="uid://hb2a3olr5iub"
+path="res://.godot/imported/Pistol Idle.fbx-ef7e98becd26b96c09fad165a2b67681.scn"
 
 [deps]
 
-source_file="res://player/model/Quick Roll To Run.fbx"
-dest_files=["res://.godot/imported/Quick Roll To Run.fbx-db982e342afb32f155d88480d15a27a4.scn"]
+source_file="res://assets/animations/mixamo/Pistol Idle.fbx"
+dest_files=["res://.godot/imported/Pistol Idle.fbx-ef7e98becd26b96c09fad165a2b67681.scn"]
 
 [params]
 
@@ -41,9 +41,9 @@ _subresources={
 "animations": {
 "mixamo_com": {
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/animations/roll.tres",
+"save_to_file/fallback_path": "res://assets/animations/animation tres/pistol_idle.tres",
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "uid://bj447v83ev5lb",
+"save_to_file/path": "uid://crxd4t863rfdu",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,

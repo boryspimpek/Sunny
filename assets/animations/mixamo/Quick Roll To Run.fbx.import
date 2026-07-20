@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bqtdbsswqthvi"
-path="res://.godot/imported/Jump.fbx-5dc16008743262da0c043c0c758c2367.scn"
+uid="uid://bn2u6388lgmt7"
+path="res://.godot/imported/Quick Roll To Run.fbx-d71138c32810d155ece220d345b90459.scn"
 
 [deps]
 
-source_file="res://player/model/Jump.fbx"
-dest_files=["res://.godot/imported/Jump.fbx-5dc16008743262da0c043c0c758c2367.scn"]
+source_file="res://assets/animations/mixamo/Quick Roll To Run.fbx"
+dest_files=["res://.godot/imported/Quick Roll To Run.fbx-d71138c32810d155ece220d345b90459.scn"]
 
 [params]
 
@@ -41,9 +41,9 @@ _subresources={
 "animations": {
 "mixamo_com": {
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/animations/jump.tres",
+"save_to_file/fallback_path": "res://assets/animations/animation tres/roll.tres",
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "uid://wjqaa1qm6wfx",
+"save_to_file/path": "uid://bj447v83ev5lb",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,

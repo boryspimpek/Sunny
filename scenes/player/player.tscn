@@ -1,21 +1,22 @@
 [gd_scene format=3 uid="uid://dphrbjw30d5c1"]
 
-[ext_resource type="PackedScene" uid="uid://cqw1dfft2d3s" path="res://player/model/T-Pose.fbx" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://c882ymmsxn15t" path="res://player/player.gd" id="2_hqtel"]
-[ext_resource type="Animation" uid="uid://d1lybno2b1aqh" path="res://assets/animations/idle.tres" id="3_1jxqw"]
-[ext_resource type="Texture2D" uid="uid://daat8dcnljn2s" path="res://player/model/T-Pose_0.png" id="4_a8ls1"]
-[ext_resource type="Animation" uid="uid://wjqaa1qm6wfx" path="res://assets/animations/jump.tres" id="4_dw050"]
-[ext_resource type="Animation" uid="uid://b8dd7l5vyoajl" path="res://assets/animations/running.tres" id="5_b26j0"]
-[ext_resource type="Animation" uid="uid://033muyqox2bf" path="res://assets/animations/left_strafe.tres" id="5_ur7pv"]
-[ext_resource type="Animation" uid="uid://c56fpenem1qvb" path="res://assets/animations/running_backward.tres" id="6_n7ghd"]
-[ext_resource type="Animation" uid="uid://xpns44hcbpif" path="res://assets/animations/right_strafe.tres" id="6_y4r1p"]
-[ext_resource type="Animation" uid="uid://bj447v83ev5lb" path="res://assets/animations/roll.tres" id="7_ur7pv"]
-[ext_resource type="Animation" uid="uid://crxd4t863rfdu" path="res://assets/animations/pistol_idle.tres" id="8_pistol_idle"]
-[ext_resource type="Animation" uid="uid://b5a5uklwbuxbq" path="res://assets/animations/pistol_run.tres" id="9_pistol_run"]
-[ext_resource type="Animation" uid="uid://bqio0lvncwebe" path="res://assets/animations/pistol_run_backward.tres" id="10_pistol_back"]
-[ext_resource type="Animation" uid="uid://5iwprtie7pmg" path="res://assets/animations/pistol_strafe_left.tres" id="11_pistol_left"]
-[ext_resource type="Animation" uid="uid://bpabdelf0teuf" path="res://assets/animations/pistol_strafe_right.tres" id="12_pistol_right"]
+[ext_resource type="PackedScene" uid="uid://cqw1dfft2d3s" path="res://scenes/player/model/T-Pose.fbx" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://c882ymmsxn15t" path="res://scenes/player/player.gd" id="2_hqtel"]
+[ext_resource type="Animation" uid="uid://d1lybno2b1aqh" path="res://assets/animations/animation tres/idle.tres" id="3_1jxqw"]
+[ext_resource type="Texture2D" uid="uid://daat8dcnljn2s" path="res://scenes/player/model/T-Pose_0.png" id="4_a8ls1"]
+[ext_resource type="Animation" uid="uid://wjqaa1qm6wfx" path="res://assets/animations/animation tres/jump.tres" id="4_dw050"]
+[ext_resource type="Animation" uid="uid://b8dd7l5vyoajl" path="res://assets/animations/animation tres/running.tres" id="5_b26j0"]
+[ext_resource type="Animation" uid="uid://033muyqox2bf" path="res://assets/animations/animation tres/left_strafe.tres" id="5_ur7pv"]
+[ext_resource type="Animation" uid="uid://c56fpenem1qvb" path="res://assets/animations/animation tres/running_backward.tres" id="6_n7ghd"]
+[ext_resource type="Animation" uid="uid://xpns44hcbpif" path="res://assets/animations/animation tres/right_strafe.tres" id="6_y4r1p"]
+[ext_resource type="Animation" uid="uid://bj447v83ev5lb" path="res://assets/animations/animation tres/roll.tres" id="7_ur7pv"]
+[ext_resource type="Animation" uid="uid://crxd4t863rfdu" path="res://assets/animations/animation tres/pistol_idle.tres" id="8_pistol_idle"]
+[ext_resource type="Animation" uid="uid://b5a5uklwbuxbq" path="res://assets/animations/animation tres/pistol_run.tres" id="9_pistol_run"]
+[ext_resource type="Animation" uid="uid://bqio0lvncwebe" path="res://assets/animations/animation tres/pistol_run_backward.tres" id="10_pistol_back"]
+[ext_resource type="Animation" uid="uid://5iwprtie7pmg" path="res://assets/animations/animation tres/pistol_strafe_left.tres" id="11_pistol_left"]
+[ext_resource type="Animation" uid="uid://bpabdelf0teuf" path="res://assets/animations/animation tres/pistol_strafe_right.tres" id="12_pistol_right"]
 [ext_resource type="PackedScene" uid="uid://5pie2dwdmmh7" path="res://assets/weapon/uploads_files_6390069_halo_pulse.tscn" id="13_weapon"]
+[ext_resource type="Animation" uid="uid://defnax5xkuiox" path="res://assets/animations/animation tres/stand_to_roll.tres" id="17_kvlxm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qfm1y"]
 diffuse_mode = 3
@@ -25,7 +26,7 @@ roughness = 0.43
 normal_enabled = true
 normal_scale = 16.0
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ivps1"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uf5tr"]
 _data = {
 &"idle": ExtResource("3_1jxqw"),
 &"jump": ExtResource("4_dw050"),
@@ -38,7 +39,8 @@ _data = {
 &"right_strafe": ExtResource("6_y4r1p"),
 &"roll": ExtResource("7_ur7pv"),
 &"running": ExtResource("5_b26j0"),
-&"running_backward": ExtResource("6_n7ghd")
+&"running_backward": ExtResource("6_n7ghd"),
+&"stand_to_roll": ExtResource("17_kvlxm")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_z7fso"]
@@ -72,7 +74,7 @@ blend_point_4/pos = Vector2(0, -1)
 radius = 0.39892578
 height = 1.6637939
 
-[node name="player" unique_id=2073691774 instance=ExtResource("1_4flbx")]
+[node name="player" unique_id=1483343661 instance=ExtResource("1_4flbx")]
 script = ExtResource("2_hqtel")
 max_speed = 10.0
 combat_max_speed = 4.0
@@ -84,7 +86,7 @@ aim_assist_range = 30.0
 camera_pitch_min = -20.0
 camera_pitch_max = -20.0
 
-[node name="Skeleton3D" parent="." index="0" unique_id=1790970419]
+[node name="Skeleton3D" parent="." index="0" unique_id=889547714]
 transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 0, 0, 0)
 bones/0/position = Vector3(-5.7233276e-05, 0.46347934, 1.8239021e-05)
 bones/0/rotation = Quaternion(-0.031790517, -0.025013896, -0.07974898, 0.99599385)
@@ -181,11 +183,11 @@ transform = Transform3D(3.648529e-08, 0.4999999, 1.1175871e-08, 0.086823836, 6.5
 
 [node name="Pistol" parent="Skeleton3D/WeaponAttachment/PistolMount" index="0" unique_id=1948238105 instance=ExtResource("13_weapon")]
 
-[node name="tripo_node_5142fb7b" parent="Skeleton3D" index="1" unique_id=111282864]
+[node name="tripo_node_5142fb7b" parent="Skeleton3D" index="1" unique_id=1712033884]
 surface_material_override/0 = SubResource("StandardMaterial3D_qfm1y")
 
-[node name="AnimationPlayer" parent="." index="1" unique_id=2138918882]
-libraries/Moves = SubResource("AnimationLibrary_ivps1")
+[node name="AnimationPlayer" parent="." index="1" unique_id=1228739727]
+libraries/Moves = SubResource("AnimationLibrary_uf5tr")
 
 [node name="AnimationTree" type="AnimationTree" parent="." index="2" unique_id=816003553]
 tree_root = SubResource("AnimationNodeBlendSpace2D_oprun")
@@ -194,7 +196,6 @@ parameters/blend_position = Vector2(0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="3" unique_id=816003554]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83189696, 0)
-visible = false
 shape = SubResource("CapsuleShape3D_sweqy")
 
 [node name="SpringArmPivot" type="Node3D" parent="." index="4" unique_id=1012374855]

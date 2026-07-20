@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ckl4poli8tvfx"
-path="res://.godot/imported/Pistol Run Backward.fbx-35a06c62682a4c2859694aa290dee5d8.scn"
+path="res://.godot/imported/Pistol Run Backward.fbx-08f4bf0812c646e2a7a0062754fe8b5a.scn"
 
 [deps]
 
-source_file="res://player/model/Pistol Run Backward.fbx"
-dest_files=["res://.godot/imported/Pistol Run Backward.fbx-35a06c62682a4c2859694aa290dee5d8.scn"]
+source_file="res://assets/animations/mixamo/Pistol Run Backward.fbx"
+dest_files=["res://.godot/imported/Pistol Run Backward.fbx-08f4bf0812c646e2a7a0062754fe8b5a.scn"]
 
 [params]
 
@@ -41,7 +41,7 @@ _subresources={
 "animations": {
 "mixamo_com": {
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/animations/pistol_run_backward.tres",
+"save_to_file/fallback_path": "res://assets/animations/animation tres/pistol_run_backward.tres",
 "save_to_file/keep_custom_tracks": "",
 "save_to_file/path": "uid://bqio0lvncwebe",
 "settings/loop_mode": 0,

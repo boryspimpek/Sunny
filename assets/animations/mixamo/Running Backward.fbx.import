@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://crjm2343fvko2"
-path="res://.godot/imported/Running.fbx-3283818fa05f0cc3ac2901831f2e733c.scn"
+uid="uid://bldmjuscal88a"
+path="res://.godot/imported/Running Backward.fbx-5b7c571b89bfc45483624fee0f529542.scn"
 
 [deps]
 
-source_file="res://player/model/Running.fbx"
-dest_files=["res://.godot/imported/Running.fbx-3283818fa05f0cc3ac2901831f2e733c.scn"]
+source_file="res://assets/animations/mixamo/Running Backward.fbx"
+dest_files=["res://.godot/imported/Running Backward.fbx-5b7c571b89bfc45483624fee0f529542.scn"]
 
 [params]
 
@@ -41,9 +41,9 @@ _subresources={
 "animations": {
 "mixamo_com": {
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/animations/running.tres",
+"save_to_file/fallback_path": "res://assets/animations/animation tres/running_backward.tres",
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "uid://b8dd7l5vyoajl",
+"save_to_file/path": "uid://c56fpenem1qvb",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://daat8dcnljn2s"
-path.s3tc="res://.godot/imported/T-Pose_0.png-f3722cb2eabdf1e08f8cd5e0a9e99585.s3tc.ctex"
+path.s3tc="res://.godot/imported/T-Pose_0.png-261e34e6ea2483106bb65b04e79c3b93.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://player/model/T-Pose_0.png"
-dest_files=["res://.godot/imported/T-Pose_0.png-f3722cb2eabdf1e08f8cd5e0a9e99585.s3tc.ctex"]
+source_file="res://scenes/player/model/T-Pose_0.png"
+dest_files=["res://.godot/imported/T-Pose_0.png-261e34e6ea2483106bb65b04e79c3b93.s3tc.ctex"]
 
 [params]
 
