@@ -18,6 +18,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var model: Node3D = $Skeleton3D
 @onready var spring_arm_pivot: Node3D = $SpringArmPivot
 @onready var spring_arm: SpringArm3D = $SpringArmPivot/SpringArm3D
+@onready var aim_indicator: Node3D = $AimIndicator
 
 var action_animation_playing := false
 var roll_hips_bone := -1
@@ -88,11 +89,12 @@ func _physics_process(delta: float) -> void:
 
 	# 3. Prawy drążek: niezależny kierunek celowania
 	var aim_input := Input.get_vector("aim_left", "aim_right", "aim_up", "aim_down")
-	var aim_direction := Vector3(aim_input.x, 0.0, aim_input.y)
+	var aim_direction := Vector3(-aim_input.x, 0.0, -aim_input.y)
 	aim_direction = aim_direction.rotated(Vector3.UP, spring_arm_pivot.global_rotation.y)
 	if aim_direction.length() > 0.01:
 		var target_angle := atan2(aim_direction.x, aim_direction.z)
 		model.rotation.y = lerp_angle(model.rotation.y, target_angle, rotation_speed * delta)
+		aim_indicator.rotation.y = lerp_angle(aim_indicator.rotation.y, target_angle, rotation_speed * delta)
 
 	# 4. Ruch postaci
 	if move_direction.length() > 0.01:
@@ -107,5 +109,6 @@ func _physics_process(delta: float) -> void:
 
 	# 6. Aktualizacja AnimationTree (mieszanie animacji idle/running)
 	if not action_animation_playing:
-		var blend_value := Vector2(move_input.x, -move_input.y)
+		var local_move := move_direction.rotated(Vector3.UP, -model.rotation.y)
+		var blend_value := Vector2(local_move.x, -local_move.z)
 		animation_tree.set("parameters/blend_position", blend_value)
