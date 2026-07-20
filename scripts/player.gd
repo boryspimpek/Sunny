@@ -5,8 +5,10 @@ extends CharacterBody3D
 @export var acceleration: float = 6.0   # Jak szybko postać przyspiesza
 @export var friction: float = 8.0       # Jak szybko postać się zatrzymuje
 @export var jump_strength: float = 8.0  # Siła skoku
-@export var camera: Camera3D            # Referencja do kamery (opcjonalnie)
 @export var rotation_speed: float = 12.0 # Szybkość obracania postaci
+@export var gamepad_camera_sensitivity: float = 2.5
+@export_range(-89.0, 0.0, 1.0, "degrees") var camera_pitch_min: float = -45.0
+@export_range(-30.0, 89.0, 1.0, "degrees") var camera_pitch_max: float = 45.0
 
 # Grawitacja pobrana z ustawień projektu Godota
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -19,21 +21,14 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var spring_arm: SpringArm3D = $SpringArmPivot/SpringArm3D
 
 func _ready() -> void:
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	camera = $SpringArmPivot/SpringArm3D/Camera3D
-
-	
-func _input(event: InputEvent) -> void:
-	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	if event is InputEventMouseButton and event.pressed and Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE:
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-		spring_arm_pivot.rotate_y(-event.relative.x * 0.005)
-		spring_arm.rotate_x(-event.relative.y * 0.005)
-		spring_arm.rotation.x = clamp(spring_arm.rotation.x, -PI / 4.0, PI / 4.0)
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _physics_process(delta: float) -> void:
+	var camera_input := Input.get_vector("camera_left", "camera_right", "camera_up", "camera_down")
+	spring_arm_pivot.rotate_y(-camera_input.x * gamepad_camera_sensitivity * delta)
+	spring_arm.rotate_x(-camera_input.y * gamepad_camera_sensitivity * delta)
+	spring_arm.rotation.x = clamp(spring_arm.rotation.x, deg_to_rad(camera_pitch_min), deg_to_rad(camera_pitch_max))
+
 	# 1. Obsługa grawitacji (spadanie na ziemię)
 	if not is_on_floor():
 		velocity.y -= gravity * delta

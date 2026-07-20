@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c2mdsm26ktgtd"
-path="res://.godot/imported/Stand To Roll.fbx-10b78b8b42d846edea3f20ce24edcd92.scn"
+uid="uid://bn2u6388lgmt7"
+path="res://.godot/imported/Quick Roll To Run.fbx-db982e342afb32f155d88480d15a27a4.scn"
 
 [deps]
 
-source_file="res://player/model/Stand To Roll.fbx"
-dest_files=["res://.godot/imported/Stand To Roll.fbx-10b78b8b42d846edea3f20ce24edcd92.scn"]
+source_file="res://player/model/Quick Roll To Run.fbx"
+dest_files=["res://.godot/imported/Quick Roll To Run.fbx-db982e342afb32f155d88480d15a27a4.scn"]
 
 [params]
 
@@ -41,9 +41,9 @@ _subresources={
 "animations": {
 "mixamo_com": {
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/animations/stand_to_roll.tres",
+"save_to_file/fallback_path": "res://assets/animations/roll.tres",
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "uid://defnax5xkuiox",
+"save_to_file/path": "uid://bj447v83ev5lb",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,
