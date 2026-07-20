@@ -25,6 +25,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 # --- Referencje do węzłów ---
 # @onready pobiera węzeł AnimationTree zaraz po uruchomieniu gry
 @onready var animation_tree: AnimationTree = $AnimationTree
+@onready var locomotion_blend_space: AnimationNodeBlendSpace2D = animation_tree.tree_root as AnimationNodeBlendSpace2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var model: Node3D = $Skeleton3D
 @onready var spring_arm_pivot: Node3D = $SpringArmPivot
@@ -43,10 +44,34 @@ var combat_mode := false
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	animation_tree.process_callback = AnimationTree.ANIMATION_PROCESS_MANUAL
+	_set_locomotion_animations(false)
 	animation_tree.active = true
 	spring_arm.add_excluded_object(get_rid())
 	roll_hips_bone = model.find_bone("mixamorig_Hips")
 	animation_player.animation_finished.connect(_on_animation_finished)
+
+func _set_locomotion_animations(use_pistol: bool) -> void:
+	var animation_names: Array[StringName] = []
+	if use_pistol:
+		animation_names.append_array([
+			&"Moves/pistol_idle",
+			&"Moves/pistol_strafe_left",
+			&"Moves/pistol_strafe_right",
+			&"Moves/pistol_run",
+			&"Moves/pistol_run_backward"
+		])
+	else:
+		animation_names.append_array([
+			&"Moves/idle",
+			&"Moves/left_strafe",
+			&"Moves/right_strafe",
+			&"Moves/running",
+			&"Moves/running_backward"
+		])
+	for index in animation_names.size():
+		var animation_node := locomotion_blend_space.get_blend_point_node(index) as AnimationNodeAnimation
+		if animation_node != null:
+			animation_node.animation = animation_names[index]
 
 func _play_action_animation(animation_name: StringName, action_direction := Vector3.ZERO) -> void:
 	if action_animation_playing:
@@ -134,13 +159,14 @@ func _physics_process(delta: float) -> void:
 		velocity.y -= gravity * delta
 
 	fire_cooldown = maxf(fire_cooldown - delta, 0.0)
-	if Input.is_action_pressed("fire"):
+	if combat_mode and Input.is_action_pressed("fire"):
 		_apply_aim_assist(delta)
 		if fire_cooldown <= 0.0:
 			_shoot()
 
 	if Input.is_action_just_pressed("toggle_combat_mode"):
 		combat_mode = not combat_mode
+		_set_locomotion_animations(combat_mode)
 
 	# 2. Odczytanie wejścia od gracza (WASD)
 	var input_dir: Vector2 = Input.get_vector("move_left", "move_right", "move_forward", "move_back")
