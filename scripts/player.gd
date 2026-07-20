@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+const PROJECTILE_SCENE: PackedScene = preload("res://scenes/projectile.tscn")
+
 # --- Parametry ruchu ---
 @export var max_speed: float = 5.0      # Maksymalna prędkość biegu
 @export var acceleration: float = 6.0   # Jak szybko postać przyspiesza
@@ -8,6 +10,7 @@ extends CharacterBody3D
 @export var rotation_speed: float = 12.0 # Szybkość obracania postaci
 @export var gamepad_camera_sensitivity: float = 2.5
 @export var roll_distance: float = 5.0
+@export var fire_interval: float = 0.2
 @export_range(-89.0, 0.0, 1.0, "degrees") var camera_pitch_min: float = -45.0
 @export_range(-30.0, 89.0, 1.0, "degrees") var camera_pitch_max: float = 45.0
 
@@ -28,6 +31,7 @@ var roll_root_motion_start := Vector3.ZERO
 var roll_direction := Vector3.ZERO
 var roll_displacement_pending := Vector3.ZERO
 var roll_pivot_initial_position := Vector3.ZERO
+var fire_cooldown := 0.0
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
@@ -65,6 +69,14 @@ func _on_animation_finished(animation_name: StringName) -> void:
 		action_animation_playing = false
 		animation_tree.active = true
 
+func _shoot() -> void:
+	var projectile: Projectile = PROJECTILE_SCENE.instantiate()
+	var direction := model.global_transform.basis.z.normalized()
+	get_parent().add_child(projectile)
+	projectile.global_position = global_position + direction + Vector3.UP
+	projectile.setup(direction)
+	fire_cooldown = fire_interval
+
 func _physics_process(delta: float) -> void:
 	if action_animation_playing and animation_player.current_animation == &"Moves/roll":
 		_update_roll_camera_position()
@@ -81,6 +93,10 @@ func _physics_process(delta: float) -> void:
 	# 1. Obsługa grawitacji (spadanie na ziemię)
 	if not is_on_floor():
 		velocity.y -= gravity * delta
+
+	fire_cooldown = maxf(fire_cooldown - delta, 0.0)
+	if Input.is_action_pressed("fire") and fire_cooldown <= 0.0:
+		_shoot()
 
 	# Skok
 	if Input.is_action_just_pressed("jump") and is_on_floor() and not action_animation_playing:
