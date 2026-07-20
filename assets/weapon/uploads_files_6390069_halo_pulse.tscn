@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://5pie2dwdmmh7"]
+
+[ext_resource type="PackedScene" uid="uid://b68k4sqsc1ro4" path="res://assets/weapon/uploads_files_6390069_HaloPulse.glb" id="1_32w50"]
+[ext_resource type="Texture2D" uid="uid://d23ntwl14p63v" path="res://assets/weapon/uploads_files_6390069_HaloPulse_tripo_image_dc4bff1a-1c50-4362-8c34-2550fad28a75_0.jpg" id="2_lerqs"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i4tdi"]
+shading_mode = 0
+albedo_texture = ExtResource("2_lerqs")
+
+[node name="uploads_files_6390069_HaloPulse" unique_id=216552323 instance=ExtResource("1_32w50")]
+
+[node name="tripo_node_dc4bff1a-1c50-4362-8c34-2550fad28a75" parent="." index="0" unique_id=1808871344]
+surface_material_override/0 = SubResource("StandardMaterial3D_i4tdi")
