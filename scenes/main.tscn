@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://by0nljbgt7vjr"]
 
 [ext_resource type="PackedScene" uid="uid://dphrbjw30d5c1" path="res://scenes/player.tscn" id="1_ig7tw"]
-[ext_resource type="Script" uid="uid://bfjemstsdvpb3" path="res://scripts/camera_3d.gd" id="2_0xm2m"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0xm2m"]
 
@@ -22,17 +21,10 @@ mesh = SubResource("BoxMesh_h2yge")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=1580851234]
 shape = SubResource("ConcavePolygonShape3D_1bvp3")
 
-[node name="player" parent="." unique_id=1015128258 node_paths=PackedStringArray("camera") instance=ExtResource("1_ig7tw")]
+[node name="player" parent="." unique_id=1015128258 instance=ExtResource("1_ig7tw")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 8.81)
-camera = NodePath("../Camera3D")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1300961812]
-
-[node name="Camera3D" type="Camera3D" parent="." unique_id=871677299 node_paths=PackedStringArray("target")]
-transform = Transform3D(-1, 2.990035e-08, -8.2150535e-08, 0, 0.9396926, 0.34202012, 8.742278e-08, 0.34202012, -0.9396926, 0, 1.5, -10)
-script = ExtResource("2_0xm2m")
-target = NodePath("../player")
-distance = 1.635
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1612480161]
 transform = Transform3D(0.79547346, 0.50238717, 0.33886436, 0, -0.5591928, 0.82903755, 0.60598844, -0.65947735, -0.44482303, 0, 6.185, 0)

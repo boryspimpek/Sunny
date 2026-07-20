@@ -14,11 +14,13 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 # --- Referencje do węzłów ---
 # @onready pobiera węzeł AnimationTree zaraz po uruchomieniu gry
 @onready var animation_tree: AnimationTree = $AnimationTree
+@onready var model: Node3D = $Skeleton3D
+@onready var spring_arm_pivot: Node3D = $SpringArmPivot
+@onready var spring_arm: SpringArm3D = $SpringArmPivot/SpringArm3D
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	if camera == null:
-		camera = get_node_or_null("../Camera3D")
+	camera = $SpringArmPivot/SpringArm3D/Camera3D
 
 	
 func _input(event: InputEvent) -> void:
@@ -26,6 +28,10 @@ func _input(event: InputEvent) -> void:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	if event is InputEventMouseButton and event.pressed and Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+		spring_arm_pivot.rotate_y(-event.relative.x * 0.005)
+		spring_arm.rotate_x(-event.relative.y * 0.005)
+		spring_arm.rotation.x = clamp(spring_arm.rotation.x, -PI / 4.0, PI / 4.0)
 
 func _physics_process(delta: float) -> void:
 	# 1. Obsługa grawitacji (spadanie na ziemię)
@@ -40,24 +46,15 @@ func _physics_process(delta: float) -> void:
 	var input_dir: Vector2 = Input.get_vector("move_left", "move_right", "move_forward", "move_back")
 
 	# 3. Kierunek ruchu względem kamery (spłaszczony na płaszczyźnie XZ)
-	var target_direction: Vector3 = Vector3.ZERO
-	if camera:
-		var cam_forward: Vector3 = -camera.global_transform.basis.z
-		cam_forward.y = 0.0
-		cam_forward = cam_forward.normalized()
-		var cam_right: Vector3 = camera.global_transform.basis.x
-		cam_right.y = 0.0
-		cam_right = cam_right.normalized()
-		target_direction = cam_forward * -input_dir.y + cam_right * input_dir.x
-	else:
-		target_direction = transform.basis.x * input_dir.x + transform.basis.z * -input_dir.y
+	var target_direction := Vector3(input_dir.x, 0.0, input_dir.y)
+	target_direction = target_direction.rotated(Vector3.UP, spring_arm_pivot.global_rotation.y)
 
 	# 4. Obrót postaci w stronę ruchu i płynne przyspieszanie/hamowanie
 	if target_direction.length() > 0.01:
-		var target_angle: float = atan2(target_direction.x, target_direction.z)
-		rotation.y = lerp_angle(rotation.y, target_angle, rotation_speed * delta)
-		velocity.x = move_toward(velocity.x, transform.basis.z.x * max_speed, acceleration * delta)
-		velocity.z = move_toward(velocity.z, transform.basis.z.z * max_speed, acceleration * delta)
+		var target_angle: float = atan2(target_direction.x, target_direction.z) - global_rotation.y
+		model.rotation.y = lerp_angle(model.rotation.y, target_angle, rotation_speed * delta)
+		velocity.x = move_toward(velocity.x, target_direction.x * max_speed, acceleration * delta)
+		velocity.z = move_toward(velocity.z, target_direction.z * max_speed, acceleration * delta)
 	else:
 		velocity.x = move_toward(velocity.x, 0.0, friction * delta)
 		velocity.z = move_toward(velocity.z, 0.0, friction * delta)
