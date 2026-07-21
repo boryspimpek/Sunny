@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://5pie2dwdmmh7" path="res://assets/weapon/uploads_files_6390069_halo_pulse.tscn" id="13_weapon"]
 [ext_resource type="Animation" uid="uid://defnax5xkuiox" path="res://assets/animations/animation tres/stand_to_roll.tres" id="17_kvlxm"]
 [ext_resource type="Script" uid="uid://bauo260fefjfo" path="res://src/player/player_movement.gd" id="18_movement"]
+[ext_resource type="AudioStream" uid="uid://c72fb5lg5leqk" path="res://assets/sounds/walking.mp3" id="19_6cv16"]
 [ext_resource type="Script" uid="uid://p4v75nu8j6pk" path="res://src/player/player_camera.gd" id="19_camera"]
 [ext_resource type="Script" uid="uid://cnypbfy077fe8" path="res://src/player/player_aim_assist.gd" id="20_aim"]
 [ext_resource type="Script" uid="uid://djdqttl0f8so8" path="res://src/player/player_animator.gd" id="21_animator"]
@@ -83,6 +84,7 @@ height = 1.6637939
 [node name="player" unique_id=1483343661 groups=["player"] instance=ExtResource("1_4flbx")]
 collision_layer = 2
 collision_mask = 5
+floor_block_on_wall = false
 script = ExtResource("2_hqtel")
 
 [node name="Skeleton3D" parent="." index="0" unique_id=889547714]
@@ -249,6 +251,7 @@ combat_max_speed = 4.0
 acceleration = 30.0
 friction = 40.0
 jump_strength = 4.0
+walk_sound = ExtResource("19_6cv16")
 
 [node name="PlayerCamera" type="Node" parent="." index="7" unique_id=633470677]
 script = ExtResource("19_camera")

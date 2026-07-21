@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dng3r4tljsyhl" path="res://scenes/enemies/enemy_base.tscn" id="4_enemy"]
 [ext_resource type="Script" uid="uid://cff7fv1vlpjpa" path="res://main.gd" id="5_abc12"]
 [ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="6_hud"]
+[ext_resource type="PackedScene" path="res://scenes/pickups/star.tscn" id="7_272bh"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0xm2m"]
 
@@ -41,6 +42,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.602875, -16.13469, 0)
 
 [node name="Player" parent="." unique_id=1015128258 instance=ExtResource("1_ig7tw")]
 transform = Transform3D(0.11493719, 0, 0.99337274, 0, 1, 0, -0.99337274, 0, 0.11493719, 27.294704, -1.2166414, -8.103349)
+floor_block_on_wall = false
+floor_snap_length = 1.0
 
 [node name="HUD" parent="." unique_id=1830043377 instance=ExtResource("6_hud")]
 
@@ -100,6 +103,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6402931, 10, 23.431526)
 
 [node name="Enemy15" parent="Enemy" unique_id=893558432 instance=ExtResource("4_enemy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.9170685, 10, -5.571907)
+drops = Array[PackedScene]([ExtResource("7_272bh")])
 
 [node name="Enemy16" parent="Enemy" unique_id=1369472502 instance=ExtResource("4_enemy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7952938, 10, -14.529026)

@@ -8,11 +8,21 @@ extends Node
 @export var friction: float = 8.0
 @export var jump_strength: float = 8.0
 @export var rotation_speed: float = 12.0
+@export var walk_sound: AudioStream
 
 @onready var body: CharacterBody3D = get_parent()
 @onready var model: Skeleton3D = body.get_node("Skeleton3D")
+@onready var walk_audio: AudioStreamPlayer3D = _create_walk_audio()
 
 var last_input_dir := Vector2.ZERO
+
+
+func _create_walk_audio() -> AudioStreamPlayer3D:
+	var audio := AudioStreamPlayer3D.new()
+	audio.name = "WalkAudio"
+	audio.stream = walk_sound
+	add_child(audio)
+	return audio
 
 
 func update(delta: float, combat_mode: bool, camera_yaw: float, animator: PlayerAnimator) -> void:
@@ -52,6 +62,10 @@ func update(delta: float, combat_mode: bool, camera_yaw: float, animator: Player
 		else:
 			body.velocity.x = move_toward(body.velocity.x, target_direction.x * current_max_speed, acceleration * delta)
 			body.velocity.z = move_toward(body.velocity.z, target_direction.z * current_max_speed, acceleration * delta)
+		if walk_sound and not walk_audio.playing:
+			walk_audio.play()
 	else:
 		body.velocity.x = 0.0
 		body.velocity.z = 0.0
+		if walk_audio.playing:
+			walk_audio.stop()
