@@ -176,6 +176,10 @@ func _physics_process(delta: float) -> void:
 	var target_direction := Vector3(input_dir.x, 0.0, input_dir.y)
 	target_direction = target_direction.rotated(Vector3.UP, spring_arm_pivot.global_rotation.y)
 
+	if combat_mode and not action_animation_playing:
+		var target_angle: float = spring_arm_pivot.global_rotation.y + PI - global_rotation.y
+		model.rotation.y = lerp_angle(model.rotation.y, target_angle, rotation_speed * delta)
+
 	# Skok
 	if Input.is_action_just_pressed("jump") and is_on_floor() and not action_animation_playing:
 		velocity.y = jump_strength
@@ -188,13 +192,9 @@ func _physics_process(delta: float) -> void:
 		velocity.x = 0.0
 		velocity.z = 0.0
 	elif target_direction.length() > 0.01:
-		if not action_animation_playing:
-			if combat_mode:
-				var target_angle: float = spring_arm_pivot.global_rotation.y + PI - global_rotation.y
-				model.rotation.y = lerp_angle(model.rotation.y, target_angle, rotation_speed * delta)
-			else:
-				var movement_angle := atan2(target_direction.x, target_direction.z)
-				model.global_rotation.y = lerp_angle(model.global_rotation.y, movement_angle, rotation_speed * delta)
+		if not action_animation_playing and not combat_mode:
+			var movement_angle := atan2(target_direction.x, target_direction.z)
+			model.global_rotation.y = lerp_angle(model.global_rotation.y, movement_angle, rotation_speed * delta)
 		var current_max_speed := combat_max_speed if combat_mode else max_speed
 		var current_direction := Vector2(velocity.x, velocity.z)
 		var desired_direction := Vector2(target_direction.x, target_direction.z)

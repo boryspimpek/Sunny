@@ -20,11 +20,9 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qfm1y"]
 diffuse_mode = 3
+specular_mode = 1
 albedo_texture = ExtResource("4_a8ls1")
-metallic_specular = 1.0
-roughness = 0.43
-normal_enabled = true
-normal_scale = 16.0
+metallic = 0.39
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uf5tr"]
 _data = {

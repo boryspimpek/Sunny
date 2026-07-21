@@ -17,13 +17,13 @@ sky_material = SubResource("PanoramaSkyMaterial_jyhfs")
 [sub_resource type="Environment" id="Environment_0wfyh"]
 background_mode = 2
 sky = SubResource("Sky_tbgi4")
-ambient_light_sky_contribution = 0.0
+ambient_light_sky_contribution = 0.9
+reflected_light_source = 2
 tonemap_mode = 2
-volumetric_fog_density = 0.148
-volumetric_fog_emission_energy = 0.0
-volumetric_fog_gi_inject = 0.0
-volumetric_fog_anisotropy = 0.9
-volumetric_fog_length = 15.81
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.065
+volumetric_fog_anisotropy = -0.9
+volumetric_fog_length = 50.0
 volumetric_fog_sky_affect = 0.0
 adjustment_enabled = true
 adjustment_saturation = 1.6
@@ -48,10 +48,10 @@ jump_strength = 4.0
 environment = SubResource("Environment_0wfyh")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1612480161]
-transform = Transform3D(-0.8526402, -0.42695695, 0.30118498, 0, 0.5764322, 0.8171448, -0.5224985, 0.69673055, -0.4914893, 0, 50, 0)
+transform = Transform3D(0.026176995, 0.8751644, -0.48311675, 0, 0.4832824, 0.8754643, 0.99965733, -0.022917029, 0.01265088, 0, 50, 0)
+light_volumetric_fog_energy = 0.0
 shadow_enabled = true
 shadow_normal_bias = 4.817
-shadow_opacity = 0.82
 shadow_blur = 0.0
 
 [node name="Enemy" type="Node3D" parent="." unique_id=1509290342]

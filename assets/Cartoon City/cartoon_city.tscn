@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://ut5ch6bvegqu"]
-
-[ext_resource type="PackedScene" uid="uid://j2mxdq2kiila" path="res://assets/Cartoon City/uploads_files_6376639_Cartoon_City_Free.glb" id="1_uw0jd"]
-
-[node name="cartoon city" unique_id=516260923 instance=ExtResource("1_uw0jd")]
