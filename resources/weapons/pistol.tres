@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cvvv5c76nldjs" path="res://src/weapons/weapon_resource.gd" id="1_weapon_res"]
 [ext_resource type="PackedScene" uid="uid://dbxojkr0k7vsg" path="res://assets/BinbunVFX_Vol2/StylizedHitFX/effects/hit/vfx_hit_01.tscn" id="2_i4ekl"]
 [ext_resource type="PackedScene" uid="uid://buhgruu5mejpb" path="res://scenes/weapons/projectile_pistol.tscn" id="2_projectile"]
-[ext_resource type="PackedScene" uid="uid://cqeg404p8u1rk" path="res://assets/BinbunVFX/muzzle_flash/effects/big_flash/big_flash_03.tscn" id="3_xq21v"]
+[ext_resource type="PackedScene" uid="uid://djei8rcsa8lfv" path="res://assets/BinbunVFX/muzzle_flash/effects/wide_flash/wide_flash_01.tscn" id="3_xq21v"]
 
 [resource]
 script = ExtResource("1_weapon_res")

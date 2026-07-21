@@ -89,6 +89,14 @@ func _shoot() -> void:
 	body.get_parent().add_child(projectile)
 	projectile.global_position = body.global_position + direction + Vector3.UP
 	projectile.setup(direction, weapon.damage, weapon.hit_effect_scene, weapon.projectile_speed)
+
+	if weapon.muzzle_flash_scene != null:
+		var muzzle: Node3D = weapon.muzzle_flash_scene.instantiate()
+		body.get_parent().add_child(muzzle)
+		muzzle.global_position = body.global_position + direction + Vector3.UP
+		muzzle.look_at(muzzle.global_position + direction)
+		get_tree().create_timer(0.5).timeout.connect(muzzle.queue_free)
+
 	fire_cooldown = weapon.fire_interval
 
 	if weapon.magazine_size > 0:
