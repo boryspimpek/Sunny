@@ -14,10 +14,6 @@ config/name="Sunny"
 run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
-[display]
-
-window/size/always_on_top=true
-
 [input]
 
 move_left={

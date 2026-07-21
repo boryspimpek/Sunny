@@ -2,5 +2,5 @@
 
 [ext_resource type="PackedScene" uid="uid://c3a8jac5joa00" path="res://assets/maps/uploads_files_3339257_PP_FreeLowPolyForest_v3.0_Demo_01.fbx" id="1_hc475"]
 
-[node name="uploads_files_3339257_PP_FreeLowPolyForest_v3_0_Demo_01" unique_id=1523009757 instance=ExtResource("1_hc475")]
+[node name="low_poly_forest" unique_id=1523009757 instance=ExtResource("1_hc475")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.407164, 0)
