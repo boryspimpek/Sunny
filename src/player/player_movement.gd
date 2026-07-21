@@ -12,13 +12,13 @@ extends Node
 
 @onready var body: CharacterBody3D = get_parent()
 @onready var model: Skeleton3D = body.get_node("Skeleton3D")
-@onready var walk_audio: AudioStreamPlayer3D = _create_walk_audio()
+@onready var walk_audio: AudioStreamPlayer = _create_walk_audio()
 
 var last_input_dir := Vector2.ZERO
 
 
-func _create_walk_audio() -> AudioStreamPlayer3D:
-	var audio := AudioStreamPlayer3D.new()
+func _create_walk_audio() -> AudioStreamPlayer:
+	var audio := AudioStreamPlayer.new()
 	audio.name = "WalkAudio"
 	audio.stream = walk_sound
 	add_child(audio)

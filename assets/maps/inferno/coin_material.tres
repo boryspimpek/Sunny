@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dygc2lg72jg2t"]
+
+[ext_resource type="Texture2D" uid="uid://dgvuxllsmccqw" path="res://assets/maps/inferno/Coin_color.png" id="1_d56gv"]
+[ext_resource type="Texture2D" uid="uid://c3hwbwslg34ev" path="res://assets/maps/inferno/Coin_normal.png" id="2_uby1h"]
+
+[resource]
+albedo_color = Color(1.8247963, 1.8247963, 1.8247963, 1)
+albedo_texture = ExtResource("1_d56gv")
+normal_enabled = true
+normal_texture = ExtResource("2_uby1h")

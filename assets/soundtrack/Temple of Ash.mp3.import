@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://1igjqq6agvhk"
+path="res://.godot/imported/Temple of Ash.mp3-7e61b3a1297feabffaf8c637cf32918c.mp3str"
+
+[deps]
+
+source_file="res://assets/soundtrack/Temple of Ash.mp3"
+dest_files=["res://.godot/imported/Temple of Ash.mp3-7e61b3a1297feabffaf8c637cf32918c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

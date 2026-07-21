@@ -1,7 +1,152 @@
 [gd_scene format=3 uid="uid://dvvdigoh0skns"]
 
 [ext_resource type="PackedScene" uid="uid://cq1fhwwvo5blh" path="res://assets/maps/inferno/uploads_files_6496404_Inferno_World_free.fbx" id="1_oo2xo"]
-[ext_resource type="Script" path="res://assets/maps/inferno/inferno.gd" id="2_5byaq"]
+[ext_resource type="Script" uid="uid://37kqhvbjytrp" path="res://assets/maps/inferno/inferno.gd" id="2_5byaq"]
+[ext_resource type="Material" uid="uid://dygc2lg72jg2t" path="res://assets/maps/inferno/coin_material.tres" id="3_0aalm"]
+[ext_resource type="Material" uid="uid://bwiue7hysgq2v" path="res://assets/maps/inferno/crystal_yellow.tres" id="4_i47q7"]
+[ext_resource type="Material" uid="uid://c75widt0utf8f" path="res://assets/maps/inferno/crystal_dodger.tres" id="5_0aalm"]
+[ext_resource type="Material" uid="uid://dtp4fkf7nvvqp" path="res://assets/maps/inferno/crystal_green.tres" id="6_gmuvl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_at68k"]
+albedo_color = Color(3, 0, 0, 1)
 
 [node name="inferno" unique_id=1919387517 instance=ExtResource("1_oo2xo")]
 script = ExtResource("2_5byaq")
+
+[node name="RockMid_004_017" parent="." index="20" unique_id=762397429]
+transform = Transform3D(0.23288727, 0.9725037, 6.556511e-07, 0, -5.9604645e-07, 1, 0.9725037, -0.23288727, -1.1920929e-07, -2.5051227, 9.474691, -27.144213)
+
+[node name="StairsMiddle_001_006" parent="." index="40" unique_id=1993711769]
+transform = Transform3D(-0.4298377, -0.90290624, 8.940697e-08, 0, 0, 1, -0.9029062, 0.42983764, -1.1920929e-07, 10.27039, 9.531281, -18.915613)
+
+[node name="GoldPileSmall_001_001" parent="." index="47" unique_id=121005207]
+surface_material_override/1 = ExtResource("3_0aalm")
+
+[node name="GoldPileBig_001_002" parent="." index="48" unique_id=1478707678]
+surface_material_override/1 = ExtResource("3_0aalm")
+
+[node name="GoldPileBig_001_003" parent="." index="49" unique_id=982507878]
+surface_material_override/1 = ExtResource("3_0aalm")
+
+[node name="Box_001_001" parent="." index="58" unique_id=110487512]
+surface_material_override/1 = SubResource("StandardMaterial3D_at68k")
+
+[node name="GoldPileSmall_001_008" parent="." index="61" unique_id=480410820]
+surface_material_override/1 = ExtResource("3_0aalm")
+
+[node name="GoldPileSmall_001_009" parent="." index="72" unique_id=1858439911]
+surface_material_override/1 = ExtResource("3_0aalm")
+
+[node name="GoldPileBig_001_005" parent="." index="73" unique_id=147526209]
+surface_material_override/1 = ExtResource("3_0aalm")
+
+[node name="GoldPileSmall_001_010" parent="." index="74" unique_id=1046962005]
+surface_material_override/0 = ExtResource("3_0aalm")
+
+[node name="GoldPileBig_001_006" parent="." index="87" unique_id=307673171]
+surface_material_override/1 = ExtResource("3_0aalm")
+
+[node name="GoldPileSmall_001_011" parent="." index="89" unique_id=1121981731]
+surface_material_override/1 = ExtResource("3_0aalm")
+
+[node name="GoldPileSmall_001_012" parent="." index="103" unique_id=169068805]
+surface_material_override/1 = ExtResource("3_0aalm")
+
+[node name="GoldPileBig_001_007" parent="." index="104" unique_id=1044033404]
+surface_material_override/1 = ExtResource("3_0aalm")
+
+[node name="GoldPileSmall_001_013" parent="." index="105" unique_id=1535226099]
+surface_material_override/1 = ExtResource("3_0aalm")
+
+[node name="Grass_004_009" parent="." index="122" unique_id=1762152222]
+surface_material_override/0 = ExtResource("4_i47q7")
+
+[node name="Grass_002_032" parent="." index="123" unique_id=1305873218]
+surface_material_override/0 = ExtResource("4_i47q7")
+
+[node name="Grass_001_001" parent="." index="124" unique_id=205416252]
+surface_material_override/0 = ExtResource("5_0aalm")
+
+[node name="Grass_002_033" parent="." index="125" unique_id=1325160214]
+surface_material_override/0 = ExtResource("4_i47q7")
+
+[node name="Grass_001_008" parent="." index="126" unique_id=510533897]
+transform = Transform3D(0.50162625, 0.86508447, 2.9802322e-07, 0, -3.5762787e-07, 1, 0.86508447, -0.5016263, -2.3841858e-07, 5.056473, 14.517525, 1.9804742)
+surface_material_override/0 = ExtResource("6_gmuvl")
+
+[node name="Grass_004_015" parent="." index="127" unique_id=1408338391]
+surface_material_override/0 = ExtResource("4_i47q7")
+
+[node name="Grass_003_022" parent="." index="128" unique_id=1415366055]
+surface_material_override/0 = ExtResource("4_i47q7")
+
+[node name="Grass_002_042" parent="." index="129" unique_id=1994062357]
+surface_material_override/0 = ExtResource("6_gmuvl")
+
+[node name="Grass_001_031" parent="." index="130" unique_id=62803610]
+surface_material_override/0 = ExtResource("6_gmuvl")
+
+[node name="Grass_002_043" parent="." index="131" unique_id=299260949]
+surface_material_override/0 = ExtResource("5_0aalm")
+
+[node name="Grass_002_044" parent="." index="132" unique_id=541443254]
+surface_material_override/0 = ExtResource("6_gmuvl")
+
+[node name="Grass_002_045" parent="." index="133" unique_id=1429026695]
+transform = Transform3D(-0.97357535, 0.22836557, -3.7252903e-08, -7.450581e-09, 1.7881393e-07, 0.99999994, 0.22836557, 0.9735754, -1.1920929e-07, 12.119271, 14.447211, 15.031735)
+surface_material_override/0 = ExtResource("5_0aalm")
+
+[node name="Grass_001_032" parent="." index="134" unique_id=1966721830]
+transform = Transform3D(0.05646825, -0.9984044, 5.662441e-07, 2.9802322e-08, 5.364418e-07, 1, -0.9984044, -0.05646822, 0, 11.233768, 14.356119, 9.410582)
+surface_material_override/0 = ExtResource("5_0aalm")
+
+[node name="Grass_002_046" parent="." index="135" unique_id=57975520]
+surface_material_override/0 = ExtResource("5_0aalm")
+
+[node name="Grass_001_033" parent="." index="136" unique_id=1531960469]
+surface_material_override/0 = ExtResource("5_0aalm")
+
+[node name="Grass_004_016" parent="." index="137" unique_id=1878154320]
+surface_material_override/0 = ExtResource("4_i47q7")
+
+[node name="Grass_003_023" parent="." index="138" unique_id=882586043]
+surface_material_override/0 = ExtResource("4_i47q7")
+
+[node name="Grass_002_047" parent="." index="139" unique_id=1341614465]
+surface_material_override/0 = ExtResource("5_0aalm")
+
+[node name="Grass_001_034" parent="." index="140" unique_id=402035583]
+surface_material_override/0 = ExtResource("5_0aalm")
+
+[node name="Grass_002_048" parent="." index="141" unique_id=1702250629]
+surface_material_override/0 = ExtResource("6_gmuvl")
+
+[node name="Grass_001_035" parent="." index="142" unique_id=664711248]
+surface_material_override/0 = ExtResource("6_gmuvl")
+
+[node name="Grass_002_049" parent="." index="143" unique_id=12601159]
+surface_material_override/0 = ExtResource("6_gmuvl")
+
+[node name="Grass_003_024" parent="." index="144" unique_id=1573965533]
+surface_material_override/0 = ExtResource("4_i47q7")
+
+[node name="Grass_002_050" parent="." index="145" unique_id=1573064852]
+surface_material_override/0 = ExtResource("4_i47q7")
+
+[node name="Grass_001_036" parent="." index="146" unique_id=183105049]
+surface_material_override/0 = ExtResource("5_0aalm")
+
+[node name="Grass_002_051" parent="." index="147" unique_id=1869254932]
+surface_material_override/0 = ExtResource("6_gmuvl")
+
+[node name="Grass_001_037" parent="." index="148" unique_id=1866296853]
+surface_material_override/0 = ExtResource("5_0aalm")
+
+[node name="Grass_003_025" parent="." index="149" unique_id=205099628]
+surface_material_override/0 = ExtResource("4_i47q7")
+
+[node name="Grass_001_038" parent="." index="150" unique_id=1837850377]
+surface_material_override/0 = ExtResource("6_gmuvl")
+
+[node name="Grass_002_052" parent="." index="151" unique_id=283709059]
+surface_material_override/0 = ExtResource("5_0aalm")

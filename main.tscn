@@ -2,16 +2,17 @@
 
 [ext_resource type="PackedScene" uid="uid://dphrbjw30d5c1" path="res://scenes/player/player.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://dvvdigoh0skns" path="res://assets/maps/inferno/inferno.tscn" id="3_272bh"]
-[ext_resource type="Texture2D" uid="uid://7r64f81iqvwe" path="res://assets/sky box/kloofendal_48d_partly_cloudy_puresky_4k.exr" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://dng3r4tljsyhl" path="res://scenes/enemies/enemy_base.tscn" id="4_enemy"]
+[ext_resource type="Texture2D" uid="uid://b5vpsa5hv018t" path="res://assets/sky box/moonless_golf_4k.exr" id="5_5vw27"]
 [ext_resource type="Script" uid="uid://cff7fv1vlpjpa" path="res://main.gd" id="5_abc12"]
 [ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="6_hud"]
 [ext_resource type="PackedScene" path="res://scenes/pickups/star.tscn" id="7_272bh"]
+[ext_resource type="AudioStream" uid="uid://bytf04c1cd68t" path="res://assets/soundtrack/Temple of Ash (3).mp3" id="8_5vw27"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0xm2m"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_jyhfs"]
-panorama = ExtResource("3_sugp2")
+panorama = ExtResource("5_5vw27")
 
 [sub_resource type="Sky" id="Sky_tbgi4"]
 sky_material = SubResource("PanoramaSkyMaterial_jyhfs")
@@ -19,14 +20,15 @@ sky_material = SubResource("PanoramaSkyMaterial_jyhfs")
 [sub_resource type="Environment" id="Environment_0wfyh"]
 background_mode = 2
 sky = SubResource("Sky_tbgi4")
-ambient_light_sky_contribution = 0.9
 reflected_light_source = 2
 tonemap_mode = 2
+glow_enabled = true
+glow_intensity = 1.0
+glow_bloom = 0.21
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.065
 volumetric_fog_anisotropy = -0.9
 volumetric_fog_length = 50.0
-volumetric_fog_sky_affect = 0.0
 adjustment_enabled = true
 adjustment_saturation = 1.6
 
@@ -42,7 +44,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.602875, -16.13469, 0)
 
 [node name="Player" parent="." unique_id=1015128258 instance=ExtResource("1_ig7tw")]
 transform = Transform3D(0.11493719, 0, 0.99337274, 0, 1, 0, -0.99337274, 0, 0.11493719, 27.294704, -1.2166414, -8.103349)
-floor_block_on_wall = false
 floor_snap_length = 1.0
 
 [node name="HUD" parent="." unique_id=1830043377 instance=ExtResource("6_hud")]
@@ -227,3 +228,7 @@ transform = Transform3D(-0.88469493, 0, 0.46617052, 0, 1, 0, -0.46617052, 0, -0.
 
 [node name="Enemy56" parent="Enemy" unique_id=284066720 instance=ExtResource("4_enemy")]
 transform = Transform3D(-0.88469493, 0, 0.46617052, 0, 1, 0, -0.46617052, 0, -0.88469493, 54.38913, -13.111273, -46.024136)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=145163531]
+stream = ExtResource("8_5vw27")
+autoplay = true
