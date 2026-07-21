@@ -164,9 +164,9 @@ func _physics_process(delta: float) -> void:
 		_set_locomotion_animations(combat_mode)
 
 	fire_cooldown = maxf(fire_cooldown - delta, 0.0)
-	if combat_mode and Input.is_action_pressed("fire"):
+	if combat_mode:
 		_apply_aim_assist(delta)
-		if fire_cooldown <= 0.0:
+		if Input.is_action_pressed("fire") and fire_cooldown <= 0.0:
 			_shoot()
 
 	# 2. Odczytanie wejścia od gracza (WASD)
