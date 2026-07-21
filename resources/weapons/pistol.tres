@@ -4,12 +4,10 @@
 [ext_resource type="Script" uid="uid://cvvv5c76nldjs" path="res://src/weapons/weapon_resource.gd" id="1_weapon_res"]
 [ext_resource type="PackedScene" uid="uid://dbxojkr0k7vsg" path="res://assets/BinbunVFX_Vol2/StylizedHitFX/effects/hit/vfx_hit_01.tscn" id="2_i4ekl"]
 [ext_resource type="PackedScene" uid="uid://buhgruu5mejpb" path="res://scenes/weapons/projectile_pistol.tscn" id="2_projectile"]
-[ext_resource type="PackedScene" uid="uid://djei8rcsa8lfv" path="res://assets/BinbunVFX/muzzle_flash/effects/wide_flash/wide_flash_01.tscn" id="3_xq21v"]
 
 [resource]
 script = ExtResource("1_weapon_res")
 display_name = "Pistol"
 projectile_scene = ExtResource("2_projectile")
 hit_effect_scene = ExtResource("2_i4ekl")
-muzzle_flash_scene = ExtResource("3_xq21v")
 fire_sound = ExtResource("1_15s11")

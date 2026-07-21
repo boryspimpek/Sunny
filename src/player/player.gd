@@ -23,15 +23,16 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	animator.update_roll()
-	player_camera.update(delta)
-
-	if not is_on_floor():
-		velocity.y -= gravity * delta
 
 	var combat_mode_held := Input.is_action_pressed("combat_mode")
 	if combat_mode != combat_mode_held:
 		combat_mode = combat_mode_held
 		animator.set_combat_mode(combat_mode)
+
+	player_camera.update(delta, combat_mode)
+
+	if not is_on_floor():
+		velocity.y -= gravity * delta
 
 	if combat_mode:
 		aim_assist.apply(delta)
