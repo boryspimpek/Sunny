@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dng3r4tljsyhl"]
+
+[ext_resource type="Script" uid="uid://bonshippq1dr1" path="res://src/enemies/enemy.gd" id="1_enemy"]
+[ext_resource type="Script" uid="uid://iw2t1i2n45gn" path="res://src/components/health_component.gd" id="2_health"]
+[ext_resource type="Script" uid="uid://bk54joa15v62c" path="res://src/enemies/behaviors/movement/movement_idle.gd" id="3_movement"]
+[ext_resource type="Script" uid="uid://dirffq4elijau" path="res://src/enemies/behaviors/attack/attack_behavior.gd" id="4_attack"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_enemy"]
+albedo_color = Color(0.85, 0.08, 0.08, 1)
+metallic = 0.15
+roughness = 0.55
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_enemy"]
+material = SubResource("StandardMaterial3D_enemy")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_enemy"]
+
+[node name="Enemy" type="CharacterBody3D" unique_id=890571983 groups=["enemy"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+collision_layer = 4
+collision_mask = 5
+script = ExtResource("1_enemy")
+score_value = 10
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1740779949]
+mesh = SubResource("CapsuleMesh_enemy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=989135450]
+shape = SubResource("CapsuleShape3D_enemy")
+
+[node name="HealthComponent" type="Node" parent="." unique_id=994067726]
+script = ExtResource("2_health")
+max_health = 10.0
+
+[node name="MovementBehavior" type="Node" parent="." unique_id=2129914048]
+script = ExtResource("3_movement")
+
+[node name="AttackBehavior" type="Node" parent="." unique_id=411215838]
+script = ExtResource("4_attack")

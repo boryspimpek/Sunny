@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://src/weapons/projectile.gd" id="1_enemy_proj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_enemy_proj"]
+albedo_color = Color(0.75, 0.1, 1, 1)
+emission_enabled = true
+emission = Color(0.55, 0.05, 1, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_enemy_proj"]
+material = SubResource("StandardMaterial3D_enemy_proj")
+radius = 0.15
+height = 0.3
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_enemy_proj"]
+radius = 0.15
+
+[node name="ProjectileEnemy" type="Area3D"]
+collision_layer = 16
+collision_mask = 3
+script = ExtResource("1_enemy_proj")
+speed = 20.0
+lifetime = 3.0
+damage = 5.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_enemy_proj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_enemy_proj")

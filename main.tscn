@@ -3,8 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://dphrbjw30d5c1" path="res://scenes/player/player.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://dvvdigoh0skns" path="res://assets/maps/inferno/inferno.tscn" id="3_272bh"]
 [ext_resource type="Texture2D" uid="uid://7r64f81iqvwe" path="res://assets/sky box/kloofendal_48d_partly_cloudy_puresky_4k.exr" id="3_sugp2"]
-[ext_resource type="PackedScene" path="res://scenes/enemy/enemy.tscn" id="4_enemy"]
+[ext_resource type="PackedScene" path="res://scenes/enemies/enemy_base.tscn" id="4_enemy"]
 [ext_resource type="Script" uid="uid://cff7fv1vlpjpa" path="res://main.gd" id="5_abc12"]
+[ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="6_hud"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0xm2m"]
 
@@ -40,9 +41,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.602875, -16.13469, 0)
 
 [node name="Player" parent="." unique_id=1015128258 instance=ExtResource("1_ig7tw")]
 transform = Transform3D(0.11493719, 0, 0.99337274, 0, 1, 0, -0.99337274, 0, 0.11493719, 27.294704, -1.2166414, -8.103349)
-acceleration = 30.0
-friction = 40.0
-jump_strength = 4.0
+
+[node name="HUD" parent="." unique_id=1830043377 instance=ExtResource("6_hud")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1300961812]
 environment = SubResource("Environment_0wfyh")

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dphrbjw30d5c1"]
 
 [ext_resource type="PackedScene" uid="uid://cqw1dfft2d3s" path="res://scenes/player/model/T-Pose.fbx" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://c882ymmsxn15t" path="res://scenes/player/player.gd" id="2_hqtel"]
+[ext_resource type="Script" uid="uid://bg0t33p7ys5u" path="res://src/player/player.gd" id="2_hqtel"]
 [ext_resource type="Animation" uid="uid://d1lybno2b1aqh" path="res://assets/animations/animation tres/idle.tres" id="3_1jxqw"]
 [ext_resource type="Texture2D" uid="uid://daat8dcnljn2s" path="res://scenes/player/model/T-Pose_0.png" id="4_a8ls1"]
 [ext_resource type="Animation" uid="uid://wjqaa1qm6wfx" path="res://assets/animations/animation tres/jump.tres" id="4_dw050"]
@@ -17,6 +17,14 @@
 [ext_resource type="Animation" uid="uid://bpabdelf0teuf" path="res://assets/animations/animation tres/pistol_strafe_right.tres" id="12_pistol_right"]
 [ext_resource type="PackedScene" uid="uid://5pie2dwdmmh7" path="res://assets/weapon/uploads_files_6390069_halo_pulse.tscn" id="13_weapon"]
 [ext_resource type="Animation" uid="uid://defnax5xkuiox" path="res://assets/animations/animation tres/stand_to_roll.tres" id="17_kvlxm"]
+[ext_resource type="Script" uid="uid://bauo260fefjfo" path="res://src/player/player_movement.gd" id="18_movement"]
+[ext_resource type="Script" uid="uid://p4v75nu8j6pk" path="res://src/player/player_camera.gd" id="19_camera"]
+[ext_resource type="Script" uid="uid://cnypbfy077fe8" path="res://src/player/player_aim_assist.gd" id="20_aim"]
+[ext_resource type="Script" uid="uid://djdqttl0f8so8" path="res://src/player/player_animator.gd" id="21_animator"]
+[ext_resource type="Script" uid="uid://v6vq3nv17u38" path="res://src/player/weapon_manager.gd" id="22_weapons"]
+[ext_resource type="Script" uid="uid://iw2t1i2n45gn" path="res://src/components/health_component.gd" id="23_health"]
+[ext_resource type="Resource" uid="uid://lmoxsg0uwhpn" path="res://resources/weapons/pistol.tres" id="24_pistol"]
+[ext_resource type="Script" uid="uid://cvvv5c76nldjs" path="res://src/weapons/weapon_resource.gd" id="25_weapon_res"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qfm1y"]
 diffuse_mode = 3
@@ -72,17 +80,10 @@ blend_point_4/pos = Vector2(0, -1)
 radius = 0.39892578
 height = 1.6637939
 
-[node name="player" unique_id=1483343661 instance=ExtResource("1_4flbx")]
+[node name="player" unique_id=1483343661 groups=["player"] instance=ExtResource("1_4flbx")]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("2_hqtel")
-max_speed = 10.0
-combat_max_speed = 4.0
-animation_reference_speed = 8.0
-acceleration = 10000.0
-friction = 5000.0
-aim_assist_strength = 1.0
-aim_assist_range = 30.0
-camera_pitch_min = -20.0
-camera_pitch_max = -20.0
 
 [node name="Skeleton3D" parent="." index="0" unique_id=889547714]
 transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 0, 0, 0)
@@ -240,3 +241,32 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(1, 1, 1, 0.9)
+
+[node name="PlayerMovement" type="Node" parent="." index="6" unique_id=1805629396]
+script = ExtResource("18_movement")
+max_speed = 10.0
+combat_max_speed = 4.0
+acceleration = 30.0
+friction = 40.0
+jump_strength = 4.0
+
+[node name="PlayerCamera" type="Node" parent="." index="7" unique_id=633470677]
+script = ExtResource("19_camera")
+camera_pitch_min = -20.0
+camera_pitch_max = -20.0
+
+[node name="PlayerAimAssist" type="Node" parent="." index="8" unique_id=2132243855]
+script = ExtResource("20_aim")
+aim_assist_strength = 1.0
+aim_assist_range = 30.0
+
+[node name="PlayerAnimator" type="Node" parent="." index="9" unique_id=1958128040]
+script = ExtResource("21_animator")
+animation_reference_speed = 8.0
+
+[node name="WeaponManager" type="Node" parent="." index="10" unique_id=1644353159]
+script = ExtResource("22_weapons")
+weapons = Array[ExtResource("25_weapon_res")]([ExtResource("24_pistol")])
+
+[node name="HealthComponent" type="Node" parent="." index="11" unique_id=1332951278]
+script = ExtResource("23_health")

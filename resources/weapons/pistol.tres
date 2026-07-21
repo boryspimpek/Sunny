@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="WeaponResource" format=3 uid="uid://lmoxsg0uwhpn"]
+
+[ext_resource type="AudioStream" uid="uid://bjh55f70c0a0l" path="res://assets/sounds/001_S_WEAPON_1.wav" id="1_15s11"]
+[ext_resource type="Script" uid="uid://cvvv5c76nldjs" path="res://src/weapons/weapon_resource.gd" id="1_weapon_res"]
+[ext_resource type="PackedScene" uid="uid://buhgruu5mejpb" path="res://scenes/weapons/projectile_pistol.tscn" id="2_projectile"]
+
+[resource]
+script = ExtResource("1_weapon_res")
+display_name = "Pistol"
+projectile_scene = ExtResource("2_projectile")
+fire_sound = ExtResource("1_15s11")
