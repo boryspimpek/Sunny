@@ -379,6 +379,8 @@ script = ExtResource("1_uno15")
 primary_color = Color(1, 1, 1, 1)
 secondary_color = Color(1, 0.8, 0.4, 1)
 light_color = Color(1, 0.8, 0.4, 1)
+one_shot = true
+autoplay = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1122126073]
 libraries/ = SubResource("AnimationLibrary_ffe1e")

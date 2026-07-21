@@ -4,6 +4,7 @@ extends Resource
 
 @export var display_name: String = "Weapon"
 @export var damage: float = 10.0
+@export var projectile_speed: float = 60.0
 @export var fire_interval: float = 0.2
 @export var magazine_size: int = 12
 @export var reload_time: float = 1.5

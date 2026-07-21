@@ -88,7 +88,7 @@ func _shoot() -> void:
 	direction = direction.normalized()
 	body.get_parent().add_child(projectile)
 	projectile.global_position = body.global_position + direction + Vector3.UP
-	projectile.setup(direction, weapon.damage, weapon.hit_effect_scene)
+	projectile.setup(direction, weapon.damage, weapon.hit_effect_scene, weapon.projectile_speed)
 	fire_cooldown = weapon.fire_interval
 
 	if weapon.magazine_size > 0:

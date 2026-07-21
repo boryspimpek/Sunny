@@ -342,7 +342,10 @@ _data = {
 }
 
 [node name="BigFlash_03" type="Node3D" unique_id=1166401343]
+transform = Transform3D(-0.026176963, 0, -0.99965733, 0, 1, 0, 0.99965733, 0, -0.026176963, 0, 0, 0)
 script = ExtResource("1_dfcht")
+preview = false
+one_shot = true
 local_coords = true
 primary_color = Color(1, 0.717647, 0.694118, 1)
 secondary_color = Color(1, 0.45098, 0.054902, 1)

@@ -3,20 +3,22 @@ extends Area3D
 ## Wspólny skrypt pocisku dla gracza i wrogów.
 ## Warstwy kolizji ustawiane per scena (player_projectile / enemy_projectile).
 
-@export var speed := 60.0
-@export var lifetime := 2.0
-@export var damage := 10.0
-@export var hit_effect_scene: PackedScene
+@export var lifetime: float = 2.0
 
+var damage: float
+var speed: float
 var direction := Vector3.FORWARD
+var hit_effect_scene: PackedScene
 
 
-func setup(shot_direction: Vector3, shot_damage: float = -1.0, hit_effect: PackedScene = null) -> void:
+func setup(shot_direction: Vector3, shot_damage: float = -1.0, hit_effect: PackedScene = null, shot_speed: float = -1.0) -> void:
 	direction = shot_direction.normalized()
 	if shot_damage >= 0.0:
 		damage = shot_damage
 	if hit_effect != null:
 		hit_effect_scene = hit_effect
+	if shot_speed >= 0.0:
+		speed = shot_speed
 
 
 func _ready() -> void:

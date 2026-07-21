@@ -4,6 +4,8 @@ extends AttackBehavior
 
 @export var projectile_scene: PackedScene
 @export var damage: float = 5.0
+@export var projectile_speed: float = 20.0
+@export var hit_effect_scene: PackedScene
 @export var fire_interval: float = 1.5
 @export var attack_range: float = 15.0
 @export var fire_sound: AudioStream
@@ -24,7 +26,7 @@ func try_attack(enemy: Enemy, target: Node3D, delta: float) -> void:
 	var projectile: Projectile = projectile_scene.instantiate()
 	enemy.get_parent().add_child(projectile)
 	projectile.global_position = enemy.global_position + direction + Vector3.UP
-	projectile.setup(direction, damage)
+	projectile.setup(direction, damage, hit_effect_scene, projectile_speed)
 	_cooldown = fire_interval
 	if fire_sound != null:
 		EventBus.sfx_requested.emit(fire_sound, enemy.global_position)
