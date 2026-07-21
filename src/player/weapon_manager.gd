@@ -6,7 +6,7 @@ extends Node
 @export var weapons: Array[WeaponResource] = []
 
 @onready var body: CharacterBody3D = get_parent()
-@onready var camera: Camera3D = body.get_node("SpringArmPivot/SpringArm3D/Camera3D")
+@onready var player_camera: PlayerCamera = body.get_node("PlayerCamera")
 
 var current_index := 0
 var ammo: Array[int] = []
@@ -83,9 +83,7 @@ func _shoot() -> void:
 		return
 
 	var projectile: Projectile = weapon.projectile_scene.instantiate()
-	var direction := -camera.global_transform.basis.z
-	direction.y = 0.0
-	direction = direction.normalized()
+	var direction := player_camera.get_aim_direction()
 	body.get_parent().add_child(projectile)
 	projectile.global_position = body.global_position + direction + Vector3.UP
 	projectile.setup(direction, weapon.damage, weapon.hit_effect_scene, weapon.projectile_speed)

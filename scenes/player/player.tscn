@@ -254,6 +254,7 @@ jump_strength = 4.0
 script = ExtResource("19_camera")
 camera_pitch_min = -20.0
 camera_pitch_max = -20.0
+combat_spring_offset = Vector3(1, 0, 0.1)
 
 [node name="PlayerAimAssist" type="Node" parent="." index="8" unique_id=2132243855]
 script = ExtResource("20_aim")

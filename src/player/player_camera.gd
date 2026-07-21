@@ -9,6 +9,7 @@ extends Node
 @export var combat_spring_offset: Vector3 = Vector3(0.6, 0.0, 1.0)
 @export var combat_spring_length: float = 1.2
 @export var camera_shift_speed: float = 5.0
+@export var aim_ray_length: float = 100.0
 
 @onready var body: CharacterBody3D = get_parent()
 @onready var spring_arm_pivot: Node3D = body.get_node("SpringArmPivot")
@@ -42,7 +43,18 @@ func get_yaw() -> float:
 
 
 ## Kierunek strzału spłaszczony do płaszczyzny XZ.
+## Używa promienia z kamery, aby trafić w to, co widzi celownik.
 func get_aim_direction() -> Vector3:
-	var direction := -camera.global_transform.basis.z
+	var ray_origin := camera.global_position
+	var ray_dir := -camera.global_transform.basis.z
+	var ray_end := ray_origin + ray_dir * aim_ray_length
+	var space_state := body.get_world_3d().direct_space_state
+	var query := PhysicsRayQueryParameters3D.create(ray_origin, ray_end, 1 | 4, [body.get_rid()])
+	var result := space_state.intersect_ray(query)
+	var target_pos := ray_end
+	if not result.is_empty():
+		target_pos = result["position"] as Vector3
+	var spawn_pos := body.global_position + Vector3.UP
+	var direction := target_pos - spawn_pos
 	direction.y = 0.0
 	return direction.normalized()
