@@ -6,7 +6,7 @@ extends Node
 @export var weapons: Array[WeaponResource] = []
 
 @onready var body: CharacterBody3D = get_parent()
-@onready var player_camera: PlayerCamera = body.get_node("PlayerCamera")
+@onready var aim_assist: PlayerAimAssist = body.get_node("PlayerAimAssist")
 
 var current_index := 0
 var ammo: Array[int] = []
@@ -83,7 +83,7 @@ func _shoot() -> void:
 		return
 
 	var projectile: Projectile = weapon.projectile_scene.instantiate()
-	var direction := player_camera.get_aim_direction()
+	var direction: Vector3 = aim_assist.get_aim_direction()
 	body.get_parent().add_child(projectile)
 	projectile.global_position = body.global_position + direction + Vector3.UP
 	projectile.setup(direction, weapon.damage, weapon.hit_effect_scene, weapon.projectile_speed)
