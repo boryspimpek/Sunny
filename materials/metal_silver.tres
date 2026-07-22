@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://r07u423vnku3"]
+
+[ext_resource type="Texture2D" uid="uid://b8blvjr117yn2" path="res://assets/textures/metal_01_1k/metal_01_1k/metal_01_color_1k.png" id="1_44rj7"]
+
+[resource]
+albedo_texture = ExtResource("1_44rj7")
+metallic = 0.9
+roughness = 0.28

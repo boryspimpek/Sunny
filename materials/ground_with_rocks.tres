@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dc34q3wspa0xm"]
+
+[ext_resource type="Texture2D" uid="uid://dhy3ybnf28jmu" path="res://assets/textures/ground_with_rocks_02_1k/ground_with_rocks_02_1k/ground_with_rocks_02_color_1k.png" id="1_e7ut1"]
+
+[resource]
+albedo_color = Color(0.24840015, 0.24840018, 0.24840015, 1)
+albedo_texture = ExtResource("1_e7ut1")
+uv1_scale = Vector3(0.085, 0.085, 0.085)
+uv1_triplanar = true

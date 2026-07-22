@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c2rat50ta1hri"]
+
+[ext_resource type="Texture2D" uid="uid://c8p64wdh8jfwg" path="res://assets/textures/cliff_rocks_01_1k/cliff_rocks_01_1k/cliff_rocks_01_color_1k.png" id="1_lh5a0"]
+
+[resource]
+albedo_color = Color(0.2629324, 0.26293248, 0.26293242, 1)
+albedo_texture = ExtResource("1_lh5a0")
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_offset = Vector3(2.055, -0.02, 0)
+uv1_triplanar = true

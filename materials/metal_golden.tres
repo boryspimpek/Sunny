@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://br7xlkotetnch"]
+
+[ext_resource type="Texture2D" uid="uid://d1lhqh8qe0eoe" path="res://assets/textures/metal_02_1k/metal_02_1k/metal_02_color_1k.png" id="1_kaok1"]
+
+[resource]
+albedo_texture = ExtResource("1_kaok1")
+metallic = 0.94
+roughness = 0.07
+uv1_scale = Vector3(0.085, 0.085, 0.085)
+uv1_triplanar = true

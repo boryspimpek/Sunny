@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://kduo0v7y15sg"]
+
+[ext_resource type="Texture2D" uid="uid://pp0po8vf5c" path="res://assets/textures/plaster_wall_01_1k/plaster_wall_01_basecolor_1k.png" id="1_7hf2u"]
+
+[resource]
+specular_mode = 1
+albedo_color = Color(0.581033, 0.58103293, 0.5810329, 1)
+albedo_texture = ExtResource("1_7hf2u")
+uv1_scale = Vector3(0.3, 0.3, 0.3)
+uv1_triplanar = true
