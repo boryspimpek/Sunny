@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://c517a47uvwujt"]
-
-[ext_resource type="PackedScene" uid="uid://d2i7c1rj4ow1b" path="res://assets/maps/inferno/Inferno_World_free.fbx" id="1_ttgb5"]
-
-[node name="Inferno_World_free" unique_id=642880765 instance=ExtResource("1_ttgb5")]
-
-[node name="ColumnBig_001_015" parent="." index="92" unique_id=196551151]
-transform = Transform3D(-0.7618263, -0.6477815, -2.9802322e-08, 2.9802322e-08, -1.1920929e-07, 1, -0.6477815, 0.7618263, 5.9604645e-08, 2.4472785, 14.339936, -10.859812)
