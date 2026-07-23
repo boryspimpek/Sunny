@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://cen0eoi1b8j31"]
+
+[ext_resource type="PackedScene" uid="uid://celtcugivxvaa" path="res://assets/maps/inferno/Separate_assets_fbx/ChestBig_001.fbx" id="1_axtiy"]
+
+[node name="ChestBig_001" unique_id=315768913 instance=ExtResource("1_axtiy")]

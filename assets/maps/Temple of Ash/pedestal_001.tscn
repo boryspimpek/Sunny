@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bbbq76tuij8ah"]
+
+[ext_resource type="PackedScene" uid="uid://ca1phtu4vy126" path="res://assets/maps/inferno/Separate_assets_fbx/Pedestal_001.fbx" id="1_fr0wj"]
+
+[node name="Pedestal_001" unique_id=249965450 instance=ExtResource("1_fr0wj")]

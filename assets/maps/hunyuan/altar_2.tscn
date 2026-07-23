@@ -6,8 +6,18 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cunku"]
 albedo_texture = ExtResource("2_60idf")
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ul32l"]
+height = 0.09900195
+radius = 0.4560547
+
 [node name="altar2" unique_id=205204710 instance=ExtResource("1_ul32l")]
 transform = Transform3D(30, 0, 0, 0, 10, 0, 0, 0, 30, 0, 0, 0)
 
 [node name="Mesh_0" parent="." index="0" unique_id=730381293]
 surface_material_override/0 = SubResource("StandardMaterial3D_cunku")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1733368065]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1758754270]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01782271, 0.049611047, 0.030161604)
+shape = SubResource("CylinderShape3D_ul32l")

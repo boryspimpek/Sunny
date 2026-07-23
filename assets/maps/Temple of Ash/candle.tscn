@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bvx6fwj5rk2do"]
+
+[ext_resource type="PackedScene" uid="uid://b7jpv44hutu2k" path="res://assets/maps/kenney/graveyard/candle.fbx" id="1_tnnwi"]
+
+[node name="candle" unique_id=309180674 instance=ExtResource("1_tnnwi")]

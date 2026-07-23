@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://vkbn613tvcv1"]
+
+[ext_resource type="PackedScene" uid="uid://bxcvdwxh654yw" path="res://assets/maps/inferno/Separate_assets_fbx/StatueKnight_002.fbx" id="1_ddoau"]
+
+[node name="StatueKnight_002" unique_id=2060018459 instance=ExtResource("1_ddoau")]

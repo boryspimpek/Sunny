@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bpuutv73ra1jt"]
+
+[ext_resource type="PackedScene" uid="uid://dhcr53hsryj38" path="res://assets/maps/kenney/graveyard/gravestone-decorative.fbx" id="1_uiuod"]
+
+[node name="gravestone-decorative" unique_id=424053565 instance=ExtResource("1_uiuod")]

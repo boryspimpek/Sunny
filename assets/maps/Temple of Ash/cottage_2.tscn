@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://wvqer57hey1n"]
+
+[ext_resource type="PackedScene" uid="uid://qxu37g1o3k2c" path="res://assets/maps/cottage/Cottage2.fbx" id="1_eh8bb"]
+[ext_resource type="Texture2D" uid="uid://dldo0vxdlhkt1" path="res://assets/maps/cottage/color_palette.png" id="2_gmerh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ulnvg"]
+albedo_texture = ExtResource("2_gmerh")
+
+[node name="Cottage2" unique_id=554659773 instance=ExtResource("1_eh8bb")]
+
+[node name="Circle_007" parent="." index="0" unique_id=363742839]
+surface_material_override/0 = SubResource("StandardMaterial3D_ulnvg")

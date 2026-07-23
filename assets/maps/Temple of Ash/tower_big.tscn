@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://crga44wpumx78"]
+
+[ext_resource type="PackedScene" uid="uid://5vap3p71y6w" path="res://assets/maps/inferno/Separate_assets_fbx/TowerBig_001.fbx" id="1_eomns"]
+[ext_resource type="Material" uid="uid://bck61ui1wf8j2" path="res://materials/inferno_base.tres" id="2_ln1ra"]
+[ext_resource type="Material" uid="uid://bqurh37aa44k7" path="res://materials/tower_window.tres" id="3_dofqe"]
+
+[node name="TowerBig_001" unique_id=1707520566 instance=ExtResource("1_eomns")]
+
+[node name="TowerBig_001" parent="." index="0" unique_id=229022507]
+surface_material_override/0 = ExtResource("2_ln1ra")
+surface_material_override/1 = ExtResource("3_dofqe")

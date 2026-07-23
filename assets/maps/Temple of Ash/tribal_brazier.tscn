@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://be3n8ttmojnse"]
+
+[ext_resource type="PackedScene" uid="uid://djq0bngrwjcs" path="res://assets/maps/inferno/Separate_assets_fbx/CirclePlatformSmall_001.fbx" id="1_43god"]
+[ext_resource type="PackedScene" uid="uid://tpf5mnfmowjg" path="res://assets/maps/inferno/Separate_assets_fbx/Bone_003.fbx" id="2_vc7md"]
+[ext_resource type="PackedScene" uid="uid://b5olk5rxpa43w" path="res://assets/maps/inferno/Separate_assets_fbx/Bone_004.fbx" id="3_c5kny"]
+[ext_resource type="PackedScene" uid="uid://dgrsosfr7jpgw" path="res://assets/maps/inferno/Separate_assets_fbx/Bone_006.fbx" id="4_mmjxe"]
+[ext_resource type="PackedScene" uid="uid://dhjhy4kw4ctiq" path="res://assets/maps/inferno/Separate_assets_fbx/BaseSmall_001.fbx" id="5_mmjxe"]
+[ext_resource type="PackedScene" uid="uid://cif63xilma0dx" path="res://assets/maps/inferno/Separate_assets_fbx/WellSmall_001.fbx" id="6_4hfyk"]
+[ext_resource type="PackedScene" uid="uid://dra0ivq7stx8c" path="res://assets/BinbunVFX_Vol2/FlameFX/effects/fire/vfx_basic_fire_01.tscn" id="7_0datn"]
+[ext_resource type="PackedScene" uid="uid://ci70qo2eqgpf1" path="res://assets/maps/inferno/Separate_assets_fbx/Mound_005.fbx" id="8_0datn"]
+[ext_resource type="PackedScene" uid="uid://bse4whvgh5nj8" path="res://assets/maps/inferno/Separate_assets_fbx/Mound_008.fbx" id="9_byonb"]
+
+[node name="TribalBrazier" type="Node3D" unique_id=1856360006]
+
+[node name="CirclePlatformSmall_001" parent="." unique_id=1180920856 instance=ExtResource("1_43god")]
+
+[node name="Bone_003" parent="." unique_id=2087644581 instance=ExtResource("2_vc7md")]
+transform = Transform3D(0.66614205, 0, 0.74582493, 0, 1, 0, -0.74582493, 0, 0.66614205, -5.806047, 0, 6.1263123)
+
+[node name="Bone_004" parent="." unique_id=357898958 instance=ExtResource("3_c5kny")]
+transform = Transform3D(0.8843529, 0, -0.46681887, 0, 1, 0, 0.46681887, 0, 0.8843529, -7.046139, 0, -5.2227955)
+
+[node name="Bone_006" parent="." unique_id=1082971680 instance=ExtResource("4_mmjxe")]
+transform = Transform3D(-0.7506417, 0, -0.6607095, 0, 1, 0, 0.6607095, 0, -0.7506417, 6.425252, 0.5415404, -5.08456)
+
+[node name="BaseSmall_001" parent="." unique_id=113261685 instance=ExtResource("5_mmjxe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4292169, 0)
+
+[node name="WellSmall_001" parent="." unique_id=977630617 instance=ExtResource("6_4hfyk")]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 5.2754545, 0)
+
+[node name="VFXBasicFire_01" parent="." unique_id=2052583828 instance=ExtResource("7_0datn")]
+transform = Transform3D(-0.40937385, 0, 0.91236687, -1.8626451e-09, 1, 0, -0.91236687, -1.4210855e-14, -0.40937385, 0, 6.8341026, -0.07610035)
+
+[node name="Mound_005" parent="." unique_id=984570628 instance=ExtResource("8_0datn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.902692, 0, 6.2735395)
+
+[node name="Mound_008" parent="." unique_id=141134894 instance=ExtResource("9_byonb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3275347, 0.11600304, -4.827276)
+
+[node name="Mound_009" parent="." unique_id=1637405967 instance=ExtResource("9_byonb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.2977767, -0.09157467, -4.8007765)

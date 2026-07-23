@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://b4da6tykmq8j8"]
+
+[ext_resource type="PackedScene" uid="uid://c1du42ymmwtme" path="res://assets/maps/tower/Biskupin_Tower.fbx" id="1_h5okv"]
+[ext_resource type="Texture2D" uid="uid://d23r7kuouvedh" path="res://assets/maps/tower/color_palette.png" id="2_04p8c"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1yv41"]
+albedo_texture = ExtResource("2_04p8c")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yfryu"]
+albedo_texture = ExtResource("2_04p8c")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o7coa"]
+albedo_texture = ExtResource("2_04p8c")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qtao3"]
+albedo_texture = ExtResource("2_04p8c")
+
+[node name="Biskupin_Tower" unique_id=1771876316 instance=ExtResource("1_h5okv")]
+
+[node name="LOD1_cords_and_ropes" parent="." index="0" unique_id=1338320714]
+surface_material_override/0 = SubResource("StandardMaterial3D_1yv41")
+
+[node name="LOD1_beams_and_sticks" parent="." index="1" unique_id=806271111]
+surface_material_override/0 = SubResource("StandardMaterial3D_yfryu")
+
+[node name="LOD1_thatch_no_opacity" parent="." index="2" unique_id=428102847]
+surface_material_override/0 = SubResource("StandardMaterial3D_o7coa")
+
+[node name="LOD1_boards_and_planks" parent="." index="3" unique_id=2099343402]
+surface_material_override/0 = SubResource("StandardMaterial3D_qtao3")

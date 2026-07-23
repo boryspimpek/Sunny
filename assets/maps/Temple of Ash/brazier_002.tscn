@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://h7lhtnv2ey8n"]
+
+[ext_resource type="PackedScene" uid="uid://b2rmmsr75ffgc" path="res://assets/maps/inferno/Separate_assets_fbx/Brazier_002.fbx" id="1_e1rui"]
+
+[node name="Brazier_002" unique_id=1854253402 instance=ExtResource("1_e1rui")]

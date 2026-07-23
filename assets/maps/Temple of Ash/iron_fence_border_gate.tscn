@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://w5ln785yrto4"]
+
+[ext_resource type="PackedScene" uid="uid://3wkcyivqxyr" path="res://assets/maps/kenney/graveyard/iron-fence-border-gate.fbx" id="1_hs1ru"]
+
+[node name="iron-fence-border-gate" unique_id=1247859624 instance=ExtResource("1_hs1ru")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)

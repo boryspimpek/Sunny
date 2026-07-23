@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://caj1524a23hfv"]
+
+[ext_resource type="PackedScene" uid="uid://dn3ks7tn42tmj" path="res://assets/maps/kenney/graveyard/crypt-large.fbx" id="1_6iqcj"]
+[ext_resource type="Texture2D" uid="uid://d18rgvaalbyh1" path="res://assets/textures/stone_bricks_wall_05_1k/stone_bricks_wall_05_color_1k.png" id="2_qx1o2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gimmd"]
+albedo_color = Color(0.38928655, 0.38928664, 0.38928658, 1)
+albedo_texture = ExtResource("2_qx1o2")
+uv1_scale = Vector3(0.9, 0.9, 0.9)
+uv1_triplanar = true
+
+[node name="crypt-large" unique_id=1368317219 instance=ExtResource("1_6iqcj")]
+transform = Transform3D(7.5, 0, 0, 0, 7.5, 0, 0, 0, 7.5, 0, 0, 0)
+
+[node name="crypt-large" parent="." index="0" unique_id=2050527656]
+surface_material_override/0 = SubResource("StandardMaterial3D_gimmd")

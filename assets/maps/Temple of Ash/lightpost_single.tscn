@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cxt0vrlf3iwdv"]
+
+[ext_resource type="PackedScene" uid="uid://ctb4thi88pw5o" path="res://assets/maps/kenney/graveyard/lightpost-single.fbx" id="1_wmqwq"]
+[ext_resource type="Material" uid="uid://cv6msef1hjp0w" path="res://materials/lantern.tres" id="2_p5nno"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_o4bst"]
+material = ExtResource("2_p5nno")
+size = Vector3(1, 1.28, 1)
+
+[node name="lightpost-single" unique_id=716717606 instance=ExtResource("1_wmqwq")]
+transform = Transform3D(3.8, 0, 0, 0, 3.8, 0, 0, 0, 3.8, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="lightpost-single" parent_id_path=PackedInt32Array(640100162) index="0" unique_id=951430582]
+transform = Transform3D(0.135, 0, -2.4532403e-08, 0, 0.135, 0, 2.4532403e-08, 0, 0.135, -0.0012187958, 1.0466044, 0.26122284)
+mesh = SubResource("BoxMesh_o4bst")

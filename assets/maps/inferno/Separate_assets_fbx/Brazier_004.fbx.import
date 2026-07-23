@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/Brazier_004.fbx-8e9d105d30c866d76de8a9294b7a4
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="MeshInstance3D"
 nodes/root_name=""
 nodes/root_script=null
 nodes/apply_root_scale=true

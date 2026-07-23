@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ba7fn4snledo0"]
+
+[ext_resource type="PackedScene" uid="uid://1kf8ofuw3ayk" path="res://assets/maps/inferno/Separate_assets_fbx/PlatformSmall_001.fbx" id="1_4cmko"]
+[ext_resource type="Material" uid="uid://3dwoe5630gk0" path="res://materials/cliff_rocks_05.tres" id="2_l3l27"]
+
+[node name="PlatformSmall_001" unique_id=1916809702 instance=ExtResource("1_4cmko")]
+
+[node name="PlatformSmall_001" parent="." index="0" unique_id=1930624985]
+transform = Transform3D(2.89, 0, 0, 0, -1.2632592e-07, 2.89, 0, -2.89, -1.2632592e-07, 0, 0, 0)
+surface_material_override/0 = ExtResource("2_l3l27")

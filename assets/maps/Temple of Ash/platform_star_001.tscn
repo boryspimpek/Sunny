@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dcrlepn38lijo"]
+
+[ext_resource type="PackedScene" uid="uid://d10vop132u067" path="res://assets/maps/inferno/Separate_assets_fbx/PlatformStar_001.fbx" id="1_kdmeu"]
+
+[node name="PlatformStar_001" unique_id=2049024821 instance=ExtResource("1_kdmeu")]

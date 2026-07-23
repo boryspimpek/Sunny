@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bahmisjpnmwnl"]
+
+[ext_resource type="PackedScene" uid="uid://dp444i7wkepc4" path="res://assets/maps/inferno/Separate_assets_fbx/PlatformSmall_003.fbx" id="1_apxpy"]
+[ext_resource type="Material" uid="uid://dycf6oj0bwgyv" path="res://materials/desert_rocks_01.tres" id="2_ocibh"]
+
+[node name="PlatformSmall_003" unique_id=1047983528 instance=ExtResource("1_apxpy")]
+transform = Transform3D(2.89, 0, 0, 0, 2.89, 0, 0, 0, 2.89, 0, 0, 0)
+
+[node name="PlatformSmall_003" parent="." index="0" unique_id=1526489862]
+surface_material_override/0 = ExtResource("2_ocibh")

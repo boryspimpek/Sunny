@@ -77,7 +77,7 @@ color_ramp = SubResource("GradientTexture1D_dj6rn")
 alpha_curve = SubResource("CurveTexture_0wteg")
 
 [sub_resource type="QuadMesh" id="QuadMesh_wbfbh"]
-size = Vector2(0.21, 0.3)
+size = Vector2(0.085, 0.095)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_f13ep"]
 render_priority = 0
@@ -88,7 +88,7 @@ shader_parameter/emission = 6.0
 shader_parameter/noise_texture = SubResource("NoiseTexture2D_blc7y")
 shader_parameter/noise_scale = Vector2(1, 1)
 shader_parameter/noise_scroll = Vector2(0, 1)
-shader_parameter/flame_scale = Vector2(0.21, 0.3)
+shader_parameter/flame_scale = Vector2(0.085, 0.095)
 shader_parameter/edge_hardness = 0.9
 shader_parameter/edge_position = 0.2
 shader_parameter/proximity_fade = true
@@ -187,14 +187,14 @@ _data = {
 }
 
 [node name="VFXBasicFire_01" type="Node3D" unique_id=2052583828]
-transform = Transform3D(-0.40937388, 0, 0.91236687, 0, 1, 0, -0.91236687, 0, -0.40937388, 0, 0, 0)
+transform = Transform3D(-0.40937382, 0, 0.91236675, 0, 1, 0, -0.91236675, 0, -0.40937382, 0, 0, 0)
 script = ExtResource("1_o2kce")
 primary_color = Color(0.5781947, 0.57819486, 0, 1)
 secondary_color = Color(1, 0, 0, 1)
 light_color = Color(0.7223417, 0.7223419, 3.85046e-07, 1)
 light_energy = 0.86
 noise_texture = SubResource("NoiseTexture2D_blc7y")
-flame_scale = Vector2(0.215, 1)
+flame_scale = Vector2(0.085, 0.095)
 proximity_fade = true
 proximity_fade_distance = 0.2
 

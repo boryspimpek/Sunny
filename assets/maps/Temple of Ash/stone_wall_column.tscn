@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://4wbtcvas5srm"]
+
+[ext_resource type="PackedScene" uid="uid://cwqwiioddn22" path="res://assets/maps/kenney/graveyard/stone-wall-column.fbx" id="1_naeug"]
+
+[node name="stone-wall-column" unique_id=2104597989 instance=ExtResource("1_naeug")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)

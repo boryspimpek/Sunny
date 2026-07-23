@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://cb8t7lybrl872"]
+
+[ext_resource type="PackedScene" uid="uid://dsprvky4eu32i" path="res://assets/maps/kenney/graveyard/gravestone-roof.fbx" id="1_v7557"]
+
+[node name="gravestone-roof" unique_id=1819833709 instance=ExtResource("1_v7557")]

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cybaktmmtukpa"]
+
+[ext_resource type="PackedScene" uid="uid://bh78iiurm44p1" path="res://assets/maps/kenney/graveyard/shovel.fbx" id="1_hge2i"]
+
+[node name="shovel" unique_id=696956943 instance=ExtResource("1_hge2i")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)

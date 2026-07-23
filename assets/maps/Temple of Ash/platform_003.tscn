@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dmc1owc44wu2u"]
+
+[ext_resource type="PackedScene" uid="uid://dyynpwvuejv4w" path="res://assets/maps/inferno/Separate_assets_fbx/Platform_003.fbx" id="1_8xw38"]
+[ext_resource type="Material" uid="uid://dycf6oj0bwgyv" path="res://materials/desert_rocks_01.tres" id="2_gstpl"]
+
+[node name="Platform_003" unique_id=750618990 instance=ExtResource("1_8xw38")]
+
+[node name="Platform_003" parent="." index="0" unique_id=330465811]
+surface_material_override/0 = ExtResource("2_gstpl")

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bkho2rp3e13lo"]
+
+[ext_resource type="PackedScene" uid="uid://ba2kjg206hov7" path="res://assets/maps/kenney/graveyard/column-large.fbx" id="1_7ab8n"]
+
+[node name="column-large" unique_id=181348429 instance=ExtResource("1_7ab8n")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)

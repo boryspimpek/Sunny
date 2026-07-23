@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cs2qi0m4b6rwu"]
+
+[ext_resource type="PackedScene" uid="uid://bbbq76tuij8ah" path="res://assets/maps/Temple of Ash/pedestal_001.tscn" id="1_m61kq"]
+[ext_resource type="PackedScene" uid="uid://h7lhtnv2ey8n" path="res://assets/maps/Temple of Ash/brazier_002.tscn" id="2_nqi7r"]
+[ext_resource type="PackedScene" uid="uid://dra0ivq7stx8c" path="res://assets/BinbunVFX_Vol2/FlameFX/effects/fire/vfx_basic_fire_01.tscn" id="3_nqi7r"]
+
+[node name="BrazierBig" type="Node3D" unique_id=1116518330]
+
+[node name="Pedestal_001" parent="." unique_id=249965450 instance=ExtResource("1_m61kq")]
+
+[node name="Brazier_002" parent="." unique_id=1854253402 instance=ExtResource("2_nqi7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1243117, 0)
+
+[node name="VFXBasicFire_01" parent="." unique_id=2052583828 instance=ExtResource("3_nqi7r")]
+transform = Transform3D(-0.40937388, 0, 0.91236687, 0, 1, 0, -0.91236687, 0, -0.40937388, 0, 3.5379925, 0)

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c3xc8n0ni0pls"]
+
+[ext_resource type="PackedScene" uid="uid://cycmty3nesssa" path="res://assets/maps/kenney/graveyard/cross.fbx" id="1_aon34"]
+
+[node name="cross" unique_id=215693859 instance=ExtResource("1_aon34")]
+transform = Transform3D(3.65, 0, 0, 0, 3.65, 0, 0, 0, 3.65, 0, 0, 0)

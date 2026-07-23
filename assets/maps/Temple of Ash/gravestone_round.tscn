@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dige08354igku"]
+
+[ext_resource type="PackedScene" uid="uid://cjqa1877h58gx" path="res://assets/maps/kenney/graveyard/gravestone-round.fbx" id="1_kml2q"]
+
+[node name="gravestone-round" unique_id=1937232778 instance=ExtResource("1_kml2q")]

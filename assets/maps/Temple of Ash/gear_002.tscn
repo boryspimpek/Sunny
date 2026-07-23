@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://7dwvj6yjiimd"]
+
+[ext_resource type="PackedScene" uid="uid://bofs1ul1wk2io" path="res://assets/maps/inferno/Separate_assets_fbx/Gear_002.fbx" id="1_byi0k"]
+[ext_resource type="Material" uid="uid://r07u423vnku3" path="res://materials/metal_silver.tres" id="2_ypwxs"]
+
+[node name="Gear_002" unique_id=2109739882 instance=ExtResource("1_byi0k")]
+
+[node name="Gear_002" parent="." index="0" unique_id=961371358]
+surface_material_override/0 = ExtResource("2_ypwxs")

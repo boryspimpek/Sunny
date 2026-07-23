@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ds43fdopnabh1"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wa8h5"]
+load_path = "res://.godot/imported/lava_rocks_01_color_1k.png-23c8f5779acb6f14b19b2d174013762f.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c3wb8"]
+albedo_texture = SubResource("CompressedTexture2D_wa8h5")
+uv1_scale = Vector3(0.01, 0.01, 0.01)
+uv1_triplanar = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_p8h0p"]
+material = SubResource("StandardMaterial3D_c3wb8")
+size = Vector2(500, 500)
+
+[node name="lava2" type="Node3D" unique_id=278022073]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1010613144]
+mesh = SubResource("PlaneMesh_p8h0p")
