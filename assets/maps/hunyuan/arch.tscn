@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://53im2ki8qgts"]
+
+[ext_resource type="PackedScene" uid="uid://bo27cvjyfhv85" path="res://assets/maps/hunyuan/20260723035627_52fec395.fbx" id="1_kpqs4"]
+[ext_resource type="Texture2D" uid="uid://dywber2brukh8" path="res://assets/maps/hunyuan/20260723035627_52fec395_0.png" id="2_7uoqf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4reyn"]
+albedo_texture = ExtResource("2_7uoqf")
+
+[node name="arch" unique_id=607692328 instance=ExtResource("1_kpqs4")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
+
+[node name="Mesh_0" parent="." index="0" unique_id=281024812]
+surface_material_override/0 = SubResource("StandardMaterial3D_4reyn")

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://0uegyc3dimo7"]
+
+[ext_resource type="PackedScene" uid="uid://dp06b65e4d6ay" path="res://assets/maps/hunyuan/20260723031253_6297d3de.fbx" id="1_2skfq"]
+[ext_resource type="Texture2D" uid="uid://b5t2tnadf6bxp" path="res://assets/maps/hunyuan/20260723031253_6297d3de_0.png" id="2_vpwdo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8adve"]
+albedo_texture = ExtResource("2_vpwdo")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vpwdo"]
+size = Vector3(0.7219238, 0.14135742, 0.45324707)
+
+[node name="altar" unique_id=1885183151 instance=ExtResource("1_2skfq")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+
+[node name="Mesh_0" parent="." index="0" unique_id=169392615]
+surface_material_override/0 = SubResource("StandardMaterial3D_8adve")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=955888144]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0040283203, 0.072143555, -0.006286621)
+shape = SubResource("BoxShape3D_vpwdo")

@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://wn347d7uy3qp"]
+
+[ext_resource type="Texture2D" uid="uid://cdf7pcbwaj14k" path="res://assets/maps/hunyuan/20260723031912_c4d53b89_0.png" id="1_3vkus"]
+
+[resource]
+albedo_texture = ExtResource("1_3vkus")

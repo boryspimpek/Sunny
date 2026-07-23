@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cw6aqhi13ja5"]
+
+[ext_resource type="PackedScene" uid="uid://dybwqt047dimi" path="res://assets/maps/hunyuan/20260723035921_190975f3.fbx" id="1_v6f8i"]
+[ext_resource type="Texture2D" uid="uid://rnveo0qddh0y" path="res://assets/maps/hunyuan/20260723035921_190975f3_0.png" id="2_et8y8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r6vra"]
+albedo_texture = ExtResource("2_et8y8")
+
+[node name="banner" unique_id=2096632405 instance=ExtResource("1_v6f8i")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+
+[node name="Mesh_0" parent="." index="0" unique_id=455443428]
+surface_material_override/0 = SubResource("StandardMaterial3D_r6vra")

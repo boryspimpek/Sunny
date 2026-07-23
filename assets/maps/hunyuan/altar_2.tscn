@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://e55e60dqkyq6"]
+
+[ext_resource type="PackedScene" uid="uid://c8k7ywv66x34r" path="res://assets/maps/hunyuan/20260723035050_63e6485a.fbx" id="1_ul32l"]
+[ext_resource type="Texture2D" uid="uid://duin4viay7gc4" path="res://assets/maps/hunyuan/20260723035050_63e6485a_0.png" id="2_60idf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cunku"]
+albedo_texture = ExtResource("2_60idf")
+
+[node name="altar2" unique_id=205204710 instance=ExtResource("1_ul32l")]
+transform = Transform3D(30, 0, 0, 0, 10, 0, 0, 0, 30, 0, 0, 0)
+
+[node name="Mesh_0" parent="." index="0" unique_id=730381293]
+surface_material_override/0 = SubResource("StandardMaterial3D_cunku")

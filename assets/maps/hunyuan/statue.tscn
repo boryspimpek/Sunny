@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cgvgyinc6jkyp"]
+
+[ext_resource type="PackedScene" uid="uid://d30dswud7vcmh" path="res://assets/maps/hunyuan/20260723031912_c4d53b89.fbx" id="1_ctked"]
+[ext_resource type="Material" uid="uid://wn347d7uy3qp" path="res://materials/statue.tres" id="2_of4g7"]
+
+[node name="statue" unique_id=492040996 instance=ExtResource("1_ctked")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+
+[node name="Mesh_0" parent="." index="0" unique_id=2033306900]
+surface_material_override/0 = ExtResource("2_of4g7")
