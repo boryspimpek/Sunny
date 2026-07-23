@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://81xht8dpghwx"]
+
+[ext_resource type="PackedScene" uid="uid://bahmisjpnmwnl" path="res://assets/maps/Temple of Ash/platform_small_003.tscn" id="1_om11g"]
+[ext_resource type="PackedScene" uid="uid://ba7fn4snledo0" path="res://assets/maps/Temple of Ash/platform_small_001.tscn" id="2_u1ydv"]
+[ext_resource type="PackedScene" uid="uid://ds43fdopnabh1" path="res://assets/maps/Temple of Ash/lava_2.tscn" id="3_w3476"]
+
+[node name="Ground" type="Node3D" unique_id=1694446182]
+
+[node name="platform_010" parent="." unique_id=1047983528 instance=ExtResource("1_om11g")]
+transform = Transform3D(-4.9336834, 0, 4.845163, 0, 6.515, 0, -5.4884577, 0, -4.3554125, -8.024956, -69.8951, -27.451283)
+
+[node name="platform_011" parent="." unique_id=1333685073 instance=ExtResource("1_om11g")]
+transform = Transform3D(3.810187, 0, -1.7855327, 0, 4.034999, 0, 1.3280413, 0, 5.1227436, 89.00711, -37.725937, 25.797451)
+
+[node name="platform_012" parent="." unique_id=1298674236 instance=ExtResource("1_om11g")]
+transform = Transform3D(1.0950617, 0, 0.43959033, 0, 1.18, 0, -0.43959033, 0, 1.0950617, 12.699951, -5.7524757, 80.03525)
+
+[node name="PlatformSmall_001" parent="." unique_id=1916809702 instance=ExtResource("2_u1ydv")]
+transform = Transform3D(0.5424122, 0, 0.84011257, 0, 1, 0, -0.84011257, 0, 0.5424122, 44.34198, -10.428934, 114.50187)
+
+[node name="PlatformSmall_002" parent="." unique_id=574112035 instance=ExtResource("2_u1ydv")]
+transform = Transform3D(0.85468537, 0, 0.51914626, 0, 1, 0, -0.51914626, 0, 0.85468537, 17.306868, -6.8767204, 82.88051)
+
+[node name="PlatformSmall_005" parent="." unique_id=1898817321 instance=ExtResource("2_u1ydv")]
+transform = Transform3D(-0.37948856, 0, 0.9251964, 0, 1, 0, -0.9251964, 0, -0.37948856, -55.01292, 1.2249451, 79.31605)
+
+[node name="PlatformSmall_003" parent="." unique_id=1847269476 instance=ExtResource("2_u1ydv")]
+transform = Transform3D(1.3331778, 0, -1.1259046, 0, 1.7450002, 0, 1.1259046, 0, 1.3331778, 70.82087, -16.52493, -86.087326)
+
+[node name="PlatformSmall_004" parent="." unique_id=1481849059 instance=ExtResource("2_u1ydv")]
+transform = Transform3D(0.014862031, 0, 1.7449366, 0, 1.7450005, 0, -1.7449366, 0, 0.014862031, -79.74358, -8.300488, 13.049568)
+
+[node name="lava2" parent="." unique_id=278022073 instance=ExtResource("3_w3476")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.64624, 0, -7.5626755)
+visible = false

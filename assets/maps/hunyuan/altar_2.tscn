@@ -6,18 +6,348 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cunku"]
 albedo_texture = ExtResource("2_60idf")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ul32l"]
+size = Vector3(0.2566223, 0.080444336, 0.03540039)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_60idf"]
+size = Vector3(0.21737671, 0.09295654, 0.52008057)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cunku"]
+size = Vector3(0.24816895, 0.07376099, 0.12615967)
+
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_ul32l"]
-height = 0.09900195
-radius = 0.4560547
+height = 0.09371948
+radius = 0.25146484
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yyc0q"]
+size = Vector3(0.15753174, 0.19543457, 0.14196777)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pkccm"]
+size = Vector3(0.18338776, 0.15131378, 0.18363953)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5jr4y"]
+size = Vector3(0.117263794, 0.35231018, 0.10177612)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_60idf"]
+height = 0.08898926
+radius = 0.119140625
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_cunku"]
+height = 0.08898926
+radius = 0.071777344
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yqqvb"]
+size = Vector3(0.46997833, 0.09703064, 0.10710907)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jlqpl"]
+size = Vector3(0.092163086, 0.095588684, 0.11364746)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ybdfc"]
+size = Vector3(0.092163086, 0.095588684, 0.11364746)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qh7ti"]
+size = Vector3(0.14328003, 0.03414917, 0.11987305)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_77vga"]
+size = Vector3(0.14292908, 0.03414917, 0.13006592)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fq7tq"]
+size = Vector3(0.1543231, 0.08981323, 0.26794434)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qo44k"]
+size = Vector3(0.1649301, 0.08981323, 0.26794434)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_neo0w"]
+size = Vector3(0.10785568, 0.08981323, 0.15740967)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v87yn"]
+size = Vector3(0.10785568, 0.08981323, 0.15740967)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_crsvx"]
+size = Vector3(0.109306335, 0.14840698, 0.09588623)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2i6dr"]
+size = Vector3(0.11820793, 0.12974548, 0.10671234)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ul32l"]
+albedo_color = Color(0, 2.5537615, 5.4700704, 1)
+emission_enabled = true
+emission = Color(0, 0.44313726, 1, 1)
+emission_energy_multiplier = 5.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_60idf"]
+material = SubResource("StandardMaterial3D_ul32l")
+top_radius = 0.002
+bottom_radius = 0.002
+height = 100.0
 
 [node name="altar2" unique_id=205204710 instance=ExtResource("1_ul32l")]
 transform = Transform3D(30, 0, 0, 0, 10, 0, 0, 0, 30, 0, 0, 0)
 
-[node name="Mesh_0" parent="." index="0" unique_id=730381293]
+[node name="Mesh_0" parent="." index="0" unique_id=949827115]
 surface_material_override/0 = SubResource("StandardMaterial3D_cunku")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1733368065]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1758754270]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01782271, 0.049611047, 0.030161604)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1554085477]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.022262618, -0.023319626, 0.47568107)
+shape = SubResource("BoxShape3D_ul32l")
+debug_color = Color(1, 0, 0, 1)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1" unique_id=1143355317]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.020568892, -0.0023601532, 0.44254717)
+shape = SubResource("BoxShape3D_ul32l")
+debug_color = Color(1, 0, 0, 1)
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" index="2" unique_id=1630440864]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.020568892, 0.018654251, 0.40140447)
+shape = SubResource("BoxShape3D_ul32l")
+debug_color = Color(1, 0, 0, 1)
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D" index="3" unique_id=1203967162]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.020568892, 0.041524123, 0.36997548)
+shape = SubResource("BoxShape3D_ul32l")
+debug_color = Color(1, 0, 0, 1)
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D" index="4" unique_id=1047545229]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.020568892, 0.06130562, 0.32692948)
+shape = SubResource("BoxShape3D_ul32l")
+debug_color = Color(1, 0, 0, 1)
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="StaticBody3D" index="5" unique_id=757578650]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.039779697, 0.0552063, 0.04562375)
+shape = SubResource("BoxShape3D_60idf")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="StaticBody3D" index="6" unique_id=1336878891]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.026123092, 0.04307556, -0.27548245)
+shape = SubResource("BoxShape3D_cunku")
+debug_color = Color(0, 1, 0, 1)
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="StaticBody3D" index="7" unique_id=356169430]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.026123092, 0.018014526, -0.29200262)
+shape = SubResource("BoxShape3D_cunku")
+debug_color = Color(0, 1, 0, 1)
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="StaticBody3D" index="8" unique_id=360244013]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.035461474, -0.0026275634, -0.31742987)
+shape = SubResource("BoxShape3D_cunku")
+debug_color = Color(0, 1, 0, 1)
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="StaticBody3D" index="9" unique_id=424429334]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.029029474, 0.054367065, 0.039078206)
 shape = SubResource("CylinderShape3D_ul32l")
+debug_color = Color(0, 1, 0.36862746, 1)
+
+[node name="CollisionShape3D11" type="CollisionShape3D" parent="StaticBody3D" index="10" unique_id=1274340524]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2909625, 0.101501465, 0.04132449)
+shape = SubResource("BoxShape3D_yyc0q")
+debug_color = Color(1, 0, 0, 1)
+
+[node name="CollisionShape3D13" type="CollisionShape3D" parent="StaticBody3D" index="11" unique_id=26459391]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2995341, 0.054973602, 0.041927252)
+shape = SubResource("BoxShape3D_pkccm")
+debug_color = Color(1, 0, 0, 1)
+
+[node name="CollisionShape3D12" type="CollisionShape3D" parent="StaticBody3D" index="12" unique_id=1887050519]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2895358, 0.37035066, 0.039966498)
+shape = SubResource("BoxShape3D_5jr4y")
+debug_color = Color(1, 0, 0, 1)
+
+[node name="CollisionShape3D14" type="CollisionShape3D" parent="StaticBody3D" index="13" unique_id=77463797]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28657588, 0.056325354, 0.18245424)
+shape = SubResource("CylinderShape3D_60idf")
+debug_color = Color(1, 0, 1, 1)
+
+[node name="CollisionShape3D15" type="CollisionShape3D" parent="StaticBody3D" index="14" unique_id=402421178]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2161174, 0.056325354, 0.26661298)
+shape = SubResource("CylinderShape3D_60idf")
+debug_color = Color(1, 0, 1, 1)
+
+[node name="CollisionShape3D38" type="CollisionShape3D" parent="StaticBody3D" index="15" unique_id=1099717922]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19958529, 0.056325354, 0.33238372)
+shape = SubResource("CylinderShape3D_cunku")
+debug_color = Color(1, 0, 1, 1)
+
+[node name="CollisionShape3D39" type="CollisionShape3D" parent="StaticBody3D" index="16" unique_id=1879548066]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22157589, 0.056325354, 0.33677655)
+shape = SubResource("CylinderShape3D_cunku")
+debug_color = Color(1, 0, 1, 1)
+
+[node name="CollisionShape3D16" type="CollisionShape3D" parent="StaticBody3D" index="17" unique_id=1464323358]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25330386, 0.056325354, 0.22616464)
+shape = SubResource("CylinderShape3D_60idf")
+debug_color = Color(1, 0, 1, 1)
+
+[node name="CollisionShape3D17" type="CollisionShape3D" parent="StaticBody3D" index="18" unique_id=836466707]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.31071448, 0.056325354, 0.10286229)
+shape = SubResource("CylinderShape3D_60idf")
+debug_color = Color(1, 0, 1, 1)
+
+[node name="CollisionShape3D18" type="CollisionShape3D" parent="StaticBody3D" index="19" unique_id=2135652234]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.31267163, 0.056325354, 0.017398752)
+shape = SubResource("CylinderShape3D_60idf")
+debug_color = Color(1, 0, 1, 1)
+
+[node name="CollisionShape3D19" type="CollisionShape3D" parent="StaticBody3D" index="20" unique_id=419753328]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2976667, 0.056325354, -0.081112675)
+shape = SubResource("CylinderShape3D_60idf")
+debug_color = Color(1, 0, 1, 1)
+
+[node name="CollisionShape3D32" type="CollisionShape3D" parent="StaticBody3D" index="21" unique_id=344521038]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.27418056, 0.056325354, -0.12090867)
+shape = SubResource("CylinderShape3D_60idf")
+debug_color = Color(1, 0, 1, 1)
+
+[node name="CollisionShape3D33" type="CollisionShape3D" parent="StaticBody3D" index="22" unique_id=1336239098]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.31201944, 0.056325354, -0.042621464)
+shape = SubResource("CylinderShape3D_60idf")
+debug_color = Color(1, 0, 1, 1)
+
+[node name="CollisionShape3D34" type="CollisionShape3D" parent="StaticBody3D" index="23" unique_id=1189120818]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3022335, 0.056325354, 0.13221999)
+shape = SubResource("CylinderShape3D_60idf")
+debug_color = Color(1, 0, 1, 1)
+
+[node name="CollisionShape3D35" type="CollisionShape3D" parent="StaticBody3D" index="24" unique_id=1942316539]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.31201947, 0.056325354, 0.053932797)
+shape = SubResource("CylinderShape3D_60idf")
+debug_color = Color(1, 0, 1, 1)
+
+[node name="CollisionShape3D20" type="CollisionShape3D" parent="StaticBody3D" index="25" unique_id=582340781]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24808478, 0.056325354, -0.15548551)
+shape = SubResource("CylinderShape3D_60idf")
+debug_color = Color(1, 0, 1, 1)
+
+[node name="CollisionShape3D49" type="CollisionShape3D" parent="StaticBody3D" index="26" unique_id=193287405]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.20256808, 0.056325354, -0.1979436)
+shape = SubResource("CylinderShape3D_60idf")
+debug_color = Color(1, 0, 1, 1)
+
+[node name="CollisionShape3D50" type="CollisionShape3D" parent="StaticBody3D" index="27" unique_id=1585959399]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22204554, 0.056325354, -0.18327601)
+shape = SubResource("CylinderShape3D_60idf")
+debug_color = Color(1, 0, 1, 1)
+
+[node name="CollisionShape3D51" type="CollisionShape3D" parent="StaticBody3D" index="28" unique_id=2045045870]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24188027, 0.056325354, -0.2043636)
+shape = SubResource("CylinderShape3D_60idf")
+debug_color = Color(1, 0, 1, 1)
+
+[node name="CollisionShape3D52" type="CollisionShape3D" parent="StaticBody3D" index="29" unique_id=1072493285]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26680198, 0.056325354, -0.1851931)
+shape = SubResource("CylinderShape3D_60idf")
+debug_color = Color(1, 0, 1, 1)
+
+[node name="CollisionShape3D21" type="CollisionShape3D" parent="StaticBody3D" index="30" unique_id=1448919512]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24251512, 0.056325354, 0.26726547)
+shape = SubResource("CylinderShape3D_60idf")
+debug_color = Color(1, 0, 1, 1)
+
+[node name="CollisionShape3D22" type="CollisionShape3D" parent="StaticBody3D" index="31" unique_id=675899227]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.30253533, 0.056325354, 0.21311678)
+shape = SubResource("CylinderShape3D_60idf")
+debug_color = Color(1, 0, 1, 1)
+
+[node name="CollisionShape3D23" type="CollisionShape3D" parent="StaticBody3D" index="32" unique_id=1765699943]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.33319786, 0.056325354, 0.15831576)
+shape = SubResource("CylinderShape3D_60idf")
+debug_color = Color(1, 0, 1, 1)
+
+[node name="CollisionShape3D24" type="CollisionShape3D" parent="StaticBody3D" index="33" unique_id=1538595804]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.34167898, 0.056325354, 0.04479929)
+shape = SubResource("CylinderShape3D_60idf")
+debug_color = Color(1, 0, 1, 1)
+
+[node name="CollisionShape3D25" type="CollisionShape3D" parent="StaticBody3D" index="34" unique_id=1673443896]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.34037426, 0.056325354, -0.061540842)
+shape = SubResource("CylinderShape3D_60idf")
+debug_color = Color(1, 0, 1, 1)
+
+[node name="CollisionShape3D26" type="CollisionShape3D" parent="StaticBody3D" index="35" unique_id=1693287987]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.29079235, 0.056325354, -0.15679033)
+shape = SubResource("CylinderShape3D_60idf")
+debug_color = Color(1, 0, 1, 1)
+
+[node name="CollisionShape3D27" type="CollisionShape3D" parent="StaticBody3D" index="36" unique_id=1411236030]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32536918, 0.056325354, -0.10655602)
+shape = SubResource("CylinderShape3D_60idf")
+debug_color = Color(1, 0, 1, 1)
+
+[node name="CollisionShape3D28" type="CollisionShape3D" parent="StaticBody3D" index="37" unique_id=409919420]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3462459, 0.05706787, -0.014568539)
+shape = SubResource("CylinderShape3D_60idf")
+debug_color = Color(1, 0, 1, 1)
+
+[node name="CollisionShape3D29" type="CollisionShape3D" parent="StaticBody3D" index="38" unique_id=943140545]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.34233153, 0.056325354, 0.10677664)
+shape = SubResource("CylinderShape3D_60idf")
+debug_color = Color(1, 0, 1, 1)
+
+[node name="CollisionShape3D30" type="CollisionShape3D" parent="StaticBody3D" index="39" unique_id=206632646]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.27774456, 0.056325354, 0.24377926)
+shape = SubResource("CylinderShape3D_60idf")
+debug_color = Color(1, 0, 1, 1)
+
+[node name="CollisionShape3D31" type="CollisionShape3D" parent="StaticBody3D" index="40" unique_id=115188153]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.31623578, 0.056325354, 0.19354495)
+shape = SubResource("CylinderShape3D_60idf")
+debug_color = Color(1, 0, 1, 1)
+
+[node name="CollisionShape3D36" type="CollisionShape3D" parent="StaticBody3D" index="41" unique_id=449023943]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.024204127, 0.053199768, 0.29125622)
+shape = SubResource("BoxShape3D_yqqvb")
+
+[node name="CollisionShape3D37" type="CollisionShape3D" parent="StaticBody3D" index="42" unique_id=1369563722]
+transform = Transform3D(0.9871001, 0, -0.16010536, 0, 1, 0, 0.16010536, 0, 0.9871001, -0.15262267, 0.05262375, 0.35727668)
+shape = SubResource("BoxShape3D_jlqpl")
+debug_color = Color(0.827451, 0.39607844, 0, 1)
+
+[node name="CollisionShape3D40" type="CollisionShape3D" parent="StaticBody3D" index="43" unique_id=1603255418]
+transform = Transform3D(0.9909087, 0, 0.13453954, 0, 1, 0, -0.13453954, 0, 0.9909087, 0.19220452, 0.05262375, 0.3551002)
+shape = SubResource("BoxShape3D_ybdfc")
+debug_color = Color(0.827451, 0.39607844, 0, 1)
+
+[node name="CollisionShape3D41" type="CollisionShape3D" parent="StaticBody3D" index="44" unique_id=1922859526]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13978593, 0.115859985, -0.34753445)
+shape = SubResource("BoxShape3D_qh7ti")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="CollisionShape3D44" type="CollisionShape3D" parent="StaticBody3D" index="45" unique_id=369186219]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.20202698, 0.115859985, -0.33621243)
+shape = SubResource("BoxShape3D_77vga")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="CollisionShape3D43" type="CollisionShape3D" parent="StaticBody3D" index="46" unique_id=2098477446]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14604916, 0.054855347, -0.2734988)
+shape = SubResource("BoxShape3D_fq7tq")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="CollisionShape3D45" type="CollisionShape3D" parent="StaticBody3D" index="47" unique_id=1507913135]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19450168, 0.054855347, -0.2734988)
+shape = SubResource("BoxShape3D_qo44k")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="CollisionShape3D47" type="CollisionShape3D" parent="StaticBody3D" index="48" unique_id=65777366]
+transform = Transform3D(0.75937414, 0, 0.6506555, 0, 1, 0, -0.6506555, 0, 0.75937414, 0.2821156, -0.014047242, -0.26630133)
+shape = SubResource("BoxShape3D_neo0w")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="CollisionShape3D48" type="CollisionShape3D" parent="StaticBody3D" index="49" unique_id=2054371418]
+transform = Transform3D(0.7353296, 0, -0.67771125, 0, 1, 0, 0.67771125, 0, 0.7353296, -0.23438954, -0.010037231, -0.26834986)
+shape = SubResource("BoxShape3D_v87yn")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="CollisionShape3D42" type="CollisionShape3D" parent="StaticBody3D" index="50" unique_id=219191371]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14121644, 0.20462953, -0.34939602)
+shape = SubResource("BoxShape3D_crsvx")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="CollisionShape3D46" type="CollisionShape3D" parent="StaticBody3D" index="51" unique_id=192521673]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.20126855, 0.19529878, -0.33676556)
+shape = SubResource("BoxShape3D_2i6dr")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="2" unique_id=1554025930]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.021083033, 50.076656, 0.040266834)
+mesh = SubResource("CylinderMesh_60idf")

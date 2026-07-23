@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/20260723051617_56f9ccd5.fbx-400caccfed8ec6020
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="MeshInstance3D"
 nodes/root_name=""
 nodes/root_script=null
 nodes/apply_root_scale=true

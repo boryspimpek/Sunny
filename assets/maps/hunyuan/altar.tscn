@@ -7,7 +7,7 @@
 albedo_texture = ExtResource("2_vpwdo")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vpwdo"]
-size = Vector3(0.7219238, 0.14929199, 0.42791748)
+size = Vector3(0.7219238, 0.14929199, 0.44137573)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8adve"]
 size = Vector3(0.33294678, 0.06829834, 0.22270203)
@@ -15,17 +15,20 @@ size = Vector3(0.33294678, 0.06829834, 0.22270203)
 [sub_resource type="BoxShape3D" id="BoxShape3D_3tnr1"]
 size = Vector3(0.24375916, 0.45114136, 0.08131027)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_bvbrx"]
+size = Vector3(0.3143921, 0.11156845, 0.27642822)
+
 [node name="altar" unique_id=1885183151 instance=ExtResource("1_2skfq")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 
-[node name="Mesh_0" parent="." index="0" unique_id=169392615]
+[node name="Mesh_0" parent="." index="0" unique_id=8443571]
 surface_material_override/0 = SubResource("StandardMaterial3D_8adve")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1457929275]
 transform = Transform3D(1, 0, 0, 0, 1, 7.5497894e-08, 0, -7.5497894e-08, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=955888144]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.074035645, -0.012664797)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.074035645, -0.005935671)
 shape = SubResource("BoxShape3D_vpwdo")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1" unique_id=1050752024]
@@ -35,3 +38,7 @@ shape = SubResource("BoxShape3D_8adve")
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" index="2" unique_id=215793932]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008079529, 0.4351717, -0.051622387)
 shape = SubResource("BoxShape3D_3tnr1")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D" index="3" unique_id=1198964178]
+transform = Transform3D(1, 0, 0, 0, 0.85272205, -0.5223646, 0, 0.5223646, 0.85272205, 0.013580322, 0.029196618, 0.30355477)
+shape = SubResource("BoxShape3D_bvbrx")

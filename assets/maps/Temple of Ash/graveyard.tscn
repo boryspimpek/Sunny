@@ -448,12 +448,6 @@ transform = Transform3D(-1.7036366, 0, -1.0476745, 0, 2, 0, 1.0476745, 0, -1.703
 [node name="gravestone-broken2" parent="." unique_id=959198652 instance=ExtResource("25_x1q6k")]
 transform = Transform3D(-0.058390513, 0, -1.9991474, 0, 2, 0, 1.9991474, 0, -0.058390513, -8.014408, 0, -11.274776)
 
-[node name="gravestone-cross-large2" parent="." unique_id=1956509050 instance=ExtResource("26_imo4t")]
-transform = Transform3D(-0.080926344, 0, -1.9983621, 0, 2, 0, 1.9983621, 0, -0.080926344, -6.0465984, 0, 1.4975203)
-
-[node name="gravestone-debris2" parent="." unique_id=551045702 instance=ExtResource("27_mniey")]
-transform = Transform3D(0.017557785, 0, -1.9999229, 0, 2, 0, 1.9999229, 0, 0.017557785, -10.579867, 0, 3.695445)
-
 [node name="gravestone-roof2" parent="." unique_id=431283680 instance=ExtResource("28_tgn46")]
 transform = Transform3D(0.059402224, 0, -1.9991176, 0, 2, 0, 1.9991176, 0, 0.059402224, -11.570119, 0, 7.798223)
 
@@ -471,9 +465,6 @@ transform = Transform3D(-1.9998821, 0, -0.021711702, 0, 2, 0, 0.021711702, 0, -1
 
 [node name="gravestone-broken4" parent="." unique_id=1400525548 instance=ExtResource("25_x1q6k")]
 transform = Transform3D(-1.9998821, 0, -0.021711702, 0, 2, 0, 0.021711702, 0, -1.9998821, -2.0387053, 0, 13.69952)
-
-[node name="gravestone-cross4" parent="." unique_id=1009300997 instance=ExtResource("31_g34tn")]
-transform = Transform3D(0.6963913, 0, 1.8748437, 0, 2, 0, -1.8748437, 0, 0.6963913, -4.5240746, 9.536743e-07, -2.0648293)
 
 [node name="gravestone-cross-large3" parent="." unique_id=1002926650 instance=ExtResource("26_imo4t")]
 transform = Transform3D(-1.5051515, 0, -1.3170114, 0, 2, 0, 1.3170114, 0, -1.5051515, -7.1024218, 0, 16.103956)
@@ -604,20 +595,11 @@ transform = Transform3D(0.059402224, 0, -1.9991176, 0, 2, 0, 1.9991176, 0, 0.059
 [node name="grave6" parent="." unique_id=1113971806 instance=ExtResource("33_rsa53")]
 transform = Transform3D(1.5193601, 0, 1.3005941, 0, 2, 0, -1.3005941, 0, 1.5193601, -6.3016, 0, 17.1043)
 
-[node name="grave7" parent="." unique_id=2142120853 instance=ExtResource("33_rsa53")]
-transform = Transform3D(-0.080926344, 0, -1.9983621, 0, 2, 0, 1.9983621, 0, -0.080926344, -7.47235, 0, 1.4272114)
-
-[node name="grave31" parent="." unique_id=527935940 instance=ExtResource("33_rsa53")]
-transform = Transform3D(0.017557785, 0, -1.9999229, 0, 2, 0, 1.9999229, 0, 0.017557785, -11.842189, 0, 3.683814)
-
 [node name="grave32" parent="." unique_id=1899028673 instance=ExtResource("33_rsa53")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -7.445582, 0, 7.9264517)
 
 [node name="grave33" parent="." unique_id=270887376 instance=ExtResource("33_rsa53")]
 transform = Transform3D(-1.9999079, 0, -0.019198425, 0, 2, 0, 0.019198425, 0, -1.9999079, -4.1468515, 0, 8.213528)
-
-[node name="grave8" parent="." unique_id=460860308 instance=ExtResource("33_rsa53")]
-transform = Transform3D(-0.7167034, 0, -1.8671733, 0, 2, 0, 1.8671733, 0, -0.7167034, -5.7482467, 0, -2.5830352)
 
 [node name="grave13" parent="." unique_id=1398157813 instance=ExtResource("33_rsa53")]
 transform = Transform3D(-1.9955146, 0, 0.13387135, 0, 2, 0, -0.13387135, 0, -1.9955146, 10.754957, 0, -5.6481714)
@@ -720,18 +702,6 @@ transform = Transform3D(0.009913317, 0, 1.9999754, 0, 2, 0, -1.9999754, 0, 0.009
 
 [node name="grave12" parent="." unique_id=1047747470 instance=ExtResource("33_rsa53")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 10.082267, 0, 8.034995)
-
-[node name="candle" parent="." unique_id=309180674 instance=ExtResource("14_mq1g0")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5.7611995, 0, 1.5340762)
-
-[node name="VFXBasicFire_01" parent="candle" unique_id=2052583828 instance=ExtResource("15_qkk3s")]
-transform = Transform3D(-0.81874764, 0, 1.8247335, 0, 2, 0, -1.8247335, 0, -0.81874764, 0, 0.22, 0)
-
-[node name="candle2" parent="." unique_id=144597278 instance=ExtResource("14_mq1g0")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -12.615761, 0, 3.669661)
-
-[node name="VFXBasicFire_01" parent="candle2" unique_id=1089766325 instance=ExtResource("15_qkk3s")]
-transform = Transform3D(-0.81874764, 0, 1.8247335, 0, 2, 0, -1.8247335, 0, -0.81874764, 0, 0.22, 0)
 
 [node name="candle3" parent="." unique_id=725065049 instance=ExtResource("14_mq1g0")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -11.26186, 0, 7.867542)
@@ -888,18 +858,6 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 13.061922, 0, -13.662161)
 
 [node name="VFXBasicFire_01" parent="candle28" unique_id=1682282466 instance=ExtResource("15_qkk3s")]
 transform = Transform3D(-0.81874764, 0, 1.8247335, 0, 2, 0, -1.8247335, 0, -0.81874764, 0, 0.22, 0)
-
-[node name="candle-multiple" parent="." unique_id=619896133 instance=ExtResource("16_rfkeb")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -4.2474456, 0, -1.7728416)
-
-[node name="VFXBasicFire_01" parent="candle-multiple" unique_id=2082469372 instance=ExtResource("15_qkk3s")]
-transform = Transform3D(-0.81874764, 0, 1.8247335, 0, 2, 0, -1.8247335, 0, -0.81874764, -0.06612444, 0.22, 0.009016991)
-
-[node name="VFXBasicFire_02" parent="candle-multiple" unique_id=710697999 instance=ExtResource("15_qkk3s")]
-transform = Transform3D(-0.81874764, 0, 1.8247335, 0, 2, 0, -1.8247335, 0, -0.81874764, 0.08415842, 0.22, -0.078146935)
-
-[node name="VFXBasicFire_03" parent="candle-multiple" unique_id=80921734 instance=ExtResource("15_qkk3s")]
-transform = Transform3D(-0.81874764, 0, 1.8247335, 0, 2, 0, -1.8247335, 0, -0.81874764, 0.078146935, 0.22, 0.09016967)
 
 [node name="candle-multiple2" parent="." unique_id=1738276291 instance=ExtResource("16_rfkeb")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 10.721996, 0, -3.9195728)
