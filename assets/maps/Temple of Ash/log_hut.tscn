@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://daddjmcerltga"]
+
+[ext_resource type="PackedScene" uid="uid://b2w1a3t6a8w5e" path="res://assets/maps/log house/log_hut_stylised.fbx" id="1_wmbh3"]
+[ext_resource type="Texture2D" uid="uid://clog7h2g8v8n8" path="res://assets/maps/log house/color_palette.png" id="2_i1lrr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gpqrt"]
+albedo_texture = ExtResource("2_i1lrr")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jaoc5"]
+albedo_texture = ExtResource("2_i1lrr")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oriui"]
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("2_i1lrr")
+metallic = 1.0
+metallic_specular = 1.0
+roughness = 0.42
+
+[node name="log_hut" unique_id=1796174337 instance=ExtResource("1_wmbh3")]
+
+[node name="Cube_001" parent="." index="0" unique_id=13717574]
+surface_material_override/0 = SubResource("StandardMaterial3D_gpqrt")
+
+[node name="barn_031" parent="." index="1" unique_id=208955357]
+surface_material_override/0 = SubResource("StandardMaterial3D_jaoc5")
+
+[node name="barn_025" parent="." index="2" unique_id=1664997279]
+surface_material_override/0 = SubResource("StandardMaterial3D_oriui")

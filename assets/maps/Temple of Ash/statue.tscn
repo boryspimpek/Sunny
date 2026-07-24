@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://cgvgyinc6jkyp"]
+
+[ext_resource type="PackedScene" uid="uid://d30dswud7vcmh" path="res://assets/maps/hunyuan/20260723031912_c4d53b89.fbx" id="1_xqxoq"]
+[ext_resource type="Texture2D" uid="uid://cdf7pcbwaj14k" path="res://assets/maps/hunyuan/20260723031912_c4d53b89_0.png" id="2_xqxoq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tdjrf"]
+albedo_texture = ExtResource("2_xqxoq")
+metallic = 0.68
+metallic_specular = 0.0
+roughness = 0.66
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_of4g7"]
+size = Vector3(0.6483154, 0.19070435, 0.5863037)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0r6pk"]
+size = Vector3(0.22103882, 0.62293243, 0.2581482)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xqxoq"]
+albedo_color = Color(1, 0, 0, 1)
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+emission_energy_multiplier = 4.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_lpa1o"]
+material = SubResource("StandardMaterial3D_xqxoq")
+radius = 0.02
+height = 0.04
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lpa1o"]
+albedo_color = Color(0, 1, 0, 1)
+emission_enabled = true
+emission = Color(0, 1, 0, 1)
+emission_energy_multiplier = 3.02
+
+[sub_resource type="BoxMesh" id="BoxMesh_tdjrf"]
+material = SubResource("StandardMaterial3D_lpa1o")
+size = Vector3(0.04, 0.04, 0.018)
+
+[node name="statue" unique_id=492040996 instance=ExtResource("1_xqxoq")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+
+[node name="Mesh_0" parent="." index="0" unique_id=1843411626]
+surface_material_override/0 = SubResource("StandardMaterial3D_tdjrf")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=716501406]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=742734381]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.024963379, 0.09577942, -0.043762207)
+shape = SubResource("BoxShape3D_of4g7")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1" unique_id=1330007520]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.001083374, 0.49830246, -0.01121521)
+shape = SubResource("BoxShape3D_0r6pk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="2" unique_id=610784584]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0017874896, 0.7473147, -0.0024983466)
+mesh = SubResource("CapsuleMesh_lpa1o")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." index="3" unique_id=1488530360]
+transform = Transform3D(0.65192646, 0.7582823, 0, -0.7582823, 0.65192646, 0, 0, 0, 1, -0.08561048, 0.81678784, 0.110179186)
+mesh = SubResource("BoxMesh_tdjrf")

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://d3rfb88ksonjm"]
+
+[ext_resource type="PackedScene" uid="uid://dn2fu2es8eknj" path="res://assets/maps/kenney/graveyard/road.fbx" id="1_nr77r"]
+[ext_resource type="Material" uid="uid://kduo0v7y15sg" path="res://materials/plaster_wall_01.tres" id="2_omij5"]
+
+[node name="road" unique_id=252708067 instance=ExtResource("1_nr77r")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="road" parent="." index="0" unique_id=1738541737]
+surface_material_override/0 = ExtResource("2_omij5")

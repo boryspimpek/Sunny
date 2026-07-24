@@ -1,5 +1,14 @@
 [gd_scene format=3 uid="uid://bl13wc40og2om"]
 
 [ext_resource type="PackedScene" uid="uid://br6rpubx8wh4o" path="res://assets/maps/inferno/Separate_assets_fbx/Axe_001.fbx" id="1_2hqpw"]
+[ext_resource type="Texture2D" uid="uid://0kg8o64i5xoc" path="res://assets/maps/inferno/Separate_assets_fbx/Textures_4.png" id="2_h84aj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_meluk"]
+albedo_texture = ExtResource("2_h84aj")
+roughness = 0.0
 
 [node name="Axe_001" unique_id=1712054255 instance=ExtResource("1_2hqpw")]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Axe_001" parent="." index="0" unique_id=248966435]
+surface_material_override/0 = SubResource("StandardMaterial3D_meluk")

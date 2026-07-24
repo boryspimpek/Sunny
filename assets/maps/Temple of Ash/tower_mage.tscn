@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://u4xdau5vqto1"]
+
+[ext_resource type="PackedScene" uid="uid://cpdehm12bogn6" path="res://assets/maps/hunyuan/20260724060356_75e76a07.fbx" id="1_pa3wo"]
+
+[node name="tower_mage" unique_id=669561128 instance=ExtResource("1_pa3wo")]
+transform = Transform3D(25, 0, 0, 0, 25, 0, 0, 0, 25, 0, 0, 0)

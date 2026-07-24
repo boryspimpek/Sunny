@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dkocrwgxrulyq"]
+
+[ext_resource type="PackedScene" uid="uid://clxduntfycj44" path="res://assets/maps/props/1/road_wood_4.fbx" id="1_kpf2o"]
+[ext_resource type="Material" uid="uid://bpuqlebksefam" path="res://materials/wood_road.tres" id="2_kpf2o"]
+
+[node name="road_wood_4" unique_id=2089784031 instance=ExtResource("1_kpf2o")]
+
+[node name="Road_wood_4" parent="." index="0" unique_id=2111070321]
+surface_material_override/0 = ExtResource("2_kpf2o")

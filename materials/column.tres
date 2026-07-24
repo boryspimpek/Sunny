@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b1ov22vmmykum"]
+
+[resource]
+albedo_color = Color(0.29123646, 0.12135167, 4.813075e-08, 1)
+emission_enabled = true
+emission = Color(1, 0.30980393, 0, 1)
+emission_energy_multiplier = 1.15
+uv1_scale = Vector3(0.265, 0.265, 0.265)
+uv1_offset = Vector3(0.44, -1.825, -0.82)
+uv1_triplanar = true

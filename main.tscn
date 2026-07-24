@@ -38,9 +38,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.482147, 0, 0)
 physics_material_override = SubResource("PhysicsMaterial_0xm2m")
 
 [node name="inferno" parent="Floor" unique_id=1919387517 instance=ExtResource("2_272bh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.023975372, -0.026565552, 0.022752762)
 
 [node name="Player" parent="." unique_id=1015128258 instance=ExtResource("1_ig7tw")]
-transform = Transform3D(0.11493719, 0, 0.99337274, 0, 1, 0, -0.99337274, 0, 0.11493719, 62.237946, 15.342583, 25.198442)
+transform = Transform3D(-0.95249164, 0, 0.3045651, 0, 1, 0, -0.3045651, 0, -0.95249164, -13.468636, 14.231084, 29.152927)
 
 [node name="HUD" parent="." unique_id=1830043377 instance=ExtResource("6_hud")]
 

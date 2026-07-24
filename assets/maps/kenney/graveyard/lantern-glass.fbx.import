@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/lantern-glass.fbx-b14e62a477a89d9dcfce0c09748
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="MeshInstance3D"
 nodes/root_name=""
 nodes/root_script=null
 nodes/apply_root_scale=true

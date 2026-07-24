@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ge8p5uwqxpw2"]
+
+[ext_resource type="PackedScene" uid="uid://cldhxqt81r2cb" path="res://assets/maps/hunyuan/20260723051617_56f9ccd5.fbx" id="1_yesbi"]
+
+[node name="portal" unique_id=1944556086 instance=ExtResource("1_yesbi")]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0)

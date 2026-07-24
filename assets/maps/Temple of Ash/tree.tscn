@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://cae0hiuhwxovo"]
+
+[ext_resource type="PackedScene" uid="uid://47bj6paqconw" path="res://assets/maps/tree/tree1/FBX/SM_StylizedTree_01.fbx" id="1_kpxeb"]
+
+[node name="SM_StylizedTree_01" unique_id=1080121074 instance=ExtResource("1_kpxeb")]

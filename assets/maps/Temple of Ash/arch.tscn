@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://53im2ki8qgts"]
+
+[ext_resource type="PackedScene" uid="uid://bo27cvjyfhv85" path="res://assets/maps/hunyuan/20260723035627_52fec395.fbx" id="1_kpqs4"]
+[ext_resource type="Texture2D" uid="uid://dywber2brukh8" path="res://assets/maps/hunyuan/20260723035627_52fec395_0.png" id="2_wlmds"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_shtb6"]
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("2_wlmds")
+metallic = 0.6
+metallic_specular = 1.0
+roughness = 0.5
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pq1r6"]
+size = Vector3(0.6893921, 0.8727417, 0.22924805)
+
+[node name="arch" unique_id=607692328 instance=ExtResource("1_kpqs4")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
+
+[node name="Mesh_0" parent="." index="0" unique_id=1799505781]
+surface_material_override/0 = SubResource("StandardMaterial3D_shtb6")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1537537756]
+transform = Transform3D(1, 0, 0, 0, 1, 7.5497894e-08, 0, -7.5497894e-08, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=2067547008]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0069274902, 0.45108032, -0.015747072)
+shape = SubResource("BoxShape3D_pq1r6")

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b1ki2ff6psf5l"]
+
+[ext_resource type="PackedScene" uid="uid://2mj3t6nqjw3r" path="res://assets/maps/hunyuan/20260724060055_e4fcbcb6.fbx" id="1_00rwk"]
+[ext_resource type="Texture2D" uid="uid://bdhq4mg6q3sc5" path="res://assets/maps/hunyuan/20260724060055_e4fcbcb6_0.png" id="2_t7ipk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hh0r4"]
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("2_t7ipk")
+metallic = 1.0
+metallic_specular = 0.46
+
+[node name="stairs_stone" unique_id=1026692481 instance=ExtResource("1_00rwk")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+
+[node name="Mesh_0" parent="." index="0" unique_id=1441700173]
+surface_material_override/0 = SubResource("StandardMaterial3D_hh0r4")

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ca7ng37havwq2"]
+
+[ext_resource type="PackedScene" uid="uid://fytan52d0mkr" path="res://assets/maps/hunyuan/20260724063923_5967bd00.fbx" id="1_05pcq"]
+[ext_resource type="Texture2D" uid="uid://dcsoknejrrfx0" path="res://assets/maps/hunyuan/20260724063923_5967bd00_0.png" id="2_q3b3x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fb6wp"]
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("2_q3b3x")
+metallic = 1.0
+metallic_specular = 1.0
+roughness = 0.0
+
+[node name="column_mid" unique_id=1202752047 instance=ExtResource("1_05pcq")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+
+[node name="Mesh_0" parent="." index="0" unique_id=630480591]
+surface_material_override/0 = SubResource("StandardMaterial3D_fb6wp")

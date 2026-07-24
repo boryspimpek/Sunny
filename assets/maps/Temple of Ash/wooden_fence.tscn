@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bcqynfegen7ea"]
+
+[ext_resource type="PackedScene" uid="uid://bd4nv7sx511r0" path="res://assets/maps/fence/3/uploads_files_2890024_gatefence.fbx" id="1_42eyk"]
+
+[node name="wooden_fence" unique_id=1196128903 instance=ExtResource("1_42eyk")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="fence1" parent="." index="0" unique_id=1891740790]
+transform = Transform3D(99.98958, 1.4433167, 6.1749165e-06, -2.980232e-06, -1.1920929e-05, 100, 1.4433137, -99.98958, -1.481358e-05, -21.757223, 0, -0.25830364)
+
+[node name="fence4" parent="." index="1" unique_id=325579849]
+transform = Transform3D(99.98958, 1.4433167, 6.1749165e-06, -2.980232e-06, -1.1920929e-05, 100, 1.4433137, -99.98958, -1.481358e-05, -7.7586827, -0.054343224, -0.05623722)
+
+[node name="fence2" parent="." index="5" unique_id=994595198]
+transform = Transform3D(99.98958, 1.4433167, 6.1749165e-06, -2.980232e-06, -1.1920929e-05, 100, 1.4433137, -99.98958, -1.481358e-05, -14.757953, -0.054343224, -0.15727043)

@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dd02beomuhvjw"]
+
+[ext_resource type="PackedScene" uid="uid://cyou5x26i2mp0" path="res://assets/maps/props/1/Lamp_3.fbx" id="1_oir04"]
+[ext_resource type="Texture2D" uid="uid://6055dehpw7un" path="res://assets/maps/props/1/Texture.png" id="2_erpvb"]
+[ext_resource type="Material" uid="uid://wkcuewni2hf1" path="res://materials/lantern_village.tres" id="3_erpvb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l17cb"]
+albedo_color = Color(0.29219002, 0.29219005, 0.29219002, 1)
+albedo_texture = ExtResource("2_erpvb")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_l17cb"]
+material = ExtResource("3_erpvb")
+top_radius = 0.216
+bottom_radius = 0.149
+height = 0.5
+
+[node name="Lamp_3" unique_id=1259954724 instance=ExtResource("1_oir04")]
+
+[node name="Lamp_3" parent="." index="0" unique_id=1841305695]
+surface_material_override/0 = SubResource("StandardMaterial3D_l17cb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="1" unique_id=679997800]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8537414, 1.5936525)
+mesh = SubResource("CylinderMesh_l17cb")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." index="2" unique_id=159009919]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.026732564, 2.8537414, -1.572168)
+mesh = SubResource("CylinderMesh_l17cb")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." index="3" unique_id=378342341]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5700002, 2.8537414, -0.0029287636)
+mesh = SubResource("CylinderMesh_l17cb")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." index="4" unique_id=2093600559]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5951189, 2.8537414, 0.021356553)
+mesh = SubResource("CylinderMesh_l17cb")

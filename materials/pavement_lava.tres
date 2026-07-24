@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://h0ortsxucxjk"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_aurp2"]
+load_path = "res://.godot/imported/lava_rocks_01_color_1k.png-23c8f5779acb6f14b19b2d174013762f.s3tc.ctex"
+
+[resource]
+albedo_color = Color(2.454227, 2.454227, 2.454227, 1)
+albedo_texture = SubResource("CompressedTexture2D_aurp2")
+uv1_scale = Vector3(0.685, 0.685, 0.685)
+uv1_triplanar = true

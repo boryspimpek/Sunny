@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ckulqdduleqg1"]
+
+[ext_resource type="PackedScene" uid="uid://4ek0m5k06mmd" path="res://assets/maps/inferno/Separate_assets_fbx/RockBig_001.fbx" id="1_gog21"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b8j4c"]
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.08577634, 0.055913374, 2.4065375e-08, 1)
+metallic_specular = 1.0
+roughness = 0.32
+
+[node name="RockBig_001" unique_id=1221980098 instance=ExtResource("1_gog21")]
+
+[node name="RockBig_001" parent="." index="0" unique_id=2002793394]
+surface_material_override/0 = SubResource("StandardMaterial3D_b8j4c")

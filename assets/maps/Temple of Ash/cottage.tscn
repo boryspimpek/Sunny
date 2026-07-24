@@ -4,7 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://dldo0vxdlhkt1" path="res://assets/maps/cottage/color_palette.png" id="2_xonly"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8lp8s"]
+diffuse_mode = 3
+specular_mode = 1
 albedo_texture = ExtResource("2_xonly")
+metallic = 1.0
+metallic_specular = 1.0
+roughness = 0.5
 
 [node name="Cottage" unique_id=1411939020 instance=ExtResource("1_yh2fy")]
 

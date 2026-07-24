@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://0oi8uti71gkb"]
 
 [ext_resource type="PackedScene" uid="uid://biel6lp4x2as6" path="res://assets/maps/kenney/graveyard/iron-fence.fbx" id="1_gpoaf"]
+[ext_resource type="Material" uid="uid://p45cbq78vtgq" path="res://materials/iron_fance.tres" id="2_dn44i"]
 
 [node name="iron-fence" unique_id=1319009482 instance=ExtResource("1_gpoaf")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+
+[node name="iron-fence" parent="." index="0" unique_id=1791725069]
+surface_material_override/0 = ExtResource("2_dn44i")

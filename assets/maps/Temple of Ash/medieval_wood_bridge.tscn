@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dma1xu0yicm6v"]
+
+[ext_resource type="PackedScene" uid="uid://ry1dy3a2ykfa" path="res://assets/maps/bridge1/uploads_files_4381969_medieval_wood_bridge_cg_trader.fbx" id="1_itdpn"]
+
+[node name="medieval_wood_bridge" unique_id=1312850492 instance=ExtResource("1_itdpn")]

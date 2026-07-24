@@ -2,4 +2,17 @@
 
 [ext_resource type="PackedScene" uid="uid://dowq460y4o21o" path="res://assets/maps/inferno/Separate_assets_fbx/Box_001.fbx" id="1_jm1hl"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jm1hl"]
+albedo_color = Color(1.8247963, 0, 0, 1)
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+emission_energy_multiplier = 2.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_g8n2n"]
+material = SubResource("StandardMaterial3D_jm1hl")
+
 [node name="Lampion" unique_id=1111887277 instance=ExtResource("1_jm1hl")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="1" unique_id=1695159882]
+transform = Transform3D(0.913, 0, 0, 0, 0.913, 0, 0, 0, 0.913, 0, 0.50606453, 0)
+mesh = SubResource("BoxMesh_g8n2n")

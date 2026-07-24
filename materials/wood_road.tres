@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bpuqlebksefam"]
+
+[ext_resource type="Texture2D" uid="uid://d3agyvc6ky7en" path="res://assets/textures/Stylized Dark Ship Deck Texture/Dark_Ship_Albedo.jpg" id="1_rtfua"]
+
+[resource]
+albedo_color = Color(0.288518, 0.28851798, 0.28851798, 1)
+albedo_texture = ExtResource("1_rtfua")

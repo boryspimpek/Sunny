@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://y0ksmkcasvn1"]
+
+[ext_resource type="PackedScene" uid="uid://s0yq06ikapg7" path="res://assets/maps/tombstones/tomb2/Big_TombStones.fbx" id="1_koqnt"]
+[ext_resource type="Texture2D" uid="uid://bla5fiveems66" path="res://assets/maps/tombstones/tomb2/M_B_TombStones_BaseColor.png" id="2_y1wo8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l2ob1"]
+albedo_texture = ExtResource("2_y1wo8")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qhnpn"]
+albedo_texture = ExtResource("2_y1wo8")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bj0v8"]
+albedo_texture = ExtResource("2_y1wo8")
+
+[node name="Big_TombStones" unique_id=847297221 instance=ExtResource("1_koqnt")]
+
+[node name="B_Tombstone_02_Sep2" parent="B_TombStones_low/Tombsstone_03" parent_id_path=PackedInt32Array(1836828256) index="0" unique_id=716614660]
+surface_material_override/0 = SubResource("StandardMaterial3D_l2ob1")
+
+[node name="B_Tombstone_02_Sep1" parent="B_TombStones_low/Tombsstone_03" parent_id_path=PackedInt32Array(1836828256) index="1" unique_id=1699392881]
+surface_material_override/0 = SubResource("StandardMaterial3D_l2ob1")
+
+[node name="B_Tombstone_02_Sep" parent="B_TombStones_low/Tombsstone_03" parent_id_path=PackedInt32Array(1836828256) index="2" unique_id=180856471]
+surface_material_override/0 = SubResource("StandardMaterial3D_l2ob1")
+
+[node name="B_Tombstone_03_Sep3" parent="B_TombStones_low/Tombsstone_02" parent_id_path=PackedInt32Array(1281610784) index="0" unique_id=192093365]
+surface_material_override/0 = SubResource("StandardMaterial3D_qhnpn")
+
+[node name="B_Tombstone_03_Sep1" parent="B_TombStones_low/Tombsstone_02" parent_id_path=PackedInt32Array(1281610784) index="1" unique_id=499232479]
+surface_material_override/0 = SubResource("StandardMaterial3D_qhnpn")
+
+[node name="B_Tombstone_03_Sep2" parent="B_TombStones_low/Tombsstone_02" parent_id_path=PackedInt32Array(1281610784) index="2" unique_id=930470748]
+surface_material_override/0 = SubResource("StandardMaterial3D_qhnpn")
+
+[node name="B_Tombstone_03_Sep4" parent="B_TombStones_low/Tombsstone_02" parent_id_path=PackedInt32Array(1281610784) index="3" unique_id=125580909]
+surface_material_override/0 = SubResource("StandardMaterial3D_qhnpn")
+
+[node name="B_Tombstone_03_Sep5" parent="B_TombStones_low/Tombsstone_02" parent_id_path=PackedInt32Array(1281610784) index="4" unique_id=198249528]
+surface_material_override/0 = SubResource("StandardMaterial3D_qhnpn")
+
+[node name="B_Tombstone_03_Sep" parent="B_TombStones_low/Tombsstone_02" parent_id_path=PackedInt32Array(1281610784) index="5" unique_id=1057288765]
+surface_material_override/0 = SubResource("StandardMaterial3D_qhnpn")
+
+[node name="B_Tombstone_01_Sep" parent="B_TombStones_low/Tombsstone_01" parent_id_path=PackedInt32Array(967224347) index="0" unique_id=1071002065]
+surface_material_override/0 = SubResource("StandardMaterial3D_bj0v8")
+
+[node name="B_Tombstone_01_Sep2" parent="B_TombStones_low/Tombsstone_01" parent_id_path=PackedInt32Array(967224347) index="1" unique_id=523854986]
+surface_material_override/0 = SubResource("StandardMaterial3D_bj0v8")
+
+[node name="B_Tombstone_01_Sep1" parent="B_TombStones_low/Tombsstone_01" parent_id_path=PackedInt32Array(967224347) index="2" unique_id=1361656137]
+surface_material_override/0 = SubResource("StandardMaterial3D_bj0v8")
+
+[node name="B_Tombstone_01_Sep4" parent="B_TombStones_low/Tombsstone_01" parent_id_path=PackedInt32Array(967224347) index="3" unique_id=1111515618]
+surface_material_override/0 = SubResource("StandardMaterial3D_bj0v8")

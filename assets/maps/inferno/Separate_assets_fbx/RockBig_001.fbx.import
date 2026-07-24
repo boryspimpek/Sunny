@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/RockBig_001.fbx-118578299ea531e5974f0e68319fe
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="MeshInstance3D"
 nodes/root_name=""
 nodes/root_script=null
 nodes/apply_root_scale=true

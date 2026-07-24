@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://3xku1wbuj2t7"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_seb1l"]
+load_path = "res://.godot/imported/Coin_color.png-c542d928640432720cc8223dc17306c1.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0t7fk"]
+load_path = "res://.godot/imported/Coin_normal.png-2bbd51fce68aebaf4b335da9710ba6f6.s3tc.ctex"
+
+[resource]
+albedo_color = Color(1.8247963, 1.8247963, 1.8247963, 1)
+albedo_texture = SubResource("CompressedTexture2D_seb1l")
+normal_enabled = true
+normal_texture = SubResource("CompressedTexture2D_0t7fk")
+uv1_scale = Vector3(0.49, 0.49, 0.49)

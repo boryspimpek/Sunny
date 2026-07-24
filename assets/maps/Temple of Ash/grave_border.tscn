@@ -1,5 +1,9 @@
 [gd_scene format=3 uid="uid://c5mey5bft32uu"]
 
 [ext_resource type="PackedScene" uid="uid://cexahyhrcfo7g" path="res://assets/maps/kenney/graveyard/grave-border.fbx" id="1_l5q06"]
+[ext_resource type="Material" uid="uid://dkelmvihl1ndk" path="res://materials/grave_dirt.tres" id="2_b2eu1"]
 
 [node name="grave-border" unique_id=1438169749 instance=ExtResource("1_l5q06")]
+
+[node name="grave-border" parent="." index="0" unique_id=1856816179]
+surface_material_override/0 = ExtResource("2_b2eu1")

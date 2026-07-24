@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://plmfk7f7duel"]
+
+[ext_resource type="PackedScene" uid="uid://dod55d4rg8hqm" path="res://assets/maps/tombstones/tomb1/GraveStone2.fbx" id="1_qi5n7"]
+[ext_resource type="Texture2D" uid="uid://5tkqoh8q2ku" path="res://assets/maps/tombstones/tomb1/GraveStones_Albedo.png" id="2_ireis"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_336dc"]
+albedo_texture = ExtResource("2_ireis")
+
+[node name="GraveStone2" unique_id=554836697 instance=ExtResource("1_qi5n7")]
+
+[node name="GraveStone2" parent="." index="0" unique_id=399871514]
+surface_material_override/0 = SubResource("StandardMaterial3D_336dc")

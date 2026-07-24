@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://p45cbq78vtgq"]
+
+[ext_resource type="Texture2D" uid="uid://c0ww66r5a6e3u" path="res://assets/maps/kenney/graveyard/Textures/colormap.png" id="1_nj44w"]
+
+[resource]
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.38431373, 0.38431373, 0.38431373, 1)
+albedo_texture = ExtResource("1_nj44w")
+metallic_specular = 1.0
+roughness = 0.0

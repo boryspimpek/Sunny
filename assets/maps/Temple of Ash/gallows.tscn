@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cunrw6pcn383b"]
+
+[ext_resource type="PackedScene" uid="uid://dd215m0locrx6" path="res://assets/maps/hunyuan/20260724061017_229bc92d.fbx" id="1_0cqf7"]
+
+[node name="gallows" unique_id=498918101 instance=ExtResource("1_0cqf7")]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0)
