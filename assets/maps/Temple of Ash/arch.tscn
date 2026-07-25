@@ -7,9 +7,8 @@
 diffuse_mode = 3
 specular_mode = 1
 albedo_texture = ExtResource("2_wlmds")
-metallic = 0.6
-metallic_specular = 1.0
-roughness = 0.5
+metallic = 0.94
+roughness = 0.58
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pq1r6"]
 size = Vector3(0.6893921, 0.8727417, 0.22924805)

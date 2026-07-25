@@ -13,6 +13,7 @@ var combat_mode := false
 @onready var animator: PlayerAnimator = $PlayerAnimator
 @onready var weapon_manager: WeaponManager = $WeaponManager
 @onready var health: HealthComponent = $HealthComponent
+@onready var flashlight: SpotLight3D = $SpringArmPivot/SpringArm3D/Camera3D/SpotLight3D
 
 
 func _ready() -> void:
@@ -42,6 +43,10 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	animator.update_locomotion(delta, combat_mode, movement.last_input_dir)
 
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("toggle_flashlight"):
+		flashlight.visible = not flashlight.visible
 
 func _on_health_changed(current: float, max_health: float) -> void:
 	EventBus.player_health_changed.emit(current, max_health)

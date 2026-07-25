@@ -5592,7 +5592,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 118.576294, 14.832026, 57.454
 transform = Transform3D(-0.749707, 0, 0.6617699, 0, 1, 0, -0.6617699, 0, -0.749707, 116.32788, 14.832026, 59.39438)
 
 [node name="Fog" type="Node3D" parent="." unique_id=1001598981]
-visible = false
 
 [node name="FogVolume" type="FogVolume" parent="Fog" unique_id=1679953008]
 transform = Transform3D(-0.97502154, 0, -0.22211017, 0, 1, 0, 0.22211017, 0, -0.97502154, 0.36623907, 14.337557, 31.039198)

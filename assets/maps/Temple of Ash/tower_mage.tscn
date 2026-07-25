@@ -7,9 +7,8 @@
 diffuse_mode = 3
 specular_mode = 1
 albedo_texture = ExtResource("2_wme03")
-metallic = 1.0
-metallic_specular = 1.0
-roughness = 0.52
+metallic = 0.72
+metallic_specular = 0.37
 
 [node name="tower_mage" unique_id=669561128 instance=ExtResource("1_pa3wo")]
 transform = Transform3D(25, 0, 0, 0, 25, 0, 0, 0, 25, 0, 0, 0)
