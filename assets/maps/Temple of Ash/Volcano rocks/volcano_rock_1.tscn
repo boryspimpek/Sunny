@@ -7,7 +7,7 @@
 diffuse_mode = 3
 specular_mode = 1
 albedo_texture = ExtResource("2_pjy1x")
-metallic = 1.0
+metallic = 0.6
 metallic_specular = 1.0
 roughness = 0.39
 

@@ -216,6 +216,13 @@ margin = 0.2
 [node name="Camera3D" type="Camera3D" parent="SpringArmPivot/SpringArm3D" index="0" unique_id=1343860646]
 current = true
 
+[node name="SpotLight3D" type="SpotLight3D" parent="SpringArmPivot/SpringArm3D/Camera3D" index="0" unique_id=309497272]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, -0.57313275, -0.44331008)
+spot_range = 20.0
+spot_attenuation = -0.9
+spot_angle = 18.41
+spot_angle_attenuation = 0.26794344
+
 [node name="CrosshairLayer" type="CanvasLayer" parent="." index="6" unique_id=1805758746]
 offset = Vector2(0, -100)
 transform = Transform2D(1, 0, 0, 1, 0, -100)
@@ -280,7 +287,3 @@ weapons = Array[ExtResource("25_weapon_res")]([ExtResource("24_pistol")])
 
 [node name="HealthComponent" type="Node" parent="." index="12" unique_id=1332951278]
 script = ExtResource("23_health")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="." index="13" unique_id=781754786]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
-light_energy = 6.058
