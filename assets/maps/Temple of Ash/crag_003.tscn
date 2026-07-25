@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://d35u426ci4gco"]
+
+[ext_resource type="PackedScene" uid="uid://ks87bsvc4rn7" path="res://assets/maps/inferno/Separate_assets_fbx/Crag_003.fbx" id="1_g1kes"]
+[ext_resource type="Material" uid="uid://qh0vigsh2oq8" path="res://materials/lava_rocks_01.tres" id="2_0rk3j"]
+
+[node name="Crag_003" unique_id=767932441 instance=ExtResource("1_g1kes")]
+
+[node name="Crag_003" parent="." index="0" unique_id=1390718136]
+surface_material_override/0 = ExtResource("2_0rk3j")

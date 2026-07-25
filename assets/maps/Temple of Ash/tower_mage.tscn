@@ -1,6 +1,18 @@
 [gd_scene format=3 uid="uid://u4xdau5vqto1"]
 
 [ext_resource type="PackedScene" uid="uid://cpdehm12bogn6" path="res://assets/maps/hunyuan/20260724060356_75e76a07.fbx" id="1_pa3wo"]
+[ext_resource type="Texture2D" uid="uid://b1r2mno7rlqe3" path="res://assets/maps/hunyuan/20260724060356_75e76a07_0.png" id="2_wme03"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sn8xa"]
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("2_wme03")
+metallic = 1.0
+metallic_specular = 1.0
+roughness = 0.52
 
 [node name="tower_mage" unique_id=669561128 instance=ExtResource("1_pa3wo")]
 transform = Transform3D(25, 0, 0, 0, 25, 0, 0, 0, 25, 0, 0, 0)
+
+[node name="Mesh_0" parent="." index="0" unique_id=945733483]
+surface_material_override/0 = SubResource("StandardMaterial3D_sn8xa")

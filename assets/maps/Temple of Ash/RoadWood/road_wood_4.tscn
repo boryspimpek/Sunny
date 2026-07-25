@@ -3,7 +3,16 @@
 [ext_resource type="PackedScene" uid="uid://clxduntfycj44" path="res://assets/maps/props/1/road_wood_4.fbx" id="1_kpf2o"]
 [ext_resource type="Material" uid="uid://bpuqlebksefam" path="res://materials/wood_road.tres" id="2_kpf2o"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_kpf2o"]
+size = Vector3(3.0805664, 0.51220703, 6.050537)
+
 [node name="road_wood_4" unique_id=2089784031 instance=ExtResource("1_kpf2o")]
 
 [node name="Road_wood_4" parent="." index="0" unique_id=2111070321]
 surface_material_override/0 = ExtResource("2_kpf2o")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=567672837]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1032205282]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.018310547, 0.24389648, -2.9957275)
+shape = SubResource("BoxShape3D_kpf2o")

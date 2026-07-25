@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dck320btghv2j"]
+
+[ext_resource type="PackedScene" uid="uid://fuh8g57788bk" path="res://assets/maps/nature/tree5/uploads_files_5456535_Skeletal+Tree+FREE.fbx" id="1_jwglj"]
+[ext_resource type="Texture2D" uid="uid://b0cp5f85vnef4" path="res://assets/maps/nature/tree5/Tree_Base color.png" id="2_e6chp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2qj5j"]
+albedo_color = Color(0, 0, 1, 1)
+albedo_texture = ExtResource("2_e6chp")
+
+[node name="tree5" unique_id=2067030956 instance=ExtResource("1_jwglj")]
+transform = Transform3D(70, 0, 0, 0, 70, 0, 0, 0, 70, 0, 0, 0)
+
+[node name="Skeletal_Tree_FREE" parent="." index="0" unique_id=1835034553]
+surface_material_override/0 = SubResource("StandardMaterial3D_2qj5j")

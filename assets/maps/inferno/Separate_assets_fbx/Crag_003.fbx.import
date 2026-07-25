@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/Crag_003.fbx-53307f58eb08d4d12f230eacf37864f8
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="MeshInstance3D"
 nodes/root_name=""
 nodes/root_script=null
 nodes/apply_root_scale=true

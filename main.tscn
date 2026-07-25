@@ -19,15 +19,16 @@ sky_material = SubResource("PanoramaSkyMaterial_jyhfs")
 background_mode = 2
 sky = SubResource("Sky_tbgi4")
 reflected_light_source = 2
-tonemap_mode = 2
+tonemap_mode = 3
 glow_enabled = true
 glow_intensity = 1.0
 glow_bloom = 0.21
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.065
+volumetric_fog_density = 0.201
 volumetric_fog_anisotropy = -0.9
-volumetric_fog_length = 50.0
+volumetric_fog_length = 60.5
 adjustment_enabled = true
+adjustment_brightness = 1.21
 adjustment_saturation = 1.6
 
 [node name="main" type="Node3D" unique_id=1051936391]
@@ -41,7 +42,7 @@ physics_material_override = SubResource("PhysicsMaterial_0xm2m")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.023975372, -0.026565552, 0.022752762)
 
 [node name="Player" parent="." unique_id=1015128258 instance=ExtResource("1_ig7tw")]
-transform = Transform3D(-0.95249164, 0, 0.3045651, 0, 1, 0, -0.3045651, 0, -0.95249164, -13.468636, 14.231084, 29.152927)
+transform = Transform3D(0.9712923, 0, 0.23788929, 0, 1, 0, -0.23788929, 0, 0.9712923, 60.716644, 14.999565, 19.755024)
 
 [node name="HUD" parent="." unique_id=1830043377 instance=ExtResource("6_hud")]
 
@@ -50,6 +51,7 @@ environment = SubResource("Environment_0wfyh")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1612480161]
 transform = Transform3D(0.026176995, 0.8751644, -0.48311675, 0, 0.4832824, 0.8754643, 0.99965733, -0.022917029, 0.01265088, 0, 50, 0)
+light_energy = 0.0
 light_volumetric_fog_energy = 0.0
 shadow_enabled = true
 shadow_normal_bias = 4.817

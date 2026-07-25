@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bt5u374lxjhqw"]
+
+[node name="lamp_omnilight" type="Node3D" unique_id=1362498555]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=884504469]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.80654025, 2.3451068, 0)
+light_color = Color(0, 0.4448345, 2.8878452e-07, 1)
+light_volumetric_fog_energy = 0.0
+light_specular = 16.0
+omni_range = 8.191

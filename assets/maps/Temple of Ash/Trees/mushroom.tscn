@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://8ko5yrsayt5i"]
+
+[ext_resource type="PackedScene" uid="uid://n43vgbddd5yg" path="res://assets/maps/nature/mushroom/uploads_files_3571788_mushroom1.fbx" id="1_gtage"]
+[ext_resource type="Texture2D" uid="uid://cm32fik5h0ue4" path="res://assets/maps/nature/mushroom/mushroom1.jpg" id="2_sgof3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0c3n1"]
+albedo_texture = ExtResource("2_sgof3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_su6nj"]
+albedo_texture = ExtResource("2_sgof3")
+
+[node name="mushroom" unique_id=525718335 instance=ExtResource("1_gtage")]
+
+[node name="mushroom" parent="." index="0" unique_id=875085611]
+surface_material_override/0 = SubResource("StandardMaterial3D_0c3n1")
+
+[node name="mushroom2" parent="." index="1" unique_id=2028644915]
+surface_material_override/0 = SubResource("StandardMaterial3D_su6nj")

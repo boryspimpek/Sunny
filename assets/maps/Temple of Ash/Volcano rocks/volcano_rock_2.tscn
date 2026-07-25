@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b8at4sbc1k1jw"]
+
+[ext_resource type="PackedScene" uid="uid://c6sowuaghdyj2" path="res://assets/maps/hunyuan/VolcanRosk2/20260725063356_37318b19.fbx" id="1_f1gee"]
+[ext_resource type="Texture2D" uid="uid://btrq3eu4bpchm" path="res://assets/maps/hunyuan/VolcanRosk2/20260725063356_37318b19_0.png" id="2_mxovq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2om3u"]
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("2_mxovq")
+metallic = 1.0
+metallic_specular = 1.0
+roughness = 0.43
+
+[node name="volcano_rock2" unique_id=37892863 instance=ExtResource("1_f1gee")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+
+[node name="Mesh_0" parent="." index="0" unique_id=304064888]
+surface_material_override/0 = SubResource("StandardMaterial3D_2om3u")

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dbqwbjim4ln58"]
+
+[ext_resource type="PackedScene" uid="uid://u71g7mvu7a8s" path="res://assets/maps/hunyuan/Skull/20260725062822_314c244e.fbx" id="1_tyk4v"]
+[ext_resource type="Texture2D" uid="uid://dvd0hsgh5dtru" path="res://assets/maps/hunyuan/Skull/20260725062822_314c244e_0.png" id="2_53p5c"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_er5vi"]
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("2_53p5c")
+metallic = 0.4
+metallic_specular = 1.0
+roughness = 0.4
+
+[node name="skull" unique_id=2086286674 instance=ExtResource("1_tyk4v")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+
+[node name="Mesh_0" parent="." index="0" unique_id=1552158919]
+surface_material_override/0 = SubResource("StandardMaterial3D_er5vi")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="1" unique_id=219504941]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.10773709, 0.33355114, 0.15973487)
+light_specular = 5.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="." index="2" unique_id=415849195]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.111685134, 0.33355114, 0.15973487)
+light_specular = 5.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="." index="3" unique_id=1374001330]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.011, 0.032075215, 0.25246388)
+light_color = Color(0.654902, 0.13333334, 0, 1)
+light_volumetric_fog_energy = 0.0
+omni_range = 15.0
+omni_attenuation = -0.555

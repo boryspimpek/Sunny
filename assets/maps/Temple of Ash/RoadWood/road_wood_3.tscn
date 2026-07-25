@@ -3,7 +3,20 @@
 [ext_resource type="PackedScene" uid="uid://i6otqtu2ctm3" path="res://assets/maps/props/1/Road_wood_3.fbx" id="1_g8d1p"]
 [ext_resource type="Material" uid="uid://bpuqlebksefam" path="res://materials/wood_road.tres" id="2_g8d1p"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_g8d1p"]
+size = Vector3(3.0805664, 0.51220703, 6.050537)
+
 [node name="Road_wood_3" unique_id=899670789 instance=ExtResource("1_g8d1p")]
 
 [node name="Road_wood_3" parent="." index="0" unique_id=533514581]
 surface_material_override/0 = ExtResource("2_g8d1p")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1632307495]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=355135808]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.018310547, 0.24389648, -2.9957275)
+shape = SubResource("BoxShape3D_g8d1p")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1" unique_id=1390319805]
+transform = Transform3D(0.0056199296, 0, -0.9999842, 0, 1, 0, 0.9999842, 0, 0.0056199296, 0.018310547, 0.24389648, -2.9957275)
+shape = SubResource("BoxShape3D_g8d1p")

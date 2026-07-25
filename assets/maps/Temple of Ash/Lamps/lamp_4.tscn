@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dttdgttjlirqf" path="res://assets/maps/props/1/Lamp_4.fbx" id="1_4x2tf"]
 [ext_resource type="Texture2D" uid="uid://6055dehpw7un" path="res://assets/maps/props/1/Texture.png" id="2_tdph6"]
 [ext_resource type="Material" uid="uid://wkcuewni2hf1" path="res://materials/lantern_village.tres" id="3_tdph6"]
+[ext_resource type="PackedScene" uid="uid://bt5u374lxjhqw" path="res://assets/maps/Temple of Ash/lamp_omnilight.tscn" id="4_fhh42"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fhh42"]
 albedo_color = Color(0.288518, 0.28851798, 0.28851798, 1)
@@ -13,6 +14,9 @@ material = ExtResource("3_tdph6")
 top_radius = 0.216
 bottom_radius = 0.149
 height = 0.5
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fhh42"]
+size = Vector3(0.35028076, 3.7109375, 0.3770752)
 
 [node name="Lamp_4" unique_id=653618881 instance=ExtResource("1_4x2tf")]
 
@@ -26,3 +30,15 @@ mesh = SubResource("CylinderMesh_fhh42")
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="." index="2" unique_id=1269116559]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00073570013, 2.8537414, 1.5950962)
 mesh = SubResource("CylinderMesh_fhh42")
+
+[node name="lamp_omnilight" parent="." index="3" unique_id=1362498555 instance=ExtResource("4_fhh42")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8414955, 1.6056702)
+
+[node name="lamp_omnilight2" parent="." index="4" unique_id=1143376338 instance=ExtResource("4_fhh42")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8414955, -1.5703038)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="5" unique_id=446872182]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1433997594]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.012481689, 1.8466797, 0.010192871)
+shape = SubResource("BoxShape3D_fhh42")

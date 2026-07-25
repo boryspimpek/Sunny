@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cy14skriub5m8" path="res://assets/maps/props/1/Lamp_2.fbx" id="1_0ol6j"]
 [ext_resource type="Texture2D" uid="uid://6055dehpw7un" path="res://assets/maps/props/1/Texture.png" id="2_amn0e"]
 [ext_resource type="Material" uid="uid://wkcuewni2hf1" path="res://materials/lantern_village.tres" id="3_amn0e"]
+[ext_resource type="PackedScene" uid="uid://bt5u374lxjhqw" path="res://assets/maps/Temple of Ash/lamp_omnilight.tscn" id="4_asshu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_asshu"]
 albedo_color = Color(0.29586652, 0.2958665, 0.2958665, 1)
@@ -19,6 +20,9 @@ size = Vector2(1.037, 1.255)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_yyfb6"]
 size = Vector2(1.137, 1.28)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_asshu"]
+size = Vector3(0.3265381, 3.7109375, 0.31011963)
 
 [node name="Lamp_2" unique_id=1881258199 instance=ExtResource("1_0ol6j")]
 
@@ -64,3 +68,12 @@ surface_material_override/0 = ExtResource("3_amn0e")
 transform = Transform3D(-1.0654155e-09, 8.677114e-09, -0.19999997, 0.19850923, 0.024373865, 0, 0.024373865, -0.19850923, -8.742276e-09, -0.8100948, 2.4370754, -0.1757401)
 mesh = SubResource("PlaneMesh_0ol6j")
 surface_material_override/0 = ExtResource("3_amn0e")
+
+[node name="lamp_omnilight" parent="." index="9" unique_id=1362498555 instance=ExtResource("4_asshu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8027086, 2.3460808, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="10" unique_id=1563082755]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=578258717]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0036010742, 1.8466797, 0.00015258789)
+shape = SubResource("BoxShape3D_asshu")

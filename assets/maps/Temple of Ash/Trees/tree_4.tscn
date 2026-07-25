@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://ba73h3dbpj1q8"]
+
+[ext_resource type="PackedScene" uid="uid://yxiujd74f077" path="res://assets/maps/nature/tree4/uploads_files_4993400_tree.fbx" id="1_0ikky"]
+[ext_resource type="Texture2D" uid="uid://drvc5gpclnvb1" path="res://assets/maps/nature/tree4/base_color.png" id="2_mfhuk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hbg7i"]
+albedo_color = Color(0.5552965, 0.24716276, 9.62615e-08, 1)
+albedo_texture = ExtResource("2_mfhuk")
+
+[node name="tree4" unique_id=1926762258 instance=ExtResource("1_0ikky")]
+
+[node name="Cube" parent="." index="0" unique_id=1280469647]
+surface_material_override/0 = SubResource("StandardMaterial3D_hbg7i")
