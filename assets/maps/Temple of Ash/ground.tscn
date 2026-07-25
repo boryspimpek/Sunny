@@ -30,5 +30,5 @@ transform = Transform3D(1.3331778, 0, -1.1259046, 0, 1.7450002, 0, 1.1259046, 0,
 [node name="PlatformSmall_004" parent="." unique_id=1481849059 instance=ExtResource("2_u1ydv")]
 transform = Transform3D(0.014862031, 0, 1.7449366, 0, 1.7450005, 0, -1.7449366, 0, 0.014862031, -79.74358, -8.300488, 13.049568)
 
-[node name="lava2" parent="." unique_id=278022073 instance=ExtResource("3_w3476")]
+[node name="lava" parent="." unique_id=278022073 instance=ExtResource("3_w3476")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.64624, 0, -7.5626755)

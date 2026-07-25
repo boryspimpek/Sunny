@@ -219,7 +219,7 @@ current = true
 [node name="SpotLight3D" type="SpotLight3D" parent="SpringArmPivot/SpringArm3D/Camera3D" index="0" unique_id=309497272]
 transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, -0.57313275, -0.44331008)
 light_volumetric_fog_energy = 0.0
-spot_range = 20.0
+spot_range = 30.0
 spot_attenuation = -0.9
 spot_angle = 18.41
 spot_angle_attenuation = 0.26794344

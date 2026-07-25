@@ -217,6 +217,8 @@ mesh = SubResource("QuadMesh_wbfbh")
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1340843048]
 light_color = Color(0.7223417, 0.7223419, 3.85046e-07, 1)
 light_energy = 0.86
+omni_range = 1.788
+omni_attenuation = -3.258
 script = ExtResource("4_6d0hr")
 vfx_light_energy = 0.86
 

@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://ds43fdopnabh1"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wa8h5"]
-load_path = "res://.godot/imported/lava_rocks_01_color_1k.png-23c8f5779acb6f14b19b2d174013762f.s3tc.ctex"
+[ext_resource type="Texture2D" uid="uid://djm460s0q8b73" path="res://assets/textures/lava_rocks_01_1k/lava_rocks_01_color_1k.png" id="1_c3wb8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c3wb8"]
-albedo_texture = SubResource("CompressedTexture2D_wa8h5")
+albedo_texture = ExtResource("1_c3wb8")
+emission_enabled = true
 uv1_scale = Vector3(0.01, 0.01, 0.01)
 uv1_triplanar = true
 
