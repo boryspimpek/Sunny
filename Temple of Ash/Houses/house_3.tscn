@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cgn2ya84jebkl"]
+
+[ext_resource type="PackedScene" uid="uid://dpiiv14vxtbfs" path="res://assets/maps/houses/3/model/-LOD0_p_hut_003.fbx" id="1_rngs6"]
+[ext_resource type="Texture2D" uid="uid://00j50g7gt2vv" path="res://assets/maps/houses/3/textures/thatch_no_opacity/gratis because you are awesome/thatch_bc2.png" id="2_1d0dn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_doriy"]
+albedo_texture = ExtResource("2_1d0dn")
+
+[node name="house3" unique_id=1181210296 instance=ExtResource("1_rngs6")]
+
+[node name="Cylinder_006" parent="." index="0" unique_id=789162205]
+surface_material_override/0 = SubResource("StandardMaterial3D_doriy")

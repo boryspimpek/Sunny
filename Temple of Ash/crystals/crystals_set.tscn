@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://c4abcdopo7gne"]
+
+[ext_resource type="PackedScene" uid="uid://bl8wn5y0eo540" path="res://assets/maps/crystal/crystal1/Crystals_Set_FBX.fbx" id="1_ff8fa"]
+[ext_resource type="Texture2D" uid="uid://dmtgj1tojbs4v" path="res://assets/maps/crystal/crystal1/Textures/1024x1024_Purple/Crystal_low_lambert1_baseColor.png" id="2_q3se4"]
+[ext_resource type="Texture2D" uid="uid://k4rqfiqydaox" path="res://assets/maps/crystal/crystal1/Textures/1024x1024_Purple/Crystal_low_lambert1_Emissive.png" id="3_gibfg"]
+[ext_resource type="Texture2D" uid="uid://icvwtcwugg6s" path="res://assets/maps/crystal/crystal1/Textures/1024x1024_Purple/Crystal_low_lambert1_metallic.png" id="4_eufo1"]
+[ext_resource type="Texture2D" uid="uid://bfeg6m8mc84c2" path="res://assets/maps/crystal/crystal1/Textures/1024x1024_Purple/Crystal_low_lambert1_Normal.png" id="5_p07ji"]
+[ext_resource type="Texture2D" uid="uid://dggdyvgpa128a" path="res://assets/maps/crystal/crystal1/Textures/1024x1024_Purple/Crystal_low_lambert1_Roughness.png" id="6_fd0v2"]
+[ext_resource type="Texture2D" uid="uid://dju822k0tsn8t" path="res://assets/maps/crystal/crystal1/Textures/1024x1024_Yellow/Crystal_low_lambert1_baseColor.png" id="7_bshoc"]
+[ext_resource type="Texture2D" uid="uid://de6r5xyoh0lb4" path="res://assets/maps/crystal/crystal1/Textures/1024x1024_Yellow/Crystal_low_lambert1_Emissive.png" id="8_qpgj8"]
+[ext_resource type="Texture2D" uid="uid://dig7to6qj8xsk" path="res://assets/maps/crystal/crystal1/Textures/1024x1024_Yellow/Crystal_low_lambert1_Normal.png" id="9_sswj6"]
+[ext_resource type="Texture2D" uid="uid://blsgv21saetsy" path="res://assets/maps/crystal/crystal1/Textures/1024x1024_ColorFull/Crystal_low_lambert1_baseColor.png" id="10_c7qc4"]
+[ext_resource type="Texture2D" uid="uid://cfvwk2xoj6ke3" path="res://assets/maps/crystal/crystal1/Textures/1024x1024_ColorFull/Crystal_low_lambert1_Emissive.png" id="11_v4ibi"]
+[ext_resource type="Texture2D" uid="uid://c3j58pu0esv13" path="res://assets/maps/crystal/crystal1/Textures/1024x1024_ColorFull/Crystal_low_lambert1_Normal.png" id="12_qdt5o"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_forev"]
+albedo_texture = ExtResource("2_q3se4")
+metallic = 1.0
+metallic_texture = ExtResource("4_eufo1")
+roughness_texture = ExtResource("6_fd0v2")
+emission_enabled = true
+emission_texture = ExtResource("3_gibfg")
+normal_enabled = true
+normal_texture = ExtResource("5_p07ji")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3vusw"]
+albedo_texture = ExtResource("7_bshoc")
+emission_enabled = true
+emission_texture = ExtResource("8_qpgj8")
+normal_enabled = true
+normal_texture = ExtResource("9_sswj6")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_luic2"]
+albedo_texture = ExtResource("10_c7qc4")
+emission_enabled = true
+emission_texture = ExtResource("11_v4ibi")
+normal_enabled = true
+normal_texture = ExtResource("12_qdt5o")
+
+[node name="crystals_set" unique_id=1035048712 instance=ExtResource("1_ff8fa")]
+
+[node name="Crystal_LP_005" parent="group" parent_id_path=PackedInt32Array(156249104) index="0" unique_id=69094747]
+surface_material_override/0 = SubResource("StandardMaterial3D_forev")
+
+[node name="LP_005" parent="group" parent_id_path=PackedInt32Array(156249104) index="1" unique_id=2101332562]
+surface_material_override/0 = SubResource("StandardMaterial3D_3vusw")
+
+[node name="Crystal_set_OBJ_polySurface1" parent="group1" parent_id_path=PackedInt32Array(1108171082) index="0" unique_id=1679962326]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2691457, 0.16846943, -0.4140486)
+surface_material_override/0 = SubResource("StandardMaterial3D_luic2")

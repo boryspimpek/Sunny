@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://cqh2dtbsxve3q"]
+
+[ext_resource type="PackedScene" uid="uid://cdpsmsv2kdqys" path="res://assets/maps/houses/2/midpoly_town_house_01.fbx" id="1_xh0cy"]
+[ext_resource type="Texture2D" uid="uid://c36n88plox7x7" path="res://assets/maps/houses/2/textures/wood/T_darkwood_basecolor.png" id="2_wta51"]
+[ext_resource type="Texture2D" uid="uid://d1vl7htojegyp" path="res://assets/maps/houses/2/textures/rocks/rock_bc.jpg" id="3_bjhww"]
+[ext_resource type="Texture2D" uid="uid://c82jjo23sq21q" path="res://assets/maps/houses/2/textures/wood/T_brightwood_basecolor.png" id="4_euo53"]
+[ext_resource type="Texture2D" uid="uid://cpxv0g5lp5qdm" path="res://assets/maps/houses/2/textures/rooftiles/T_darkwood_basecolor.png" id="5_c1522"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ip6kw"]
+albedo_texture = ExtResource("2_wta51")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cjknc"]
+albedo_texture = ExtResource("2_wta51")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s5ba0"]
+albedo_texture = ExtResource("2_wta51")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rwbci"]
+albedo_texture = ExtResource("2_wta51")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w51jg"]
+albedo_texture = ExtResource("2_wta51")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_62if7"]
+albedo_texture = ExtResource("3_bjhww")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jwusf"]
+albedo_texture = ExtResource("3_bjhww")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jgbe3"]
+albedo_texture = ExtResource("4_euo53")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ivinr"]
+albedo_texture = ExtResource("5_c1522")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_obfdp"]
+albedo_texture = ExtResource("5_c1522")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_631oh"]
+albedo_texture = ExtResource("5_c1522")
+
+[node name="house2" unique_id=206234894 instance=ExtResource("1_xh0cy")]
+
+[node name="Cube_009" parent="." index="0" unique_id=875663814]
+surface_material_override/0 = SubResource("StandardMaterial3D_ip6kw")
+
+[node name="construction_006" parent="." index="1" unique_id=713835921]
+surface_material_override/0 = SubResource("StandardMaterial3D_cjknc")
+
+[node name="construction_005" parent="." index="2" unique_id=988273790]
+surface_material_override/0 = SubResource("StandardMaterial3D_s5ba0")
+
+[node name="construction_003" parent="." index="3" unique_id=1153436716]
+surface_material_override/0 = SubResource("StandardMaterial3D_rwbci")
+
+[node name="construction_002" parent="." index="4" unique_id=414916076]
+surface_material_override/0 = SubResource("StandardMaterial3D_w51jg")
+
+[node name="Cube_007" parent="." index="5" unique_id=1678014297]
+surface_material_override/0 = SubResource("StandardMaterial3D_62if7")
+
+[node name="Cube_006" parent="." index="6" unique_id=363343175]
+surface_material_override/0 = SubResource("StandardMaterial3D_jwusf")
+
+[node name="Cube_005" parent="." index="7" unique_id=1934574662]
+surface_material_override/0 = SubResource("StandardMaterial3D_jgbe3")
+
+[node name="Cube_003" parent="." index="8" unique_id=1525749683]
+surface_material_override/0 = SubResource("StandardMaterial3D_ivinr")
+
+[node name="Cube_004" parent="." index="9" unique_id=1251923418]
+surface_material_override/0 = SubResource("StandardMaterial3D_obfdp")
+
+[node name="Cube" parent="." index="10" unique_id=1024248071]
+surface_material_override/0 = SubResource("StandardMaterial3D_631oh")

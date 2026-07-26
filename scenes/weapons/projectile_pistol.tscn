@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://buhgruu5mejpb"]
 
 [ext_resource type="Script" uid="uid://cxv5vg543r7qm" path="res://src/weapons/projectile.gd" id="1_d1ygb"]
-[ext_resource type="PackedScene" uid="uid://bt5u374lxjhqw" path="res://assets/maps/Temple of Ash/lamp_omnilight.tscn" id="2_a3vcu"]
+[ext_resource type="PackedScene" uid="uid://bt5u374lxjhqw" path="res://Temple of Ash/lamp_omnilight.tscn" id="2_a3vcu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rx7lu"]
 albedo_color = Color(1, 0, 1, 1)

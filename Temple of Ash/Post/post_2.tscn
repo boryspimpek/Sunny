@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://72lftgrqmbxm"]
+
+[ext_resource type="PackedScene" uid="uid://bgeydmwhyajvl" path="res://assets/maps/sign/post2.fbx" id="1_8ewa1"]
+
+[node name="post2" unique_id=436363359 instance=ExtResource("1_8ewa1")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0.35065103, 0)

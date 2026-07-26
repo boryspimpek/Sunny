@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dck320btghv2j"]
+
+[ext_resource type="PackedScene" uid="uid://fuh8g57788bk" path="res://assets/maps/nature/tree5/uploads_files_5456535_Skeletal+Tree+FREE.fbx" id="1_jwglj"]
+[ext_resource type="Texture2D" uid="uid://b0cp5f85vnef4" path="res://assets/maps/nature/tree5/Tree_Base color.png" id="2_e6chp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2qj5j"]
+albedo_color = Color(0, 0, 1, 1)
+albedo_texture = ExtResource("2_e6chp")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_40by6"]
+height = 0.05758667
+radius = 0.016113281
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_y06il"]
+height = 0.03904724
+radius = 0.01171875
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_67io0"]
+height = 0.03904724
+radius = 0.009765625
+
+[node name="tree5" unique_id=2067030956 instance=ExtResource("1_jwglj")]
+transform = Transform3D(70, 0, 0, 0, 70, 0, 0, 0, 70, 0, 0, 0)
+
+[node name="Skeletal_Tree_FREE" parent="." index="0" unique_id=1835034553]
+surface_material_override/0 = SubResource("StandardMaterial3D_2qj5j")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=1446056026]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=2132211605]
+transform = Transform3D(0.875532, -0.4831602, 0, 0.4831602, 0.875532, 0, 0, 0, 1, -0.012140221, 0.019044718, 0.004015514)
+shape = SubResource("CylinderShape3D_40by6")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1" unique_id=1929163454]
+transform = Transform3D(0.98562986, 0.16891943, 0, -0.16891943, 0.98562986, 0, 0, 0, 1, -0.027591668, 0.053951725, 0.004015514)
+shape = SubResource("CylinderShape3D_y06il")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" index="2" unique_id=967081804]
+transform = Transform3D(0.89253855, 0.450971, 0, -0.450971, 0.89253855, 0, 0, 0, 1, -0.01709014, 0.08695942, 0.0030087593)
+shape = SubResource("CylinderShape3D_67io0")

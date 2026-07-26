@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bdbhqpshphq8"]
+
+[ext_resource type="PackedScene" uid="uid://dm4r2v1ypk41k" path="res://assets/maps/houses/1/model/-LOD0_hut_003.fbx" id="1_yxl4s"]
+[ext_resource type="Texture2D" uid="uid://c4ffxs6egap7o" path="res://assets/maps/houses/1/textures/logs/base_color.png" id="2_6o72x"]
+[ext_resource type="Texture2D" uid="uid://bo8vwa81ncxc6" path="res://assets/maps/houses/1/textures/wood/T_darkwood_basecolor.png" id="3_n5w6t"]
+[ext_resource type="Texture2D" uid="uid://85wfo4eihfs3" path="res://assets/maps/houses/1/textures/thatch_no_opacity/gratis because you are awesome/thatch_bc2.png" id="4_ah3sa"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0nejf"]
+albedo_texture = ExtResource("2_6o72x")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_owr68"]
+albedo_texture = ExtResource("3_n5w6t")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k2p82"]
+albedo_texture = ExtResource("4_ah3sa")
+
+[node name="house1" unique_id=385347009 instance=ExtResource("1_yxl4s")]
+
+[node name="Cylinder_001" parent="." index="0" unique_id=985674315]
+surface_material_override/0 = SubResource("StandardMaterial3D_0nejf")
+
+[node name="Cylinder_006" parent="." index="1" unique_id=370252463]
+surface_material_override/0 = SubResource("StandardMaterial3D_owr68")
+
+[node name="Roof" parent="." index="2" unique_id=1273856485]
+surface_material_override/0 = SubResource("StandardMaterial3D_k2p82")

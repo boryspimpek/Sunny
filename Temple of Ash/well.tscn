@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://0l54k5rylyn0"]
+
+[ext_resource type="PackedScene" uid="uid://di6krkfvql5fw" path="res://assets/maps/well/uploads_files_3443469_Well-Handle_Finish.fbx" id="1_0efug"]
+
+[node name="well" unique_id=472847213 instance=ExtResource("1_0efug")]

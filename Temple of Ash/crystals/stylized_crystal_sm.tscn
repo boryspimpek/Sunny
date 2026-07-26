@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://csfsw2ie0eil4"]
+
+[ext_resource type="PackedScene" uid="uid://cv8d03315hed6" path="res://assets/maps/crystal/crystal5/stylized_crystal_SM.fbx" id="1_xho3a"]
+[ext_resource type="Texture2D" uid="uid://dxou0lgnh8rsk" path="res://assets/maps/crystal/crystal5/Textures/PNG/crystal_m_Base_color.png" id="2_tio86"]
+[ext_resource type="Texture2D" uid="uid://rewkl0r1g4r4" path="res://assets/maps/crystal/crystal5/Textures/PNG/crystal_m_Height.png" id="3_fkhuu"]
+[ext_resource type="Texture2D" uid="uid://bf8blgsaj1ict" path="res://assets/maps/crystal/crystal5/Textures/PNG/crystal_m_Normal_DirectX.png" id="4_pja7a"]
+[ext_resource type="Texture2D" uid="uid://bo5kxpusdwkxc" path="res://assets/maps/crystal/crystal5/Textures/PNG/crystal_m_Metallic.png" id="4_visnp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fkhuu"]
+albedo_texture = ExtResource("2_tio86")
+metallic = 1.0
+metallic_specular = 1.0
+metallic_texture = ExtResource("4_visnp")
+roughness = 0.34
+emission_enabled = true
+emission = Color(0.00042971133, 0.032366317, 0.26192337, 1)
+normal_enabled = true
+normal_texture = ExtResource("4_pja7a")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_fkhuu")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pja7a"]
+albedo_texture = ExtResource("2_tio86")
+roughness = 0.34
+emission_enabled = true
+emission = Color(0.23529412, 0, 0.23529412, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_visnp"]
+albedo_texture = ExtResource("2_tio86")
+metallic = 0.54
+roughness = 0.36
+emission = Color(0, 0.2627451, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h112j"]
+albedo_texture = ExtResource("2_tio86")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_32vaa"]
+albedo_texture = ExtResource("2_tio86")
+
+[node name="stylized_crystal_SM" unique_id=166582125 instance=ExtResource("1_xho3a")]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
+
+[node name="crystal1_low" parent="." index="0" unique_id=1796064153]
+surface_material_override/0 = SubResource("StandardMaterial3D_fkhuu")
+
+[node name="crystal2_low" parent="." index="1" unique_id=734151863]
+surface_material_override/0 = SubResource("StandardMaterial3D_pja7a")
+
+[node name="crystal3_low" parent="." index="2" unique_id=385573619]
+surface_material_override/0 = SubResource("StandardMaterial3D_visnp")
+
+[node name="crystal4_low" parent="." index="3" unique_id=1697273188]
+surface_material_override/0 = SubResource("StandardMaterial3D_h112j")
+
+[node name="crystal5_low" parent="." index="4" unique_id=1360296123]
+surface_material_override/0 = SubResource("StandardMaterial3D_32vaa")

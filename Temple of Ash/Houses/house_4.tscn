@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dex5bokdb4fq8"]
+
+[ext_resource type="PackedScene" uid="uid://b8sj8vmcrcqod" path="res://assets/maps/houses/4/model/-LOD0_v_hut_002.fbx" id="1_4db1i"]
+[ext_resource type="Texture2D" uid="uid://gtjabuk7yfc1" path="res://assets/maps/houses/4/textures/wood/T_darkwood_basecolor.png" id="2_egg6a"]
+[ext_resource type="Texture2D" uid="uid://d6ur7lishdu" path="res://assets/maps/houses/4/textures/wood/T_brightwood_basecolor.png" id="3_m2pm2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fm74y"]
+albedo_texture = ExtResource("2_egg6a")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bkxia"]
+albedo_texture = ExtResource("3_m2pm2")
+
+[node name="house4" unique_id=1954466984 instance=ExtResource("1_4db1i")]
+
+[node name="Circle_002" parent="." index="0" unique_id=1650789696]
+surface_material_override/0 = SubResource("StandardMaterial3D_fm74y")
+surface_material_override/1 = SubResource("StandardMaterial3D_bkxia")

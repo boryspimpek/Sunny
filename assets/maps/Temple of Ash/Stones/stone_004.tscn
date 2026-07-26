@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://cq6brhm2htxb5"]
-
-[ext_resource type="PackedScene" uid="uid://bxforxh0ie45p" path="res://assets/maps/inferno/Separate_assets_fbx/Stone_004.fbx" id="1_dedqa"]
-
-[node name="Stone_004" unique_id=1322112413 instance=ExtResource("1_dedqa")]

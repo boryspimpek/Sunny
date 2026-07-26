@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dpcjeh73uaixf"]
+
+[ext_resource type="PackedScene" uid="uid://qf07yl1hdkfe" path="res://assets/maps/nature/tree3/uploads_files_3623688_tree+.fbx" id="1_rurf4"]
+[ext_resource type="Texture2D" uid="uid://bvrnjgct8e6t0" path="res://assets/maps/nature/tree3/tree_DefaultMaterial_BaseColor.png" id="2_2tjw5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vkavj"]
+albedo_texture = ExtResource("2_2tjw5")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_hlyss"]
+height = 0.90719604
+radius = 0.095214844
+
+[node name="tree3" unique_id=55689119 instance=ExtResource("1_rurf4")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+
+[node name="tree" parent="." index="0" unique_id=454955031]
+surface_material_override/0 = SubResource("StandardMaterial3D_vkavj")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=440485070]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1056288386]
+transform = Transform3D(0.99841285, 0.056379337, 4.6356305e-10, -0.055654094, 0.9855696, 0.15988122, 0.009013967, -0.15962699, 0.9871393, 0.04423744, 0.4540869, -0.07274493)
+shape = SubResource("CylinderShape3D_hlyss")

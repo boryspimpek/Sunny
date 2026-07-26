@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://d2ogw43rxt48m"]
+
+[ext_resource type="PackedScene" uid="uid://blvbkdl7y0e3q" path="res://assets/maps/crystal/crystal4/uploads_files_5892008_Crystal.fbx" id="1_m4ns2"]
+
+[node name="crystal_blue" unique_id=1769516285 instance=ExtResource("1_m4ns2")]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)

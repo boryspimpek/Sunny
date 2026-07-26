@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b5o1s10pm8bl3"]
+
+[ext_resource type="PackedScene" uid="uid://bubjtjoidh6lw" path="res://assets/maps/inferno/Separate_assets_fbx/Stone_002.fbx" id="1_h10tq"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_gog16"]
+radius = 1.3349609
+
+[node name="Stone_002" unique_id=1702903905 instance=ExtResource("1_h10tq")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1835604140]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=170581493]
+transform = Transform3D(0.8998853, 0, 0.43612656, 0, 1, 0, -0.43612656, 0, 0.8998853, -0.02327457, 0, -0.0526253)
+shape = SubResource("CylinderShape3D_gog16")

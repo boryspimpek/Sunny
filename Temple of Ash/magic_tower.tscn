@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://drtcfmdqo68ri"]
+
+[ext_resource type="PackedScene" uid="uid://t01618p34qq2" path="res://assets/maps/tower/Magic_tower.fbx" id="1_23ceh"]
+[ext_resource type="Texture2D" uid="uid://br67moylhfll" path="res://assets/maps/tower/Magic_Tower_LP_BaseColor_v1.png" id="2_s67py"]
+[ext_resource type="Texture2D" uid="uid://b5fi8n4wetksl" path="res://assets/maps/tower/Magic_Tower_LP_BaseColor_v2.png" id="3_hkgbn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_15kpf"]
+albedo_texture = ExtResource("2_s67py")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rgnhm"]
+albedo_texture = ExtResource("2_s67py")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6oveq"]
+albedo_texture = ExtResource("2_s67py")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o8ut3"]
+albedo_texture = ExtResource("2_s67py")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kji4f"]
+albedo_texture = ExtResource("2_s67py")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1f6wf"]
+albedo_texture = ExtResource("2_s67py")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ek1ie"]
+albedo_texture = ExtResource("2_s67py")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v0ox1"]
+albedo_texture = ExtResource("2_s67py")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ueh88"]
+albedo_texture = ExtResource("2_s67py")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2d244"]
+albedo_texture = ExtResource("2_s67py")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iol6h"]
+albedo_texture = ExtResource("2_s67py")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nknv3"]
+albedo_texture = ExtResource("3_hkgbn")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d8bu8"]
+albedo_texture = ExtResource("2_s67py")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pcxjp"]
+albedo_texture = ExtResource("2_s67py")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g3qbb"]
+albedo_texture = ExtResource("2_s67py")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1qq6i"]
+albedo_texture = ExtResource("2_s67py")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6j77b"]
+albedo_texture = ExtResource("2_s67py")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2lkpn"]
+albedo_texture = ExtResource("2_s67py")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d5jmj"]
+albedo_texture = ExtResource("2_s67py")
+
+[node name="magic_tower" unique_id=514905653 instance=ExtResource("1_23ceh")]
+
+[node name="Columns_LP" parent="." index="0" unique_id=1521067039]
+material_override = SubResource("StandardMaterial3D_15kpf")
+
+[node name="Floor_LP" parent="." index="4" unique_id=1301931569]
+material_override = SubResource("StandardMaterial3D_rgnhm")
+
+[node name="Plane_LP" parent="." index="5" unique_id=390191162]
+material_override = SubResource("StandardMaterial3D_6oveq")
+
+[node name="Platform_LP" parent="." index="6" unique_id=1562743189]
+material_override = SubResource("StandardMaterial3D_o8ut3")
+
+[node name="Rocks_1_LP" parent="." index="7" unique_id=893788034]
+material_override = SubResource("StandardMaterial3D_kji4f")
+
+[node name="Rocks_2_LP" parent="." index="8" unique_id=258993321]
+material_override = SubResource("StandardMaterial3D_1f6wf")
+
+[node name="Rocks_3_LP" parent="." index="9" unique_id=1999563756]
+material_override = SubResource("StandardMaterial3D_ek1ie")
+
+[node name="Rocks_above_LP" parent="." index="10" unique_id=1409849132]
+material_override = SubResource("StandardMaterial3D_v0ox1")
+
+[node name="Romb_1_LP" parent="." index="11" unique_id=1699258453]
+material_override = SubResource("StandardMaterial3D_ueh88")
+
+[node name="Romb_1_LP_001" parent="." index="12" unique_id=220232298]
+material_override = SubResource("StandardMaterial3D_2d244")
+
+[node name="Romb_broken_LP" parent="." index="14" unique_id=441311015]
+material_override = SubResource("StandardMaterial3D_iol6h")
+
+[node name="Stair_LP" parent="." index="15" unique_id=1137263071]
+material_override = SubResource("StandardMaterial3D_nknv3")
+
+[node name="Wall_high_LP" parent="." index="16" unique_id=420204977]
+material_override = SubResource("StandardMaterial3D_d8bu8")
+
+[node name="Wall_inner_1_LP" parent="." index="17" unique_id=1264271891]
+material_override = SubResource("StandardMaterial3D_pcxjp")
+
+[node name="Wall_inner_1_LP_001" parent="." index="18" unique_id=914400381]
+material_override = SubResource("StandardMaterial3D_g3qbb")
+
+[node name="Wall_inner_1_LP_002" parent="." index="19" unique_id=1781499925]
+material_override = SubResource("StandardMaterial3D_1qq6i")
+
+[node name="Wall_outer_1_LP" parent="." index="20" unique_id=1298822339]
+material_override = SubResource("StandardMaterial3D_6j77b")
+
+[node name="Wall_outer_1_LP_001" parent="." index="21" unique_id=352349123]
+material_override = SubResource("StandardMaterial3D_2lkpn")
+
+[node name="Wall_outer_1_LP_002" parent="." index="22" unique_id=526636830]
+material_override = SubResource("StandardMaterial3D_d5jmj")
