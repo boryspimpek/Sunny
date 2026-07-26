@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://codis1hnwg5kb"
-path="res://.godot/imported/Jump.fbx-28876d7b6069643e5c7558e80ac6ff22.scn"
+uid="uid://cpcrvrum23i08"
+path="res://.godot/imported/Sprinting Forward Roll.fbx-32f2b859d90352cd80efbc7aadb09501.scn"
 
 [deps]
 
-source_file="res://assets/animations/Player_2/mixamo/Jump.fbx"
-dest_files=["res://.godot/imported/Jump.fbx-28876d7b6069643e5c7558e80ac6ff22.scn"]
+source_file="res://assets/animations/Player_2/mixamo/Sprinting Forward Roll.fbx"
+dest_files=["res://.godot/imported/Sprinting Forward Roll.fbx-32f2b859d90352cd80efbc7aadb09501.scn"]
 
 [params]
 
@@ -41,9 +41,9 @@ _subresources={
 "animations": {
 "mixamo_com": {
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/animations/Player_2/animations/jump.tres",
+"save_to_file/fallback_path": "res://assets/animations/Player_2/animations/roll.tres",
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "uid://ca8pkkh8x6det",
+"save_to_file/path": "uid://bpabrxmmjfbd1",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,
