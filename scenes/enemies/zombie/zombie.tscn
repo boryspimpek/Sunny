@@ -90,7 +90,6 @@ max_health = 10.0
 
 [node name="MovementBehavior" type="Node" parent="." index="3" unique_id=1544890698]
 script = ExtResource("7_7e2u1")
-detection_range = 50.0
 stop_distance = 0.7
 
 [node name="AttackBehavior" type="Node" parent="." index="4" unique_id=278806177]
