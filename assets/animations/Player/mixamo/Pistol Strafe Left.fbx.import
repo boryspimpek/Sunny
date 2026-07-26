@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://crjm2343fvko2"
-path="res://.godot/imported/Running.fbx-78274949481a8ace89fd599acaf549ed.scn"
+uid="uid://byidgarpn7gvh"
+path="res://.godot/imported/Pistol Strafe Left.fbx-f67062bb2ac56301ce17b092b1274473.scn"
 
 [deps]
 
-source_file="res://assets/animations/mixamo/Running.fbx"
-dest_files=["res://.godot/imported/Running.fbx-78274949481a8ace89fd599acaf549ed.scn"]
+source_file="res://assets/animations/Player/mixamo/Pistol Strafe Left.fbx"
+dest_files=["res://.godot/imported/Pistol Strafe Left.fbx-f67062bb2ac56301ce17b092b1274473.scn"]
 
 [params]
 
@@ -41,9 +41,9 @@ _subresources={
 "animations": {
 "mixamo_com": {
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/animations/animation tres/running.tres",
+"save_to_file/fallback_path": "res://assets/animations/Player/animation tres/pistol_strafe_left.tres",
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "uid://b8dd7l5vyoajl",
+"save_to_file/path": "uid://5iwprtie7pmg",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,

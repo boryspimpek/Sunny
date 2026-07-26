@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://hb2a3olr5iub"
-path="res://.godot/imported/Pistol Idle.fbx-ef7e98becd26b96c09fad165a2b67681.scn"
+uid="uid://ct2hfxvobi7w5"
+path="res://.godot/imported/Zombie Idle.fbx-88e0578a0db7218ebea6c5d1fe62ca4c.scn"
 
 [deps]
 
-source_file="res://assets/animations/mixamo/Pistol Idle.fbx"
-dest_files=["res://.godot/imported/Pistol Idle.fbx-ef7e98becd26b96c09fad165a2b67681.scn"]
+source_file="res://assets/animations/Zombie/mixamo/Zombie Idle.fbx"
+dest_files=["res://.godot/imported/Zombie Idle.fbx-88e0578a0db7218ebea6c5d1fe62ca4c.scn"]
 
 [params]
 
@@ -41,9 +41,9 @@ _subresources={
 "animations": {
 "mixamo_com": {
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/animations/animation tres/pistol_idle.tres",
+"save_to_file/fallback_path": "res://assets/animations/Zombie/animation tres/idle.tres",
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "uid://crxd4t863rfdu",
+"save_to_file/path": "uid://jpvbjhmu13ca",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,

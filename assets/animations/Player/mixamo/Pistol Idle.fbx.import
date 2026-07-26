@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c80a51gs7186a"
-path="res://.godot/imported/Pistol Run.fbx-3b6d0b6e9f98008f023129c0453611ac.scn"
+uid="uid://hb2a3olr5iub"
+path="res://.godot/imported/Pistol Idle.fbx-56d73a0be9ddee799f1bde384592684a.scn"
 
 [deps]
 
-source_file="res://assets/animations/mixamo/Pistol Run.fbx"
-dest_files=["res://.godot/imported/Pistol Run.fbx-3b6d0b6e9f98008f023129c0453611ac.scn"]
+source_file="res://assets/animations/Player/mixamo/Pistol Idle.fbx"
+dest_files=["res://.godot/imported/Pistol Idle.fbx-56d73a0be9ddee799f1bde384592684a.scn"]
 
 [params]
 
@@ -41,9 +41,9 @@ _subresources={
 "animations": {
 "mixamo_com": {
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/animations/animation tres/pistol_run.tres",
+"save_to_file/fallback_path": "res://assets/animations/Player/animation tres/pistol_idle.tres",
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "uid://b5a5uklwbuxbq",
+"save_to_file/path": "uid://crxd4t863rfdu",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,

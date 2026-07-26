@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bldmjuscal88a"
-path="res://.godot/imported/Running Backward.fbx-5b7c571b89bfc45483624fee0f529542.scn"
+uid="uid://bupa00kwm54h4"
+path="res://.godot/imported/Zombie Punching.fbx-d13d40f90331f407027fc7343c798d35.scn"
 
 [deps]
 
-source_file="res://assets/animations/mixamo/Running Backward.fbx"
-dest_files=["res://.godot/imported/Running Backward.fbx-5b7c571b89bfc45483624fee0f529542.scn"]
+source_file="res://assets/animations/Zombie/mixamo/Zombie Punching.fbx"
+dest_files=["res://.godot/imported/Zombie Punching.fbx-d13d40f90331f407027fc7343c798d35.scn"]
 
 [params]
 
@@ -41,9 +41,9 @@ _subresources={
 "animations": {
 "mixamo_com": {
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/animations/animation tres/running_backward.tres",
+"save_to_file/fallback_path": "res://assets/animations/Zombie/animation tres/punching.tres",
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "uid://c56fpenem1qvb",
+"save_to_file/path": "uid://ch2yxwl320mn1",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,
