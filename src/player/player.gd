@@ -2,14 +2,13 @@ class_name Player
 extends CharacterBody3D
 ## Root gracza: fizyka (grawitacja, move_and_slide) i orkiestracja komponentów.
 ## Logika podzielona na komponenty-dzieci: PlayerMovement, PlayerCamera,
-## PlayerAimAssist, PlayerAnimator, WeaponManager, HealthComponent.
+## PlayerAnimator, WeaponManager, HealthComponent.
 
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 var combat_mode := false
 
 @onready var movement: PlayerMovement = $PlayerMovement
 @onready var player_camera: PlayerCamera = $PlayerCamera
-@onready var aim_assist: PlayerAimAssist = $PlayerAimAssist
 @onready var animator: PlayerAnimator = $PlayerAnimator
 @onready var weapon_manager: WeaponManager = $WeaponManager
 @onready var health: HealthComponent = $HealthComponent
@@ -35,8 +34,6 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 
-	if combat_mode:
-		aim_assist.apply(delta)
 	weapon_manager.update(delta, combat_mode and Input.is_action_pressed("fire"))
 
 	movement.update(delta, combat_mode, player_camera.get_yaw(), animator)
