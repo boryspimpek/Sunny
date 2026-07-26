@@ -331,7 +331,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_488hv")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_m0mba"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i5mv6"]
 render_priority = 0
 shader = ExtResource("30_dc080")
 shader_parameter/albedo = Color(0.56988835, 0.31059232, 0, 1)
@@ -359,7 +359,7 @@ shader_parameter/interactive_level_xz = 3.0
 shader_parameter/interactive_level_y = 0.3
 metadata/SimpleGrassTexturedMaterial = "2.1.0"
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_i3exe"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yma7u"]
 render_priority = 0
 shader = ExtResource("30_dc080")
 shader_parameter/albedo = Color(0.3220863, 7.01987e-05, 0.32208392, 1)
@@ -387,7 +387,7 @@ shader_parameter/interactive_level_xz = 3.0
 shader_parameter/interactive_level_y = 0.3
 metadata/SimpleGrassTexturedMaterial = "2.1.0"
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_mirxp"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g22cj"]
 render_priority = 0
 shader = ExtResource("30_dc080")
 shader_parameter/albedo = Color(0.09945222, 1.4439226e-07, 0.5398537, 1)
@@ -415,7 +415,7 @@ shader_parameter/interactive_level_xz = 3.0
 shader_parameter/interactive_level_y = 0.3
 metadata/SimpleGrassTexturedMaterial = "2.1.0"
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_vulwf"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kevch"]
 render_priority = 0
 shader = ExtResource("30_dc080")
 shader_parameter/albedo = Color(0.09411765, 0.13725491, 0, 1)
@@ -823,7 +823,7 @@ transform = Transform3D(0.9998349, 0, -0.018167842, 0, 1, 0, 0.018167842, 0, 0.9
 [node name="Grass" type="MeshInstance3D" parent="Village" unique_id=1666937536]
 
 [node name="SimpleGrassTextured" type="MultiMeshInstance3D" parent="Village/Grass" unique_id=560384368]
-material_override = SubResource("ShaderMaterial_m0mba")
+material_override = SubResource("ShaderMaterial_i5mv6")
 multimesh = ExtResource("32_unrth")
 script = ExtResource("33_8umfu")
 albedo = Color(0.56988835, 0.31059232, 0, 1)
@@ -844,7 +844,7 @@ metadata/_custom_type_script = "uid://2juaclm8gc1n"
 metadata/SimpleGrassTextured = "2.0.5"
 
 [node name="SimpleGrassTextured2" type="MultiMeshInstance3D" parent="Village/Grass" unique_id=437275234]
-material_override = SubResource("ShaderMaterial_i3exe")
+material_override = SubResource("ShaderMaterial_yma7u")
 multimesh = ExtResource("34_cvb7v")
 script = ExtResource("33_8umfu")
 albedo = Color(0.3220863, 7.01987e-05, 0.32208392, 1)
@@ -865,7 +865,7 @@ metadata/_custom_type_script = "uid://2juaclm8gc1n"
 metadata/SimpleGrassTextured = "2.0.5"
 
 [node name="SimpleGrassTextured3" type="MultiMeshInstance3D" parent="Village/Grass" unique_id=720414076]
-material_override = SubResource("ShaderMaterial_mirxp")
+material_override = SubResource("ShaderMaterial_g22cj")
 multimesh = ExtResource("35_2tf7s")
 script = ExtResource("33_8umfu")
 albedo = Color(0.09945222, 1.4439226e-07, 0.5398537, 1)
@@ -970,7 +970,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.019, 14.316557, 90.921875
 [node name="Crypt grass" type="Node3D" parent="Crypt" unique_id=304377566]
 
 [node name="SimpleGrassTextured" type="MultiMeshInstance3D" parent="Crypt/Crypt grass" unique_id=2034335967]
-material_override = SubResource("ShaderMaterial_vulwf")
+material_override = SubResource("ShaderMaterial_kevch")
 multimesh = ExtResource("41_nd6hk")
 script = ExtResource("33_8umfu")
 albedo = Color(0.09411765, 0.13725491, 0, 1)
@@ -11418,9 +11418,6 @@ transform = Transform3D(21.64783, 0, 7.5601826, 0, 22.93, 0, -7.5601826, 0, 21.6
 
 [node name="volcano_rock11" parent="VolcanoRock" unique_id=68412901 instance=ExtResource("10_rc0uw")]
 transform = Transform3D(7.279968, 0, -21.74366, 0, 22.929996, 0, 21.74366, 0, 7.279968, 85.94392, 14.489869, -20.378693)
-
-[node name="volcano_rock15" parent="VolcanoRock" unique_id=430067470 instance=ExtResource("10_rc0uw")]
-transform = Transform3D(8.381854, 0, 5.453853, 0, 10, 0, -5.453853, 0, 8.381854, -2.6690674, 6.153626, 88.2395)
 
 [node name="Trees" type="Node3D" parent="." unique_id=1737571427]
 

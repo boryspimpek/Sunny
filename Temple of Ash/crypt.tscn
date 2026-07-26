@@ -9,7 +9,6 @@
 [ext_resource type="Shader" uid="uid://bi3o8elbtqoni" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="9_bgmxo"]
 [ext_resource type="MultiMesh" uid="uid://b3cmafj6a4ilh" path="res://resources/grass/crypt_grass.res" id="10_4n6v0"]
 [ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="10_sve0r"]
-[ext_resource type="PackedScene" uid="uid://c3xc8n0ni0pls" path="res://Temple of Ash/cross.tscn" id="11_xwt4o"]
 [ext_resource type="PackedScene" uid="uid://caj1524a23hfv" path="res://Temple of Ash/crypt_large.tscn" id="12_ajyib"]
 [ext_resource type="Script" uid="uid://2juaclm8gc1n" path="res://addons/simplegrasstextured/grass.gd" id="12_o1i8m"]
 [ext_resource type="PackedScene" uid="uid://brpyb6wr4f62o" path="res://assets/maps/gravestones/Gravestones_set.fbx" id="12_xwt4o"]
@@ -37,7 +36,7 @@ size = Vector2(100, 100)
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_lqdc2"]
 data = PackedVector3Array(50, 0, 50, -50, 0, 50, 50, 0, -50, -50, 0, 50, -50, 0, -50, 50, 0, -50)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_sve0r"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a8mdj"]
 render_priority = 0
 shader = ExtResource("9_bgmxo")
 shader_parameter/albedo = Color(0.36952943, 0.15424201, 0.21610183, 1)
@@ -185,7 +184,7 @@ mesh = SubResource("PlaneMesh_d0q6y")
 shape = SubResource("ConcavePolygonShape3D_lqdc2")
 
 [node name="SimpleGrassTextured" type="MultiMeshInstance3D" parent="MeshInstance3D3/StaticBody3D" unique_id=1165503919]
-material_override = SubResource("ShaderMaterial_sve0r")
+material_override = SubResource("ShaderMaterial_a8mdj")
 multimesh = ExtResource("10_4n6v0")
 script = ExtResource("12_o1i8m")
 albedo = Color(0.36952943, 0.15424201, 0.21610183, 1)
@@ -534,9 +533,6 @@ mesh = SubResource("BoxMesh_sve0r")
 
 [node name="Gravestones_set" parent="Gravestone" unique_id=1962677758 instance=ExtResource("12_xwt4o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.102741, -0.07898831, -9.857132)
-
-[node name="cross2" parent="Gravestone" unique_id=215693859 instance=ExtResource("11_xwt4o")]
-transform = Transform3D(-3.4215677, 0, 1.2709742, 0, 3.65, 0, -1.2709742, 0, -3.4215677, -0.6996727, 9.536743e-07, -15.942345)
 
 [node name="grave" parent="Gravestone" unique_id=1934884103 instance=ExtResource("14_shfsx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.884228, 0, -8.848457)
