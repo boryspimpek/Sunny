@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ddruhmrlt0meb" path="res://scenes/enemies/zombie/model/T-Pose.fbx" id="7_ekvjy"]
 [ext_resource type="Script" uid="uid://cjuevontlfne6" path="res://src/enemies/behaviors/attack/attack_punch.gd" id="8_7e2u1"]
 [ext_resource type="Script" uid="uid://bonshippq1dr1" path="res://src/enemies/enemy.gd" id="8_hcbe1"]
+[ext_resource type="AudioStream" uid="uid://2wuf56d06rak" path="res://assets/sounds/zombie/ElevenLabs_Frantic_zombie_snarls_as_it_spots_its_target,_aggressive_tone.mp3" id="9_leu6i"]
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ue16u"]
 _data = {
@@ -81,6 +82,7 @@ bones/63/rotation = Quaternion(0.27519652, 0.054904163, -0.015756048, 0.9596897)
 
 [node name="AnimationPlayer" parent="." index="1" unique_id=850962903]
 libraries/ZombieMoves = SubResource("AnimationLibrary_ue16u")
+speed_scale = 2.0
 
 [node name="HealthComponent" type="Node" parent="." index="2" unique_id=10460280]
 script = ExtResource("4_jabed")
@@ -88,6 +90,9 @@ max_health = 10.0
 
 [node name="MovementBehavior" type="Node" parent="." index="3" unique_id=1544890698]
 script = ExtResource("7_7e2u1")
+speed = 1.0
+detection_range = 50.0
+stop_distance = 0.7
 
 [node name="AttackBehavior" type="Node" parent="." index="4" unique_id=278806177]
 script = ExtResource("8_7e2u1")
@@ -95,3 +100,9 @@ script = ExtResource("8_7e2u1")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="5" unique_id=398915539]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4463395, 0)
 shape = SubResource("CapsuleShape3D_doa7c")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="6" unique_id=1658878695]
+stream = ExtResource("9_leu6i")
+autoplay = true
+max_distance = 10.0
+parameters/looping = true
