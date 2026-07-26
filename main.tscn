@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b5vpsa5hv018t" path="res://assets/sky box/moonless_golf_4k.exr" id="5_5vw27"]
 [ext_resource type="Script" uid="uid://cff7fv1vlpjpa" path="res://main.gd" id="5_abc12"]
 [ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="6_hud"]
+[ext_resource type="PackedScene" uid="uid://blfod00qqelea" path="res://scenes/enemies/zombie/zombie.tscn" id="7_272bh"]
 [ext_resource type="AudioStream" uid="uid://bytf04c1cd68t" path="res://assets/soundtrack/Temple of Ash (3).mp3" id="8_5vw27"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0xm2m"]
@@ -62,3 +63,6 @@ shadow_blur = 0.0
 stream = ExtResource("8_5vw27")
 autoplay = true
 parameters/looping = true
+
+[node name="zombie" parent="." unique_id=1896429224 instance=ExtResource("7_272bh")]
+transform = Transform3D(-0.32122436, 0, -1.7202659, 0, 1.75, 0, 1.7202659, 0, -0.32122436, -4.685813, 14.566322, 28.227985)
