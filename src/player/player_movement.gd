@@ -24,6 +24,15 @@ func update(delta: float, combat_mode: bool, camera_yaw: float, animator: Player
 	var target_direction := Vector3(input_dir.x, 0.0, input_dir.y)
 	target_direction = target_direction.rotated(Vector3.UP, camera_yaw)
 
+	# Dźwięk kroków tylko na ziemi i poza akcjami (skok/roll)
+	var should_play_walk_audio := (target_direction.length() > 0.01) and body.is_on_floor() and not animator.action_animation_playing
+	if should_play_walk_audio:
+		if not walk_audio.playing:
+			walk_audio.play()
+	else:
+		if walk_audio.playing:
+			walk_audio.stop()
+
 	# W trybie walki model obraca się w stronę kamery
 	if combat_mode and not animator.action_animation_playing:
 		var target_angle: float = camera_yaw + PI - body.global_rotation.y
@@ -53,10 +62,6 @@ func update(delta: float, combat_mode: bool, camera_yaw: float, animator: Player
 		else:
 			body.velocity.x = move_toward(body.velocity.x, target_direction.x * current_max_speed, acceleration * delta)
 			body.velocity.z = move_toward(body.velocity.z, target_direction.z * current_max_speed, acceleration * delta)
-		if not walk_audio.playing:
-			walk_audio.play()
 	else:
 		body.velocity.x = 0.0
 		body.velocity.z = 0.0
-		if walk_audio.playing:
-			walk_audio.stop()
