@@ -86,10 +86,10 @@ speed_scale = 2.0
 
 [node name="HealthComponent" type="Node" parent="." index="2" unique_id=10460280]
 script = ExtResource("4_jabed")
-max_health = 10.0
 
 [node name="MovementBehavior" type="Node" parent="." index="3" unique_id=1544890698]
 script = ExtResource("7_7e2u1")
+detection_range = 15.0
 stop_distance = 0.7
 
 [node name="AttackBehavior" type="Node" parent="." index="4" unique_id=278806177]

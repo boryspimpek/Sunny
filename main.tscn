@@ -26,7 +26,7 @@ fog_light_color = Color(0.078431375, 0, 0, 1)
 fog_density = 0.03
 fog_sky_affect = 0.987
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.008
+volumetric_fog_density = 0.028
 volumetric_fog_albedo = Color(1, 0, 0, 1)
 volumetric_fog_emission_energy = 977.53
 volumetric_fog_gi_inject = 0.44
@@ -49,7 +49,6 @@ environment = SubResource("Environment_0wfyh")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1612480161]
 transform = Transform3D(0.026176995, 0.8751644, -0.48311675, 0, 0.4832824, 0.8754643, 0.99965733, -0.022917029, 0.01265088, 0, 50, 0)
-visible = false
 shadow_enabled = true
 shadow_normal_bias = 7.075
 shadow_blur = 0.0

@@ -42,8 +42,8 @@ func get_yaw() -> float:
 	return spring_arm_pivot.global_rotation.y
 
 
-## Kierunek strzału na podstawie tego, co widzi celownik (środek ekranu).
-## Używa promienia z kamery, z zachowaną składową pionową.
+## Kierunek strzału spłaszczony do płaszczyzny XZ.
+## Używa promienia z kamery, aby trafić w to, co widzi celownik.
 func get_aim_direction() -> Vector3:
 	var ray_origin := camera.global_position
 	var ray_dir := -camera.global_transform.basis.z
@@ -56,4 +56,5 @@ func get_aim_direction() -> Vector3:
 		target_pos = result["position"] as Vector3
 	var spawn_pos := body.global_position + Vector3.UP
 	var direction := target_pos - spawn_pos
+	direction.y = 0.0
 	return direction.normalized()
