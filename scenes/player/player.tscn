@@ -198,7 +198,7 @@ tree_root = SubResource("AnimationNodeBlendSpace2D_oprun")
 anim_player = NodePath("../AnimationPlayer")
 parameters/blend_position = Vector2(0, 0)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer3D" parent="." index="3" unique_id=921320483]
+[node name="WalkAudio" type="AudioStreamPlayer3D" parent="." index="3" unique_id=921320483]
 stream = ExtResource("19_6cv16")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="4" unique_id=816003554]
@@ -265,7 +265,6 @@ combat_max_speed = 4.0
 acceleration = 30.0
 friction = 40.0
 jump_strength = 4.0
-walk_sound = ExtResource("19_6cv16")
 
 [node name="PlayerCamera" type="Node" parent="." index="8" unique_id=633470677]
 script = ExtResource("19_camera")
