@@ -1,4 +1,4 @@
-class_name ZombiePunch
+class_name AttackPunch
 extends AttackBehavior
 ## Wróg atakuje wręcz, gdy gracz znajdzie się w zasięgu.
 
