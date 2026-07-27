@@ -1,15 +1,7 @@
 [gd_scene format=3 uid="uid://l5m0ma7heehq"]
 
 [ext_resource type="PackedScene" uid="uid://cvqtgx6mjgvfd" path="res://assets/maps/inferno/Separate_assets_fbx/StoneSmall_002.fbx" id="1_w1qeq"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w1qeq"]
-diffuse_mode = 3
-specular_mode = 1
-disable_ambient_light = true
-albedo_color = Color(0.3779188, 0.3779189, 0.37791875, 1)
-metallic = 0.74
-metallic_specular = 1.0
-roughness = 0.33
+[ext_resource type="Material" uid="uid://chqswvumtsimf" path="res://materials/curb.tres" id="2_gqfw7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jkuhe"]
 size = Vector3(2.00457, 0.7246094, 1.6835251)
@@ -17,7 +9,7 @@ size = Vector3(2.00457, 0.7246094, 1.6835251)
 [node name="StoneSmall_002" unique_id=1765913107 instance=ExtResource("1_w1qeq")]
 
 [node name="StoneSmall_002" parent="." index="0" unique_id=324941996]
-surface_material_override/0 = SubResource("StandardMaterial3D_w1qeq")
+surface_material_override/0 = ExtResource("2_gqfw7")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=17354594]
 
