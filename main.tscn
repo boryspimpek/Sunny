@@ -40,7 +40,7 @@ script = ExtResource("5_abc12")
 [node name="inferno" parent="." unique_id=1919387517 instance=ExtResource("2_5vw27")]
 
 [node name="player_2" parent="." unique_id=106330497 instance=ExtResource("3_272bh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.57635, 31.485317)
+transform = Transform3D(-0.105101235, 0, -0.99446154, 0, 1, 0, 0.99446154, 0, -0.105101235, -2.7693129, 14.57635, 8.151342)
 
 [node name="HUD" parent="." unique_id=1830043377 instance=ExtResource("6_hud")]
 

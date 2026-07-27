@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ck5hstdg2g07a"]
+
+[ext_resource type="Texture2D" uid="uid://cot5gvfymo7t" path="res://assets/textures/concrete_wall_02_1k/concrete_wall_02_1k/concrete_wall_02_color_1k.png" id="1_byju8"]
+[ext_resource type="Texture2D" uid="uid://m372b5g5l20d" path="res://assets/textures/concrete_wall_02_1k/concrete_wall_02_1k/concrete_wall_02_height_1k.png" id="2_spl73"]
+[ext_resource type="Texture2D" uid="uid://d2uvtx0rns4vx" path="res://assets/textures/concrete_wall_02_1k/concrete_wall_02_1k/concrete_wall_02_normal_dx_1k.png" id="3_wagdr"]
+
+[resource]
+albedo_color = Color(0.3180198, 0.31801978, 0.31801975, 1)
+albedo_texture = ExtResource("1_byju8")
+metallic = 0.58
+normal_enabled = true
+normal_scale = 9.82
+normal_texture = ExtResource("3_wagdr")
+ao_enabled = true
+heightmap_texture = ExtResource("2_spl73")
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_triplanar = true

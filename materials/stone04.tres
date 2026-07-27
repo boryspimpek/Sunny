@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cubp1iwbwvuc8"]
+
+[ext_resource type="Texture2D" uid="uid://d0lwgvcfjpqa8" path="res://assets/textures/concrete_wall_04_1k/concrete_wall_04_1k/concrete_wall_04_color_1k.png" id="1_qb0vh"]
+
+[resource]
+albedo_color = Color(0.9428228, 0.94282264, 0.94282264, 1)
+albedo_texture = ExtResource("1_qb0vh")
+albedo_texture_force_srgb = true
+metallic = 0.44
+uv1_scale = Vector3(0.245, 0.245, 0.245)
+uv1_triplanar = true

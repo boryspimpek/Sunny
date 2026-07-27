@@ -1,14 +1,35 @@
 [gd_scene format=3 uid="uid://bffd1puqvbdgw"]
 
 [ext_resource type="PackedScene" uid="uid://g8wuwhbiyf1g" path="res://assets/maps/inferno/Separate_assets_fbx/Stone_005.fbx" id="1_wfxiw"]
+[ext_resource type="Texture2D" uid="uid://cfe1ex710qmb4" path="res://assets/textures/concrete_ground_01_1k/concrete_ground_01_1k/concrete_ground_01_color_1k.png" id="2_aqh46"]
+[ext_resource type="Texture2D" uid="uid://0b84emuv1wtk" path="res://assets/textures/concrete_ground_01_1k/concrete_ground_01_1k/concrete_ground_01_ambient_occlusion_1k.png" id="3_yu7ec"]
+[ext_resource type="Texture2D" uid="uid://bx8imhwwykg0k" path="res://assets/textures/concrete_ground_01_1k/concrete_ground_01_1k/concrete_ground_01_height_1k.png" id="4_vv8y1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yu4m4"]
+albedo_color = Color(0.6255971, 0.6255971, 0.6255971, 1)
+albedo_texture = ExtResource("2_aqh46")
+albedo_texture_force_srgb = true
+metallic = 0.22
+normal_enabled = true
+normal_texture = ExtResource("4_vv8y1")
+ao_enabled = true
+ao_texture = ExtResource("3_yu7ec")
+heightmap_enabled = true
+heightmap_texture = ExtResource("4_vv8y1")
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_triplanar = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yvi3k"]
 size = Vector3(3.4164886, 1, 4.336357)
 
 [node name="Stone_005" unique_id=615095981 instance=ExtResource("1_wfxiw")]
 
+[node name="Stone_005" parent="." index="0" unique_id=651861283]
+surface_material_override/0 = SubResource("StandardMaterial3D_yu4m4")
+
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=836495075]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1728418922]
 transform = Transform3D(-0.23004974, 0, 0.9731788, 0, 1, 0, -0.9731788, 0, -0.23004974, 0.22977048, 0, -0.14243774)
+visible = false
 shape = SubResource("BoxShape3D_yvi3k")

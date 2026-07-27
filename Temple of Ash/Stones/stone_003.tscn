@@ -1,14 +1,19 @@
 [gd_scene format=3 uid="uid://dxd6l7nra0ifr"]
 
 [ext_resource type="PackedScene" uid="uid://2edkxmrlknh2" path="res://assets/maps/inferno/Separate_assets_fbx/Stone_003.fbx" id="1_8jkg2"]
+[ext_resource type="Material" uid="uid://cbuol442hns82" path="res://materials/stone03.tres" id="2_fmtf0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jbmp7"]
 size = Vector3(2.4875755, 1, 3.4696922)
 
 [node name="Stone_003" unique_id=1774504588 instance=ExtResource("1_8jkg2")]
 
+[node name="Stone_003" parent="." index="0" unique_id=978984618]
+surface_material_override/0 = ExtResource("2_fmtf0")
+
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1993250822]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=46639762]
 transform = Transform3D(0.9840686, 0, 0.17778899, 0, 1, 0, -0.17778899, 0, 0.9840686, -0.164141, 0, -0.090664186)
+visible = false
 shape = SubResource("BoxShape3D_jbmp7")

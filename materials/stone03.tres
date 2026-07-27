@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cbuol442hns82"]
+
+[ext_resource type="Texture2D" uid="uid://c8j25dgfhjoku" path="res://assets/textures/concrete_wall_03_1k/concrete_wall_03_1k/concrete_wall_03_color_1k.png" id="1_qtbuw"]
+[ext_resource type="Texture2D" uid="uid://eowf6ts1coyq" path="res://assets/textures/concrete_wall_03_1k/concrete_wall_03_1k/concrete_wall_03_normal_dx_1k.png" id="2_brwtv"]
+
+[resource]
+albedo_color = Color(0.5529556, 0.55295557, 0.55295557, 1)
+albedo_texture = ExtResource("1_qtbuw")
+albedo_texture_force_srgb = true
+metallic = 0.49
+normal_enabled = true
+normal_texture = ExtResource("2_brwtv")
+heightmap_enabled = true
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_triplanar = true
