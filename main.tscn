@@ -37,10 +37,10 @@ adjustment_saturation = 1.6
 [node name="main" type="Node3D" unique_id=1051936391]
 script = ExtResource("5_abc12")
 
-[node name="inferno" parent="." unique_id=1919387517 instance=ExtResource("2_5vw27")]
+[node name="Arena" parent="." unique_id=1919387517 instance=ExtResource("2_5vw27")]
 
-[node name="player_2" parent="." unique_id=106330497 instance=ExtResource("3_272bh")]
-transform = Transform3D(-0.105101235, 0, -0.99446154, 0, 1, 0, 0.99446154, 0, -0.105101235, -2.7693129, 14.57635, 8.151342)
+[node name="Player_2" parent="." unique_id=106330497 instance=ExtResource("3_272bh")]
+transform = Transform3D(0.9927867, 0, 0.11989425, 0, 1, 0, -0.11989425, 0, 0.9927867, -40.854713, 14.57635, -45.18019)
 
 [node name="HUD" parent="." unique_id=1830043377 instance=ExtResource("6_hud")]
 
@@ -55,7 +55,7 @@ shadow_blur = 0.0
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=145163531]
 stream = ExtResource("8_5vw27")
-autoplay = true
+volume_db = -80.0
 parameters/looping = true
 
 [node name="Zombies" type="Node3D" parent="." unique_id=986996289]
@@ -277,13 +277,13 @@ transform = Transform3D(-0.32122436, 0, -1.7202659, 0, 1.75, 0, 1.7202659, 0, -0
 transform = Transform3D(-0.32122436, 0, -1.7202659, 0, 1.75, 0, 1.7202659, 0, -0.32122436, -69.683815, 14.566324, -64.2206)
 
 [node name="zombie74" parent="Zombies" unique_id=1833446817 instance=ExtResource("7_272bh")]
-transform = Transform3D(-0.32122436, 0, -1.7202659, 0, 1.75, 0, 1.7202659, 0, -0.32122436, -67.38047, 14.566324, -58.18013)
+transform = Transform3D(-0.32122436, 0, -1.7202659, 0, 1.75, 0, 1.7202659, 0, -0.32122436, -45.17916, 14.566324, -73.248825)
 
 [node name="zombie75" parent="Zombies" unique_id=1715160684 instance=ExtResource("7_272bh")]
 transform = Transform3D(-0.32122436, 0, -1.7202659, 0, 1.75, 0, 1.7202659, 0, -0.32122436, -72.743515, 14.566324, -56.117336)
 
 [node name="zombie76" parent="Zombies" unique_id=768157369 instance=ExtResource("7_272bh")]
-transform = Transform3D(-0.32122436, 0, -1.7202659, 0, 1.75, 0, 1.7202659, 0, -0.32122436, -74.716965, 14.566324, -53.141903)
+transform = Transform3D(1.5733312, 0, 0.7662432, 0, 1.75, 0, -0.7662432, 0, 1.5733312, -39.99363, 14.566324, -73.864624)
 
 [node name="zombie77" parent="Zombies" unique_id=238076760 instance=ExtResource("7_272bh")]
 transform = Transform3D(-0.32122436, 0, -1.7202659, 0, 1.75, 0, 1.7202659, 0, -0.32122436, -69.716965, 14.566324, -48.141903)

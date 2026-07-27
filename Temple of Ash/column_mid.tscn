@@ -11,8 +11,31 @@ metallic = 0.65
 metallic_specular = 1.0
 roughness = 0.0
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_qkdds"]
+size = Vector3(0.31878662, 0.07373047, 0.29974365)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4j3wf"]
+size = Vector3(0.23783875, 0.095458984, 0.23222351)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6qyiy"]
+size = Vector3(0.20269394, 1.0292664, 0.19270134)
+
 [node name="column_mid" unique_id=1202752047 instance=ExtResource("1_05pcq")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 
 [node name="Mesh_0" parent="." index="0" unique_id=630480591]
 surface_material_override/0 = SubResource("StandardMaterial3D_fb6wp")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=597108607]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=697340721]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008453369, 0.041748047, -0.000579834)
+shape = SubResource("BoxShape3D_qkdds")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" index="1" unique_id=1423559603]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.009529114, 1.0733565, -0.0023117065)
+shape = SubResource("BoxShape3D_4j3wf")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="2" unique_id=767214505]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.006341934, 0.6038537, -0.0028085709)
+shape = SubResource("BoxShape3D_6qyiy")

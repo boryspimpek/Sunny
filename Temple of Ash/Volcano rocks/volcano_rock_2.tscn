@@ -11,8 +11,26 @@ metallic = 0.65
 metallic_specular = 1.0
 roughness = 0.43
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_7d8k8"]
+height = 0.061523438
+radius = 0.2919922
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_cpv1g"]
+height = 0.10839844
+radius = 0.2524414
+
 [node name="volcano_rock2" unique_id=37892863 instance=ExtResource("1_f1gee")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 
 [node name="Mesh_0" parent="." index="0" unique_id=304064888]
 surface_material_override/0 = SubResource("StandardMaterial3D_2om3u")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=203485893]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=390731763]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.017089844, 0)
+shape = SubResource("CylinderShape3D_7d8k8")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1" unique_id=1989142004]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10161743, 0)
+shape = SubResource("CylinderShape3D_cpv1g")

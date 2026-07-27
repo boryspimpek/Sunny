@@ -2,5 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://ba2kjg206hov7" path="res://assets/maps/kenney/graveyard/column-large.fbx" id="1_7ab8n"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_p8v4c"]
+size = Vector3(0.19433594, 1.1235046, 0.20162964)
+
 [node name="column-large" unique_id=181348429 instance=ExtResource("1_7ab8n")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=2091588556]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=738087019]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0053710938, 0.5654394, 0.0003244877)
+shape = SubResource("BoxShape3D_p8v4c")

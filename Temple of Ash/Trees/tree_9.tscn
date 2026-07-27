@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cfev3hf74xxir"]
+
+[ext_resource type="PackedScene" uid="uid://c25kp3h6gw5yg" path="res://assets/maps/nature/trees9/RedDeliciousApple.fbx" id="1_sj0pf"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_sj0pf"]
+height = 0.03353882
+radius = 0.0043945313
+
+[node name="tree9" unique_id=1320825187 instance=ExtResource("1_sj0pf")]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=2099484902]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1360593071]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.012680054, 0)
+shape = SubResource("CylinderShape3D_sj0pf")

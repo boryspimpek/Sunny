@@ -2,5 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://cwqwiioddn22" path="res://assets/maps/kenney/graveyard/stone-wall-column.fbx" id="1_naeug"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_a4wd6"]
+size = Vector3(1, 0.7255249, 0.24700928)
+
 [node name="stone-wall-column" unique_id=2104597989 instance=ExtResource("1_naeug")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=2001355792]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=420933718]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.36644953, -0.40029907)
+shape = SubResource("BoxShape3D_a4wd6")

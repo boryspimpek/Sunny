@@ -2,5 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://nw4blrvlachf" path="res://assets/maps/sign/post3.fbx" id="1_r4y0h"]
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_r4y0h"]
+height = 0.65600586
+radius = 0.044433594
+
 [node name="post3" unique_id=325201863 instance=ExtResource("1_r4y0h")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.06328264, 8.509973, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1565240911]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=193185389]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047889996, -0.56348336, -0.044587232)
+shape = SubResource("CylinderShape3D_r4y0h")

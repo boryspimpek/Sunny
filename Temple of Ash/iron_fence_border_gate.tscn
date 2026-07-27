@@ -3,8 +3,21 @@
 [ext_resource type="PackedScene" uid="uid://3wkcyivqxyr" path="res://assets/maps/kenney/graveyard/iron-fence-border-gate.fbx" id="1_hs1ru"]
 [ext_resource type="Material" uid="uid://p45cbq78vtgq" path="res://materials/iron_fance.tres" id="2_5o6k8"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_rjuqk"]
+size = Vector3(0.15414429, 0.7684326, 0.14868164)
+
 [node name="iron-fence-border-gate" unique_id=1247859624 instance=ExtResource("1_hs1ru")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 
 [node name="iron-fence-border-gate" parent="." index="0" unique_id=2000240287]
 surface_material_override/0 = ExtResource("2_5o6k8")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=17980061]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1801576287]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38960266, 0.37862605, -0.3277588)
+shape = SubResource("BoxShape3D_rjuqk")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1" unique_id=998017750]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.38888472, 0.37862605, -0.3277588)
+shape = SubResource("BoxShape3D_rjuqk")

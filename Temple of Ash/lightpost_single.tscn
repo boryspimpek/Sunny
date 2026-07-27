@@ -8,6 +8,9 @@
 material = ExtResource("2_p5nno")
 size = Vector3(1, 1.28, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_1i4ob"]
+size = Vector3(0.087890625, 1.0244141, 0.08300781)
+
 [node name="lightpost-single" unique_id=716717606 instance=ExtResource("1_wmqwq")]
 transform = Transform3D(3.8, 0, 0, 0, 3.8, 0, 0, 0, 3.8, 0, 0, 0)
 
@@ -17,3 +20,9 @@ surface_material_override/0 = ExtResource("2_o4bst")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="lightpost-single" index="0" unique_id=951430582]
 transform = Transform3D(0.135, 0, -2.4532403e-08, 0, 0.135, 0, 2.4532403e-08, 0, 0.135, -0.0012187958, 1.0466044, 0.26122284)
 mesh = SubResource("BoxMesh_o4bst")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=350571325]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=685927949]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5158943, -0.0029595115)
+shape = SubResource("BoxShape3D_1i4ob")

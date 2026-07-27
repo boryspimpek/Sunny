@@ -23,7 +23,7 @@ func _run() -> void:
 
 	# buckets[key]      = Array[Transform3D]
 	# mesh_by_key[key]  = Mesh
-	# materials[key]    = { "override": Material, "overlay": Material }
+	# materials[key]    = { "surface_mats": Array[Material], "overlay": Material }
 	var buckets: Dictionary = {}
 	var mesh_by_key: Dictionary = {}
 	var materials: Dictionary = {}
@@ -40,21 +40,34 @@ func _run() -> void:
 
 	for key in buckets.keys():
 		var transforms: Array = buckets[key]
-		var mesh: Mesh = mesh_by_key[key]
+		var base_mesh: Mesh = mesh_by_key[key]
+		var mat_data := materials[key] as Dictionary
+		var surface_mats: Array[Material] = mat_data["surface_mats"]
+		var overlay: Material = mat_data["overlay"]
+
+		var use_original := true
+		for s in range(surface_mats.size()):
+			if base_mesh.surface_get_material(s) != surface_mats[s]:
+				use_original = false
+				break
+
+		var mm_mesh: Mesh = base_mesh
+		if not use_original:
+			mm_mesh = base_mesh.duplicate() as Mesh
+			for s in range(surface_mats.size()):
+				mm_mesh.surface_set_material(s, surface_mats[s])
 
 		var mm := MultiMesh.new()
 		mm.transform_format = MultiMesh.TRANSFORM_3D
-		mm.mesh = mesh
+		mm.mesh = mm_mesh
 		mm.instance_count = transforms.size()
 		for i in range(transforms.size()):
 			mm.set_instance_transform(i, transforms[i])
 
 		var mmi := MultiMeshInstance3D.new()
-		mmi.name = "Baked_" + _safe_name(mesh)
+		mmi.name = "Baked_" + _safe_name(base_mesh)
 		mmi.multimesh = mm
-
-		mmi.material_override = materials[key]["override"]
-		mmi.material_overlay = materials[key]["overlay"]
+		mmi.material_overlay = overlay
 
 		baked_root.add_child(mmi)
 		mmi.owner = scene_root
@@ -102,13 +115,21 @@ func _process_instance(inst: Node3D, baked_root: Node3D, buckets: Dictionary, me
 		if not mi or not mi.mesh:
 			continue
 		var mesh: Mesh = mi.mesh
-		var key := mesh.resource_path if not mesh.resource_path.is_empty() else str(mesh.get_instance_id())
+		var mesh_key := mesh.resource_path if not mesh.resource_path.is_empty() else str(mesh.get_instance_id())
+		var surf_count := mesh.get_surface_count()
+		var effective_mats: Array[Material] = []
+		effective_mats.resize(surf_count)
+		for s in range(surf_count):
+			effective_mats[s] = mi.get_active_material(s)
+		var mat_sig := _material_signature(effective_mats)
+		var overlay_key := mi.material_overlay.resource_path if mi.material_overlay else ""
+		var key := mesh_key + "|" + mat_sig + "|" + overlay_key
 
 		if not buckets.has(key):
 			buckets[key] = []
 			mesh_by_key[key] = mesh
 			materials[key] = {
-				"override": mi.material_override,
+				"surface_mats": effective_mats,
 				"overlay": mi.material_overlay
 			}
 
@@ -116,6 +137,16 @@ func _process_instance(inst: Node3D, baked_root: Node3D, buckets: Dictionary, me
 
 	to_remove.append(inst)
 	temp.queue_free()
+
+
+func _material_signature(mats: Array[Material]) -> String:
+	var parts: Array[String] = []
+	for m in mats:
+		if m:
+			parts.append(m.resource_path if not m.resource_path.is_empty() else str(m.get_instance_id()))
+		else:
+			parts.append("null")
+	return "|".join(parts)
 
 
 func _safe_name(mesh: Mesh) -> String:

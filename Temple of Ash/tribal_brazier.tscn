@@ -10,6 +10,38 @@
 [ext_resource type="PackedScene" uid="uid://ci70qo2eqgpf1" path="res://assets/maps/inferno/Separate_assets_fbx/Mound_005.fbx" id="8_0datn"]
 [ext_resource type="PackedScene" uid="uid://bse4whvgh5nj8" path="res://assets/maps/inferno/Separate_assets_fbx/Mound_008.fbx" id="9_byonb"]
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_aw2r1"]
+height = 0.6767578
+radius = 6.970215
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_47pab"]
+height = 0.49609375
+radius = 6.237793
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_htmqn"]
+height = 0.49609375
+radius = 5.561035
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ifkvm"]
+height = 0.80322266
+radius = 3.4174805
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_vf8x4"]
+height = 2.842041
+radius = 2.6875
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_5a6ye"]
+height = 2.842041
+radius = 0.75683594
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_j0r26"]
+height = 2.842041
+radius = 0.75683594
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_s7nkl"]
+height = 2.842041
+radius = 0.75683594
+
 [node name="TribalBrazier" type="Node3D" unique_id=1856360006]
 
 [node name="CirclePlatformSmall_001" parent="." unique_id=1180920856 instance=ExtResource("1_43god")]
@@ -40,3 +72,37 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3275347, 0.11600304, -4.827
 
 [node name="Mound_009" parent="." unique_id=1637405967 instance=ExtResource("9_byonb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.2977767, -0.09157467, -4.8007765)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1452973612]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1862049593]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24267578, 0)
+shape = SubResource("CylinderShape3D_aw2r1")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=1512881401]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.80026245, 0)
+shape = SubResource("CylinderShape3D_47pab")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" unique_id=1410936101]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2401428, 0)
+shape = SubResource("CylinderShape3D_htmqn")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D" unique_id=772671307]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8189392, 0)
+shape = SubResource("CylinderShape3D_ifkvm")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D" unique_id=759907118]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.6593933, 0)
+shape = SubResource("CylinderShape3D_vf8x4")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="StaticBody3D" unique_id=428746538]
+transform = Transform3D(1, 0, 0, 0, 0.99537104, -0.096106336, 0, 0.096106336, 0.99537104, -6.1509705, 1.3509827, 6.525757)
+shape = SubResource("CylinderShape3D_5a6ye")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="StaticBody3D" unique_id=1200596734]
+transform = Transform3D(0.48267666, 0.065251864, 0.8733645, -0.13396893, 0.9909855, 0, -0.86549175, -0.11700369, 0.48706722, 6.8602037, 1.7940674, -5.3860993)
+shape = SubResource("CylinderShape3D_j0r26")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="StaticBody3D" unique_id=1151208378]
+transform = Transform3D(0.9477574, -0.31899238, 0, 0.31899244, 0.94775724, 0, 0, 0, 1, -7.3895636, 1.7940674, -4.9625764)
+shape = SubResource("CylinderShape3D_s7nkl")

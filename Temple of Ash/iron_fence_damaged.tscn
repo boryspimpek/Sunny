@@ -3,8 +3,17 @@
 [ext_resource type="PackedScene" uid="uid://cbl22wjsdn1ee" path="res://assets/maps/kenney/graveyard/iron-fence-damaged.fbx" id="1_pj6kj"]
 [ext_resource type="Material" uid="uid://p45cbq78vtgq" path="res://materials/iron_fance.tres" id="2_yjy6q"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_nje2f"]
+size = Vector3(1, 0.73461914, 0.14672852)
+
 [node name="iron-fence-damaged" unique_id=350544935 instance=ExtResource("1_pj6kj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 
 [node name="iron-fence-damaged" parent="." index="0" unique_id=123434036]
 surface_material_override/0 = ExtResource("2_yjy6q")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1584451884]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1748008362]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.37099665, -0.32751465)
+shape = SubResource("BoxShape3D_nje2f")

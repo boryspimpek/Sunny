@@ -3,7 +3,17 @@
 [ext_resource type="PackedScene" uid="uid://bofs1ul1wk2io" path="res://assets/maps/inferno/Separate_assets_fbx/Gear_002.fbx" id="1_byi0k"]
 [ext_resource type="Material" uid="uid://r07u423vnku3" path="res://materials/metal_silver.tres" id="2_ypwxs"]
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_25v5b"]
+height = 1.8677368
+radius = 3.1811523
+
 [node name="Gear_002" unique_id=2109739882 instance=ExtResource("1_byi0k")]
 
 [node name="Gear_002" parent="." index="0" unique_id=961371358]
 surface_material_override/0 = ExtResource("2_ypwxs")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=228662037]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1008678703]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, -0.47080028, -0.0066223145)
+shape = SubResource("CylinderShape3D_25v5b")

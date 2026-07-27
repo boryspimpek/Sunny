@@ -2,4 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://csfoyff8d8uw5" path="res://assets/maps/kenney/graveyard/stone-wall-damaged.fbx" id="1_ml8xa"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_wmwjg"]
+size = Vector3(1, 0.7255249, 0.24700928)
+
 [node name="stone-wall-damaged" unique_id=1059609636 instance=ExtResource("1_ml8xa")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1442797776]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1398945622]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.36644953, -0.40029907)
+shape = SubResource("BoxShape3D_wmwjg")

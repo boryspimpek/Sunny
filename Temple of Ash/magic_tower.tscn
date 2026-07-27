@@ -61,6 +61,9 @@ albedo_texture = ExtResource("2_s67py")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d5jmj"]
 albedo_texture = ExtResource("2_s67py")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_23ceh"]
+size = Vector3(2.684967, 5.4868164, 2.682129)
+
 [node name="magic_tower" unique_id=514905653 instance=ExtResource("1_23ceh")]
 
 [node name="Columns_LP" parent="." index="0" unique_id=1521067039]
@@ -119,3 +122,9 @@ material_override = SubResource("StandardMaterial3D_2lkpn")
 
 [node name="Wall_outer_1_LP_002" parent="." index="22" unique_id=526636830]
 material_override = SubResource("StandardMaterial3D_d5jmj")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="23" unique_id=464224691]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1379364196]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.014389038, 2.7514648, -0.013427734)
+shape = SubResource("BoxShape3D_23ceh")

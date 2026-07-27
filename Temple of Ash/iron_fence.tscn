@@ -3,8 +3,17 @@
 [ext_resource type="PackedScene" uid="uid://biel6lp4x2as6" path="res://assets/maps/kenney/graveyard/iron-fence.fbx" id="1_gpoaf"]
 [ext_resource type="Material" uid="uid://p45cbq78vtgq" path="res://materials/iron_fance.tres" id="2_dn44i"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_dt1n2"]
+size = Vector3(1, 0.73461914, 0.14672852)
+
 [node name="iron-fence" unique_id=1319009482 instance=ExtResource("1_gpoaf")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 
 [node name="iron-fence" parent="." index="0" unique_id=1791725069]
 surface_material_override/0 = ExtResource("2_dn44i")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1270933271]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=334746865]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.37099665, -0.32751465)
+shape = SubResource("BoxShape3D_dt1n2")

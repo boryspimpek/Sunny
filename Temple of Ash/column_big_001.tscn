@@ -9,8 +9,17 @@ metallic = 1.0
 metallic_specular = 1.0
 roughness = 0.12
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_wf2ug"]
+size = Vector3(1.4831601, 8.161682, 1.4521484)
+
 [node name="ColumnBig_001" unique_id=1956513137 instance=ExtResource("1_gq8ta")]
 
 [node name="ColumnBig_001" parent="." index="0" unique_id=818449117]
 surface_material_override/0 = SubResource("StandardMaterial3D_clna1")
 surface_material_override/1 = ExtResource("2_qjv53")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=449744572]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1514216938]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0036533475, 4.084528, 0.005859375)
+shape = SubResource("BoxShape3D_wf2ug")
