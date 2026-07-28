@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://6ua44l3hlonh"
+path="res://.godot/imported/20 Gauge Single edit.mp3-3eddeb6290070a9e6b4c1ced479d903e.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/guns/Full Sounds/20 Gauge/MP3/20 Gauge Single edit.mp3"
+dest_files=["res://.godot/imported/20 Gauge Single edit.mp3-3eddeb6290070a9e6b4c1ced479d903e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
