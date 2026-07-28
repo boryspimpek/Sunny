@@ -47,6 +47,12 @@ func _on_died() -> void:
 	GameState.add_score(score_value)
 	if death_sound != null:
 		EventBus.sfx_requested.emit(death_sound, global_position)
+	set_physics_process(false)
+	var animation_player := get_node_or_null("AnimationPlayer")
+	if animation_player != null:
+		var anim_index := randi_range(1, 2)
+		animation_player.play("ZombieMoves/dying" + str(anim_index))
+		await animation_player.animation_finished
 	_spawn_drops()
 	queue_free()
 

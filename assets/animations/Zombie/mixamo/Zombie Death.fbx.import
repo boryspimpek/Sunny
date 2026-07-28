@@ -41,7 +41,7 @@ _subresources={
 "animations": {
 "mixamo_com": {
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://dying1.tres",
+"save_to_file/fallback_path": "res://assets/animations/Zombie/animation tres/dying1.tres",
 "save_to_file/keep_custom_tracks": "",
 "save_to_file/path": "uid://dq7st58k6wwih",
 "settings/loop_mode": 0,

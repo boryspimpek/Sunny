@@ -41,7 +41,7 @@ _subresources={
 "animations": {
 "mixamo_com": {
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://standup2.tres",
+"save_to_file/fallback_path": "res://assets/animations/Zombie/animation tres/standup2.tres",
 "save_to_file/keep_custom_tracks": "",
 "save_to_file/path": "uid://dvt045gowdrat",
 "settings/loop_mode": 0,
