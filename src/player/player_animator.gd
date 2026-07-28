@@ -5,6 +5,7 @@ extends Node
 
 @export var animation_reference_speed: float = 5.0
 @export var roll_distance: float = 5.0
+@export var blend_smoothing: float = 10.0
 
 @onready var body: CharacterBody3D = get_parent()
 @onready var animation_tree: AnimationTree = body.get_node("AnimationTree")
@@ -15,6 +16,7 @@ extends Node
 
 var action_animation_playing := false
 var roll_hips_bone := -1
+var _current_blend_position := Vector2.ZERO
 var roll_root_motion_start := Vector3.ZERO
 var roll_direction := Vector3.ZERO
 var roll_displacement_pending := Vector3.ZERO
@@ -90,8 +92,9 @@ func update_locomotion(delta: float, combat_mode: bool, input_dir: Vector2) -> v
 		return
 	var horizontal_speed := Vector2(body.velocity.x, body.velocity.z).length()
 	var animation_speed := maxf(horizontal_speed / animation_reference_speed, 1.0)
-	var blend_value := Vector2(input_dir.x, -input_dir.y) if combat_mode else Vector2(0.0, 1.0 if not input_dir.is_zero_approx() else 0.0)
-	animation_tree.set("parameters/blend_position", blend_value)
+	var target_blend := Vector2(input_dir.x, -input_dir.y) if combat_mode else Vector2(0.0, 1.0 if not input_dir.is_zero_approx() else 0.0)
+	_current_blend_position = _current_blend_position.lerp(target_blend, blend_smoothing * delta)
+	animation_tree.set("parameters/blend_position", _current_blend_position)
 	animation_tree.advance(delta * animation_speed)
 
 

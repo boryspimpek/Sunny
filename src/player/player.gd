@@ -44,10 +44,14 @@ func _physics_process(delta: float) -> void:
 	movement.post_physics_update()
 	animator.update_locomotion(delta, combat_mode, movement.last_input_dir)
 
+	if Input.is_action_just_pressed("toggle_flashlight"):
+		print("toggle_flashlight action triggered")
+		flashlight.visible = not flashlight.visible
+
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("toggle_flashlight"):
-		flashlight.visible = not flashlight.visible
+	if event is InputEventJoypadButton:
+		print("Joypad button pressed: index=", event.button_index, " pressed=", event.pressed, " device=", event.device)
 
 func _on_health_changed(current: float, max_health: float) -> void:
 	EventBus.player_health_changed.emit(current, max_health)
