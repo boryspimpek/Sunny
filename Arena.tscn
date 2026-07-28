@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://81xht8dpghwx" path="res://Temple of Ash/ground.tscn" id="2_gbu3q"]
 [ext_resource type="PackedScene" uid="uid://bfab7ppcits5e" path="res://Temple of Ash/pavement.tscn" id="3_32wrx"]
 [ext_resource type="PackedScene" uid="uid://ckulqdduleqg1" path="res://Temple of Ash/rock_big_001.tscn" id="3_dhnyx"]
+[ext_resource type="Script" uid="uid://cmfkgl5168lrp" path="res://volcano_rocks.gd" id="5_i3exe"]
 [ext_resource type="PackedScene" uid="uid://d3lxbsrldsolx" path="res://Temple of Ash/roxk_mid03.tscn" id="5_m0mba"]
 [ext_resource type="PackedScene" uid="uid://bi2mu0aphsgim" path="res://Temple of Ash/crag_001.tscn" id="6_2ypaj"]
 [ext_resource type="PackedScene" uid="uid://cgtjs5sivn24a" path="res://Temple of Ash/rock_mid04.tscn" id="6_i3exe"]
@@ -87,7 +88,7 @@
 [ext_resource type="PackedScene" uid="uid://cqh2dtbsxve3q" path="res://Temple of Ash/Houses/house_2.tscn" id="89_yma7u"]
 [ext_resource type="PackedScene" uid="uid://cgn2ya84jebkl" path="res://Temple of Ash/Houses/house_3.tscn" id="90_g22cj"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_0n0ig"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i3exe"]
 render_priority = 0
 shader = ExtResource("30_dc080")
 shader_parameter/albedo = Color(0.56988835, 0.31059232, 0, 1)
@@ -115,7 +116,7 @@ shader_parameter/interactive_level_xz = 3.0
 shader_parameter/interactive_level_y = 0.3
 metadata/SimpleGrassTexturedMaterial = "2.1.0"
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_m0mba"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mirxp"]
 render_priority = 0
 shader = ExtResource("30_dc080")
 shader_parameter/albedo = Color(0.3220863, 7.01987e-05, 0.32208392, 1)
@@ -143,7 +144,7 @@ shader_parameter/interactive_level_xz = 3.0
 shader_parameter/interactive_level_y = 0.3
 metadata/SimpleGrassTexturedMaterial = "2.1.0"
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_i3exe"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vulwf"]
 render_priority = 0
 shader = ExtResource("30_dc080")
 shader_parameter/albedo = Color(0.09945222, 1.4439226e-07, 0.5398537, 1)
@@ -171,7 +172,7 @@ shader_parameter/interactive_level_xz = 3.0
 shader_parameter/interactive_level_y = 0.3
 metadata/SimpleGrassTexturedMaterial = "2.1.0"
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_mirxp"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i5mv6"]
 render_priority = 0
 shader = ExtResource("30_dc080")
 shader_parameter/albedo = Color(0.09411765, 0.13725491, 0, 1)
@@ -331,63 +332,62 @@ transform = Transform3D(0.68553877, 0, -0.7280362, 0, 1, 0, 0.7280362, 0, 0.6855
 [node name="RockBig_039" parent="RockBig" unique_id=873200572 instance=ExtResource("3_dhnyx")]
 transform = Transform3D(0.6854786, 0.01324666, -0.7279723, -0.11645397, 0.98895735, -0.0916605, 0.7187195, 0.14760658, 0.67945176, 77.80994, -0.5204506, 92.04173)
 
-[node name="RockMid" type="Node3D" parent="." unique_id=822719712]
+[node name="LavaRocks" type="Node3D" parent="." unique_id=63781194]
+script = ExtResource("5_i3exe")
 
-[node name="RockMid_007" parent="RockMid" unique_id=37636630 instance=ExtResource("5_m0mba")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.612375, 14.633192, 5.985797)
-
-[node name="RockMid_008" parent="RockMid" unique_id=1642835386 instance=ExtResource("5_m0mba")]
-transform = Transform3D(0.093812905, 0, 0.99558985, 0, 1, 0, -0.99558985, 0, 0.093812905, 36.127235, 13.576714, 2.7872095)
-
-[node name="RockMid_009" parent="RockMid" unique_id=235217250 instance=ExtResource("6_i3exe")]
-transform = Transform3D(0.63392097, 0, -0.77339786, 0, 1, 0, 0.77339786, 0, 0.63392097, 30.958319, 14.591527, 0.82582426)
-
-[node name="RockMid_002" parent="RockMid" unique_id=678091425 instance=ExtResource("7_mirxp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.861023, 10.239444, 79.49661)
-
-[node name="RockMid_003" parent="RockMid" unique_id=546464554 instance=ExtResource("7_mirxp")]
-transform = Transform3D(0.98643214, -0.16416962, 0, 0.16396442, 0.9851992, -0.049982846, 0.008205665, 0.049304686, 0.9987501, 36.496574, 5.8166437, 68.53984)
-
-[node name="RockMid_004" parent="RockMid" unique_id=245842379 instance=ExtResource("7_mirxp")]
-transform = Transform3D(0.7797861, 0, 0.626046, 0, 1, 0, -0.626046, 0, 0.7797861, -39.82898, 14.610172, -9.780007)
-
-[node name="RockMid_005" parent="RockMid" unique_id=682971514 instance=ExtResource("6_i3exe")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.426434, 14.502275, 38.14325)
-
-[node name="RockMid_006" parent="RockMid" unique_id=2086538973 instance=ExtResource("6_i3exe")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.843693, 14.591531, 34.593952)
-
-[node name="Crag" type="Node3D" parent="." unique_id=63781194]
-
-[node name="Crag_002" parent="Crag" unique_id=1528110203 instance=ExtResource("6_2ypaj")]
+[node name="Crag_002" parent="LavaRocks" unique_id=1528110203 instance=ExtResource("6_2ypaj")]
 transform = Transform3D(0.9507811, 0.132315, 0.28019294, 0, 0.90424657, -0.42701072, -0.30986342, 0.40599373, 0.85974056, -15.713684, 5.5129395, 101.124695)
 
-[node name="Crag_003" parent="Crag" unique_id=581432358 instance=ExtResource("6_2ypaj")]
+[node name="Crag_003" parent="LavaRocks" unique_id=581432358 instance=ExtResource("6_2ypaj")]
 transform = Transform3D(0.97928643, -0.086460985, -0.18309154, -7.0838713e-09, 0.9042465, -0.4270107, 0.20247966, 0.41816586, 0.88551646, -9.190277, 4.02594, 104.76459)
 
-[node name="Crag_006" parent="Crag" unique_id=1105280965 instance=ExtResource("6_2ypaj")]
+[node name="Crag_006" parent="LavaRocks" unique_id=1105280965 instance=ExtResource("6_2ypaj")]
 transform = Transform3D(0.9442844, -0.3291303, 0, 0.3291303, 0.9442844, 0, 0, 0, 1, 6.848877, 8.183855, 129.96562)
 
-[node name="Crag_007" parent="Crag" unique_id=1720245232 instance=ExtResource("6_2ypaj")]
+[node name="Crag_007" parent="LavaRocks" unique_id=1720245232 instance=ExtResource("6_2ypaj")]
 transform = Transform3D(-0.94274133, 0.32859248, 0.057145838, 0.32913032, 0.9442845, 0, -0.053961914, 0.018808424, -0.9983658, 1.276947, 9.879525, 116.94945)
 
-[node name="Crag_008" parent="Crag" unique_id=1693767052 instance=ExtResource("6_2ypaj")]
+[node name="Crag_008" parent="LavaRocks" unique_id=1693767052 instance=ExtResource("6_2ypaj")]
 transform = Transform3D(-0.65294933, 0.22758548, -0.7224002, 0.32913032, 0.9442845, 0, 0.68215114, -0.23776376, -0.6914753, -2.9508362, 10.546717, 111.5795)
 
-[node name="Crag_011" parent="Crag" unique_id=1067770154 instance=ExtResource("6_2ypaj")]
+[node name="Crag_011" parent="LavaRocks" unique_id=1067770154 instance=ExtResource("6_2ypaj")]
 transform = Transform3D(0.81886154, 0.57399094, 0, -0.57399094, 0.81886154, 0, 0, 0, 1, 36.735992, 8.095131, 94.1097)
 
-[node name="Crag_009" parent="Crag" unique_id=194978205 instance=ExtResource("6_2ypaj")]
+[node name="Crag_009" parent="LavaRocks" unique_id=194978205 instance=ExtResource("6_2ypaj")]
 transform = Transform3D(-0.9382349, 0.32702178, 0.11301249, 0.3291303, 0.94428444, -1.0303784e-08, -0.10671607, 0.03719589, -0.9935935, -4.48938, 3.4475708, 105.533844)
 
-[node name="Crag_004" parent="Crag" unique_id=767932441 instance=ExtResource("7_unxh0")]
+[node name="Crag_004" parent="LavaRocks" unique_id=767932441 instance=ExtResource("7_unxh0")]
 transform = Transform3D(0.7332079, 0, 0.6800046, 0, 1, 0, -0.6800046, 0, 0.7332079, -14.362579, 9.325399, 107.23035)
 
-[node name="Crag_010" parent="Crag" unique_id=25368415 instance=ExtResource("7_unxh0")]
+[node name="Crag_010" parent="LavaRocks" unique_id=25368415 instance=ExtResource("7_unxh0")]
 transform = Transform3D(0.9723092, 0.19157201, 0.13384673, -0.09513297, 0.8475886, -0.5220567, -0.21345843, 0.49486727, 0.84234303, 46.69585, 9.119783, 90.17309)
 
-[node name="Crag_005" parent="Crag" unique_id=1128037105 instance=ExtResource("7_unxh0")]
+[node name="Crag_005" parent="LavaRocks" unique_id=1128037105 instance=ExtResource("7_unxh0")]
 transform = Transform3D(0.7332079, 0, 0.6800046, 0, 1, 0, -0.6800046, 0, 0.7332079, 8.433929, 7.9225025, 122.39929)
+
+[node name="RockMid_007" parent="LavaRocks" unique_id=37636630 instance=ExtResource("5_m0mba")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.612375, 14.633192, 5.985797)
+
+[node name="RockMid_008" parent="LavaRocks" unique_id=2096865346 instance=ExtResource("5_m0mba")]
+transform = Transform3D(0.093812905, 0, 0.99558985, 0, 1, 0, -0.99558985, 0, 0.093812905, 36.127235, 13.576714, 2.7872095)
+
+[node name="RockMid_009" parent="LavaRocks" unique_id=235217250 instance=ExtResource("6_i3exe")]
+transform = Transform3D(0.63392097, 0, -0.77339786, 0, 1, 0, 0.77339786, 0, 0.63392097, 30.958319, 14.591527, 0.82582426)
+
+[node name="RockMid_002" parent="LavaRocks" unique_id=678091425 instance=ExtResource("7_mirxp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.861023, 10.239444, 79.49661)
+
+[node name="RockMid_003" parent="LavaRocks" unique_id=2108810680 instance=ExtResource("7_mirxp")]
+transform = Transform3D(0.98643214, -0.16416962, 0, 0.16396442, 0.9851992, -0.049982846, 0.008205665, 0.049304686, 0.9987501, 36.496574, 5.8166437, 68.53984)
+
+[node name="RockMid_004" parent="LavaRocks" unique_id=802161954 instance=ExtResource("7_mirxp")]
+transform = Transform3D(0.7797861, 0, 0.626046, 0, 1, 0, -0.626046, 0, 0.7797861, -39.82898, 14.610172, -9.780007)
+
+[node name="RockMid_005" parent="LavaRocks" unique_id=1198901657 instance=ExtResource("6_i3exe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.426434, 14.502275, 38.14325)
+
+[node name="RockMid_006" parent="LavaRocks" unique_id=1985745176 instance=ExtResource("6_i3exe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.843693, 14.591531, 34.593952)
 
 [node name="Tower" type="Node3D" parent="." unique_id=2034498053]
 
@@ -560,7 +560,7 @@ transform = Transform3D(0.9998349, 0, -0.018167842, 0, 1, 0, 0.018167842, 0, 0.9
 [node name="Grass" type="MeshInstance3D" parent="Village" unique_id=1666937536]
 
 [node name="SimpleGrassTextured" type="MultiMeshInstance3D" parent="Village/Grass" unique_id=560384368]
-material_override = SubResource("ShaderMaterial_0n0ig")
+material_override = SubResource("ShaderMaterial_i3exe")
 multimesh = ExtResource("32_unrth")
 script = ExtResource("33_8umfu")
 albedo = Color(0.56988835, 0.31059232, 0, 1)
@@ -581,7 +581,7 @@ metadata/_custom_type_script = "uid://2juaclm8gc1n"
 metadata/SimpleGrassTextured = "2.0.5"
 
 [node name="SimpleGrassTextured2" type="MultiMeshInstance3D" parent="Village/Grass" unique_id=437275234]
-material_override = SubResource("ShaderMaterial_m0mba")
+material_override = SubResource("ShaderMaterial_mirxp")
 multimesh = ExtResource("34_cvb7v")
 script = ExtResource("33_8umfu")
 albedo = Color(0.3220863, 7.01987e-05, 0.32208392, 1)
@@ -602,7 +602,7 @@ metadata/_custom_type_script = "uid://2juaclm8gc1n"
 metadata/SimpleGrassTextured = "2.0.5"
 
 [node name="SimpleGrassTextured3" type="MultiMeshInstance3D" parent="Village/Grass" unique_id=720414076]
-material_override = SubResource("ShaderMaterial_i3exe")
+material_override = SubResource("ShaderMaterial_vulwf")
 multimesh = ExtResource("35_2tf7s")
 script = ExtResource("33_8umfu")
 albedo = Color(0.09945222, 1.4439226e-07, 0.5398537, 1)
@@ -731,7 +731,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.019, 14.316557, 90.921875
 [node name="Crypt grass" type="Node3D" parent="Crypt" unique_id=304377566]
 
 [node name="SimpleGrassTextured" type="MultiMeshInstance3D" parent="Crypt/Crypt grass" unique_id=2034335967]
-material_override = SubResource("ShaderMaterial_mirxp")
+material_override = SubResource("ShaderMaterial_i5mv6")
 multimesh = ExtResource("41_nd6hk")
 script = ExtResource("33_8umfu")
 albedo = Color(0.09411765, 0.13725491, 0, 1)

@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dbt848deguqir"]
+
+[ext_resource type="Texture2D" uid="uid://btrq3eu4bpchm" path="res://assets/maps/hunyuan/VolcanRosk2/20260725063356_37318b19_0.png" id="1_qjo0f"]
+
+[resource]
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("1_qjo0f")
+metallic = 0.65
+metallic_specular = 1.0
+roughness = 0.43

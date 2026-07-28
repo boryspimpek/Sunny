@@ -40,6 +40,9 @@ uniform vec4 color_lava_hot : source_color = vec4(1.0, 0.8, 0.3, 1.0);
 // Parametr wydłużający stan pomarańczowy (chłodnej lawy). >1 = pomarańczowy trwa dłużej, <1 = jasny żółto-pomarańczowy trwa dłużej
 uniform float orange_hold : hint_range(0.1, 10.0, 0.1) = 3.0;
 
+// Przesunięcie fazowe dla każdej instancji (ustawiane np. skryptem na każdej skale)
+instance uniform float phase_offset : hint_range(0.0, 6.2832, 0.01) = 0.0;
+
 
 void vertex() {
 	vec3 normal = NORMAL;
@@ -91,7 +94,7 @@ void fragment() {
 	
 	// 3. Płynna fala sinusowa odpowiadająca za pulsowanie (0.0 do 1.0)
 	// Używamy jej do dwóch rzeczy: siły świecenia ORAZ koloru.
-	float pulse = (sin(TIME * pulse_speed) + 1.0) * 0.5;
+	float pulse = (sin(TIME * pulse_speed + phase_offset) + 1.0) * 0.5;
 	
 	// --- NOWOŚĆ: Wyliczenie dynamicznego koloru lawy ---
 	// Płynnie mieszamy kolor 'cool' z 'hot' na podstawie wartości pulsu.
