@@ -11,6 +11,7 @@ var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 var movement_behavior: MovementBehavior
 var attack_behavior: AttackBehavior
 var target: Node3D
+var _last_health: float = 0.0
 
 @onready var health: HealthComponent = $HealthComponent
 
@@ -22,6 +23,8 @@ func _ready() -> void:
 			movement_behavior = child
 		elif child is AttackBehavior:
 			attack_behavior = child
+	_last_health = health.current_health
+	health.health_changed.connect(_on_health_changed)
 	health.died.connect(_on_died)
 
 
@@ -32,14 +35,28 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 
-	if movement_behavior != null:
+	var animation_player := get_node_or_null("AnimationPlayer") as AnimationPlayer
+	var hit_playing := animation_player != null and animation_player.current_animation == "ZombieMoves/hit" and animation_player.is_playing()
+
+	if not hit_playing and movement_behavior != null:
 		var desired := movement_behavior.get_movement(self, target, delta)
 		velocity.x = desired.x
 		velocity.z = desired.z
+	else:
+		velocity.x = 0.0
+		velocity.z = 0.0
 	move_and_slide()
 
-	if attack_behavior != null:
+	if not hit_playing and attack_behavior != null:
 		attack_behavior.try_attack(self, target, delta)
+
+
+func _on_health_changed(current: float, _max_health: float) -> void:
+	if current < _last_health and current > 0.0:
+		var animation_player := get_node_or_null("AnimationPlayer")
+		if animation_player != null:
+			animation_player.play("ZombieMoves/hit")
+	_last_health = current
 
 
 func _on_died() -> void:
