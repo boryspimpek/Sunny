@@ -100,6 +100,8 @@ func _shoot() -> void:
 	if weapon.magazine_size > 0:
 		ammo[current_index] -= 1
 		EventBus.ammo_changed.emit(ammo[current_index], weapon.magazine_size)
+		if ammo[current_index] <= 0:
+			start_reload()
 	if weapon.fire_sound != null:
 		EventBus.sfx_requested.emit(weapon.fire_sound, body.global_position)
 
