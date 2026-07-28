@@ -13,9 +13,11 @@ extends Node
 @onready var model: Skeleton3D = body.get_node("Skeleton3D")
 @onready var walk_audio: AudioStreamPlayer3D = body.get_node("WalkAudio")
 @onready var jump_audio: AudioStreamPlayer3D = body.get_node("JumpAudio")
+@onready var landing_audio: AudioStreamPlayer3D = body.get_node("LandingAudio")
 @onready var roll_audio: AudioStreamPlayer3D = body.get_node("RollAudio")
 
 var last_input_dir := Vector2.ZERO
+var _was_on_floor := true
 
 
 func update(delta: float, combat_mode: bool, camera_yaw: float, animator: PlayerAnimator) -> void:
@@ -69,3 +71,9 @@ func update(delta: float, combat_mode: bool, camera_yaw: float, animator: Player
 	else:
 		body.velocity.x = 0.0
 		body.velocity.z = 0.0
+
+func post_physics_update() -> void:
+	var on_floor := body.is_on_floor()
+	if not _was_on_floor and on_floor:
+		landing_audio.play()
+	_was_on_floor = on_floor

@@ -41,6 +41,7 @@ func _physics_process(delta: float) -> void:
 
 	movement.update(delta, combat_mode, player_camera.get_yaw(), animator)
 	move_and_slide()
+	movement.post_physics_update()
 	animator.update_locomotion(delta, combat_mode, movement.last_input_dir)
 
 
