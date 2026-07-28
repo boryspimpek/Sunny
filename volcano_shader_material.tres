@@ -1,0 +1,28 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://mw5e2cxkmdam"]
+
+[ext_resource type="Shader" uid="uid://cqsv0vvuj1rft" path="res://volcano_shader.gdshader" id="1_l47ld"]
+[ext_resource type="Texture2D" uid="uid://djm460s0q8b73" path="res://assets/textures/lava_rocks_01_1k/lava_rocks_01_color_1k.png" id="2_8fcdk"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_l47ld")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("2_8fcdk")
+shader_parameter/albedo_texture_size = Vector2i(1024, 1024)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/uv1_blend_sharpness = 1.0
+shader_parameter/uv1_scale = Vector3(0.085, 0.085, 0.085)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/pulse_speed = 1.0000000149012
+shader_parameter/emission_energy = 3.0000000447036
+shader_parameter/pulse_strength = 2.0000000298024
+shader_parameter/lava_threshold = 0.2
+shader_parameter/color_lava_cool = Color(0.6, 0.1, 0, 1)
+shader_parameter/color_lava_hot = Color(1, 0.8, 0.3, 1)
+shader_parameter/orange_hold = 2.0000000298024

@@ -31,6 +31,16 @@ uniform float emission_energy : hint_range(0.0, 20.0, 0.1) = 3.0;    // Bazowa s
 uniform float pulse_strength : hint_range(0.0, 5.0, 0.1) = 1.0;      // Jak mocno ma pulsować
 uniform float lava_threshold : hint_range(0.0, 1.0, 0.01) = 0.2;     // Odcięcie ciemnej skały (progowanie)
 
+// --- NOWE PARAMETRY DO ZMIANY KOLORU ---
+// Kolor gdy lawa jest najciemniejsza (np. ciemny, nasycony pomarańcz)
+uniform vec4 color_lava_cool : source_color = vec4(0.6, 0.1, 0.0, 1.0); 
+// Kolor gdy lawa jest najjaśniejsza (np. jaskrawy żółto-pomarańczowy)
+uniform vec4 color_lava_hot : source_color = vec4(1.0, 0.8, 0.3, 1.0);
+
+// Parametr wydłużający stan pomarańczowy (chłodnej lawy). >1 = pomarańczowy trwa dłużej, <1 = jasny żółto-pomarańczowy trwa dłużej
+uniform float orange_hold : hint_range(0.1, 10.0, 0.1) = 3.0;
+
+
 void vertex() {
 	vec3 normal = NORMAL;
 
@@ -71,17 +81,29 @@ void fragment() {
 	float roughness_tex = dot(triplanar_texture(texture_roughness, uv1_power_normal, uv1_triplanar_pos), roughness_texture_channel);
 	ROUGHNESS = roughness_tex * roughness;
 
-	// --- LOGIKA ŚWIECENIA I PULSOWANIA LAWY ---
+// --- NOWA LOGIKA ŚWIECENIA I ZMIANY KOLORU LAWY ---
 	
 	// 1. Wyliczenie jasności piksela z pobranej wcześniej tekstury albedo
 	float brightness = dot(albedo_tex.rgb, vec3(0.299, 0.587, 0.114));
 	
 	// 2. Maska: oddzielenie jasnej lawy od ciemnej skały
-	float lava_mask = smoothstep(lava_threshold, lava_threshold + 0.3, brightness);
+	float lava_mask = smoothstep(lava_threshold, lava_threshold + 0.2, brightness);
 	
-	// 3. Płynna fala sinusowa odpowiadająca za pulsowanie w czasie (0.0 do 1.0)
+	// 3. Płynna fala sinusowa odpowiadająca za pulsowanie (0.0 do 1.0)
+	// Używamy jej do dwóch rzeczy: siły świecenia ORAZ koloru.
 	float pulse = (sin(TIME * pulse_speed) + 1.0) * 0.5;
 	
-	// 4. Przypisanie emisji (świecenia) – używa koloru albedo wzmocnionego o pulsowanie
-	EMISSION = ALBEDO * lava_mask * emission_energy * (1.0 + (pulse * pulse_strength));
-}
+	// --- NOWOŚĆ: Wyliczenie dynamicznego koloru lawy ---
+	// Płynnie mieszamy kolor 'cool' z 'hot' na podstawie wartości pulsu.
+	// Wartość pulse_strength wpływa na to, jak bardzo zbliżamy się do koloru 'hot'.
+	float pulse_curve = pow(pulse, orange_hold);
+	vec3 dynamic_lava_color = mix(color_lava_cool.rgb, color_lava_hot.rgb, pulse_curve * min(1.0, pulse_strength));
+	
+	// 4. Przypisanie emisji (świecenia).
+	// Teraz używamy naszego nowego 'dynamic_lava_color' zamiast ALBEDO.
+	EMISSION = dynamic_lava_color * lava_mask * emission_energy;
+	
+	// OPCJONALNIE: Jeśli chcesz, aby fizyczny kolor skały (ALBEDO) też się zmieniał,
+	// odkomentuj poniższą linię. Dzięki temu lawa będzie 'stygła' też na samej teksturze.
+	// ALBEDO = mix(ALBEDO, dynamic_lava_color, lava_mask * 0.5); // 0.5 to siła przebarwienia
+	}

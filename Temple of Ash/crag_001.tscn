@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bi2mu0aphsgim"]
 
 [ext_resource type="PackedScene" uid="uid://5ylb62i7fnqv" path="res://assets/maps/inferno/Separate_assets_fbx/Crag_001.fbx" id="1_g53du"]
-[ext_resource type="Material" uid="uid://qh0vigsh2oq8" path="res://materials/lava_rocks_01.tres" id="2_lhbfh"]
+[ext_resource type="Material" uid="uid://mw5e2cxkmdam" path="res://volcano_shader_material.tres" id="2_jfuae"]
 
 [node name="Crag_001" unique_id=1528110203 instance=ExtResource("1_g53du")]
 
 [node name="Crag_001" parent="." index="0" unique_id=168466555]
-surface_material_override/0 = ExtResource("2_lhbfh")
+surface_material_override/0 = ExtResource("2_jfuae")
