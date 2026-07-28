@@ -55,6 +55,7 @@ shadow_blur = 0.0
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=145163531]
 stream = ExtResource("8_5vw27")
+autoplay = true
 parameters/looping = true
 
 [node name="Zombies" type="Node3D" parent="." unique_id=986996289]

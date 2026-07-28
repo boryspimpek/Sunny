@@ -12,6 +12,8 @@ extends Node
 @onready var body: CharacterBody3D = get_parent()
 @onready var model: Skeleton3D = body.get_node("Skeleton3D")
 @onready var walk_audio: AudioStreamPlayer3D = body.get_node("WalkAudio")
+@onready var jump_audio: AudioStreamPlayer3D = body.get_node("JumpAudio")
+@onready var roll_audio: AudioStreamPlayer3D = body.get_node("RollAudio")
 
 var last_input_dir := Vector2.ZERO
 
@@ -41,10 +43,12 @@ func update(delta: float, combat_mode: bool, camera_yaw: float, animator: Player
 	# Skok i przewrót
 	if Input.is_action_just_pressed("jump") and body.is_on_floor() and not animator.action_animation_playing:
 		body.velocity.y = jump_strength
+		jump_audio.play()
 		animator.play_action(&"Moves/jump")
 	if Input.is_action_just_pressed("roll") and body.is_on_floor() and not animator.action_animation_playing:
 		animator.play_action(&"Moves/roll", target_direction)
-
+		roll_audio.play()
+	
 	# Prędkość pozioma
 	if animator.is_rolling():
 		body.velocity.x = 0.0

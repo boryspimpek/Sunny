@@ -17,7 +17,7 @@
 [ext_resource type="Animation" uid="uid://bpabdelf0teuf" path="res://assets/animations/Player/animation tres/pistol_strafe_right.tres" id="12_pistol_right"]
 [ext_resource type="PackedScene" uid="uid://5pie2dwdmmh7" path="res://assets/weapon/uploads_files_6390069_halo_pulse.tscn" id="13_weapon"]
 [ext_resource type="Animation" uid="uid://defnax5xkuiox" path="res://assets/animations/Player/animation tres/stand_to_roll.tres" id="17_kvlxm"]
-[ext_resource type="AudioStream" uid="uid://xutm2hmbaotd" path="res://assets/sounds/walking/walking_long.mp3" id="18_6cv16"]
+[ext_resource type="AudioStream" uid="uid://xutm2hmbaotd" path="res://assets/sounds/character sounds/walking/walking_long.mp3" id="18_6cv16"]
 [ext_resource type="Script" uid="uid://bauo260fefjfo" path="res://src/player/player_movement.gd" id="18_movement"]
 [ext_resource type="Script" uid="uid://p4v75nu8j6pk" path="res://src/player/player_camera.gd" id="19_camera"]
 [ext_resource type="Script" uid="uid://dnghbv8sgackt" path="res://src/player/player_aim_assist.gd" id="20_aim"]

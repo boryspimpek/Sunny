@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c72fb5lg5leqk"
+path="res://.godot/imported/walking_single_step.mp3-c8b527b79067ec1c171bb4171bd1572d.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/character sounds/walking/walking_single_step.mp3"
+dest_files=["res://.godot/imported/walking_single_step.mp3-c8b527b79067ec1c171bb4171bd1572d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
