@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/RockMid_004.fbx-23ac1f2824f3eb241e68537fb0311
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="MeshInstance3D"
 nodes/root_name=""
 nodes/root_script=null
 nodes/apply_root_scale=true

@@ -11,3 +11,6 @@ albedo_texture = ExtResource("2_lerqs")
 
 [node name="tripo_node_dc4bff1a-1c50-4362-8c34-2550fad28a75" parent="." index="0" unique_id=1808871344]
 surface_material_override/0 = SubResource("StandardMaterial3D_i4tdi")
+
+[node name="Muzzle" type="Marker3D" parent="." index="1" unique_id=632382582]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.26141685, 0.34463847)

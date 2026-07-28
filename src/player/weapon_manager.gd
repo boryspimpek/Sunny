@@ -7,6 +7,7 @@ extends Node
 
 @onready var body: CharacterBody3D = get_parent()
 @onready var aim_assist: PlayerAimAssist = body.get_node("PlayerAimAssist")
+@onready var muzzle_marker: Marker3D = body.get_node_or_null("Skeleton3D/WeaponAttachment/PistolMount/Pistol/Muzzle")
 
 var current_index := 0
 var ammo: Array[int] = []
@@ -84,6 +85,8 @@ func _shoot() -> void:
 
 	var direction: Vector3 = aim_assist.get_aim_direction()
 	var spawn_pos := body.global_position + Vector3.UP
+	if muzzle_marker != null:
+		spawn_pos = muzzle_marker.global_position
 	var end_pos := spawn_pos + direction * aim_assist.aim_assist_range
 
 	var space_state := body.get_world_3d().direct_space_state
@@ -103,6 +106,7 @@ func _shoot() -> void:
 		body.get_parent().add_child(muzzle)
 		muzzle.global_position = spawn_pos + direction
 		muzzle.look_at(muzzle.global_position + direction)
+		muzzle.rotate_object_local(Vector3.UP, deg_to_rad(90))
 		get_tree().create_timer(0.5).timeout.connect(muzzle.queue_free)
 
 	fire_cooldown = weapon.fire_interval
