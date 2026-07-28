@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cl50ov6wgy3ui"
+path="res://.godot/imported/wind.wav-489dacc845c3a03d7580659d8de93e99.sample"
+
+[deps]
+
+source_file="res://assets/sounds/character sounds/Type 1/wind.wav"
+dest_files=["res://.godot/imported/wind.wav-489dacc845c3a03d7580659d8de93e99.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

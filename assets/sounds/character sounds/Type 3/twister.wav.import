@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d3s704dqqsuhk"
+path="res://.godot/imported/twister.wav-889f91f38469e6668c59b370fcf1e2d6.sample"
+
+[deps]
+
+source_file="res://assets/sounds/character sounds/Type 3/twister.wav"
+dest_files=["res://.godot/imported/twister.wav-889f91f38469e6668c59b370fcf1e2d6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

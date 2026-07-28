@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://6gbg333t76oh"
+path="res://.godot/imported/32 SW Open Cylinder Part 2.mp3-057a97c6157a5eadcf8a781c318fbdda.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/guns/& More/Revolver/32 SW Long/MP3/32 SW Open Cylinder Part 2.mp3"
+dest_files=["res://.godot/imported/32 SW Open Cylinder Part 2.mp3-057a97c6157a5eadcf8a781c318fbdda.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

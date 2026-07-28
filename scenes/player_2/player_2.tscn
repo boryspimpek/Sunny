@@ -15,6 +15,7 @@
 [ext_resource type="Animation" uid="uid://bpabrxmmjfbd1" path="res://assets/animations/Player_2/animations/roll.tres" id="12_g8yiw"]
 [ext_resource type="Animation" uid="uid://vcybmct7ox7o" path="res://assets/animations/Player_2/animations/running.tres" id="13_xwc3f"]
 [ext_resource type="Animation" uid="uid://7o8vvcsnolw" path="res://assets/animations/Player_2/animations/running_backward.tres" id="14_g3ipn"]
+[ext_resource type="AudioStream" uid="uid://doxfxqrfcs583" path="res://assets/sounds/character sounds/Type 1/jump1.wav" id="17_rv2n3"]
 [ext_resource type="AudioStream" uid="uid://xutm2hmbaotd" path="res://assets/sounds/walking/walking_long.mp3" id="18_2qbci"]
 [ext_resource type="Script" uid="uid://bauo260fefjfo" path="res://src/player/player_movement.gd" id="19_jigw5"]
 [ext_resource type="Script" uid="uid://p4v75nu8j6pk" path="res://src/player/player_camera.gd" id="20_d517h"]
@@ -77,44 +78,44 @@ script = ExtResource("2_m5a3j")
 
 [node name="Skeleton3D" parent="." index="0" unique_id=1854101202]
 transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 0, 0, 0)
-bones/0/position = Vector3(-0.010354241, 0.46547523, 0.0003336072)
-bones/0/rotation = Quaternion(-0.022197045, 0.058563348, -0.045970455, 0.9969776)
-bones/1/rotation = Quaternion(-0.022781238, -0.009717587, 0.05483364, 0.9981883)
-bones/2/rotation = Quaternion(-0.0055300645, -0.0140221985, 0.0118978135, 0.9998156)
-bones/3/rotation = Quaternion(-0.005211304, -0.0137831215, 0.011969289, 0.9998199)
-bones/4/rotation = Quaternion(0.06373139, -0.0035167302, -0.029508824, 0.99752456)
-bones/5/rotation = Quaternion(-0.106164575, -0.029365156, 0.006035606, 0.9938966)
-bones/7/rotation = Quaternion(-0.62725043, -0.36044294, 0.5732383, -0.38475418)
-bones/8/rotation = Quaternion(0.28566128, 0.046503637, 0.019211147, 0.95700896)
-bones/9/rotation = Quaternion(0.00941329, -0.057009622, 0.16818424, 0.98406065)
-bones/10/rotation = Quaternion(0.020379262, 0.5096692, 0.09355717, 0.85502577)
-bones/11/rotation = Quaternion(0.032531608, 0.04104441, 0.14076778, 0.9886564)
-bones/12/rotation = Quaternion(0.07204663, 0.013714303, -0.07280774, 0.9946458)
-bones/13/rotation = Quaternion(0.0034390693, -0.074702136, -0.03301393, 0.9966533)
-bones/15/rotation = Quaternion(0.14199117, -0.0030569234, 0.057866994, 0.9881704)
-bones/16/rotation = Quaternion(0.18050645, -0.001831841, 0.19055998, 0.9649358)
-bones/17/rotation = Quaternion(0.24620429, -0.008727593, 0.101487815, 0.96385044)
-bones/19/rotation = Quaternion(0.6259638, -0.3573037, 0.58430517, 0.372949)
-bones/20/rotation = Quaternion(0.25222307, -0.15346333, -0.08054384, 0.9520217)
-bones/21/rotation = Quaternion(0.015086254, 0.086577214, -0.25933722, 0.96178013)
-bones/22/rotation = Quaternion(0.029074842, -0.47328362, -0.095910594, 0.8751906)
-bones/23/rotation = Quaternion(-0.0010668315, -0.032399878, -0.2026476, 0.97871506)
-bones/24/rotation = Quaternion(0.12737224, -0.0039945035, 0.18649337, 0.9741564)
-bones/25/rotation = Quaternion(0.0013302416, 0.00266086, -0.002257483, 0.999993)
-bones/27/rotation = Quaternion(0.20352852, -0.014651814, -0.04115315, 0.9780941)
-bones/28/rotation = Quaternion(0.10362145, -0.004554071, -0.18201515, 0.97781)
-bones/29/rotation = Quaternion(0.18708624, 0.0108924955, -0.08138174, 0.97890615)
-bones/31/rotation = Quaternion(0.09082395, 0.12983914, 0.97199076, -0.17357108)
-bones/32/rotation = Quaternion(-0.1790622, -0.088948965, -0.02202686, 0.979561)
-bones/33/rotation = Quaternion(0.41735765, -0.0683144, -0.05233126, 0.9046586)
-bones/34/rotation = Quaternion(0.35241234, -0.006582497, 0.0031905612, 0.9358163)
-bones/36/rotation = Quaternion(-0.054210722, 0.024383714, 0.9957212, -0.07075298)
-bones/37/rotation = Quaternion(-0.16114537, 0.07745406, 0.012042068, 0.98381305)
-bones/38/rotation = Quaternion(0.51183593, 0.09284411, -0.058473345, 0.8520475)
-bones/39/rotation = Quaternion(0.37846512, 0.0042902506, -0.0013514461, 0.92560464)
+bones/0/position = Vector3(-0.0021265373, 0.46630323, 0.0023420155)
+bones/0/rotation = Quaternion(-0.015747234, 0.016754523, -0.050790664, 0.9984447)
+bones/1/rotation = Quaternion(-0.023003742, -0.008515318, 0.05512596, 0.99817806)
+bones/2/rotation = Quaternion(-0.01251289, -0.01171481, 0.012786797, 0.99977136)
+bones/3/rotation = Quaternion(-0.012452413, -0.011415175, 0.012950485, 0.9997735)
+bones/4/rotation = Quaternion(0.06396824, -0.0004689881, -0.028726842, 0.99753827)
+bones/5/rotation = Quaternion(-0.08455314, -0.013919084, 0.008402712, 0.99628633)
+bones/7/rotation = Quaternion(-0.6244853, -0.36067355, 0.58069575, -0.37778983)
+bones/8/rotation = Quaternion(0.29462215, 0.055856165, -0.0106331045, 0.95392084)
+bones/9/rotation = Quaternion(0.009931647, -0.060017385, 0.17743945, 0.9822498)
+bones/10/rotation = Quaternion(0.008121419, 0.50573206, 0.09383157, 0.8575342)
+bones/11/rotation = Quaternion(0.018812768, 0.03136877, 0.15400462, 0.98739284)
+bones/12/rotation = Quaternion(0.061297916, 0.008434293, -0.06334366, 0.9960719)
+bones/13/rotation = Quaternion(-0.0020902604, -0.08614455, 0.011835775, 0.99621016)
+bones/15/rotation = Quaternion(0.11421886, -0.0032291752, 0.040370256, 0.9926298)
+bones/16/rotation = Quaternion(0.14443347, -0.0016111864, 0.17005178, 0.97479177)
+bones/17/rotation = Quaternion(0.19082241, -0.006107758, 0.06786954, 0.97925645)
+bones/19/rotation = Quaternion(0.6138746, -0.36634365, 0.59499323, 0.36733285)
+bones/20/rotation = Quaternion(0.26529512, -0.13581909, -0.036386646, 0.95385945)
+bones/21/rotation = Quaternion(0.014484261, 0.08321421, -0.24898328, 0.9648175)
+bones/22/rotation = Quaternion(0.018453548, -0.47882298, -0.10012859, 0.8719876)
+bones/23/rotation = Quaternion(-0.002594758, -0.031795643, -0.20403378, 0.978444)
+bones/24/rotation = Quaternion(0.12325236, -0.0029193894, 0.18302079, 0.975348)
+bones/25/rotation = Quaternion(-0.0078916885, 0.005800088, -0.010924444, 0.9998924)
+bones/27/rotation = Quaternion(0.19671491, -0.014660741, -0.036032278, 0.97968876)
+bones/28/rotation = Quaternion(0.096496515, -0.0044397516, -0.17797503, 0.9792822)
+bones/29/rotation = Quaternion(0.16738021, 0.009391805, -0.0694513, 0.9833983)
+bones/31/rotation = Quaternion(0.10158683, 0.12725002, 0.97247887, -0.16665125)
+bones/32/rotation = Quaternion(-0.1918785, -0.078017265, -0.0029563745, 0.97830844)
+bones/33/rotation = Quaternion(0.43316033, -0.08452822, -0.05982689, 0.8953479)
+bones/34/rotation = Quaternion(0.3559169, -0.006774541, 0.0030789487, 0.93448806)
+bones/36/rotation = Quaternion(-0.06578003, 0.025249954, 0.99522895, -0.06748935)
+bones/37/rotation = Quaternion(-0.15389907, 0.08056057, -0.0020057797, 0.984795)
+bones/38/rotation = Quaternion(0.50595665, 0.048819963, -0.02400485, 0.8608416)
+bones/39/rotation = Quaternion(0.3751649, 0.0041002883, -0.0014641845, 0.9269479)
 
 [node name="WeaponAttachment" type="BoneAttachment3D" parent="Skeleton3D" index="0" unique_id=1380257357]
-transform = Transform3D(0.99529374, 0.0028121173, 0.096863866, 0.06950027, -0.7172881, -0.69330215, 0.06752941, 0.6967713, -0.7141077, -0.15343904, 0.47330302, 0.079698905)
+transform = Transform3D(0.96381676, -0.13659191, 0.22891068, 0.05623007, -0.7352377, -0.6754729, 0.26056796, 0.66390395, -0.7009538, -0.15731737, 0.4701088, 0.05306202)
 bone_name = "mixamorig_RightHand"
 bone_idx = 22
 
@@ -136,11 +137,15 @@ parameters/blend_position = Vector2(0, 0)
 stream = ExtResource("18_2qbci")
 volume_db = -12.92
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="4" unique_id=1414932104]
+[node name="JumpAudio" type="AudioStreamPlayer3D" parent="." index="4" unique_id=1185495360]
+stream = ExtResource("17_rv2n3")
+volume_db = -12.92
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="5" unique_id=1414932104]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83189696, 0)
 shape = SubResource("CapsuleShape3D_ei0qc")
 
-[node name="SpringArmPivot" type="Node3D" parent="." index="5" unique_id=1518464602]
+[node name="SpringArmPivot" type="Node3D" parent="." index="6" unique_id=1518464602]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="SpringArm3D" type="SpringArm3D" parent="SpringArmPivot" index="0" unique_id=367823510]
@@ -159,7 +164,7 @@ spot_attenuation = -0.9
 spot_angle = 18.41
 spot_angle_attenuation = 0.26794344
 
-[node name="CrosshairLayer" type="CanvasLayer" parent="." index="6" unique_id=1830636191]
+[node name="CrosshairLayer" type="CanvasLayer" parent="." index="7" unique_id=1830636191]
 offset = Vector2(0, -100)
 transform = Transform2D(1, 0, 0, 1, 0, -100)
 
@@ -193,7 +198,7 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(1, 1, 1, 0.9)
 
-[node name="PlayerMovement" type="Node" parent="." index="7" unique_id=2145840508]
+[node name="PlayerMovement" type="Node" parent="." index="8" unique_id=2145840508]
 script = ExtResource("19_jigw5")
 max_speed = 6.0
 combat_max_speed = 4.0
@@ -201,23 +206,23 @@ acceleration = 30.0
 friction = 40.0
 jump_strength = 4.0
 
-[node name="PlayerCamera" type="Node" parent="." index="8" unique_id=1349299670]
+[node name="PlayerCamera" type="Node" parent="." index="9" unique_id=1349299670]
 script = ExtResource("20_d517h")
 camera_pitch_min = -30.0
 camera_pitch_max = 20.0
 combat_spring_offset = Vector3(1, 0, 0.1)
 
-[node name="PlayerAimAssist" type="Node" parent="." index="9" unique_id=2090359588]
+[node name="PlayerAimAssist" type="Node" parent="." index="10" unique_id=2090359588]
 script = ExtResource("21_cv7xd")
 aim_assist_range = 15.0
 
-[node name="PlayerAnimator" type="Node" parent="." index="10" unique_id=534904250]
+[node name="PlayerAnimator" type="Node" parent="." index="11" unique_id=534904250]
 script = ExtResource("22_5k5ha")
 animation_reference_speed = 8.0
 
-[node name="WeaponManager" type="Node" parent="." index="11" unique_id=593133751]
+[node name="WeaponManager" type="Node" parent="." index="12" unique_id=593133751]
 script = ExtResource("23_c2jc6")
 weapons = Array[ExtResource("24_uvsp6")]([ExtResource("25_h3rqa")])
 
-[node name="HealthComponent" type="Node" parent="." index="12" unique_id=1792875888]
+[node name="HealthComponent" type="Node" parent="." index="13" unique_id=1792875888]
 script = ExtResource("26_tjp3x")

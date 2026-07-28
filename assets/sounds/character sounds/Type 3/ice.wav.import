@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c43yqe2fa8lru"
+path="res://.godot/imported/ice.wav-df06f84c4a067686cded0ddc0a8b2ad6.sample"
+
+[deps]
+
+source_file="res://assets/sounds/character sounds/Type 3/ice.wav"
+dest_files=["res://.godot/imported/ice.wav-df06f84c4a067686cded0ddc0a8b2ad6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

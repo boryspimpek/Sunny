@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cwwh11x2xmluy"
+path="res://.godot/imported/9mm Pistol Reload 2.mp3-0a76b18484eaa7520bf54613b4a02299.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/guns/& More/Pistol/MP3/9mm Pistol Reload 2.mp3"
+dest_files=["res://.godot/imported/9mm Pistol Reload 2.mp3-0a76b18484eaa7520bf54613b4a02299.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

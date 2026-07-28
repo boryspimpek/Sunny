@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c0230418gpp16"
+path="res://.godot/imported/cyclone.wav-bcec2f9f3bf96dfc4b43834d7a27c5a5.sample"
+
+[deps]
+
+source_file="res://assets/sounds/character sounds/Type 3/cyclone.wav"
+dest_files=["res://.godot/imported/cyclone.wav-bcec2f9f3bf96dfc4b43834d7a27c5a5.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

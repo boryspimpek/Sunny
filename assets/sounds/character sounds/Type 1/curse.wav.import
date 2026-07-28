@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cs8nmkeb2s8pe"
+path="res://.godot/imported/curse.wav-2ec01a1d9f7324b7a8c7db3fa71c960f.sample"
+
+[deps]
+
+source_file="res://assets/sounds/character sounds/Type 1/curse.wav"
+dest_files=["res://.godot/imported/curse.wav-2ec01a1d9f7324b7a8c7db3fa71c960f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

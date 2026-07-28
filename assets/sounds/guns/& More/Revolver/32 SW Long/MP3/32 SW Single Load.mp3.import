@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cw006u5khf2o8"
+path="res://.godot/imported/32 SW Single Load.mp3-d0070fd6cd29529e04c0562b61b409f1.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/guns/& More/Revolver/32 SW Long/MP3/32 SW Single Load.mp3"
+dest_files=["res://.godot/imported/32 SW Single Load.mp3-d0070fd6cd29529e04c0562b61b409f1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

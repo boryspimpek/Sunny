@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cu6isd7lg1ej0"
+path="res://.godot/imported/32 SW Close Cylinder.mp3-c2ac2b6c445bbf6e505773965aa87167.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/guns/& More/Revolver/32 SW Long/MP3/32 SW Close Cylinder.mp3"
+dest_files=["res://.godot/imported/32 SW Close Cylinder.mp3-c2ac2b6c445bbf6e505773965aa87167.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

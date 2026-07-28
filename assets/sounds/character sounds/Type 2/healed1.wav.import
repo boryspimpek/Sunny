@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://sk4gpopalpss"
+path="res://.godot/imported/healed1.wav-531f3e72474dda2fe618e0215cb43f66.sample"
+
+[deps]
+
+source_file="res://assets/sounds/character sounds/Type 2/healed1.wav"
+dest_files=["res://.godot/imported/healed1.wav-531f3e72474dda2fe618e0215cb43f66.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

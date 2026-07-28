@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d1dbykt8t14ui"
+path="res://.godot/imported/Mosin Top Load.mp3-d6be65010c05873199b5db3a90ec4d58.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/guns/& More/Mag Pack/MP3/Mosin Top Load.mp3"
+dest_files=["res://.godot/imported/Mosin Top Load.mp3-d6be65010c05873199b5db3a90ec4d58.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

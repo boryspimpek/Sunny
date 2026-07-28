@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c6a17e0mqnln6"
+path="res://.godot/imported/hellstorm.wav-e7209868dbc183f1a167d3b07266697b.sample"
+
+[deps]
+
+source_file="res://assets/sounds/character sounds/Type 1/hellstorm.wav"
+dest_files=["res://.godot/imported/hellstorm.wav-e7209868dbc183f1a167d3b07266697b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

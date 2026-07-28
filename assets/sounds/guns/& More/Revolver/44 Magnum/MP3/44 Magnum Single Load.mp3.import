@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://tu7ev7dt740i"
+path="res://.godot/imported/44 Magnum Single Load.mp3-a265c06ff112ed2bec46e97f0130bd63.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/guns/& More/Revolver/44 Magnum/MP3/44 Magnum Single Load.mp3"
+dest_files=["res://.godot/imported/44 Magnum Single Load.mp3-a265c06ff112ed2bec46e97f0130bd63.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://khc1ygmftu7e"
+path="res://.godot/imported/cure.wav-59d66bfe284962f0b0905e48f0d5d631.sample"
+
+[deps]
+
+source_file="res://assets/sounds/character sounds/Type 2/cure.wav"
+dest_files=["res://.godot/imported/cure.wav-59d66bfe284962f0b0905e48f0d5d631.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

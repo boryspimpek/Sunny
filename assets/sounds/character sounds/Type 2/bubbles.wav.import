@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b0c2c2pgb2wsp"
+path="res://.godot/imported/bubbles.wav-e81ef97ecd87c0f51472b42b2b9950df.sample"
+
+[deps]
+
+source_file="res://assets/sounds/character sounds/Type 2/bubbles.wav"
+dest_files=["res://.godot/imported/bubbles.wav-e81ef97ecd87c0f51472b42b2b9950df.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

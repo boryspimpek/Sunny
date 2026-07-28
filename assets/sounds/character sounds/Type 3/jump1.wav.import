@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://besx1lqd6xb12"
+path="res://.godot/imported/jump1.wav-6df2c908ec36a6748939f8da03604709.sample"
+
+[deps]
+
+source_file="res://assets/sounds/character sounds/Type 3/jump1.wav"
+dest_files=["res://.godot/imported/jump1.wav-6df2c908ec36a6748939f8da03604709.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

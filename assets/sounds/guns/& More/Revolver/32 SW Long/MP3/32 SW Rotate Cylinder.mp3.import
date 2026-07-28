@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cypqmuqw2jcbx"
+path="res://.godot/imported/32 SW Rotate Cylinder.mp3-5b3350781729a7d49f73f1ab2bc86d89.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/guns/& More/Revolver/32 SW Long/MP3/32 SW Rotate Cylinder.mp3"
+dest_files=["res://.godot/imported/32 SW Rotate Cylinder.mp3-5b3350781729a7d49f73f1ab2bc86d89.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
