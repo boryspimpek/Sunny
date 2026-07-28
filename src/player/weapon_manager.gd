@@ -76,22 +76,32 @@ func start_reload() -> void:
 
 func _shoot() -> void:
 	var weapon := current_weapon()
-	if weapon == null or weapon.projectile_scene == null:
+	if weapon == null:
 		return
 	if weapon.magazine_size > 0 and ammo[current_index] <= 0:
 		start_reload()
 		return
 
-	var projectile: Projectile = weapon.projectile_scene.instantiate()
 	var direction: Vector3 = aim_assist.get_aim_direction()
-	body.get_parent().add_child(projectile)
-	projectile.global_position = body.global_position + direction + Vector3.UP
-	projectile.setup(direction, weapon.damage, weapon.hit_effect_scene, weapon.projectile_speed)
+	var spawn_pos := body.global_position + Vector3.UP
+	var end_pos := spawn_pos + direction * aim_assist.aim_assist_range
+
+	var space_state := body.get_world_3d().direct_space_state
+	var query := PhysicsRayQueryParameters3D.create(spawn_pos, end_pos, 1 | 4, [body.get_rid()])
+	var result := space_state.intersect_ray(query)
+	if not result.is_empty():
+		var hit_body := result["collider"] as Node3D
+		if hit_body != null:
+			var health := hit_body.get_node_or_null("HealthComponent") as HealthComponent
+			if health != null:
+				health.take_damage(weapon.damage)
+		if weapon.hit_effect_scene != null:
+			_spawn_hit_effect(result["position"], weapon.hit_effect_scene)
 
 	if weapon.muzzle_flash_scene != null:
 		var muzzle: Node3D = weapon.muzzle_flash_scene.instantiate()
 		body.get_parent().add_child(muzzle)
-		muzzle.global_position = body.global_position + direction + Vector3.UP
+		muzzle.global_position = spawn_pos + direction
 		muzzle.look_at(muzzle.global_position + direction)
 		get_tree().create_timer(0.5).timeout.connect(muzzle.queue_free)
 
@@ -104,6 +114,12 @@ func _shoot() -> void:
 			start_reload()
 	if weapon.fire_sound != null:
 		EventBus.sfx_requested.emit(weapon.fire_sound, body.global_position)
+
+
+func _spawn_hit_effect(position: Vector3, scene: PackedScene) -> void:
+	var effect := scene.instantiate() as Node3D
+	body.get_parent().add_child(effect)
+	effect.global_position = position
 
 
 func _finish_reload() -> void:
