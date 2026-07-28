@@ -1,7 +1,6 @@
-[gd_scene format=3 uid="uid://rbhfxgdryqvd"]
+[gd_resource type="ShaderMaterial" format=3 uid="uid://0677mtmnhx6t"]
 
-[ext_resource type="PackedScene" uid="uid://bsvvsqimhfvq0" path="res://assets/maps/hunyuan/VolcanRock1/20260725064024_c28df939.fbx" id="1_u8fl1"]
-[ext_resource type="Texture2D" uid="uid://cp1yneb7520mr" path="res://assets/maps/hunyuan/VolcanRock1/20260725064024_c28df939_0.png" id="2_pjy1x"]
+[ext_resource type="Texture2D" uid="uid://btrq3eu4bpchm" path="res://assets/maps/hunyuan/VolcanRosk2/20260725063356_37318b19_0.png" id="1_stt2y"]
 
 [sub_resource type="Shader" id="Shader_1ri71"]
 code = "// NOTE: Shader automatically converted from Godot Engine 4.6.2.stable's StandardMaterial3D.
@@ -59,11 +58,11 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_pscq5"]
+[resource]
 render_priority = 0
 shader = SubResource("Shader_1ri71")
 shader_parameter/albedo = Color(1, 1, 1, 1)
-shader_parameter/texture_albedo = ExtResource("2_pjy1x")
+shader_parameter/texture_albedo = ExtResource("1_stt2y")
 shader_parameter/albedo_texture_size = Vector2i(1024, 1024)
 shader_parameter/roughness = 0.43
 shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
@@ -76,35 +75,3 @@ shader_parameter/lava_threshold = 0.1
 shader_parameter/color_lava_cool = Color(0.6, 0.1, 0, 1)
 shader_parameter/color_lava_hot = Color(1, 0.8, 0.3, 1)
 shader_parameter/orange_hold = 2.0
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_pscq5"]
-height = 0.08227539
-radius = 0.38232422
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_flf68"]
-height = 0.08227539
-radius = 0.2915039
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_4xlo1"]
-height = 0.26428223
-radius = 0.26171875
-
-[node name="volcano_rock1" unique_id=1627765898 instance=ExtResource("1_u8fl1")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
-
-[node name="Mesh_0" parent="." index="0" unique_id=174221010]
-surface_material_override/0 = SubResource("ShaderMaterial_pscq5")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=265571350]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1754347813]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03186035, 0)
-shape = SubResource("CylinderShape3D_pscq5")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1" unique_id=1940524179]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11014404, 0)
-shape = SubResource("CylinderShape3D_flf68")
-
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" index="2" unique_id=1168962049]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.27911988, 0)
-shape = SubResource("CylinderShape3D_4xlo1")

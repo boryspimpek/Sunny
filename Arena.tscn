@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://81xht8dpghwx" path="res://Temple of Ash/ground.tscn" id="2_gbu3q"]
 [ext_resource type="PackedScene" uid="uid://bfab7ppcits5e" path="res://Temple of Ash/pavement.tscn" id="3_32wrx"]
 [ext_resource type="PackedScene" uid="uid://ckulqdduleqg1" path="res://Temple of Ash/rock_big_001.tscn" id="3_dhnyx"]
-[ext_resource type="Script" uid="uid://cmfkgl5168lrp" path="res://volcano_rocks.gd" id="5_i3exe"]
+[ext_resource type="Script" uid="uid://cmfkgl5168lrp" path="res://lava_rocks.gd" id="5_i3exe"]
 [ext_resource type="PackedScene" uid="uid://d3lxbsrldsolx" path="res://Temple of Ash/roxk_mid03.tscn" id="5_m0mba"]
 [ext_resource type="PackedScene" uid="uid://bi2mu0aphsgim" path="res://Temple of Ash/crag_001.tscn" id="6_2ypaj"]
 [ext_resource type="PackedScene" uid="uid://cgtjs5sivn24a" path="res://Temple of Ash/rock_mid04.tscn" id="6_i3exe"]
@@ -88,7 +88,7 @@
 [ext_resource type="PackedScene" uid="uid://cqh2dtbsxve3q" path="res://Temple of Ash/Houses/house_2.tscn" id="89_yma7u"]
 [ext_resource type="PackedScene" uid="uid://cgn2ya84jebkl" path="res://Temple of Ash/Houses/house_3.tscn" id="90_g22cj"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_i3exe"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mirxp"]
 render_priority = 0
 shader = ExtResource("30_dc080")
 shader_parameter/albedo = Color(0.56988835, 0.31059232, 0, 1)
@@ -116,7 +116,7 @@ shader_parameter/interactive_level_xz = 3.0
 shader_parameter/interactive_level_y = 0.3
 metadata/SimpleGrassTexturedMaterial = "2.1.0"
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_mirxp"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vulwf"]
 render_priority = 0
 shader = ExtResource("30_dc080")
 shader_parameter/albedo = Color(0.3220863, 7.01987e-05, 0.32208392, 1)
@@ -144,7 +144,7 @@ shader_parameter/interactive_level_xz = 3.0
 shader_parameter/interactive_level_y = 0.3
 metadata/SimpleGrassTexturedMaterial = "2.1.0"
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_vulwf"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i5mv6"]
 render_priority = 0
 shader = ExtResource("30_dc080")
 shader_parameter/albedo = Color(0.09945222, 1.4439226e-07, 0.5398537, 1)
@@ -172,7 +172,7 @@ shader_parameter/interactive_level_xz = 3.0
 shader_parameter/interactive_level_y = 0.3
 metadata/SimpleGrassTexturedMaterial = "2.1.0"
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_i5mv6"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yma7u"]
 render_priority = 0
 shader = ExtResource("30_dc080")
 shader_parameter/albedo = Color(0.09411765, 0.13725491, 0, 1)
@@ -560,7 +560,7 @@ transform = Transform3D(0.9998349, 0, -0.018167842, 0, 1, 0, 0.018167842, 0, 0.9
 [node name="Grass" type="MeshInstance3D" parent="Village" unique_id=1666937536]
 
 [node name="SimpleGrassTextured" type="MultiMeshInstance3D" parent="Village/Grass" unique_id=560384368]
-material_override = SubResource("ShaderMaterial_i3exe")
+material_override = SubResource("ShaderMaterial_mirxp")
 multimesh = ExtResource("32_unrth")
 script = ExtResource("33_8umfu")
 albedo = Color(0.56988835, 0.31059232, 0, 1)
@@ -581,7 +581,7 @@ metadata/_custom_type_script = "uid://2juaclm8gc1n"
 metadata/SimpleGrassTextured = "2.0.5"
 
 [node name="SimpleGrassTextured2" type="MultiMeshInstance3D" parent="Village/Grass" unique_id=437275234]
-material_override = SubResource("ShaderMaterial_mirxp")
+material_override = SubResource("ShaderMaterial_vulwf")
 multimesh = ExtResource("34_cvb7v")
 script = ExtResource("33_8umfu")
 albedo = Color(0.3220863, 7.01987e-05, 0.32208392, 1)
@@ -602,7 +602,7 @@ metadata/_custom_type_script = "uid://2juaclm8gc1n"
 metadata/SimpleGrassTextured = "2.0.5"
 
 [node name="SimpleGrassTextured3" type="MultiMeshInstance3D" parent="Village/Grass" unique_id=720414076]
-material_override = SubResource("ShaderMaterial_vulwf")
+material_override = SubResource("ShaderMaterial_i5mv6")
 multimesh = ExtResource("35_2tf7s")
 script = ExtResource("33_8umfu")
 albedo = Color(0.09945222, 1.4439226e-07, 0.5398537, 1)
@@ -731,7 +731,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.019, 14.316557, 90.921875
 [node name="Crypt grass" type="Node3D" parent="Crypt" unique_id=304377566]
 
 [node name="SimpleGrassTextured" type="MultiMeshInstance3D" parent="Crypt/Crypt grass" unique_id=2034335967]
-material_override = SubResource("ShaderMaterial_i5mv6")
+material_override = SubResource("ShaderMaterial_yma7u")
 multimesh = ExtResource("41_nd6hk")
 script = ExtResource("33_8umfu")
 albedo = Color(0.09411765, 0.13725491, 0, 1)

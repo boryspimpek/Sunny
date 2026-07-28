@@ -1,13 +1,7 @@
 [gd_scene format=3 uid="uid://b41bqwwxy51ap"]
 
 [ext_resource type="PackedScene" uid="uid://c6kymmw8e2np4" path="res://assets/maps/hunyuan/VolcanRosk5/20260725061041_8f5a65f6.fbx" id="1_2431s"]
-[ext_resource type="Texture2D" uid="uid://q1mn207arh3e" path="res://assets/maps/hunyuan/VolcanRosk5/20260725061041_8f5a65f6_0.png" id="2_aehx2"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e2rud"]
-albedo_texture = ExtResource("2_aehx2")
-metallic = 0.7
-metallic_specular = 1.0
-roughness = 0.85
+[ext_resource type="Material" uid="uid://b60kbvye8d0pk" path="res://volcano_rock05.tres" id="2_ns5gk"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_ns5gk"]
 height = 0.08258057
@@ -21,7 +15,7 @@ radius = 0.3544922
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 
 [node name="Mesh_0" parent="." index="0" unique_id=1283007480]
-surface_material_override/0 = SubResource("StandardMaterial3D_e2rud")
+surface_material_override/0 = ExtResource("2_ns5gk")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1511567106]
 

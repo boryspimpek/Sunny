@@ -93,7 +93,6 @@ transform = Transform3D(30, 0, 0, 0, 10, 0, 0, 0, 30, 0, 0, 0)
 surface_material_override/0 = SubResource("StandardMaterial3D_cunku")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1733368065]
-visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1554085477]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.022262618, -0.023319626, 0.47568107)
