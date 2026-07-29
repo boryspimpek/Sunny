@@ -6,11 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://w5ln785yrto4" path="res://Temple of Ash/iron_fence_border_gate.tscn" id="4_xwt4o"]
 [ext_resource type="PackedScene" uid="uid://0oi8uti71gkb" path="res://Temple of Ash/iron_fence.tscn" id="5_ajyib"]
 [ext_resource type="Material" uid="uid://co0xj3vup5kae" path="res://materials/crypt_window.tres" id="7_xwt4o"]
-[ext_resource type="Shader" uid="uid://bi3o8elbtqoni" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="9_bgmxo"]
-[ext_resource type="MultiMesh" uid="uid://b3cmafj6a4ilh" path="res://resources/grass/crypt_grass.res" id="10_4n6v0"]
-[ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="10_sve0r"]
 [ext_resource type="PackedScene" uid="uid://caj1524a23hfv" path="res://Temple of Ash/crypt_large.tscn" id="12_ajyib"]
-[ext_resource type="Script" uid="uid://2juaclm8gc1n" path="res://addons/simplegrasstextured/grass.gd" id="12_o1i8m"]
 [ext_resource type="PackedScene" uid="uid://brpyb6wr4f62o" path="res://assets/maps/gravestones/Gravestones_set.fbx" id="12_xwt4o"]
 [ext_resource type="PackedScene" uid="uid://2svdxuy14xpl" path="res://Temple of Ash/crypt_large_roof.tscn" id="13_eicwl"]
 [ext_resource type="PackedScene" uid="uid://cxt0vrlf3iwdv" path="res://Temple of Ash/lightpost_single.tscn" id="13_shfsx"]
@@ -25,44 +21,6 @@
 [ext_resource type="PackedScene" uid="uid://de6ydviitwviq" path="res://Temple of Ash/lantern_glass.tscn" id="21_d0q6y"]
 [ext_resource type="PackedScene" uid="uid://blfofn7255eri" path="res://Temple of Ash/brazier_small.tscn" id="26_4n6v0"]
 [ext_resource type="PackedScene" uid="uid://duovrjpvwjn2t" path="res://Temple of Ash/brazier_mid.tscn" id="27_o1i8m"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sve0r"]
-cull_mode = 1
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_d0q6y"]
-material = SubResource("StandardMaterial3D_sve0r")
-size = Vector2(100, 100)
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_lqdc2"]
-data = PackedVector3Array(50, 0, 50, -50, 0, 50, 50, 0, -50, -50, 0, 50, -50, 0, -50, 50, 0, -50)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_a8mdj"]
-render_priority = 0
-shader = ExtResource("9_bgmxo")
-shader_parameter/albedo = Color(0.36952943, 0.15424201, 0.21610183, 1)
-shader_parameter/texture_albedo = ExtResource("10_sve0r")
-shader_parameter/texture_frames = Vector2(1, 1)
-shader_parameter/light_mode = 1
-shader_parameter/alpha_scissor_threshold = 0.5
-shader_parameter/normal_scale = 1.0
-shader_parameter/metallic = 0.0
-shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
-shader_parameter/roughness = 1.0
-shader_parameter/roughness_texture_channel = Vector4(1, 0, 0, 0)
-shader_parameter/specular = 0.5
-shader_parameter/scale_h = 1.0
-shader_parameter/scale_w = 1.0
-shader_parameter/scale_var = -0.25
-shader_parameter/grass_strength = 0.55
-shader_parameter/optimization_by_distance = false
-shader_parameter/optimization_level = 7.0
-shader_parameter/optimization_dist_min = 10.0
-shader_parameter/optimization_dist_max = 50.0
-shader_parameter/grass_size_y = 1.0
-shader_parameter/interactive_mode = true
-shader_parameter/interactive_level_xz = 3.0
-shader_parameter/interactive_level_y = 0.3
-metadata/SimpleGrassTexturedMaterial = "2.1.0"
 
 [sub_resource type="SphereMesh" id="SphereMesh_mv8to"]
 material = ExtResource("7_xwt4o")
@@ -173,36 +131,6 @@ transform = Transform3D(-7.5, 0, -6.556708e-07, 0, 7.5, 0, 6.556708e-07, 0, -7.5
 
 [node name="crypt-large-roof2" parent="." unique_id=175391139 instance=ExtResource("13_eicwl")]
 transform = Transform3D(-7.5, 0, -6.556708e-07, 0, 7.5, 0, 6.556708e-07, 0, -7.5, 0.80607224, 6.788379, 4.073181)
-
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1799497570]
-transform = Transform3D(0.298, 0, 0, 0, 0.298, 0, 0, 0, 0.298, 0.54693997, 0, 1.7015948)
-mesh = SubResource("PlaneMesh_d0q6y")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D3" unique_id=1680521379]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D3/StaticBody3D" unique_id=157741709]
-shape = SubResource("ConcavePolygonShape3D_lqdc2")
-
-[node name="SimpleGrassTextured" type="MultiMeshInstance3D" parent="MeshInstance3D3/StaticBody3D" unique_id=1165503919]
-material_override = SubResource("ShaderMaterial_a8mdj")
-multimesh = ExtResource("10_4n6v0")
-script = ExtResource("12_o1i8m")
-albedo = Color(0.36952943, 0.15424201, 0.21610183, 1)
-sgt_radius = 0.4
-sgt_density = 25
-sgt_scale = 1.0
-sgt_rotation = 0.0
-sgt_rotation_rand = 1.0
-sgt_dist_min = 0.2
-sgt_follow_normal = false
-sgt_slope = Vector2(0, 45)
-sgt_tool_shape = {
-"airbrush": 1,
-"eraser": 0,
-"pencil": 1
-}
-metadata/_custom_type_script = "uid://2juaclm8gc1n"
-metadata/SimpleGrassTextured = "2.0.5"
 
 [node name="road" type="Node3D" parent="." unique_id=732998985]
 

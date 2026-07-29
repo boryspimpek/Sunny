@@ -722,6 +722,7 @@ multimesh = SubResource("MultiMesh_0rtma")
 multimesh = SubResource("MultiMesh_25ah3")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1052830228]
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1802693436]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6141357, 14.074015, 36.326218)

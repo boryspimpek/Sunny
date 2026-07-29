@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://dj1c727m3mv4d" path="res://Arena.tscn" id="2_5vw27"]
 [ext_resource type="PackedScene" uid="uid://dgj0fo2egp0sy" path="res://scenes/player_2/player_2.tscn" id="3_272bh"]
 [ext_resource type="Texture2D" uid="uid://b5vpsa5hv018t" path="res://assets/sky box/moonless_golf_4k.exr" id="5_5vw27"]
-[ext_resource type="Script" uid="uid://cff7fv1vlpjpa" path="res://main.gd" id="5_abc12"]
 [ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="6_hud"]
 [ext_resource type="PackedScene" uid="uid://blfod00qqelea" path="res://scenes/enemies/zombie/zombie.tscn" id="7_272bh"]
 [ext_resource type="AudioStream" uid="uid://bytf04c1cd68t" path="res://assets/soundtrack/Temple of Ash (3).mp3" id="8_5vw27"]
@@ -35,7 +34,6 @@ adjustment_enabled = true
 adjustment_saturation = 1.6
 
 [node name="main" type="Node3D" unique_id=1051936391]
-script = ExtResource("5_abc12")
 
 [node name="Arena" parent="." unique_id=1919387517 instance=ExtResource("2_5vw27")]
 

@@ -136,10 +136,6 @@ toggle_flashlight={
 
 3d/physics_engine="Jolt Physics"
 
-[rendering]
-
-rendering_device/driver.windows="d3d12"
-
 [shader_globals]
 
 sgt_legacy_renderer={
