@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bupa00kwm54h4"
-path="res://.godot/imported/Zombie Punching.fbx-d13d40f90331f407027fc7343c798d35.scn"
+uid="uid://5v448dc7ui7t"
+path="res://.godot/imported/Zombie Attack Left.fbx-cb147216cc8f701a61b85e5c1b7c2a14.scn"
 
 [deps]
 
-source_file="res://assets/animations/Zombie/mixamo/Zombie Punching.fbx"
-dest_files=["res://.godot/imported/Zombie Punching.fbx-d13d40f90331f407027fc7343c798d35.scn"]
+source_file="res://assets/animations/Zombie/mixamo/Zombie Attack Left.fbx"
+dest_files=["res://.godot/imported/Zombie Attack Left.fbx-cb147216cc8f701a61b85e5c1b7c2a14.scn"]
 
 [params]
 
@@ -41,9 +41,9 @@ _subresources={
 "animations": {
 "mixamo_com": {
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/animations/Zombie/animation tres/punching.tres",
+"save_to_file/fallback_path": "res://assets/animations/Zombie/animation tres/attack_left.tres",
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "uid://ch2yxwl320mn1",
+"save_to_file/path": "uid://eecnbfxw0jj8",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,

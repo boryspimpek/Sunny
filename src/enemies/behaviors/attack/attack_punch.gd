@@ -30,3 +30,8 @@ func try_attack(enemy: Enemy, target: Node3D, delta: float) -> void:
 
 	anim.play(attack_animation)
 	_cooldown = attack_cooldown
+
+
+func is_attacking(enemy: Enemy) -> bool:
+	var anim := enemy.get_node_or_null("AnimationPlayer") as AnimationPlayer
+	return anim != null and anim.current_animation == attack_animation and anim.is_playing()

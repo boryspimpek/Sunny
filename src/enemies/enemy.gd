@@ -38,7 +38,9 @@ func _physics_process(delta: float) -> void:
 	var animation_player := get_node_or_null("AnimationPlayer") as AnimationPlayer
 	var hit_playing := animation_player != null and animation_player.current_animation == "ZombieMoves/hit" and animation_player.is_playing()
 
-	if not hit_playing and movement_behavior != null:
+	var is_attacking := attack_behavior != null and attack_behavior.is_attacking(self)
+
+	if not hit_playing and not is_attacking and movement_behavior != null:
 		var desired := movement_behavior.get_movement(self, target, delta)
 		velocity.x = desired.x
 		velocity.z = desired.z

@@ -7,3 +7,8 @@ extends Node
 ## Wywoływane przez Enemy w każdej klatce _physics_process.
 func try_attack(_enemy: Enemy, _target: Node3D, _delta: float) -> void:
 	pass
+
+
+## Czy w danej chwili trwa animacja ataku (używane do zatrzymania ruchu).
+func is_attacking(_enemy: Enemy) -> bool:
+	return false
