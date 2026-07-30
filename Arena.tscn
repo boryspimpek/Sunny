@@ -1246,7 +1246,6 @@ transform = Transform3D(71.29323, 0, 70.12328, 0, 100, 0, -70.12328, 0, 71.29323
 
 [node name="tree55" parent="Trees" unique_id=576420039 instance=ExtResource("86_i3exe")]
 transform = Transform3D(71.29323, 0, 70.12328, 0, 100, 0, -70.12328, 0, 71.29323, 47.12551, 14.759874, -9.726099)
-visible = false
 
 [node name="tree91" parent="Trees" unique_id=1475443141 instance=ExtResource("86_i3exe")]
 transform = Transform3D(71.29323, 0, 70.12328, 0, 100, 0, -70.12328, 0, 71.29323, 59.70205, 14.759874, 1.1088619)
@@ -1403,14 +1402,6 @@ transform = Transform3D(18.1072, -25.294756, 95.03844, 4.734125, 96.748, 24.8477
 
 [node name="tree82" parent="Trees" unique_id=1494001026 instance=ExtResource("86_i3exe")]
 transform = Transform3D(71.29323, 0, 70.12328, 0, 100, 0, -70.12328, 0, 71.29323, 67.177376, 6.870613, -42.16944)
-
-[node name="tree138" parent="Trees" unique_id=259269276 instance=ExtResource("82_i3exe")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.083412, 13.371415, 28.922632)
-visible = false
-
-[node name="tree124" parent="Trees" unique_id=2095088472 instance=ExtResource("82_i3exe")]
-transform = Transform3D(-0.09543192, 0, -0.11572705, 0, 0.14999995, 0, 0.11572705, 0, -0.09543192, 19.773682, 12.375974, 58.899437)
-visible = false
 
 [node name="tree132" parent="Trees" unique_id=2029572243 instance=ExtResource("82_i3exe")]
 transform = Transform3D(-0.13134244, 0, 0.0724511, 0, 0.14999995, 0, -0.0724511, 0, -0.13134244, -57.075912, 13.327555, 19.868048)

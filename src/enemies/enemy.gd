@@ -65,13 +65,19 @@ func _on_health_changed(current: float, _max_health: float) -> void:
 func _on_died() -> void:
 	EventBus.enemy_died.emit(global_position)
 	GameState.add_score(score_value)
-	if death_sound != null:
-		EventBus.sfx_requested.emit(death_sound, global_position)
 	set_physics_process(false)
+	var idle_audio := get_node_or_null("AudioStreamPlayer3D") as AudioStreamPlayer3D
+	if idle_audio != null:
+		idle_audio.stop()
 	var animation_player := get_node_or_null("AnimationPlayer")
 	if animation_player != null:
 		var anim_index := randi_range(1, 2)
 		animation_player.play("ZombieMoves/dying" + str(anim_index))
+		var dying_audio := get_node_or_null("ZombieDying") as AudioStreamPlayer3D
+		if dying_audio != null:
+			dying_audio.play()
+		elif death_sound != null:
+			EventBus.sfx_requested.emit(death_sound, global_position)
 		await animation_player.animation_finished
 	_spawn_drops()
 	queue_free()
