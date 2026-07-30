@@ -1,0 +1,12 @@
+{
+    "files.exclude": {
+        "**/*.uid": true,
+        "**/*.import": true,
+        "**/.git": true,
+        "**/.gitignore": true,
+        "**/.gitattributes": true,
+        "**/.godot": true,
+        "**/.gdignore": true,
+        "**/.editorconfig": true
+    }
+}
