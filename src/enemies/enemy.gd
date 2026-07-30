@@ -36,7 +36,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y -= gravity * delta
 
 	var animation_player := get_node_or_null("AnimationPlayer") as AnimationPlayer
-	var hit_playing := animation_player != null and animation_player.current_animation == "ZombieMoves/hit" and animation_player.is_playing()
+	var hit_playing := animation_player != null and animation_player.current_animation.begins_with("ZombieMoves/hit") and animation_player.is_playing()
 
 	var is_attacking := attack_behavior != null and attack_behavior.is_attacking(self)
 
@@ -57,7 +57,8 @@ func _on_health_changed(current: float, _max_health: float) -> void:
 	if current < _last_health and current > 0.0:
 		var animation_player := get_node_or_null("AnimationPlayer")
 		if animation_player != null:
-			animation_player.play("ZombieMoves/hit")
+			var hit_index := randi_range(1, 3)
+			animation_player.play("ZombieMoves/hit" + str(hit_index))
 	_last_health = current
 
 

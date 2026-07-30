@@ -4,7 +4,7 @@ extends AttackBehavior
 
 @export var attack_range: float = 1.5
 @export var attack_cooldown: float = 1.0
-@export var attack_animation: StringName = "ZombieMoves/punching"
+@export var attack_animation: StringName = "ZombieMoves/punching_left"
 
 var _cooldown: float = 0.0
 
