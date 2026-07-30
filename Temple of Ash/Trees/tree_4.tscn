@@ -7,18 +7,7 @@
 albedo_color = Color(0.5552965, 0.24716276, 9.62615e-08, 1)
 albedo_texture = ExtResource("2_mfhuk")
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_fdvgh"]
-height = 3.0346375
-radius = 0.23339844
-
 [node name="tree4" unique_id=1926762258 instance=ExtResource("1_0ikky")]
 
-[node name="Cube" parent="." index="0" unique_id=1280469647]
+[node name="Cube" parent="." index="0" unique_id=1431896735]
 surface_material_override/0 = SubResource("StandardMaterial3D_hbg7i")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=530012248]
-transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=318127878]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.017302832, 3.971745, 0.050493725)
-shape = SubResource("CylinderShape3D_fdvgh")

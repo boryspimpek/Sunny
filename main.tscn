@@ -38,7 +38,7 @@ adjustment_saturation = 1.6
 [node name="Arena" parent="." unique_id=1919387517 instance=ExtResource("2_5vw27")]
 
 [node name="Player_2" parent="." unique_id=106330497 instance=ExtResource("3_272bh")]
-transform = Transform3D(0.9927867, 0, 0.11989425, 0, 1, 0, -0.11989425, 0, 0.9927867, 14.061539, 9.800559, 86.7013)
+transform = Transform3D(0.9927867, 0, 0.11989425, 0, 1, 0, -0.11989425, 0, 0.9927867, 9.500037, 10.188266, 106.96714)
 
 [node name="HUD" parent="." unique_id=1830043377 instance=ExtResource("6_hud")]
 
@@ -50,6 +50,8 @@ transform = Transform3D(0.026176995, 0.8751644, -0.48311675, 0, 0.4832824, 0.875
 shadow_enabled = true
 shadow_normal_bias = 7.075
 shadow_blur = 0.0
+directional_shadow_mode = 0
+directional_shadow_max_distance = 20.0
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=145163531]
 stream = ExtResource("8_5vw27")
@@ -134,7 +136,7 @@ transform = Transform3D(-0.32122436, 0, -1.7202659, 0, 1.75, 0, 1.7202659, 0, -0
 transform = Transform3D(-0.32122436, 0, -1.7202659, 0, 1.75, 0, 1.7202659, 0, -0.32122436, -43.902245, 14.566328, 17.523884)
 
 [node name="zombie27" parent="Zombies" unique_id=693134483 instance=ExtResource("7_272bh")]
-transform = Transform3D(-0.32122436, 0, -1.7202659, 0, 1.75, 0, 1.7202659, 0, -0.32122436, 20.083708, 14.566328, 49.283974)
+transform = Transform3D(1.6578137, 0, -0.56049407, 0, 1.75, 0, 0.56049407, 0, 1.6578137, 24.947882, 10.166183, 85.787125)
 
 [node name="zombie28" parent="Zombies" unique_id=2032451652 instance=ExtResource("7_272bh")]
 transform = Transform3D(-0.32122436, 0, -1.7202659, 0, 1.75, 0, 1.7202659, 0, -0.32122436, 27.917944, 14.56633, 43.91791)

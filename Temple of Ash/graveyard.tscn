@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="18_dujrm"]
 [ext_resource type="MultiMesh" uid="uid://0n3qjg6gh6kf" path="res://resources/grass/graveyard_grass.res" id="19_buy7u"]
 [ext_resource type="Script" uid="uid://2juaclm8gc1n" path="res://addons/simplegrasstextured/grass.gd" id="20_d11xw"]
-[ext_resource type="PackedScene" uid="uid://cae0hiuhwxovo" path="res://Temple of Ash/tree.tscn" id="21_buy7u"]
 [ext_resource type="PackedScene" uid="uid://bkho2rp3e13lo" path="res://Temple of Ash/column_large.tscn" id="21_dujrm"]
 [ext_resource type="PackedScene" uid="uid://4wbtcvas5srm" path="res://Temple of Ash/stone_wall_column.tscn" id="22_buy7u"]
 [ext_resource type="PackedScene" uid="uid://0uegyc3dimo7" path="res://Temple of Ash/altar.tscn" id="22_d11xw"]
@@ -34,7 +33,7 @@ size = Vector2(1.925, 2)
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_buy7u"]
 data = PackedVector3Array(0.9625, 0, 1, -0.9625, 0, 1, 0.9625, 0, -1, -0.9625, 0, 1, -0.9625, 0, -1, 0.9625, 0, -1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ouaj1"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rxvwe"]
 render_priority = 0
 shader = ExtResource("17_mnv8v")
 shader_parameter/albedo = Color(0.5654406, 0.29156807, 1.92523e-07, 1)
@@ -1062,7 +1061,7 @@ shape = SubResource("ConcavePolygonShape3D_buy7u")
 
 [node name="SimpleGrassTextured" type="MultiMeshInstance3D" parent="MeshInstance3D" unique_id=964349447]
 transform = Transform3D(0.037972283, 0, 0, 0, 0.037972283, 0, 0, 0, 0.037972283, 0, 0, 0)
-material_override = SubResource("ShaderMaterial_ouaj1")
+material_override = SubResource("ShaderMaterial_rxvwe")
 multimesh = ExtResource("19_buy7u")
 script = ExtResource("20_d11xw")
 albedo = Color(0.5654406, 0.29156807, 1.92523e-07, 1)
@@ -1081,12 +1080,6 @@ sgt_tool_shape = {
 }
 metadata/_custom_type_script = "uid://2juaclm8gc1n"
 metadata/SimpleGrassTextured = "2.0.5"
-
-[node name="SM_StylizedTree_01" parent="." unique_id=1080121074 instance=ExtResource("21_buy7u")]
-transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 1.8347231, -0.19158824, -0.5912883)
-
-[node name="SM_StylizedTree_02" parent="." unique_id=198179507 instance=ExtResource("21_buy7u")]
-transform = Transform3D(-0.7576904, 0, -0.65261436, 0, 1.0000001, 0, 0.65261436, 0, -0.7576904, 7.885444, -0.19158824, 16.626778)
 
 [node name="altar" parent="." unique_id=1885183151 instance=ExtResource("22_d11xw")]
 transform = Transform3D(3.987014, 0, 9.170816, 0, 10.000003, 0, -9.170816, 0, 3.987014, -9.265695, -0.021242268, 0.7555058)

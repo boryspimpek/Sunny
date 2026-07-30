@@ -29,3 +29,4 @@ transform = Transform3D(0.014862031, 0, 1.7449366, 0, 1.7450005, 0, -1.7449366, 
 
 [node name="lava" parent="Ground" unique_id=278022073 instance=ExtResource("3_w3476")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.64624, 8.565231, -7.5626755)
+visible = false
