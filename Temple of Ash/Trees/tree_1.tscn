@@ -6,19 +6,8 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2nckg"]
 albedo_texture = ExtResource("2_iod1c")
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_2nckg"]
-height = 0.23919678
-radius = 0.04736328
-
 [node name="tree1" unique_id=2091621154 instance=ExtResource("1_kot2c")]
 transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 0, 0, 0)
 
-[node name="Tree_lp" parent="." index="0" unique_id=594791624]
+[node name="Tree_lp" parent="." index="0" unique_id=998370064]
 surface_material_override/0 = SubResource("StandardMaterial3D_2nckg")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=361822402]
-transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1447001912]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.017302832, 0.12008667, 0)
-shape = SubResource("CylinderShape3D_2nckg")

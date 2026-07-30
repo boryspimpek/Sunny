@@ -37,7 +37,22 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:LOD1_beams_and_sticks": {
+"generate/physics": true
+},
+"PATH:LOD1_boards_and_planks": {
+"generate/physics": true
+},
+"PATH:LOD1_cords_and_ropes": {
+"generate/physics": true
+},
+"PATH:LOD1_thatch_no_opacity": {
+"generate/physics": true
+}
+}
+}
 fbx/importer=0
 fbx/allow_geometry_helper_nodes=false
 fbx/embedded_image_handling=1

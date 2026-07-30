@@ -34,7 +34,7 @@ size = Vector2(1.925, 2)
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_buy7u"]
 data = PackedVector3Array(0.9625, 0, 1, -0.9625, 0, 1, 0.9625, 0, -1, -0.9625, 0, 1, -0.9625, 0, -1, 0.9625, 0, -1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_buy7u"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ouaj1"]
 render_priority = 0
 shader = ExtResource("17_mnv8v")
 shader_parameter/albedo = Color(0.5654406, 0.29156807, 1.92523e-07, 1)
@@ -1062,7 +1062,7 @@ shape = SubResource("ConcavePolygonShape3D_buy7u")
 
 [node name="SimpleGrassTextured" type="MultiMeshInstance3D" parent="MeshInstance3D" unique_id=964349447]
 transform = Transform3D(0.037972283, 0, 0, 0, 0.037972283, 0, 0, 0, 0.037972283, 0, 0, 0)
-material_override = SubResource("ShaderMaterial_buy7u")
+material_override = SubResource("ShaderMaterial_ouaj1")
 multimesh = ExtResource("19_buy7u")
 script = ExtResource("20_d11xw")
 albedo = Color(0.5654406, 0.29156807, 1.92523e-07, 1)

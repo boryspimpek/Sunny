@@ -1,81 +1,7 @@
 [gd_scene format=3 uid="uid://rbhfxgdryqvd"]
 
-[ext_resource type="PackedScene" uid="uid://bsvvsqimhfvq0" path="res://assets/maps/hunyuan/VolcanRock1/20260725064024_c28df939.fbx" id="1_u8fl1"]
-[ext_resource type="Texture2D" uid="uid://cp1yneb7520mr" path="res://assets/maps/hunyuan/VolcanRock1/20260725064024_c28df939_0.png" id="2_pjy1x"]
-
-[sub_resource type="Shader" id="Shader_1ri71"]
-code = "// NOTE: Shader automatically converted from Godot Engine 4.6.2.stable's StandardMaterial3D.
-
-shader_type spatial;
-render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_toon, specular_toon;
-
-uniform vec4 albedo : source_color;
-uniform sampler2D texture_albedo : source_color, filter_linear_mipmap, repeat_enable;
-uniform ivec2 albedo_texture_size;
-
-uniform float roughness : hint_range(0.0, 1.0);
-uniform sampler2D texture_metallic : hint_default_white, filter_linear_mipmap, repeat_enable;
-uniform vec4 metallic_texture_channel;
-uniform sampler2D texture_roughness : hint_roughness_r, filter_linear_mipmap, repeat_enable;
-
-uniform float specular : hint_range(0.0, 1.0, 0.01);
-uniform float metallic : hint_range(0.0, 1.0, 0.01);
-
-// --- DOWANE PARAMETRY EFEKTU PULSOWANIA LAWY ---
-uniform float pulse_speed : hint_range(0.0, 10.0, 0.1) = 1.0;
-uniform float emission_energy : hint_range(0.0, 20.0, 0.1) = 3.0;
-uniform float pulse_strength : hint_range(0.0, 5.0, 0.1) = 1.0;
-uniform float lava_threshold : hint_range(0.0, 0.5, 0.01) = 0.1;
-
-// --- NOWE PARAMETRY DO ZMIANY KOLORU ---
-uniform vec4 color_lava_cool : source_color = vec4(0.6, 0.1, 0.0, 1.0);
-uniform vec4 color_lava_hot : source_color = vec4(1.0, 0.8, 0.3, 1.0);
-
-uniform float orange_hold : hint_range(0.1, 10.0, 0.1) = 2.0;
-instance uniform float phase_offset : hint_range(0.0, 6.2832, 0.01) = 0.0;
-
-void fragment() {
-	vec4 albedo_tex = texture(texture_albedo, UV);
-	ALBEDO = albedo.rgb * albedo_tex.rgb;
-
-	// --- NOWA LOGIKA ŚWIECENIA I ZMIANY KOLORU LAWY ---
-	float brightness = dot(albedo_tex.rgb, vec3(0.299, 0.587, 0.114));
-	float lava_mask = smoothstep(lava_threshold, lava_threshold + 0.2, brightness);
-
-	float pulse = (sin(TIME * pulse_speed + phase_offset) + 1.0) * 0.5;
-	float pulse_curve = pow(pulse, orange_hold);
-	vec3 dynamic_lava_color = mix(color_lava_cool.rgb, color_lava_hot.rgb, pulse_curve * min(1.0, pulse_strength));
-
-	EMISSION = dynamic_lava_color * lava_mask * emission_energy;
-	// --- KONIEC PULSOWANIA ---
-
-	float metallic_tex = dot(texture(texture_metallic, UV), metallic_texture_channel);
-	METALLIC = metallic_tex * metallic;
-	SPECULAR = specular;
-
-	vec4 roughness_texture_channel = vec4(1.0, 0.0, 0.0, 0.0);
-	float roughness_tex = dot(texture(texture_roughness, UV), roughness_texture_channel);
-	ROUGHNESS = roughness_tex * roughness;
-}
-"
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_pscq5"]
-render_priority = 0
-shader = SubResource("Shader_1ri71")
-shader_parameter/albedo = Color(1, 1, 1, 1)
-shader_parameter/texture_albedo = ExtResource("2_pjy1x")
-shader_parameter/albedo_texture_size = Vector2i(1024, 1024)
-shader_parameter/roughness = 0.43
-shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
-shader_parameter/specular = 0.499999988824
-shader_parameter/metallic = 0.5999999865888
-shader_parameter/pulse_speed = 1.0
-shader_parameter/emission_energy = 3.0
-shader_parameter/pulse_strength = 1.0
-shader_parameter/lava_threshold = 0.1
-shader_parameter/color_lava_cool = Color(0.6, 0.1, 0, 1)
-shader_parameter/color_lava_hot = Color(1, 0.8, 0.3, 1)
-shader_parameter/orange_hold = 2.0
+[ext_resource type="PackedScene" uid="uid://cmj646vguui4g" path="res://assets/maps/hunyuan/VolcanRock1/20260725064024_c28df939.fbx" id="1_u8fl1"]
+[ext_resource type="Material" uid="uid://d1gq6wr5tixih" path="res://volcano_rock01.tres" id="2_pscq5"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_pscq5"]
 height = 0.08227539
@@ -89,11 +15,11 @@ radius = 0.2915039
 height = 0.26428223
 radius = 0.26171875
 
-[node name="volcano_rock1" unique_id=1627765898 instance=ExtResource("1_u8fl1")]
+[node name="volcano_rock1" unique_id=977821031 instance=ExtResource("1_u8fl1")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 
-[node name="Mesh_0" parent="." index="0" unique_id=174221010]
-surface_material_override/0 = SubResource("ShaderMaterial_pscq5")
+[node name="tripo_node_969e84bc" parent="." index="0" unique_id=985560270]
+surface_material_override/0 = ExtResource("2_pscq5")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=265571350]
 

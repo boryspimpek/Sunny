@@ -1,13 +1,10 @@
 [gd_scene format=3 uid="uid://cgvgyinc6jkyp"]
 
-[ext_resource type="PackedScene" uid="uid://d30dswud7vcmh" path="res://assets/maps/hunyuan/20260723031912_c4d53b89.fbx" id="1_xqxoq"]
-[ext_resource type="Texture2D" uid="uid://cdf7pcbwaj14k" path="res://assets/maps/hunyuan/20260723031912_c4d53b89_0.png" id="2_xqxoq"]
+[ext_resource type="PackedScene" uid="uid://blm2yjpgitrnv" path="res://assets/maps/hunyuan/20260723031912_c4d53b89.fbx" id="1_xqxoq"]
+[ext_resource type="Texture2D" uid="uid://b53dra1r7yup0" path="res://assets/maps/hunyuan/20260723031912_c4d53b89_fbx_basecolor.JPEG" id="2_ekg5m"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tdjrf"]
-albedo_texture = ExtResource("2_xqxoq")
-metallic = 0.68
-metallic_specular = 0.0
-roughness = 0.66
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_500bj"]
+albedo_texture = ExtResource("2_ekg5m")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_of4g7"]
 size = Vector3(0.6483154, 0.19070435, 0.5863037)
@@ -39,8 +36,9 @@ size = Vector3(0.04, 0.04, 0.018)
 [node name="statue" unique_id=492040996 instance=ExtResource("1_xqxoq")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 
-[node name="Mesh_0" parent="." index="0" unique_id=1843411626]
-surface_material_override/0 = SubResource("StandardMaterial3D_tdjrf")
+[node name="tripo_node_2da2049a" parent="." index="0" unique_id=1023320338]
+transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, -0.021, -0.125, -0.069)
+surface_material_override/0 = SubResource("StandardMaterial3D_500bj")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=716501406]
 

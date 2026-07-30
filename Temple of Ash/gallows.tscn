@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cunrw6pcn383b"]
 
-[ext_resource type="PackedScene" uid="uid://dd215m0locrx6" path="res://assets/maps/hunyuan/20260724061017_229bc92d.fbx" id="1_0cqf7"]
+[ext_resource type="PackedScene" uid="uid://byuj8i1vwayf0" path="res://assets/maps/hunyuan/20260724061017_229bc92d.fbx" id="1_0cqf7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0cqf7"]
 size = Vector3(0.0395813, 0.22607422, 0.040863037)
@@ -21,8 +21,11 @@ size = Vector3(0.039096832, 0.5616822, 0.5131507)
 height = 0.10748291
 radius = 0.04736328
 
-[node name="gallows" unique_id=498918101 instance=ExtResource("1_0cqf7")]
+[node name="gallows" unique_id=88957453 instance=ExtResource("1_0cqf7")]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0)
+
+[node name="tripo_node_3eebd43f" parent="." index="0" unique_id=957402636]
+transform = Transform3D(0.743, 0, 0, 0, -3.2477562e-08, 0.743, 0, -0.743, -3.2477562e-08, 0.020948425, 0, 0.0791302)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1245961905]
 

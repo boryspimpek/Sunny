@@ -1,27 +1,5 @@
 [gd_scene format=3 uid="uid://u4xdau5vqto1"]
 
-[ext_resource type="PackedScene" uid="uid://cpdehm12bogn6" path="res://assets/maps/hunyuan/20260724060356_75e76a07.fbx" id="1_pa3wo"]
-[ext_resource type="Texture2D" uid="uid://b1r2mno7rlqe3" path="res://assets/maps/hunyuan/20260724060356_75e76a07_0.png" id="2_wme03"]
+[ext_resource type="PackedScene" uid="uid://b5yejkpk3dsq6" path="res://assets/maps/hunyuan/tower_mage/tripo_convert_fc5def4d-e6d7-45c8-a280-412eb93bdde6.fbx" id="1_h8hhn"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sn8xa"]
-diffuse_mode = 3
-specular_mode = 1
-albedo_texture = ExtResource("2_wme03")
-metallic = 0.72
-metallic_specular = 0.37
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_2851u"]
-height = 0.19732666
-radius = 0.17626953
-
-[node name="tower_mage" unique_id=669561128 instance=ExtResource("1_pa3wo")]
-transform = Transform3D(25, 0, 0, 0, 25, 0, 0, 0, 25, 0, 0, 0)
-
-[node name="Mesh_0" parent="." index="0" unique_id=945733483]
-surface_material_override/0 = SubResource("StandardMaterial3D_sn8xa")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=860177523]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1742691762]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1053772, 0)
-shape = SubResource("CylinderShape3D_2851u")
+[node name="tower_mage" unique_id=1347448566 instance=ExtResource("1_h8hhn")]

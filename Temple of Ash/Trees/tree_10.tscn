@@ -2,12 +2,23 @@
 
 [ext_resource type="PackedScene" uid="uid://380h3shm4t2l" path="res://assets/maps/nature/trees10/uploads_files_848599_TreeOld_3.fbx" id="1_uye8v"]
 [ext_resource type="Texture2D" uid="uid://bogq6cay16lc6" path="res://assets/maps/nature/trees10/Trunk_BaseColorUntitled.png" id="2_pdhas"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rk68s"]
-albedo_color = Color(0, 0.0781342, 0, 1)
+[ext_resource type="Texture2D" uid="uid://cqhr5fd4wsa1v" path="res://assets/maps/nature/trees10/LeafOld_2_AOCC.png" id="2_rk68s"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m88ba"]
-albedo_color = Color(0.2283405, 0.08668663, 0, 1)
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+shading_mode = 0
+albedo_color = Color(0.24215978, 0.24215978, 9.62615e-08, 1)
+albedo_texture = ExtResource("2_rk68s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7cg20"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+shading_mode = 0
+albedo_color = Color(6.557815e-07, 0.260467, 0, 1)
+albedo_texture = ExtResource("2_rk68s")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_col7s"]
 albedo_texture = ExtResource("2_pdhas")
@@ -15,209 +26,16 @@ albedo_texture = ExtResource("2_pdhas")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xa4ot"]
 albedo_texture = ExtResource("2_pdhas")
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_uye8v"]
-radius = 0.4013672
-height = 5.2666016
+[node name="tree10" unique_id=1211445175 instance=ExtResource("1_uye8v")]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qu443"]
-radius = 0.25146484
-height = 2.9389648
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pdhas"]
-height = 4.0219727
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rk68s"]
-height = 4.0219727
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_m88ba"]
-radius = 0.55810547
-height = 4.0219727
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_col7s"]
-radius = 0.63134766
-height = 4.4660645
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xa4ot"]
-radius = 0.44726563
-height = 5.6677246
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7cg20"]
-radius = 0.56347656
-height = 10.158295
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wldb6"]
-radius = 0.56347656
-height = 7.420105
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_du7d3"]
-radius = 0.56347656
-height = 4.422653
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3exiy"]
-radius = 0.56347656
-height = 2.5832977
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vouy4"]
-radius = 0.36035156
-height = 3.1378403
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fgaht"]
-radius = 0.36035156
-height = 3.1378403
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2rbde"]
-radius = 0.28808594
-height = 3.1378403
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2cg5o"]
-radius = 0.21435547
-height = 3.1378403
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_huaf8"]
-radius = 0.4116211
-height = 5.109741
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_c1u73"]
-radius = 0.4116211
-height = 5.109741
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_d5115"]
-radius = 0.32128906
-height = 5.109741
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_epkfk"]
-radius = 0.24365234
-height = 5.109741
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pav0b"]
-radius = 0.24365234
-height = 3.0967712
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_p2c26"]
-radius = 0.8935547
-height = 7.614746
-
-[node name="tree10" unique_id=1855191754 instance=ExtResource("1_uye8v")]
-
-[node name="Plane_1077" parent="." index="0" unique_id=1175757755]
-surface_material_override/0 = SubResource("StandardMaterial3D_rk68s")
-
-[node name="Plane_321" parent="." index="1" unique_id=1628431519]
+[node name="Plane_1077" parent="." index="0" unique_id=789611478]
 surface_material_override/0 = SubResource("StandardMaterial3D_m88ba")
 
-[node name="Plane_015" parent="." index="2" unique_id=1375929331]
+[node name="Plane_321" parent="." index="1" unique_id=1385911744]
+surface_material_override/0 = SubResource("StandardMaterial3D_7cg20")
+
+[node name="Plane_015" parent="." index="2" unique_id=1310496426]
 surface_material_override/0 = SubResource("StandardMaterial3D_col7s")
 
-[node name="Tree" parent="." index="3" unique_id=997081124]
+[node name="Tree" parent="." index="3" unique_id=1494236201]
 surface_material_override/0 = SubResource("StandardMaterial3D_xa4ot")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="." index="4" unique_id=184539221]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1138125346]
-transform = Transform3D(0.9807614, -0.18776685, 0.05339115, -0.008368584, 0.23281288, 0.9724855, -0.19503069, -0.954223, 0.22676255, 2.1973267, 1.4633038, 13.107296)
-shape = SubResource("CapsuleShape3D_uye8v")
-debug_color = Color(0, 0.6, 0.69803923, 1)
-
-[node name="CollisionShape3D22" type="CollisionShape3D" parent="StaticBody3D" index="1" unique_id=2000949512]
-transform = Transform3D(0.9685011, 0.20966613, -0.13433486, 0.05400288, 0.3497839, 0.9352726, 0.2430833, -0.9130669, 0.32744342, 2.279841, 0.59100616, 16.528687)
-shape = SubResource("CapsuleShape3D_qu443")
-debug_color = Color(0, 0.6, 0.69803923, 1)
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="2" unique_id=914417733]
-transform = Transform3D(0.99528694, 0.09384185, 0.02445096, 1.7674554e-09, -0.25213692, 0.96769166, 0.09697492, -0.9631307, -0.25094852, 1.9420812, 1.5196172, 9.497469)
-shape = SubResource("CapsuleShape3D_pdhas")
-debug_color = Color(0, 0.6, 0.69803923, 1)
-
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" index="3" unique_id=1896609273]
-transform = Transform3D(0.99528694, 0.09384186, 0.024450954, -0.04192131, 0.1889915, 0.98108345, 0.08744564, -0.9774846, 0.1920348, 2.0757215, 1.5430546, 7.648531)
-shape = SubResource("CapsuleShape3D_rk68s")
-debug_color = Color(0, 0.6, 0.69803923, 1)
-
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D" index="4" unique_id=1582779446]
-transform = Transform3D(0.9973959, -0.071237236, -0.011269441, -0.0090651475, -0.27883664, 0.96029544, -0.0715512, -0.95769274, -0.27875614, 2.0757215, 1.2810688, 4.447527)
-shape = SubResource("CapsuleShape3D_m88ba")
-debug_color = Color(0, 0.6, 0.69803923, 1)
-
-[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D" index="5" unique_id=2055703364]
-transform = Transform3D(0.9501105, -0.31067157, 0.027813418, -0.03654017, -0.022304237, 0.999083, -0.30976647, -0.9502558, -0.03254348, 1.2885451, 0.92055595, 1.2501373)
-shape = SubResource("CapsuleShape3D_col7s")
-debug_color = Color(0, 0.6, 0.69803923, 1)
-
-[node name="CollisionShape3D6" type="CollisionShape3D" parent="StaticBody3D" index="6" unique_id=478675833]
-transform = Transform3D(0.80946594, -0.5869384, 0.01638384, -0.0016249652, 0.025663776, 0.9996689, -0.58716494, -0.80922496, 0.019820161, 6.0529757, 0.7801712, 2.0909872)
-shape = SubResource("CapsuleShape3D_xa4ot")
-debug_color = Color(0, 0.6, 0.69803923, 1)
-
-[node name="CollisionShape3D7" type="CollisionShape3D" parent="StaticBody3D" index="7" unique_id=1090864580]
-transform = Transform3D(-0.1911842, -0.9811981, 0.026450455, -0.02145894, 0.031119328, 0.99928486, -0.98131955, 0.19047984, -0.027005006, 5.2634125, 0.84091127, -1.0675031)
-shape = SubResource("CapsuleShape3D_7cg20")
-debug_color = Color(0, 0.6, 0.69803923, 1)
-
-[node name="CollisionShape3D12" type="CollisionShape3D" parent="StaticBody3D" index="8" unique_id=1003465953]
-transform = Transform3D(-0.9852537, 0.16904697, -0.026422031, -0.008811185, 0.1040906, 0.9945285, 0.17087245, 0.9800964, -0.10106602, -0.08329828, 1.0080934, -4.0011253)
-shape = SubResource("CapsuleShape3D_wldb6")
-debug_color = Color(0, 0.6, 0.69803923, 1)
-
-[node name="CollisionShape3D14" type="CollisionShape3D" parent="StaticBody3D" index="9" unique_id=1427555912]
-transform = Transform3D(0.15139174, 0.9832423, -0.10156788, -0.008811181, 0.10409061, 0.9945284, 0.9884346, -0.14966848, 0.024421994, -1.889026, 1.2698473, 0.11297484)
-shape = SubResource("CapsuleShape3D_du7d3")
-debug_color = Color(0, 0.6, 0.69803923, 1)
-
-[node name="CollisionShape3D15" type="CollisionShape3D" parent="StaticBody3D" index="10" unique_id=1472575762]
-transform = Transform3D(0.16165471, 0.97135913, 0.17415558, -0.049796782, -0.16822286, 0.9844901, 0.98559046, -0.16781986, 0.02117656, -4.6005573, 1.3496895, 0.5544036)
-shape = SubResource("CapsuleShape3D_3exiy")
-debug_color = Color(0, 0.6, 0.69803923, 1)
-
-[node name="CollisionShape3D16" type="CollisionShape3D" parent="StaticBody3D" index="11" unique_id=1751247574]
-transform = Transform3D(0.2990681, 0.953559, 0.035838813, -0.008000089, -0.035050884, 0.99935305, 0.9541984, -0.29916143, -0.0028540073, -6.703155, 1.6392528, 1.400475)
-shape = SubResource("CapsuleShape3D_vouy4")
-debug_color = Color(0, 0.6, 0.69803923, 1)
-
-[node name="CollisionShape3D17" type="CollisionShape3D" parent="StaticBody3D" index="12" unique_id=681706746]
-transform = Transform3D(0.11945851, 0.9706441, -0.20875914, 0.066254795, 0.20200276, 0.9771411, 0.99062634, -0.13055903, -0.04017881, -9.1886215, 1.4817821, 2.063439)
-shape = SubResource("CapsuleShape3D_vouy4")
-debug_color = Color(0, 0.6, 0.69803923, 1)
-
-[node name="CollisionShape3D18" type="CollisionShape3D" parent="StaticBody3D" index="13" unique_id=789761929]
-transform = Transform3D(-0.840589, 0.539118, -0.052557804, 0.027689602, 0.1396688, 0.9898107, 0.54096574, 0.8305692, -0.13233186, -6.405998, 1.2428752, -0.9667735)
-shape = SubResource("CapsuleShape3D_fgaht")
-debug_color = Color(0, 0.6, 0.69803923, 1)
-
-[node name="CollisionShape3D19" type="CollisionShape3D" parent="StaticBody3D" index="14" unique_id=2075363241]
-transform = Transform3D(-0.840589, 0.539118, -0.052557804, 0.027689602, 0.1396688, 0.9898107, 0.54096574, 0.8305692, -0.13233186, -7.9637375, 0.9658977, -3.1753917)
-shape = SubResource("CapsuleShape3D_2rbde")
-debug_color = Color(0, 0.6, 0.69803923, 1)
-
-[node name="CollisionShape3D20" type="CollisionShape3D" parent="StaticBody3D" index="15" unique_id=583748600]
-transform = Transform3D(-0.8812644, 0.4692397, -0.056453194, 0.12534137, 0.34721068, 0.9293728, 0.4557002, 0.81194794, -0.36479926, -9.579216, 0.25785935, -5.449577)
-shape = SubResource("CapsuleShape3D_2cg5o")
-debug_color = Color(0, 0.6, 0.69803923, 1)
-
-[node name="CollisionShape3D8" type="CollisionShape3D" parent="StaticBody3D" index="16" unique_id=1442832007]
-transform = Transform3D(-0.58968115, -0.80434036, 0.07289297, 0.012352873, 0.081261866, 0.9966159, -0.80754155, 0.5885862, -0.03798266, 11.628376, 0.5599837, -3.294851)
-shape = SubResource("CapsuleShape3D_huaf8")
-debug_color = Color(0, 0.6, 0.69803923, 1)
-
-[node name="CollisionShape3D10" type="CollisionShape3D" parent="StaticBody3D" index="17" unique_id=875670540]
-transform = Transform3D(-0.97119486, 0.23817158, -0.0073822374, 0.012352876, 0.08126185, 0.9966158, 0.23796578, 0.9678179, -0.08186311, 10.541996, 0.6663985, -5.891531)
-shape = SubResource("CapsuleShape3D_c1u73")
-debug_color = Color(0, 0.6, 0.69803923, 1)
-
-[node name="CollisionShape3D13" type="CollisionShape3D" parent="StaticBody3D" index="18" unique_id=361960550]
-transform = Transform3D(-0.8710692, 0.48955312, -0.039698765, -0.039378475, 0.010957258, 0.999164, 0.48957905, 0.8719053, 0.009733406, -2.255947, 0.8592086, -10.190359)
-shape = SubResource("CapsuleShape3D_d5115")
-debug_color = Color(0, 0.6, 0.69803923, 1)
-
-[node name="CollisionShape3D9" type="CollisionShape3D" parent="StaticBody3D" index="19" unique_id=1549989951]
-transform = Transform3D(-0.7864402, -0.6167718, 0.03323774, -0.11860436, 0.20360412, 0.97184247, -0.60617214, 0.7603541, -0.23327412, 15.105091, -0.12018448, -6.65209)
-shape = SubResource("CapsuleShape3D_epkfk")
-debug_color = Color(0, 0.6, 0.69803923, 1)
-
-[node name="CollisionShape3D11" type="CollisionShape3D" parent="StaticBody3D" index="20" unique_id=397405222]
-transform = Transform3D(-0.98496246, 0.09043352, -0.14720893, -0.08101626, 0.51080406, 0.8558712, 0.15259463, 0.85492784, -0.49579594, 9.837903, -0.03017591, -9.438167)
-shape = SubResource("CapsuleShape3D_pav0b")
-debug_color = Color(0, 0.6, 0.69803923, 1)
-
-[node name="CollisionShape3D21" type="CollisionShape3D" parent="StaticBody3D" index="21" unique_id=2005976226]
-transform = Transform3D(0.7860117, -0.5337179, 0.31197944, 0.55683464, 0.8304337, 0.017753707, -0.2685536, 0.15976626, 0.949923, -1.2939372, 4.3911624, 0.23327637)
-shape = SubResource("CapsuleShape3D_p2c26")

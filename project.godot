@@ -49,6 +49,13 @@ SimpleGrass="*uid://bfq0snth8sj3h"
 
 enabled=PackedStringArray("res://addons/simplegrasstextured/plugin.cfg")
 
+[importer_defaults]
+
+texture={
+&"compress/mode": 2,
+&"process/size_limit": 1024
+}
+
 [input]
 
 move_left={
