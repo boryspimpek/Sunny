@@ -28,7 +28,6 @@ func _physics_process(delta: float) -> void:
 	var combat_mode_held := Input.is_action_pressed("combat_mode")
 	if combat_mode != combat_mode_held:
 		combat_mode = combat_mode_held
-		animator.set_combat_mode(combat_mode)
 
 	player_camera.update(delta, combat_mode)
 
@@ -54,6 +53,15 @@ func _physics_process(delta: float) -> void:
 		weapon_manager.switch_weapon(1)
 	if Input.is_action_just_pressed("reload"):
 		weapon_manager.start_reload()
+
+	_update_animations()
+
+
+func _update_animations() -> void:
+	var current := weapon_manager.current_weapon()
+	var use_pistol := combat_mode and current != null and current.display_name == "Pistol"
+	var use_rifle := combat_mode and current != null and current.display_name == "Rifle"
+	animator.set_combat_mode(use_pistol, use_rifle)
 
 
 func _input(event: InputEvent) -> void:

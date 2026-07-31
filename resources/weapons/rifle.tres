@@ -8,6 +8,7 @@
 
 [resource]
 script = ExtResource("1_c0rnk")
+display_name = "Rifle"
 fire_interval = 0.1
 magazine_size = 30
 hit_effect_scene = ExtResource("2_p2jh4")

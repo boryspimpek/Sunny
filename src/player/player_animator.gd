@@ -22,33 +22,70 @@ var roll_direction := Vector3.ZERO
 var roll_displacement_pending := Vector3.ZERO
 var roll_pivot_initial_position := Vector3.ZERO
 
+var _last_pistol := -1
+var _last_rifle := -1
+
+const RIFLE_ANIM_PATHS := {
+	&"rifle_idle": "res://assets/animations/Player_2/animations/rifle_idle.tres",
+	&"rifle_strafe_left": "res://assets/animations/Player_2/animations/rifle_strafe_left.tres",
+	&"rifle_strafe_right": "res://assets/animations/Player_2/animations/rifle_strafe_right.tres",
+	&"rifle_run": "res://assets/animations/Player_2/animations/rifle_run_forward.tres",
+	&"rifle_run_backward": "res://assets/animations/Player_2/animations/rifle_run_backward.tres"
+}
+
 
 func _ready() -> void:
 	animation_tree.process_callback = AnimationTree.ANIMATION_PROCESS_MANUAL
-	set_combat_mode(false)
+	_load_rifle_animations()
+	set_combat_mode(false, false)
 	animation_tree.active = true
 	roll_hips_bone = model.find_bone("mixamorig_Hips")
 	animation_player.animation_finished.connect(_on_animation_finished)
 
 
-func set_combat_mode(use_pistol: bool) -> void:
+func _load_rifle_animations() -> void:
+	var library := animation_player.get_animation_library(&"Moves")
+	if library == null:
+		return
+	for anim_name in RIFLE_ANIM_PATHS:
+		if library.has_animation(anim_name):
+			continue
+		var anim := load(RIFLE_ANIM_PATHS[anim_name]) as Animation
+		if anim != null:
+			library.add_animation(anim_name, anim)
+
+
+func set_combat_mode(use_pistol: bool, use_rifle: bool) -> void:
+	if int(use_pistol) == _last_pistol and int(use_rifle) == _last_rifle:
+		return
+	_last_pistol = int(use_pistol)
+	_last_rifle = int(use_rifle)
+
 	var animation_names: Array[StringName] = []
 	if use_pistol:
-		animation_names.append_array([
+		animation_names = [
 			&"Moves/pistol_idle",
 			&"Moves/pistol_strafe_left",
 			&"Moves/pistol_strafe_right",
 			&"Moves/pistol_run",
 			&"Moves/pistol_run_backward"
-		])
+		]
+	elif use_rifle:
+		animation_names = [
+			&"Moves/rifle_idle",
+			&"Moves/rifle_strafe_left",
+			&"Moves/rifle_strafe_right",
+			&"Moves/rifle_run",
+			&"Moves/rifle_run_backward"
+		]
 	else:
-		animation_names.append_array([
+		animation_names = [
 			&"Moves/idle",
 			&"Moves/left_strafe",
 			&"Moves/right_strafe",
 			&"Moves/running",
 			&"Moves/running_backward"
-		])
+		]
 	for index in animation_names.size():
 		var animation_node := locomotion_blend_space.get_blend_point_node(index) as AnimationNodeAnimation
 		if animation_node != null:
