@@ -52,6 +52,8 @@ func _physics_process(delta: float) -> void:
 		weapon_manager.switch_weapon(0)
 	if Input.is_action_just_pressed("weapon_2"):
 		weapon_manager.switch_weapon(1)
+	if Input.is_action_just_pressed("reload"):
+		weapon_manager.start_reload()
 
 
 func _input(event: InputEvent) -> void:
