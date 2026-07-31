@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dvdvcm4q3bvjh"]
+
+[ext_resource type="PackedScene" uid="uid://bnbfw68g7l4qx" path="res://assets/guns/rifle/12 Sci-Fi Weapons Asset Pack1.fbx" id="1_1nd5h"]
+
+[node name="Rifle" unique_id=196296787 instance=ExtResource("1_1nd5h")]
+
+[node name="Gun_3" parent="." index="0" unique_id=145571221]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
+
+[node name="Muzzle" type="Marker3D" parent="." index="1" unique_id=211479369]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16763492, 0.686249)

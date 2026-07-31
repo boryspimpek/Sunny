@@ -9,7 +9,7 @@ extends Node
 @onready var body: CharacterBody3D = get_parent()
 @onready var spring_arm_pivot: Node3D = body.get_node("SpringArmPivot")
 @onready var camera: Camera3D = body.get_node("SpringArmPivot/SpringArm3D/Camera3D")
-@onready var muzzle_marker: Marker3D = body.get_node_or_null("Skeleton3D/WeaponAttachment/PistolMount/gun_6/Muzzle")
+@onready var weapon_manager: WeaponManager = body.get_node("WeaponManager")
 
 var current_target: Node3D
 var aim_direction: Vector3 = Vector3.FORWARD
@@ -93,6 +93,7 @@ func _process(_delta: float) -> void:
 
 
 func _update_laser() -> void:
+	var muzzle_marker := weapon_manager.get_active_muzzle()
 	var spawn_pos := body.global_position + Vector3.UP
 	if muzzle_marker != null:
 		spawn_pos = muzzle_marker.global_position

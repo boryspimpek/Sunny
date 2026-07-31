@@ -63,6 +63,21 @@ func _update_animations() -> void:
 	var use_rifle := combat_mode and current != null and current.display_name == "Rifle"
 	animator.set_combat_mode(use_pistol, use_rifle)
 
+	var mount := get_node_or_null("Skeleton3D/WeaponAttachment/PistolMount") as Node3D
+	if mount == null:
+		return
+	var active_name := ""
+	if combat_mode and current != null:
+		active_name = current.display_name
+	var active_model: Node3D = null
+	if active_name != "":
+		active_model = mount.get_node_or_null(active_name) as Node3D
+	if active_model == null and active_name != "" and mount.get_child_count() > 0:
+		active_model = mount.get_child(0) as Node3D
+	for child in mount.get_children():
+		if child is Node3D:
+			child.visible = child == active_model
+
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventJoypadButton:

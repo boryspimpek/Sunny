@@ -7,7 +7,6 @@ extends Node
 
 @onready var body: CharacterBody3D = get_parent()
 @onready var aim_assist: PlayerAimAssist = body.get_node("PlayerAimAssist")
-@onready var muzzle_marker: Marker3D = body.get_node_or_null("Skeleton3D/WeaponAttachment/PistolMount/gun_6/Muzzle")
 
 var current_index := 0
 var ammo: Array[int] = []
@@ -27,6 +26,19 @@ func current_weapon() -> WeaponResource:
 	if current_index >= 0 and current_index < weapons.size():
 		return weapons[current_index]
 	return null
+
+
+func get_active_muzzle() -> Marker3D:
+	var weapon := current_weapon()
+	var mount := body.get_node_or_null("Skeleton3D/WeaponAttachment/PistolMount") as Node3D
+	if mount == null or weapon == null:
+		return null
+	var model := mount.get_node_or_null(weapon.display_name) as Node3D
+	if model == null and mount.get_child_count() > 0:
+		model = mount.get_child(0) as Node3D
+	if model == null:
+		return null
+	return model.get_node_or_null("Muzzle") as Marker3D
 
 
 func update(delta: float, want_fire: bool) -> void:
@@ -84,6 +96,7 @@ func _shoot() -> void:
 		return
 
 	var direction: Vector3 = aim_assist.get_aim_direction()
+	var muzzle_marker := get_active_muzzle()
 	var spawn_pos := body.global_position + Vector3.UP
 	if muzzle_marker != null:
 		spawn_pos = muzzle_marker.global_position
