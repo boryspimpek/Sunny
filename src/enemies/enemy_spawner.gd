@@ -5,6 +5,7 @@ extends Area3D
 @export var max_spawns: int = 1
 @export var trigger_group: StringName = "player"
 @export var auto_collect_markers: bool = true
+@export var marker_group: StringName = ""
 @export var initial_delay: float = 0.0
 @export var spawn_interval: float = 0.0
 @export var spawn_points: Array[Node3D]
@@ -20,6 +21,12 @@ func _ready() -> void:
 
 
 func _collect_points() -> void:
+	if not marker_group.is_empty():
+		for node in get_tree().get_nodes_in_group(marker_group):
+			if node is Node3D:
+				_cached_points.append(node as Node3D)
+		return
+
 	if auto_collect_markers:
 		for child in get_children():
 			if child is Marker3D:

@@ -802,7 +802,8 @@ height = 0.8942871
 
 [node name="zombie" unique_id=1896429224 instance=ExtResource("7_ekvjy")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
-floor_max_angle = 0.87266463
+floor_max_angle = 1.553343
+floor_snap_length = 1.0
 script = ExtResource("8_hcbe1")
 
 [node name="Skeleton3D" parent="." index="0" unique_id=1622129317]
@@ -868,9 +869,10 @@ script = ExtResource("4_jabed")
 
 [node name="MovementBehavior" type="Node" parent="." index="3" unique_id=1544890698]
 script = ExtResource("7_7e2u1")
-detection_range = 15.0
+detection_range = 12.0
 stop_distance = 1.0
 walk_animation = &"ZombieMoves/run"
+separation_strength = 1.0
 
 [node name="AttackBehavior" type="Node" parent="." index="4" unique_id=278806177]
 script = ExtResource("8_7e2u1")
@@ -883,11 +885,11 @@ shape = SubResource("CapsuleShape3D_doa7c")
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="6" unique_id=1658878695]
 stream = ExtResource("9_leu6i")
 autoplay = true
-max_distance = 10.0
+max_distance = 5.0
 parameters/looping = true
 
 [node name="ZombieDying" type="AudioStreamPlayer3D" parent="." index="7" unique_id=762499209]
 stream = ExtResource("23_goump")
-volume_db = 3.0
+volume_db = 6.0
 max_distance = 10.0
 parameters/looping = false

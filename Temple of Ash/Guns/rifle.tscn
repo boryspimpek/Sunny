@@ -8,4 +8,4 @@
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 
 [node name="Muzzle" type="Marker3D" parent="." index="1" unique_id=211479369]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16763492, 0.686249)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16763492, -0.3273226)

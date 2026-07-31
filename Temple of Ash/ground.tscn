@@ -10,7 +10,7 @@
 [node name="Ground" type="Node3D" parent="." unique_id=83386477]
 
 [node name="BakedMultiMeshes" parent="Ground" unique_id=1877623460 instance=ExtResource("1_h1vm0")]
-transform = Transform3D(0.96852237, 0, 0.24892652, 0, 1, 0, -0.24892652, 0, 0.96852237, 0, 0, 0)
+transform = Transform3D(0.96852237, 0, 0.24892652, 0, 1, 0, -0.24892652, 0, 0.96852237, 0, -0.01, 0)
 
 [node name="platform_010" parent="Ground" unique_id=1047983528 instance=ExtResource("1_om11g")]
 transform = Transform3D(-4.9336834, 0, 4.845163, 0, 6.515, 0, -5.4884577, 0, -4.3554125, -8.024956, -69.8951, -27.451283)
