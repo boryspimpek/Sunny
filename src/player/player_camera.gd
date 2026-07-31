@@ -15,6 +15,7 @@ extends Node
 @onready var spring_arm_pivot: Node3D = body.get_node("SpringArmPivot")
 @onready var spring_arm: SpringArm3D = body.get_node("SpringArmPivot/SpringArm3D")
 @onready var camera: Camera3D = body.get_node("SpringArmPivot/SpringArm3D/Camera3D")
+@onready var crosshair_layer: CanvasLayer = body.get_node("CrosshairLayer")
 
 var normal_spring_offset: Vector3
 var normal_spring_length: float
@@ -42,19 +43,26 @@ func get_yaw() -> float:
 	return spring_arm_pivot.global_rotation.y
 
 
-## Kierunek strzału spłaszczony do płaszczyzny XZ.
-## Używa promienia z kamery, aby trafić w to, co widzi celownik.
-func get_aim_direction() -> Vector3:
-	var ray_origin := camera.global_position
-	var ray_dir := -camera.global_transform.basis.z
+func _get_aim_screen_pos() -> Vector2:
+	var viewport := get_viewport()
+	var screen_size := viewport.get_visible_rect().size
+	return (screen_size / 2.0) + crosshair_layer.offset
+
+
+## Punkt w świecie, na który wskazuje krzyżyk celownika.
+func get_aim_target() -> Vector3:
+	var screen_pos := _get_aim_screen_pos()
+	var ray_origin := camera.project_ray_origin(screen_pos)
+	var ray_dir := camera.project_ray_normal(screen_pos)
 	var ray_end := ray_origin + ray_dir * aim_ray_length
 	var space_state := body.get_world_3d().direct_space_state
 	var query := PhysicsRayQueryParameters3D.create(ray_origin, ray_end, 1 | 4, [body.get_rid()])
 	var result := space_state.intersect_ray(query)
-	var target_pos := ray_end
 	if not result.is_empty():
-		target_pos = result["position"] as Vector3
-	var spawn_pos := body.global_position + Vector3.UP
-	var direction := target_pos - spawn_pos
-	direction.y = 0.0
-	return direction.normalized()
+		return result["position"] as Vector3
+	return ray_end
+
+
+## Kierunek promienia wychodzącego przez środek krzyżyka.
+func get_aim_direction() -> Vector3:
+	return camera.project_ray_normal(_get_aim_screen_pos()).normalized()

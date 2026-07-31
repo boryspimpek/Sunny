@@ -6,7 +6,7 @@ extends Node
 @export var weapons: Array[WeaponResource] = []
 
 @onready var body: CharacterBody3D = get_parent()
-@onready var aim_assist: PlayerAimAssist = body.get_node("PlayerAimAssist")
+@onready var player_camera: PlayerCamera = body.get_node("PlayerCamera")
 
 var current_index := 0
 var ammo: Array[int] = []
@@ -95,12 +95,13 @@ func _shoot() -> void:
 		start_reload()
 		return
 
-	var direction: Vector3 = aim_assist.get_aim_direction()
+	var target_pos: Vector3 = player_camera.get_aim_target()
 	var muzzle_marker := get_active_muzzle()
 	var spawn_pos := body.global_position + Vector3.UP
 	if muzzle_marker != null:
 		spawn_pos = muzzle_marker.global_position
-	var end_pos := spawn_pos + direction * aim_assist.aim_assist_range
+	var direction := (target_pos - spawn_pos).normalized()
+	var end_pos := spawn_pos + direction * player_camera.aim_ray_length
 
 	var space_state := body.get_world_3d().direct_space_state
 	var query := PhysicsRayQueryParameters3D.create(spawn_pos, end_pos, 1 | 4, [body.get_rid()])

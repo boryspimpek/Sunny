@@ -34,12 +34,15 @@ volumetric_fog_anisotropy = 0.9
 adjustment_enabled = true
 adjustment_saturation = 1.6
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_272bh"]
+radius = 11.814722
+
 [node name="main" type="Node3D" unique_id=1051936391]
 
 [node name="Arena" parent="." unique_id=1919387517 instance=ExtResource("2_5vw27")]
 
 [node name="Player_2" parent="." unique_id=106330497 instance=ExtResource("3_272bh")]
-transform = Transform3D(0.9927867, 0, 0.11989425, 0, 1, 0, -0.11989425, 0, 0.9927867, 66.835266, 14.656689, 46.287025)
+transform = Transform3D(0.9927867, 0, 0.11989425, 0, 1, 0, -0.11989425, 0, 0.9927867, 12.395142, 10.210597, 92.866806)
 
 [node name="HUD" parent="." unique_id=1830043377 instance=ExtResource("6_hud")]
 
@@ -63,6 +66,13 @@ parameters/looping = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.769217, 10.193308, 84.73744)
 script = ExtResource("6_272bh")
 enemy_scene = ExtResource("7_272bh")
-max_spawns = 3
 spawn_interval = 0.5
-spawn_points = [null, null, null]
+spawn_points = [NodePath("CollisionShape3D/Marker3D")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1494728966]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5188179, 0.9116888, -1.3101349)
+shape = SubResource("SphereShape3D_272bh")
+
+[node name="Marker3D" type="Marker3D" parent="Area3D/CollisionShape3D" unique_id=1000543272]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9361839, 0)
+gizmo_extents = 4.76
