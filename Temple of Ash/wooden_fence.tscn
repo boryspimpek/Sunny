@@ -8,6 +8,9 @@ size = Vector3(7.1483765, 3.928711, 0.2876587)
 [sub_resource type="BoxShape3D" id="BoxShape3D_8qrs6"]
 size = Vector3(11.031097, 4.776367, 0.2876587)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_robom"]
+size = Vector3(7.1483765, 0.5706787, 0.2876587)
+
 [node name="wooden_fence" unique_id=1196128903 instance=ExtResource("1_42eyk")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
@@ -46,8 +49,8 @@ transform = Transform3D(0.008796345, 0, -0.9999613, 0, 1, 0, 0.9999613, 0, 0.008
 shape = SubResource("BoxShape3D_8qrs6")
 
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D" index="5" unique_id=825832245]
-transform = Transform3D(0.99999994, 0, -0.00031415862, 0, 1, 0, 0.00031415862, 0, 0.99999994, 23.59688, 1.8881836, 0.24476287)
-shape = SubResource("BoxShape3D_42eyk")
+transform = Transform3D(0.99999994, 0, -0.00031415862, 0, 1, 0, 0.00031415862, 0, 0.99999994, 23.59688, 4.114847, 0.24476287)
+shape = SubResource("BoxShape3D_robom")
 
 [node name="CollisionShape3D6" type="CollisionShape3D" parent="StaticBody3D" index="6" unique_id=1381202571]
 transform = Transform3D(0.99999994, 0, -0.00031415862, 0, 1, 0, 0.00031415862, 0, 0.99999994, 30.487352, 1.8881836, 0.25731406)

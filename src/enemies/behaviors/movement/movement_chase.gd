@@ -7,6 +7,8 @@ extends MovementBehavior
 @export var stop_distance: float = 2.0
 @export var idle_animation: StringName = "ZombieMoves/idle"
 @export var walk_animation: StringName = "ZombieMoves/walking"
+@export var separation_radius: float = 1.5
+@export var separation_strength: float = 2.0
 
 
 func get_movement(enemy: Enemy, target: Node3D, _delta: float) -> Vector3:
@@ -17,12 +19,15 @@ func get_movement(enemy: Enemy, target: Node3D, _delta: float) -> Vector3:
 	var to_target := target.global_position - enemy.global_position
 	to_target.y = 0.0
 	var distance := to_target.length()
-	var desired := Vector3.ZERO
+	var direction := Vector3.ZERO
 
 	if distance > detection_range or distance <= stop_distance:
-		desired = Vector3.ZERO
+		direction = Vector3.ZERO
 	else:
-		desired = to_target.normalized() * speed
+		direction = to_target.normalized() * speed
+
+	var separation := _get_separation(enemy)
+	var desired := (direction + separation).limit_length(speed)
 
 	_update_animation(enemy, desired.length() > 0.01)
 
@@ -30,6 +35,28 @@ func get_movement(enemy: Enemy, target: Node3D, _delta: float) -> Vector3:
 		enemy.look_at(enemy.global_position - desired, Vector3.UP)
 
 	return desired
+
+
+func _get_separation(enemy: Enemy) -> Vector3:
+	var separation := Vector3.ZERO
+	var tree := enemy.get_tree()
+	if tree == null:
+		return separation
+
+	for other in tree.get_nodes_in_group("enemy"):
+		if other == enemy or not (other is Enemy):
+			continue
+		var other_enemy := other as Enemy
+		var offset := enemy.global_position - other_enemy.global_position
+		offset.y = 0.0
+		var dist := offset.length()
+		if dist < separation_radius and dist > 0.001:
+			separation += offset.normalized() / dist
+
+	if separation.length() > 0.0:
+		separation = separation.normalized() * separation_strength
+
+	return separation
 
 
 func _update_animation(enemy: Enemy, is_walking: bool) -> void:
