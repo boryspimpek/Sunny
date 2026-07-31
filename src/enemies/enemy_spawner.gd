@@ -5,6 +5,8 @@ extends Area3D
 @export var max_spawns: int = 1
 @export var trigger_group: StringName = "player"
 @export var auto_collect_markers: bool = true
+@export var initial_delay: float = 0.0
+@export var spawn_interval: float = 0.0
 @export var spawn_points: Array[Node3D]
 
 var _spawned_count := 0
@@ -35,13 +37,20 @@ func _on_body_entered(body: Node3D) -> void:
 
 
 func _spawn() -> void:
+	if initial_delay > 0.0:
+		await get_tree().create_timer(initial_delay).timeout
+
 	var points := _cached_points if not _cached_points.is_empty() else spawn_points
-	for point in points:
+	for i in range(points.size()):
 		if _spawned_count >= max_spawns:
 			break
 		if enemy_scene == null:
 			break
+
 		var enemy := enemy_scene.instantiate() as Enemy
 		get_parent().add_child(enemy)
-		enemy.global_position = point.global_position
+		enemy.global_position = points[i].global_position
 		_spawned_count += 1
+
+		if spawn_interval > 0.0 and i < points.size() - 1 and _spawned_count < max_spawns:
+			await get_tree().create_timer(spawn_interval).timeout
