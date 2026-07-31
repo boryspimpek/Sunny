@@ -76,3 +76,6 @@ shape = SubResource("SphereShape3D_272bh")
 [node name="Marker3D" type="Marker3D" parent="Area3D/CollisionShape3D" unique_id=1000543272]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9361839, 0)
 gizmo_extents = 4.76
+
+[node name="zombie" parent="Area3D/CollisionShape3D" unique_id=1896429224 instance=ExtResource("7_272bh")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -5.059511, -0.9488363, 5.5928497)
