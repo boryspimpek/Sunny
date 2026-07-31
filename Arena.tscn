@@ -519,6 +519,83 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.426434, 14.502275, 38.143
 [node name="RockMid_006" parent="LavaRocks" unique_id=100890446 instance=ExtResource("6_i3exe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.843693, 14.591531, 34.593952)
 
+[node name="VolcanoRock" type="Node3D" parent="." unique_id=186668433]
+
+[node name="volcano_rock1" parent="VolcanoRock" unique_id=1627765898 instance=ExtResource("68_get0t")]
+transform = Transform3D(-4.1870728, 0, 9.081213, 0, 10, 0, -9.081213, 0, -4.1870728, -66.688416, 14.437622, -21.906738)
+
+[node name="volcano_rock2" parent="VolcanoRock" unique_id=197750965 instance=ExtResource("69_828ib")]
+transform = Transform3D(54.872536, 0, 9.239624, 0, 55.645, 0, -9.239624, 0, 54.872536, 38.12293, 14.137025, -59.21363)
+
+[node name="volcano_rock3" parent="VolcanoRock" unique_id=209335212 instance=ExtResource("69_828ib")]
+transform = Transform3D(-39.758186, 0, 38.93138, 0, 55.645, 0, -38.93138, 0, -39.758186, -106.045204, 9.924378, -23.736229)
+
+[node name="volcano_rock9" parent="VolcanoRock" unique_id=2098026559 instance=ExtResource("69_828ib")]
+transform = Transform3D(-54.208748, 0, 12.560932, 0, 55.644997, 0, -12.560932, 0, -54.208748, -93.66791, 12.774598, 70.925606)
+
+[node name="volcano_rock12" parent="VolcanoRock" unique_id=345747290 instance=ExtResource("69_828ib")]
+transform = Transform3D(-49.109257, 0, -26.165745, 0, 55.644997, 0, 26.165745, 0, -49.109257, 56.742416, -2.9415274, 51.37039)
+
+[node name="volcano_rock13" parent="VolcanoRock" unique_id=1429459524 instance=ExtResource("69_828ib")]
+transform = Transform3D(50.778778, 0, 22.756992, 0, 55.644997, 0, -22.756992, 0, 50.778778, 56.250076, -2.9415274, 78.37092)
+
+[node name="volcano_rock4" parent="VolcanoRock" unique_id=619795979 instance=ExtResource("69_828ib")]
+transform = Transform3D(25.286947, -5.6679745, 49.242355, 8.431172, 54.966293, 1.9972395, -48.84517, 6.5534506, 25.837309, -62.330772, 7.3709116, -85.82086)
+
+[node name="volcano_rock6" parent="VolcanoRock" unique_id=1864677289 instance=ExtResource("70_pn5k6")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 64.34413, 14.519044, 9.605957)
+
+[node name="volcano_rock7" parent="VolcanoRock" unique_id=720984198 instance=ExtResource("10_rc0uw")]
+transform = Transform3D(8.6751375, 0, 4.974131, 0, 10, 0, -4.974131, 0, 8.6751375, 17.431284, 14.526734, -73.963875)
+
+[node name="volcan_rock3" parent="VolcanoRock" unique_id=1578811382 instance=ExtResource("71_v4dux")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 13.281824, 14.422485, -71.0958)
+
+[node name="volcan_rock4" parent="VolcanoRock" unique_id=6887078 instance=ExtResource("71_v4dux")]
+transform = Transform3D(7.8152046, 0, 6.238796, 0, 10, 0, -6.238796, 0, 7.8152046, 9.20849, 14.422485, -71.0958)
+
+[node name="volcan_rock5" parent="VolcanoRock" unique_id=2088306158 instance=ExtResource("71_v4dux")]
+transform = Transform3D(3.7096272, 0, -9.286478, 0, 10, 0, 9.286478, 0, 3.7096272, 12.903639, 14.422485, -76.20015)
+
+[node name="volcan_rock6" parent="VolcanoRock" unique_id=837739236 instance=ExtResource("71_v4dux")]
+transform = Transform3D(6.099794, 0, -7.9241753, 0, 10, 0, 7.9241753, 0, 6.099794, -5.538883, 14.422485, -82.46937)
+
+[node name="volcan_rock8" parent="VolcanoRock" unique_id=1819046348 instance=ExtResource("71_v4dux")]
+transform = Transform3D(9.776734, 0, 2.1013055, 0, 9.999999, 0, -2.1013055, 0, 9.776734, -4.228841, 14.422485, -80.344536)
+
+[node name="volcano_rock8" parent="VolcanoRock" unique_id=198427187 instance=ExtResource("10_rc0uw")]
+transform = Transform3D(-7.40957, 0, -6.715526, 0, 10.000001, 0, 6.715526, 0, -7.40957, -66.42883, 14.526734, 37.731148)
+
+[node name="volcan_rock7" parent="VolcanoRock" unique_id=1548225216 instance=ExtResource("71_v4dux")]
+transform = Transform3D(-9.768295, 0, -2.140194, 0, 10.000001, 0, 2.140194, 0, -9.768295, -62.989334, 14.422485, 34.041466)
+
+[node name="volcan_rock9" parent="VolcanoRock" unique_id=629895255 instance=ExtResource("71_v4dux")]
+transform = Transform3D(-6.298898, 0, -7.766845, 0, 9.999999, 0, 7.766845, 0, -6.298898, -59.01038, 14.422485, 33.169693)
+
+[node name="volcan_rock10" parent="VolcanoRock" unique_id=1590244057 instance=ExtResource("71_v4dux")]
+transform = Transform3D(-5.61116, 0, 8.277373, 0, 10, 0, -8.277373, 0, -5.61116, -61.52748, 14.422485, 38.9466)
+
+[node name="volcan_rock11" parent="VolcanoRock" unique_id=1822104202 instance=ExtResource("71_v4dux")]
+transform = Transform3D(-9.549322, 0, 2.9682493, 0, 10, 0, -2.9682493, 0, -9.549322, -59.24187, 14.422485, 42.318264)
+
+[node name="volcan_rock12" parent="VolcanoRock" unique_id=1902094053 instance=ExtResource("71_v4dux")]
+transform = Transform3D(-4.3400517, 0, 9.009105, 0, 9.999999, 0, -9.009105, 0, -4.3400517, -60.245964, 14.422485, 48.272175)
+
+[node name="volcano_rock5" parent="VolcanoRock" unique_id=516610085 instance=ExtResource("10_rc0uw")]
+transform = Transform3D(22.203127, 0, -5.7276525, 0, 22.93, 0, 5.7276525, 0, 22.203127, -39.77092, 14.489869, -97.9286)
+
+[node name="volcano_rock16" parent="VolcanoRock" unique_id=230257651 instance=ExtResource("10_rc0uw")]
+transform = Transform3D(-21.102795, 0, 8.969781, 0, 22.93, 0, -8.969781, 0, -21.102795, -48.6118, 11.081422, -93.68528)
+
+[node name="volcano_rock10" parent="VolcanoRock" unique_id=21222243 instance=ExtResource("10_rc0uw")]
+transform = Transform3D(21.64783, 0, 7.5601826, 0, 22.93, 0, -7.5601826, 0, 21.64783, 91.08994, 14.489869, -11.233214)
+
+[node name="volcano_rock11" parent="VolcanoRock" unique_id=2106831886 instance=ExtResource("10_rc0uw")]
+transform = Transform3D(7.279968, 0, -21.74366, 0, 22.929996, 0, 21.74366, 0, 7.279968, 85.94392, 14.489869, -20.378693)
+
+[node name="volcano_rock14" parent="VolcanoRock" unique_id=1644392611 instance=ExtResource("10_rc0uw")]
+transform = Transform3D(4.671738, 0, 8.841654, 0, 10, 0, -8.841654, 0, 4.671738, -48.69469, 14.436646, -78.18736)
+
 [node name="Tower" type="Node3D" parent="." unique_id=2034498053]
 
 [node name="TowerBig_001" parent="Tower" unique_id=1707520566 instance=ExtResource("8_4bcey")]
@@ -543,10 +620,10 @@ transform = Transform3D(-0.018445134, 0.8618519, -0.50682473, 0.17039123, 0.5022
 
 [node name="TribalBrazier" type="Node3D" parent="." unique_id=2064964457]
 
-[node name="TribalBrazier3" parent="TribalBrazier" unique_id=1655798931 instance=ExtResource("14_86ntd")]
+[node name="TribalBrazier3" parent="TribalBrazier" unique_id=1856360006 instance=ExtResource("14_86ntd")]
 transform = Transform3D(0.9682568, 0, -0.24995756, 0, 1, 0, 0.24995756, 0, 0.9682568, 37.23262, 10.079853, 81.25039)
 
-[node name="TribalBrazier5" parent="TribalBrazier" unique_id=1055924762 instance=ExtResource("14_86ntd")]
+[node name="TribalBrazier5" parent="TribalBrazier" unique_id=360669314 instance=ExtResource("14_86ntd")]
 transform = Transform3D(-0.99912643, 0, -0.04178846, 0, 1, 0, 0.04178846, 0, -0.99912643, -82.532745, 14.491289, -10.099098)
 
 [node name="Column" type="Node3D" parent="." unique_id=1237021100]
@@ -755,7 +832,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 86.337234, 14.559954, 31.2689
 [node name="well" parent="Village" unique_id=472847213 instance=ExtResource("83_jy4y4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72.84304, 14.524745, 34.852062)
 
-[node name="cart" parent="Village" unique_id=1807776057 instance=ExtResource("87_i3exe")]
+[node name="cart" parent="Village" unique_id=846969235 instance=ExtResource("87_i3exe")]
 transform = Transform3D(0.11072081, 0, -1.6162119, 0, 1.62, 0, 1.6162119, 0, 0.11072081, 67.37026, 14.465119, 37.44454)
 
 [node name="house1" parent="Village" unique_id=767067500 instance=ExtResource("88_i5mv6")]
@@ -801,22 +878,22 @@ transform = Transform3D(-9.990948, 0, -0.42538178, 0, 9.999999, 0, 0.42538178, 0
 [node name="arch2" parent="Props" unique_id=607692328 instance=ExtResource("45_sypt3")]
 transform = Transform3D(-1.875382, -19.614988, -3.4256098, -5.135505, 3.8008337, -18.952045, 19.23822, -0.8975047, -5.39305, -18.83659, 14.563221, 46.433437)
 
-[node name="banner" parent="Props" unique_id=2096632405 instance=ExtResource("46_suj2x")]
+[node name="banner" parent="Props" unique_id=1770405437 instance=ExtResource("46_suj2x")]
 transform = Transform3D(7.0987806, 0, -7.043245, 0, 9.999998, 0, 7.043245, 0, 7.0987806, 13.816661, 14.433968, 58.38165)
 
-[node name="banner5" parent="Props" unique_id=238133448 instance=ExtResource("46_suj2x")]
+[node name="banner5" parent="Props" unique_id=804034340 instance=ExtResource("46_suj2x")]
 transform = Transform3D(1.965622, 0, 9.804913, 0, 9.999998, 0, -9.804913, 0, 1.965622, -1.00245, 14.433968, 62.631405)
 
-[node name="banner6" parent="Props" unique_id=936199791 instance=ExtResource("46_suj2x")]
+[node name="banner6" parent="Props" unique_id=1269323010 instance=ExtResource("46_suj2x")]
 transform = Transform3D(-1.4440802, 0, 9.895182, 0, 9.999998, 0, -9.895182, 0, -1.4440802, -5.1545715, 14.433968, 44.683544)
 
-[node name="banner2" parent="Props" unique_id=1908523828 instance=ExtResource("46_suj2x")]
+[node name="banner2" parent="Props" unique_id=1015575962 instance=ExtResource("46_suj2x")]
 transform = Transform3D(8.634857, 1.213321, -4.8956184, -1.2587794, 9.917605, 0.23773493, 4.8841267, 0.41096964, 8.716442, 4.5263233, 14.433968, -0.6199546)
 
-[node name="banner3" parent="Props" unique_id=1494771481 instance=ExtResource("46_suj2x")]
+[node name="banner3" parent="Props" unique_id=105323984 instance=ExtResource("46_suj2x")]
 transform = Transform3D(6.6181393, -0.60150385, 7.4725103, -0.20124148, 9.94991, 0.9791568, -7.49398, -0.7983971, 6.5728846, -20.528896, 14.433968, 4.85392)
 
-[node name="banner4" parent="Props" unique_id=650124806 instance=ExtResource("46_suj2x")]
+[node name="banner4" parent="Props" unique_id=717063567 instance=ExtResource("46_suj2x")]
 transform = Transform3D(6.6156054, 0, -7.4989166, 0, 9.999998, 0, 7.4989166, 0, 6.6156054, 9.477615, 14.433968, 40.336365)
 
 [node name="column2" parent="Props" unique_id=1069620447 instance=ExtResource("47_m45iw")]
@@ -990,83 +1067,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -81.83785, 15.993419, -13.902
 
 [node name="ChestBig_001" parent="Gold" unique_id=315768913 instance=ExtResource("67_fktk4")]
 transform = Transform3D(0.9262197, 0, 0.37698418, 0, 1, 0, -0.37698418, 0, 0.9262197, -13.772484, 14.624727, -7.053937)
-
-[node name="VolcanoRock" type="Node3D" parent="." unique_id=186668433]
-
-[node name="volcano_rock1" parent="VolcanoRock" unique_id=1627765898 instance=ExtResource("68_get0t")]
-transform = Transform3D(-4.1870728, 0, 9.081213, 0, 10, 0, -9.081213, 0, -4.1870728, -66.688416, 14.437622, -21.906738)
-
-[node name="volcano_rock2" parent="VolcanoRock" unique_id=197750965 instance=ExtResource("69_828ib")]
-transform = Transform3D(54.872536, 0, 9.239624, 0, 55.645, 0, -9.239624, 0, 54.872536, 38.12293, 14.137025, -59.21363)
-
-[node name="volcano_rock3" parent="VolcanoRock" unique_id=209335212 instance=ExtResource("69_828ib")]
-transform = Transform3D(-39.758186, 0, 38.93138, 0, 55.645, 0, -38.93138, 0, -39.758186, -106.045204, 9.924378, -23.736229)
-
-[node name="volcano_rock9" parent="VolcanoRock" unique_id=2098026559 instance=ExtResource("69_828ib")]
-transform = Transform3D(-54.208748, 0, 12.560932, 0, 55.644997, 0, -12.560932, 0, -54.208748, -93.66791, 12.774598, 70.925606)
-
-[node name="volcano_rock12" parent="VolcanoRock" unique_id=345747290 instance=ExtResource("69_828ib")]
-transform = Transform3D(-49.109257, 0, -26.165745, 0, 55.644997, 0, 26.165745, 0, -49.109257, 56.742416, -2.9415274, 51.37039)
-
-[node name="volcano_rock13" parent="VolcanoRock" unique_id=1429459524 instance=ExtResource("69_828ib")]
-transform = Transform3D(50.778778, 0, 22.756992, 0, 55.644997, 0, -22.756992, 0, 50.778778, 56.250076, -2.9415274, 78.37092)
-
-[node name="volcano_rock4" parent="VolcanoRock" unique_id=619795979 instance=ExtResource("69_828ib")]
-transform = Transform3D(25.286947, -5.6679745, 49.242355, 8.431172, 54.966293, 1.9972395, -48.84517, 6.5534506, 25.837309, -62.330772, 7.3709116, -85.82086)
-
-[node name="volcano_rock6" parent="VolcanoRock" unique_id=1864677289 instance=ExtResource("70_pn5k6")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 64.34413, 14.519044, 9.605957)
-
-[node name="volcano_rock7" parent="VolcanoRock" unique_id=330530453 instance=ExtResource("10_rc0uw")]
-transform = Transform3D(8.6751375, 0, 4.974131, 0, 10, 0, -4.974131, 0, 8.6751375, 17.431284, 14.526734, -73.963875)
-
-[node name="volcan_rock3" parent="VolcanoRock" unique_id=1578811382 instance=ExtResource("71_v4dux")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 13.281824, 14.422485, -71.0958)
-
-[node name="volcan_rock4" parent="VolcanoRock" unique_id=6887078 instance=ExtResource("71_v4dux")]
-transform = Transform3D(7.8152046, 0, 6.238796, 0, 10, 0, -6.238796, 0, 7.8152046, 9.20849, 14.422485, -71.0958)
-
-[node name="volcan_rock5" parent="VolcanoRock" unique_id=2088306158 instance=ExtResource("71_v4dux")]
-transform = Transform3D(3.7096272, 0, -9.286478, 0, 10, 0, 9.286478, 0, 3.7096272, 12.903639, 14.422485, -76.20015)
-
-[node name="volcan_rock6" parent="VolcanoRock" unique_id=837739236 instance=ExtResource("71_v4dux")]
-transform = Transform3D(6.099794, 0, -7.9241753, 0, 10, 0, 7.9241753, 0, 6.099794, -5.538883, 14.422485, -82.46937)
-
-[node name="volcan_rock8" parent="VolcanoRock" unique_id=1819046348 instance=ExtResource("71_v4dux")]
-transform = Transform3D(9.776734, 0, 2.1013055, 0, 9.999999, 0, -2.1013055, 0, 9.776734, -4.228841, 14.422485, -80.344536)
-
-[node name="volcano_rock8" parent="VolcanoRock" unique_id=260845494 instance=ExtResource("10_rc0uw")]
-transform = Transform3D(-7.40957, 0, -6.715526, 0, 10.000001, 0, 6.715526, 0, -7.40957, -66.42883, 14.526734, 37.731148)
-
-[node name="volcan_rock7" parent="VolcanoRock" unique_id=1548225216 instance=ExtResource("71_v4dux")]
-transform = Transform3D(-9.768295, 0, -2.140194, 0, 10.000001, 0, 2.140194, 0, -9.768295, -62.989334, 14.422485, 34.041466)
-
-[node name="volcan_rock9" parent="VolcanoRock" unique_id=629895255 instance=ExtResource("71_v4dux")]
-transform = Transform3D(-6.298898, 0, -7.766845, 0, 9.999999, 0, 7.766845, 0, -6.298898, -59.01038, 14.422485, 33.169693)
-
-[node name="volcan_rock10" parent="VolcanoRock" unique_id=1590244057 instance=ExtResource("71_v4dux")]
-transform = Transform3D(-5.61116, 0, 8.277373, 0, 10, 0, -8.277373, 0, -5.61116, -61.52748, 14.422485, 38.9466)
-
-[node name="volcan_rock11" parent="VolcanoRock" unique_id=1822104202 instance=ExtResource("71_v4dux")]
-transform = Transform3D(-9.549322, 0, 2.9682493, 0, 10, 0, -2.9682493, 0, -9.549322, -59.24187, 14.422485, 42.318264)
-
-[node name="volcan_rock12" parent="VolcanoRock" unique_id=1902094053 instance=ExtResource("71_v4dux")]
-transform = Transform3D(-4.3400517, 0, 9.009105, 0, 9.999999, 0, -9.009105, 0, -4.3400517, -60.245964, 14.422485, 48.272175)
-
-[node name="volcano_rock5" parent="VolcanoRock" unique_id=1072719831 instance=ExtResource("10_rc0uw")]
-transform = Transform3D(22.203127, 0, -5.7276525, 0, 22.93, 0, 5.7276525, 0, 22.203127, -39.77092, 14.489869, -97.9286)
-
-[node name="volcano_rock16" parent="VolcanoRock" unique_id=897957581 instance=ExtResource("10_rc0uw")]
-transform = Transform3D(-21.102795, 0, 8.969781, 0, 22.93, 0, -8.969781, 0, -21.102795, -48.6118, 11.081422, -93.68528)
-
-[node name="volcano_rock10" parent="VolcanoRock" unique_id=1378260482 instance=ExtResource("10_rc0uw")]
-transform = Transform3D(21.64783, 0, 7.5601826, 0, 22.93, 0, -7.5601826, 0, 21.64783, 91.08994, 14.489869, -11.233214)
-
-[node name="volcano_rock11" parent="VolcanoRock" unique_id=68412901 instance=ExtResource("10_rc0uw")]
-transform = Transform3D(7.279968, 0, -21.74366, 0, 22.929996, 0, 21.74366, 0, 7.279968, 85.94392, 14.489869, -20.378693)
-
-[node name="volcano_rock14" parent="VolcanoRock" unique_id=1601909685 instance=ExtResource("10_rc0uw")]
-transform = Transform3D(4.671738, 0, 8.841654, 0, 10, 0, -8.841654, 0, 4.671738, -48.69469, 14.436646, -78.18736)
 
 [node name="Trees" type="Node3D" parent="." unique_id=1737571427]
 

@@ -7,7 +7,7 @@ extends Node
 
 @onready var body: CharacterBody3D = get_parent()
 @onready var aim_assist: PlayerAimAssist = body.get_node("PlayerAimAssist")
-@onready var muzzle_marker: Marker3D = body.get_node_or_null("Skeleton3D/WeaponAttachment/PistolMount/Pistol/Muzzle")
+@onready var muzzle_marker: Marker3D = body.get_node_or_null("Skeleton3D/WeaponAttachment/PistolMount/gun_6/Muzzle")
 
 var current_index := 0
 var ammo: Array[int] = []

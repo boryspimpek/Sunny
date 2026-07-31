@@ -7,5 +7,5 @@
 [node name="Gun_6" parent="." index="0" unique_id=2085407758]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0.00061404705, -0.07624911, 0.019551069)
 
-[node name="Muzzle" type="Marker3D" parent="." index="1" unique_id=1639338082]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.070427194, -0.13932115)
+[node name="Muzzle" type="Marker3D" parent="." index="1" unique_id=1654807670]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07059866, 0.59234035)

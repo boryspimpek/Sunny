@@ -9,7 +9,7 @@ extends Node
 @onready var body: CharacterBody3D = get_parent()
 @onready var spring_arm_pivot: Node3D = body.get_node("SpringArmPivot")
 @onready var camera: Camera3D = body.get_node("SpringArmPivot/SpringArm3D/Camera3D")
-@onready var muzzle_marker: Marker3D = body.get_node_or_null("Skeleton3D/WeaponAttachment/PistolMount/Pistol/Muzzle")
+@onready var muzzle_marker: Marker3D = body.get_node_or_null("Skeleton3D/WeaponAttachment/PistolMount/gun_6/Muzzle")
 
 var current_target: Node3D
 var aim_direction: Vector3 = Vector3.FORWARD
