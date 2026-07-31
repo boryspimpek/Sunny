@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" format=3 uid="uid://b60kbvye8d0pk"]
 
-[ext_resource type="Texture2D" uid="uid://q1mn207arh3e" path="res://assets/maps/hunyuan/VolcanRosk5/20260725061041_8f5a65f6_0.png" id="1_b63ox"]
+[ext_resource type="Texture2D" uid="uid://dyr4gs5ply0c2" path="res://assets/maps/hunyuan/VolcanRosk5/20260725061041_8f5a65f6_fbx_basecolor.JPEG" id="1_b63ox"]
 
 [sub_resource type="Shader" id="Shader_1ri71"]
 code = "// NOTE: Shader automatically converted from Godot Engine 4.6.2.stable's StandardMaterial3D.

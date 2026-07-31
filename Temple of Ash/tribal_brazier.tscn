@@ -1,26 +1,14 @@
 [gd_scene format=3 uid="uid://be3n8ttmojnse"]
 
-[ext_resource type="PackedScene" uid="uid://djq0bngrwjcs" path="res://assets/maps/inferno/Separate_assets_fbx/CirclePlatformSmall_001.fbx" id="1_43god"]
-[ext_resource type="PackedScene" uid="uid://tpf5mnfmowjg" path="res://assets/maps/inferno/Separate_assets_fbx/Bone_003.fbx" id="2_vc7md"]
-[ext_resource type="PackedScene" uid="uid://b5olk5rxpa43w" path="res://assets/maps/inferno/Separate_assets_fbx/Bone_004.fbx" id="3_c5kny"]
-[ext_resource type="PackedScene" uid="uid://dgrsosfr7jpgw" path="res://assets/maps/inferno/Separate_assets_fbx/Bone_006.fbx" id="4_mmjxe"]
+[ext_resource type="PackedScene" uid="uid://423o36tdw4u5" path="res://Temple of Ash/circle_platform_small_001.tscn" id="1_aw2r1"]
+[ext_resource type="PackedScene" uid="uid://hpjc7bmwvc1h" path="res://Temple of Ash/bone_003.tscn" id="2_47pab"]
+[ext_resource type="PackedScene" uid="uid://xttfw4x7ohg3" path="res://Temple of Ash/bone_004.tscn" id="3_htmqn"]
+[ext_resource type="PackedScene" uid="uid://c0vbdm07cpwyb" path="res://Temple of Ash/bone_006.tscn" id="4_ifkvm"]
 [ext_resource type="PackedScene" uid="uid://dhjhy4kw4ctiq" path="res://assets/maps/inferno/Separate_assets_fbx/BaseSmall_001.fbx" id="5_mmjxe"]
 [ext_resource type="PackedScene" uid="uid://cif63xilma0dx" path="res://assets/maps/inferno/Separate_assets_fbx/WellSmall_001.fbx" id="6_4hfyk"]
 [ext_resource type="PackedScene" uid="uid://dra0ivq7stx8c" path="res://assets/BinbunVFX_Vol2/FlameFX/effects/fire/vfx_basic_fire_01.tscn" id="7_0datn"]
 [ext_resource type="PackedScene" uid="uid://ci70qo2eqgpf1" path="res://assets/maps/inferno/Separate_assets_fbx/Mound_005.fbx" id="8_0datn"]
 [ext_resource type="PackedScene" uid="uid://bse4whvgh5nj8" path="res://assets/maps/inferno/Separate_assets_fbx/Mound_008.fbx" id="9_byonb"]
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_aw2r1"]
-height = 0.6767578
-radius = 6.970215
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_47pab"]
-height = 0.49609375
-radius = 6.237793
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_htmqn"]
-height = 0.49609375
-radius = 5.561035
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_ifkvm"]
 height = 0.80322266
@@ -30,30 +18,18 @@ radius = 3.4174805
 height = 2.842041
 radius = 2.6875
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_5a6ye"]
-height = 2.842041
-radius = 0.75683594
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_j0r26"]
-height = 2.842041
-radius = 0.75683594
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_s7nkl"]
-height = 2.842041
-radius = 0.75683594
-
 [node name="TribalBrazier" type="Node3D" unique_id=1856360006]
 
-[node name="CirclePlatformSmall_001" parent="." unique_id=1180920856 instance=ExtResource("1_43god")]
+[node name="CirclePlatformSmall_002" parent="." unique_id=1260144194 instance=ExtResource("1_aw2r1")]
 
-[node name="Bone_003" parent="." unique_id=2087644581 instance=ExtResource("2_vc7md")]
-transform = Transform3D(0.66614205, 0, 0.74582493, 0, 1, 0, -0.74582493, 0, 0.66614205, -5.806047, 0, 6.1263123)
+[node name="Bone_005" parent="." unique_id=2087644581 instance=ExtResource("2_47pab")]
+transform = Transform3D(0.8614608, 0, 0.50782406, 0, 1, 0, -0.50782406, 0, 0.8614608, -5.803499, 0, 6.2721043)
 
-[node name="Bone_004" parent="." unique_id=357898958 instance=ExtResource("3_c5kny")]
-transform = Transform3D(0.8843529, 0, -0.46681887, 0, 1, 0, 0.46681887, 0, 0.8843529, -7.046139, 0, -5.2227955)
+[node name="Bone_007" parent="." unique_id=357898958 instance=ExtResource("3_htmqn")]
+transform = Transform3D(0.7421864, 0, -0.6701935, 0, 1, 0, 0.6701935, 0, 0.7421864, -6.9209423, 0, -4.9023333)
 
-[node name="Bone_006" parent="." unique_id=1082971680 instance=ExtResource("4_mmjxe")]
-transform = Transform3D(-0.7506417, 0, -0.6607095, 0, 1, 0, 0.6607095, 0, -0.7506417, 6.425252, 0.5415404, -5.08456)
+[node name="Bone_008" parent="." unique_id=1082971680 instance=ExtResource("4_ifkvm")]
+transform = Transform3D(-0.73523414, 0, -0.67781323, 0, 1, 0, 0.67781323, 0, -0.73523414, 6.4162884, 0, -4.902334)
 
 [node name="BaseSmall_001" parent="." unique_id=113261685 instance=ExtResource("5_mmjxe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4292169, 0)
@@ -75,18 +51,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.2977767, -0.09157467, -4.8
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1452973612]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1862049593]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24267578, 0)
-shape = SubResource("CylinderShape3D_aw2r1")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=1512881401]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.80026245, 0)
-shape = SubResource("CylinderShape3D_47pab")
-
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" unique_id=1410936101]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2401428, 0)
-shape = SubResource("CylinderShape3D_htmqn")
-
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D" unique_id=772671307]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8189392, 0)
 shape = SubResource("CylinderShape3D_ifkvm")
@@ -94,15 +58,3 @@ shape = SubResource("CylinderShape3D_ifkvm")
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D" unique_id=759907118]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.6593933, 0)
 shape = SubResource("CylinderShape3D_vf8x4")
-
-[node name="CollisionShape3D6" type="CollisionShape3D" parent="StaticBody3D" unique_id=428746538]
-transform = Transform3D(1, 0, 0, 0, 0.99537104, -0.096106336, 0, 0.096106336, 0.99537104, -6.1509705, 1.3509827, 6.525757)
-shape = SubResource("CylinderShape3D_5a6ye")
-
-[node name="CollisionShape3D7" type="CollisionShape3D" parent="StaticBody3D" unique_id=1200596734]
-transform = Transform3D(0.48267666, 0.065251864, 0.8733645, -0.13396893, 0.9909855, 0, -0.86549175, -0.11700369, 0.48706722, 6.8602037, 1.7940674, -5.3860993)
-shape = SubResource("CylinderShape3D_j0r26")
-
-[node name="CollisionShape3D8" type="CollisionShape3D" parent="StaticBody3D" unique_id=1151208378]
-transform = Transform3D(0.9477574, -0.31899238, 0, 0.31899244, 0.94775724, 0, 0, 0, 1, -7.3895636, 1.7940674, -4.9625764)
-shape = SubResource("CylinderShape3D_s7nkl")

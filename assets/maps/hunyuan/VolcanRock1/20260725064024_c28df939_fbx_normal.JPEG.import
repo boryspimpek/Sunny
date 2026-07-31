@@ -2,7 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxkxoucyax3jm"
+uid="uid://c7wafe0i0m87d"
 path.s3tc="res://.godot/imported/20260725064024_c28df939_fbx_normal.JPEG-39f7e2e424d103af519a58033874432c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
@@ -26,8 +26,8 @@ compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=1
-roughness/src_normal="res://assets/maps/hunyuan/VolcanRock1/20260725064024_c28df939_fbx_normal.JPEG"
+roughness/mode=0
+roughness/src_normal=""
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2
@@ -37,5 +37,5 @@ process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
-process/size_limit=0
+process/size_limit=1024
 detect_3d/compress_to=0

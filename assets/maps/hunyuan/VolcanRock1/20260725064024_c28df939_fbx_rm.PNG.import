@@ -2,20 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsxxxtct06au"
-path="res://.godot/imported/20260725064024_c28df939_fbx_rm.PNG-2c2243300d6b2c74a0f37b87f3609a6f.ctex"
+uid="uid://cktngxq75gdre"
+path.s3tc="res://.godot/imported/20260725064024_c28df939_fbx_rm.PNG-2c2243300d6b2c74a0f37b87f3609a6f.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/maps/hunyuan/VolcanRock1/20260725064024_c28df939_fbx_rm.PNG"
-dest_files=["res://.godot/imported/20260725064024_c28df939_fbx_rm.PNG-2c2243300d6b2c74a0f37b87f3609a6f.ctex"]
+dest_files=["res://.godot/imported/20260725064024_c28df939_fbx_rm.PNG-2c2243300d6b2c74a0f37b87f3609a6f.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -36,5 +37,5 @@ process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
-process/size_limit=0
+process/size_limit=1024
 detect_3d/compress_to=1

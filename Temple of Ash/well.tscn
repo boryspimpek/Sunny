@@ -2,4 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://di6krkfvql5fw" path="res://assets/maps/well/uploads_files_3443469_Well-Handle_Finish.fbx" id="1_0efug"]
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_0efug"]
+height = 1.2294312
+radius = 1.1459961
+
 [node name="well" unique_id=472847213 instance=ExtResource("1_0efug")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=944759048]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1180644728]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.68026733, 0)
+shape = SubResource("CylinderShape3D_0efug")

@@ -1,46 +1,19 @@
 [gd_scene format=3 uid="uid://db1n1xs6xrbku"]
 
 [ext_resource type="PackedScene" uid="uid://cqrin65vehpuq" path="res://assets/maps/cart/Medieval_cart_2_0.fbx" id="1_4oxfu"]
-[ext_resource type="Texture2D" uid="uid://bplph643quk52" path="res://assets/maps/cart/Textures/Fire_Lamp_2_0/Medieval_cart_0_Fire_Lamp_1_0_BaseColor.png" id="2_pu0v4"]
-[ext_resource type="Texture2D" uid="uid://b2vlk4xstbbuk" path="res://assets/maps/cart/Textures/Glass_lamp_2_0/Medieval_cart_0_Glass_lamp_1_0_BaseColor.png" id="3_m2ud8"]
-[ext_resource type="Texture2D" uid="uid://di21tcxamuoe8" path="res://assets/maps/cart/Textures/Metal_lamp_2_0/Medieval_cart_0_Metal_lamp_1_0_BaseColor.png" id="4_pi8xq"]
 [ext_resource type="Texture2D" uid="uid://bhp1pqx5ryntw" path="res://assets/maps/cart/Textures/Metal_wheel_2_0/Medieval_cart_2_0_Metal_wheel_2_0_BaseColor.png" id="5_yqusu"]
 [ext_resource type="Texture2D" uid="uid://b8ewwsu7m0wqk" path="res://assets/maps/cart/Textures/Wood_cart_2_0/Medieval_cart_2_0_Wood_cart_2_0_BaseColor.png" id="6_hwkn4"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0v18r"]
-albedo_texture = ExtResource("2_pu0v4")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cl1up"]
-albedo_texture = ExtResource("3_m2ud8")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kwbiu"]
-albedo_texture = ExtResource("4_pi8xq")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_76u18"]
 albedo_texture = ExtResource("5_yqusu")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x22bc"]
-albedo_texture = ExtResource("6_hwkn4")
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h012w"]
 albedo_texture = ExtResource("6_hwkn4")
 
-[node name="cart" unique_id=1807776057 instance=ExtResource("1_4oxfu")]
+[node name="cart" unique_id=473548646 instance=ExtResource("1_4oxfu")]
 
-[node name="Fire_lamp_2_0" parent="." index="0" unique_id=1099182424]
-surface_material_override/0 = SubResource("StandardMaterial3D_0v18r")
-
-[node name="Glass_lamp_2_0" parent="." index="1" unique_id=399917331]
-surface_material_override/0 = SubResource("StandardMaterial3D_cl1up")
-
-[node name="Metal_lamp_2_0" parent="." index="2" unique_id=77911613]
-surface_material_override/0 = SubResource("StandardMaterial3D_kwbiu")
-
-[node name="Metal_2_0" parent="Metal_2_0" parent_id_path=PackedInt32Array(1089135027) index="0" unique_id=1079727926]
+[node name="Metal_2_0" parent="Metal_2_0" parent_id_path=PackedInt32Array(1003692415) index="0" unique_id=1372115244]
 surface_material_override/0 = SubResource("StandardMaterial3D_76u18")
 
-[node name="Rope_2_0" parent="." index="4" unique_id=342072527]
-surface_material_override/0 = SubResource("StandardMaterial3D_x22bc")
-
-[node name="Wood_cart_2_0" parent="." index="5" unique_id=1113010277]
+[node name="Wood_cart_2_0" parent="." index="1" unique_id=824175806]
 surface_material_override/0 = SubResource("StandardMaterial3D_h012w")

@@ -11,8 +11,17 @@ emission_energy_multiplier = 2.0
 [sub_resource type="BoxMesh" id="BoxMesh_g8n2n"]
 material = SubResource("StandardMaterial3D_jm1hl")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_p2eml"]
+size = Vector3(1.1376953, 1.1244507, 1.1427002)
+
 [node name="Lampion" unique_id=1111887277 instance=ExtResource("1_jm1hl")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." index="1" unique_id=1695159882]
 transform = Transform3D(0.913, 0, 0, 0, 0.913, 0, 0, 0, 0.913, 0, 0.50606453, 0)
 mesh = SubResource("BoxMesh_g8n2n")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=34234016]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=911304317]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0063476563, 0.56362915, -0.014587402)
+shape = SubResource("BoxShape3D_p2eml")

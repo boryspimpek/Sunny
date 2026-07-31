@@ -1,28 +1,10 @@
 [gd_scene format=3 uid="uid://b41bqwwxy51ap"]
 
-[ext_resource type="PackedScene" uid="uid://c6kymmw8e2np4" path="res://assets/maps/hunyuan/VolcanRosk5/20260725061041_8f5a65f6.fbx" id="1_2431s"]
+[ext_resource type="PackedScene" uid="uid://hlihdnt1xnnn" path="res://assets/maps/hunyuan/VolcanRosk5/20260725061041_8f5a65f6.fbx" id="1_2431s"]
 [ext_resource type="Material" uid="uid://b60kbvye8d0pk" path="res://volcano_rock05.tres" id="2_ns5gk"]
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_ns5gk"]
-height = 0.08258057
-radius = 0.43066406
+[node name="volcano_rock5" unique_id=1670632297 instance=ExtResource("1_2431s")]
+transform = Transform3D(-4.371139e-07, 0, 10, 0, 10, 0, -10, 0, -4.371139e-07, 0, 0, 0)
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_nvk8c"]
-height = 0.11453247
-radius = 0.3544922
-
-[node name="volcano_rock5" unique_id=1586779728 instance=ExtResource("1_2431s")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
-
-[node name="Mesh_0" parent="." index="0" unique_id=1283007480]
+[node name="tripo_node_706c3ea5" parent="." index="0" unique_id=1077425522]
 surface_material_override/0 = ExtResource("2_ns5gk")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1511567106]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1312077358]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03322797, -0.007751465)
-shape = SubResource("CylinderShape3D_ns5gk")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1" unique_id=1572001353]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1352916, -0.007751465)
-shape = SubResource("CylinderShape3D_nvk8c")

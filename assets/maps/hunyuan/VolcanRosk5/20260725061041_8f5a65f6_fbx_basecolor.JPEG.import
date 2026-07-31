@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://by11l0or6qndd"
-path.s3tc="res://.godot/imported/20260725061041_8f5a65f6_1.png-a00ad60606a689728089569a8a8c09e9.s3tc.ctex"
+uid="uid://dyr4gs5ply0c2"
+path.s3tc="res://.godot/imported/20260725061041_8f5a65f6_fbx_basecolor.JPEG-dfe21ec4dc0b2399a81b5f584245626b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "016bf7f57c9d87936d5754b54c5ce9e1"
-}
 
 [deps]
 
-source_file="res://assets/maps/hunyuan/VolcanRosk5/20260725061041_8f5a65f6_1.png"
-dest_files=["res://.godot/imported/20260725061041_8f5a65f6_1.png-a00ad60606a689728089569a8a8c09e9.s3tc.ctex"]
+source_file="res://assets/maps/hunyuan/VolcanRosk5/20260725061041_8f5a65f6_fbx_basecolor.JPEG"
+dest_files=["res://.godot/imported/20260725061041_8f5a65f6_fbx_basecolor.JPEG-dfe21ec4dc0b2399a81b5f584245626b.s3tc.ctex"]
 
 [params]
 
@@ -25,12 +22,12 @@ compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=1
+compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=1
-roughness/src_normal="res://assets/maps/hunyuan/VolcanRosk5/20260725061041_8f5a65f6_1.png"
+roughness/mode=0
+roughness/src_normal=""
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2
@@ -40,5 +37,5 @@ process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
-process/size_limit=0
+process/size_limit=1024
 detect_3d/compress_to=0

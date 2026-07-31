@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://423o36tdw4u5"]
+
+[ext_resource type="PackedScene" uid="uid://djq0bngrwjcs" path="res://assets/maps/inferno/Separate_assets_fbx/CirclePlatformSmall_001.fbx" id="1_mokki"]
+[ext_resource type="Texture2D" uid="uid://7pq675hylbh6" path="res://assets/maps/inferno/Textures_4.png" id="2_xyelo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0wecy"]
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.5649617, 0.5649616, 0.5649616, 1)
+albedo_texture = ExtResource("2_xyelo")
+metallic = 0.65
+roughness = 0.47
+
+[node name="CirclePlatformSmall_001" unique_id=1260144194 instance=ExtResource("1_mokki")]
+
+[node name="CirclePlatformSmall_001" parent="." index="0" unique_id=1748559089]
+surface_material_override/0 = SubResource("StandardMaterial3D_0wecy")

@@ -3,7 +3,13 @@
 [ext_resource type="PackedScene" uid="uid://cqcuu8kf2wl1c" path="res://assets/maps/hunyuan/20260724061553_7c8465fc.fbx" id="1_afwkg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5efd4"]
-size = Vector3(0.18945313, 0.99664307, 0.18560791)
+size = Vector3(0.16308594, 0.99664307, 0.1589508)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yx6eu"]
+size = Vector3(0.26330566, 0.09402466, 0.2614174)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nbwfp"]
+size = Vector3(0.20718384, 0.14490509, 0.20689487)
 
 [node name="column_small" unique_id=3772666 instance=ExtResource("1_afwkg")]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0)
@@ -11,5 +17,13 @@ transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0)
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=990169949]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=315457575]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49713016, 0.0020446777)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00048828125, 0.49713016, 0.0009536743)
 shape = SubResource("BoxShape3D_5efd4")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1" unique_id=1098419058]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00018310547, 0.04582095, -0.00017356873)
+shape = SubResource("BoxShape3D_yx6eu")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" index="2" unique_id=235871969]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0005950928, 0.16484642, -0.00022745132)
+shape = SubResource("BoxShape3D_nbwfp")

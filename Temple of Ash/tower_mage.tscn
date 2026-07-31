@@ -2,4 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://b5yejkpk3dsq6" path="res://assets/maps/hunyuan/tower_mage/tripo_convert_fc5def4d-e6d7-45c8-a280-412eb93bdde6.fbx" id="1_h8hhn"]
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_h8hhn"]
+height = 0.20654297
+radius = 0.16210938
+
 [node name="tower_mage" unique_id=1347448566 instance=ExtResource("1_h8hhn")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=948662483]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=282931808]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10522461, 0)
+shape = SubResource("CylinderShape3D_h8hhn")
