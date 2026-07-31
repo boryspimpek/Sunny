@@ -10,6 +10,5 @@ extends Resource
 @export var reload_time: float = 1.5
 @export var projectile_scene: PackedScene
 @export var hit_effect_scene: PackedScene
-@export var muzzle_flash_scene: PackedScene
 @export var fire_sound: AudioStream
 @export var reload_sound: AudioStream

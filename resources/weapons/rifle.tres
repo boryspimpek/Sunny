@@ -3,7 +3,6 @@
 [ext_resource type="AudioStream" uid="uid://6ua44l3hlonh" path="res://assets/sounds/guns/Full Sounds/20 Gauge/MP3/20 Gauge Single edit.mp3" id="1_0lkds"]
 [ext_resource type="Script" uid="uid://cvvv5c76nldjs" path="res://src/weapons/weapon_resource.gd" id="1_c0rnk"]
 [ext_resource type="PackedScene" uid="uid://dbxojkr0k7vsg" path="res://assets/BinbunVFX_Vol2/StylizedHitFX/effects/hit/vfx_hit_01.tscn" id="2_p2jh4"]
-[ext_resource type="PackedScene" uid="uid://dd7uf7xlh4l1w" path="res://assets/BinbunVFX/muzzle_flash/effects/muzzle_flash/muzzle_flash_01.tscn" id="3_dggia"]
 [ext_resource type="AudioStream" uid="uid://6pw252xntcsc" path="res://assets/sounds/guns/reload/gun-reload.mp3" id="4_ys2y7"]
 
 [resource]
@@ -12,7 +11,6 @@ display_name = "Rifle"
 fire_interval = 0.1
 magazine_size = 30
 hit_effect_scene = ExtResource("2_p2jh4")
-muzzle_flash_scene = ExtResource("3_dggia")
 fire_sound = ExtResource("1_0lkds")
 reload_sound = ExtResource("4_ys2y7")
 metadata/_custom_type_script = "uid://cvvv5c76nldjs"

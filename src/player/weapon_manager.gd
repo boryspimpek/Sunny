@@ -115,13 +115,11 @@ func _shoot() -> void:
 		if weapon.hit_effect_scene != null:
 			_spawn_hit_effect(result["position"], weapon.hit_effect_scene)
 
-	if weapon.muzzle_flash_scene != null:
-		var muzzle: Node3D = weapon.muzzle_flash_scene.instantiate()
-		body.get_parent().add_child(muzzle)
-		muzzle.global_position = spawn_pos + direction
-		muzzle.look_at(muzzle.global_position + direction)
-		muzzle.rotate_object_local(Vector3.UP, deg_to_rad(90))
-		get_tree().create_timer(0.5).timeout.connect(muzzle.queue_free)
+	if muzzle_marker != null:
+		for child in muzzle_marker.get_children():
+			if child is VFXController:
+				child.play()
+				break
 
 	fire_cooldown = weapon.fire_interval
 
