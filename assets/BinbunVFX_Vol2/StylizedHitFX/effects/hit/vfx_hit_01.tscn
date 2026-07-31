@@ -81,6 +81,18 @@ tracks/5/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("GPUParticles3D4:emitting")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_7ctnx"]
 resource_local_to_scene = true
@@ -154,6 +166,18 @@ tracks/5/path = NodePath("AudioStreamPlayer3D:playing")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("GPUParticles3D4:emitting")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -374,6 +398,34 @@ alpha_curve = SubResource("CurveTexture_lyxse")
 [sub_resource type="QuadMesh" id="QuadMesh_6dt2h"]
 size = Vector2(0.5, 0.5)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p6wwc"]
+render_priority = 0
+shader = ExtResource("3_7ctnx")
+shader_parameter/primary_color = Color(1, 0, 0, 1)
+shader_parameter/secondary_color = Color(0, 1, 0, 1)
+shader_parameter/emission = 2.0
+shader_parameter/emission_mult = 1.0
+
+[sub_resource type="Curve" id="Curve_q2p1u"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_5tyqd"]
+curve = SubResource("Curve_q2p1u")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hq3bn"]
+spread = 180.0
+initial_velocity_min = 4.0
+initial_velocity_max = 7.0
+gravity = Vector3(0, -10, 0)
+scale_min = 0.7
+scale_max = 1.3
+scale_curve = SubResource("CurveTexture_5tyqd")
+
+[sub_resource type="SphereMesh" id="SphereMesh_t75h5"]
+radius = 0.05
+height = 0.6
+
 [node name="VFXHit_01" type="Node3D" unique_id=1851836445]
 script = ExtResource("1_uno15")
 primary_color = Color(1, 1, 1, 1)
@@ -387,6 +439,7 @@ libraries/ = SubResource("AnimationLibrary_ffe1e")
 
 [node name="Glow" type="MeshInstance3D" parent="." unique_id=194988872]
 transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+visible = false
 material_override = SubResource("ShaderMaterial_2trc5")
 mesh = SubResource("SphereMesh_t0cbq")
 
@@ -402,6 +455,7 @@ process_material = SubResource("ParticleProcessMaterial_kn1xq")
 draw_pass_1 = SubResource("QuadMesh_o2nyg")
 
 [node name="VFXOmniLightBB" type="OmniLight3D" parent="." unique_id=1272882803]
+visible = false
 light_color = Color(1, 0.8, 0.4, 1)
 light_energy = 0.0
 light_indirect_energy = 0.0
@@ -412,6 +466,7 @@ light_mult = 0.0
 vfx_light_energy = 2.0
 
 [node name="GPUParticles3D3" type="GPUParticles3D" parent="." unique_id=1694832712]
+visible = false
 material_override = SubResource("ShaderMaterial_r6874")
 emitting = false
 amount = 2
@@ -423,6 +478,7 @@ process_material = SubResource("ParticleProcessMaterial_aaoak")
 draw_pass_1 = SubResource("QuadMesh_lg0dv")
 
 [node name="HitCore" type="GPUParticles3D" parent="." unique_id=1162759326]
+visible = false
 material_override = SubResource("ShaderMaterial_05nkx")
 emitting = false
 amount = 2
@@ -435,3 +491,13 @@ draw_pass_1 = SubResource("QuadMesh_6dt2h")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=264469949]
 visible = false
+
+[node name="GPUParticles3D4" type="GPUParticles3D" parent="." unique_id=1262736344]
+material_override = SubResource("ShaderMaterial_p6wwc")
+emitting = false
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+transform_align = 2
+process_material = SubResource("ParticleProcessMaterial_hq3bn")
+draw_pass_1 = SubResource("SphereMesh_t75h5")

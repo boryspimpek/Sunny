@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://tlptcmxnexnp"]
+
+[ext_resource type="Shader" uid="uid://d2u23w24knljb" path="res://assets/BinbunVFX_Vol2/StylizedHitFX/shader/glow.gdshader" id="1_fqtoy"]
+[ext_resource type="Shader" uid="uid://bgfcf3e3clj6s" path="res://assets/BinbunVFX_Vol2/StylizedHitFX/shader/streaks.gdshader" id="2_kl7et"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t06v4"]
+render_priority = 0
+shader = ExtResource("1_fqtoy")
+shader_parameter/primary_color = Color(1, 1, 1, 1)
+shader_parameter/secondary_color = Color(1, 0.8, 0.4, 1)
+shader_parameter/emission = 2.0
+shader_parameter/emission_mult = 1.0
+
+[sub_resource type="Curve" id="Curve_h75fp"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_3ytvb"]
+curve = SubResource("Curve_h75fp")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_aomd5"]
+spread = 180.0
+initial_velocity_min = 4.0
+initial_velocity_max = 7.0
+gravity = Vector3(0, -10, 0)
+scale_min = 0.7
+scale_max = 1.3
+scale_curve = SubResource("CurveTexture_3ytvb")
+
+[sub_resource type="SphereMesh" id="SphereMesh_o148u"]
+radius = 0.05
+height = 0.6
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dxk1s"]
+render_priority = 0
+shader = ExtResource("2_kl7et")
+shader_parameter/primary_color = Color(1, 1, 1, 1)
+shader_parameter/secondary_color = Color(1, 0.8, 0.4, 1)
+shader_parameter/emission = 4.0
+shader_parameter/emission_mult = 1.0
+shader_parameter/streaks1_count = 15.0
+shader_parameter/streaks2_count = 21.0
+shader_parameter/streaks_fade = 0.7199999392025598
+shader_parameter/streaks_thickness = 0.0
+shader_parameter/center_radius = 0.0
+shader_parameter/fade_radius = 0.38999999128272
+shader_parameter/proximity_fade = false
+shader_parameter/proximity_fade_distance = 1.0
+shader_parameter/billboard = false
+
+[sub_resource type="Curve" id="Curve_n7sej"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -0.105191775, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_fm4iy"]
+curve = SubResource("Curve_n7sej")
+
+[sub_resource type="Curve" id="Curve_pbgmp"]
+_data = [Vector2(0, 0.764045), 0.0, 0.8244758, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_vj1h5"]
+curve = SubResource("Curve_pbgmp")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ofyeu"]
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_vj1h5")
+alpha_curve = SubResource("CurveTexture_fm4iy")
+
+[sub_resource type="QuadMesh" id="QuadMesh_e1jv1"]
+size = Vector2(2, 2)
+
+[node name="Node3D" type="Node3D" unique_id=2105422127]
+
+[node name="GPUParticles3D4" type="GPUParticles3D" parent="." unique_id=2049534916]
+material_override = SubResource("ShaderMaterial_t06v4")
+emitting = false
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+transform_align = 2
+process_material = SubResource("ParticleProcessMaterial_aomd5")
+draw_pass_1 = SubResource("SphereMesh_o148u")
+
+[node name="GPUParticles3D2" type="GPUParticles3D" parent="." unique_id=1475318439]
+material_override = SubResource("ShaderMaterial_dxk1s")
+emitting = false
+amount = 1
+lifetime = 0.3
+one_shot = true
+explosiveness = 0.9
+transform_align = 1
+process_material = SubResource("ParticleProcessMaterial_ofyeu")
+draw_pass_1 = SubResource("QuadMesh_e1jv1")

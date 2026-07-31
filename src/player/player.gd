@@ -48,6 +48,11 @@ func _physics_process(delta: float) -> void:
 		print("toggle_flashlight action triggered")
 		flashlight.visible = not flashlight.visible
 
+	if Input.is_action_just_pressed("weapon_1"):
+		weapon_manager.switch_weapon(0)
+	if Input.is_action_just_pressed("weapon_2"):
+		weapon_manager.switch_weapon(1)
+
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventJoypadButton:
