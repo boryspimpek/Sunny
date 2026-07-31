@@ -5,7 +5,6 @@ extends CharacterBody3D
 
 @export var score_value: int = 10
 @export var drops: Array[PackedScene] = []
-@export var death_sound: AudioStream
 
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 var movement_behavior: MovementBehavior
@@ -76,8 +75,7 @@ func _on_died() -> void:
 		var dying_audio := get_node_or_null("ZombieDying") as AudioStreamPlayer3D
 		if dying_audio != null:
 			dying_audio.play()
-		elif death_sound != null:
-			EventBus.sfx_requested.emit(death_sound, global_position)
+
 		await animation_player.animation_finished
 	_spawn_drops()
 	queue_free()
