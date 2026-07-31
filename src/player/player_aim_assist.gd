@@ -5,6 +5,7 @@ extends Node
 @export var aim_assist_strength: float = 4.0
 @export_range(1.0, 45.0, 1.0, "degrees") var aim_assist_cone: float = 18.0
 @export var aim_assist_range: float = 20.0
+@export var aim_assist_min_range: float = 2.0
 
 @onready var body: CharacterBody3D = get_parent()
 @onready var spring_arm_pivot: Node3D = body.get_node("SpringArmPivot")
@@ -26,7 +27,8 @@ func apply(delta: float) -> void:
 			continue
 		var direction_to_enemy := enemy.global_position - camera.global_position
 		direction_to_enemy.y = 0.0
-		if direction_to_enemy.length() > aim_assist_range or direction_to_enemy.is_zero_approx():
+		var distance := direction_to_enemy.length()
+		if distance < aim_assist_min_range or distance > aim_assist_range or direction_to_enemy.is_zero_approx():
 			continue
 		var alignment := camera_forward.dot(direction_to_enemy.normalized())
 		if alignment > best_alignment:

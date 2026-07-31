@@ -269,6 +269,7 @@ aim_ray_length = 50.0
 [node name="PlayerAimAssist" type="Node" parent="." index="12" unique_id=2090359588]
 script = ExtResource("21_cv7xd")
 aim_assist_range = 30.0
+aim_assist_min_range = 3.0
 
 [node name="PlayerAnimator" type="Node" parent="." index="13" unique_id=534904250]
 script = ExtResource("22_5k5ha")
