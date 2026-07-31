@@ -23,7 +23,7 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	animator.update_roll()
+	animator.update_roll(delta)
 
 	var combat_mode_held := Input.is_action_pressed("combat_mode")
 	if combat_mode != combat_mode_held:
