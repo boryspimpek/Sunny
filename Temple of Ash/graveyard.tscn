@@ -3,10 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://bvx6fwj5rk2do" path="res://Temple of Ash/candle.tscn" id="14_mq1g0"]
 [ext_resource type="PackedScene" uid="uid://c54iqox6kd2rk" path="res://assets/BinbunVFX_Vol2/FlameFX/effects/fire/vfx_basic_fire_04.tscn" id="15_qkk3s"]
 [ext_resource type="PackedScene" uid="uid://bqs66jnkx2yvl" path="res://Temple of Ash/candle_multiple.tscn" id="16_rfkeb"]
-[ext_resource type="Shader" uid="uid://bi3o8elbtqoni" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="17_mnv8v"]
-[ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="18_dujrm"]
-[ext_resource type="MultiMesh" uid="uid://0n3qjg6gh6kf" path="res://resources/grass/graveyard_grass.res" id="19_buy7u"]
-[ext_resource type="Script" uid="uid://2juaclm8gc1n" path="res://addons/simplegrasstextured/grass.gd" id="20_d11xw"]
 [ext_resource type="PackedScene" uid="uid://bkho2rp3e13lo" path="res://Temple of Ash/column_large.tscn" id="21_dujrm"]
 [ext_resource type="PackedScene" uid="uid://4wbtcvas5srm" path="res://Temple of Ash/stone_wall_column.tscn" id="22_buy7u"]
 [ext_resource type="PackedScene" uid="uid://0uegyc3dimo7" path="res://Temple of Ash/altar.tscn" id="22_d11xw"]
@@ -21,45 +17,6 @@
 [ext_resource type="PackedScene" uid="uid://bfiofy3lh8qdp" path="res://Temple of Ash/gravestone_cross.tscn" id="31_g34tn"]
 [ext_resource type="PackedScene" uid="uid://bpuutv73ra1jt" path="res://Temple of Ash/gravestone_decorative.tscn" id="32_hf7n2"]
 [ext_resource type="PackedScene" uid="uid://creiemlr17hog" path="res://Temple of Ash/grave.tscn" id="33_rsa53"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mnv8v"]
-cull_mode = 1
-albedo_color = Color(0.15716907, 0.06363588, 0.011585451, 1)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_mq1g0"]
-material = SubResource("StandardMaterial3D_mnv8v")
-size = Vector2(1.925, 2)
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_buy7u"]
-data = PackedVector3Array(0.9625, 0, 1, -0.9625, 0, 1, 0.9625, 0, -1, -0.9625, 0, 1, -0.9625, 0, -1, 0.9625, 0, -1)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_rxvwe"]
-render_priority = 0
-shader = ExtResource("17_mnv8v")
-shader_parameter/albedo = Color(0.5654406, 0.29156807, 1.92523e-07, 1)
-shader_parameter/texture_albedo = ExtResource("18_dujrm")
-shader_parameter/texture_frames = Vector2(1, 1)
-shader_parameter/light_mode = 1
-shader_parameter/alpha_scissor_threshold = 0.5
-shader_parameter/normal_scale = 1.0
-shader_parameter/metallic = 0.0
-shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
-shader_parameter/roughness = 1.0
-shader_parameter/roughness_texture_channel = Vector4(1, 0, 0, 0)
-shader_parameter/specular = 0.5
-shader_parameter/scale_h = 1.0
-shader_parameter/scale_w = 1.0
-shader_parameter/scale_var = -0.25
-shader_parameter/grass_strength = 0.55
-shader_parameter/optimization_by_distance = false
-shader_parameter/optimization_level = 7.0
-shader_parameter/optimization_dist_min = 10.0
-shader_parameter/optimization_dist_max = 50.0
-shader_parameter/grass_size_y = 1.0
-shader_parameter/interactive_mode = true
-shader_parameter/interactive_level_xz = 3.0
-shader_parameter/interactive_level_y = 0.3
-metadata/SimpleGrassTexturedMaterial = "2.1.0"
 
 [node name="graveyard" type="Node3D" unique_id=685864153]
 
@@ -1049,37 +1006,6 @@ transform = Transform3D(0.009913317, 0, 1.9999754, 0, 2, 0, -1.9999754, 0, 0.009
 
 [node name="grave12" parent="Grave" unique_id=1047747470 instance=ExtResource("33_rsa53")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 10.082267, 0, 8.034995)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1808615327]
-transform = Transform3D(26.335, 0, 0, 0, 26.335, 0, 0, 0, 26.335, 0.7104454, 0, 3.463436)
-mesh = SubResource("PlaneMesh_mq1g0")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=1542046430]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=746866410]
-shape = SubResource("ConcavePolygonShape3D_buy7u")
-
-[node name="SimpleGrassTextured" type="MultiMeshInstance3D" parent="MeshInstance3D" unique_id=964349447]
-transform = Transform3D(0.037972283, 0, 0, 0, 0.037972283, 0, 0, 0, 0.037972283, 0, 0, 0)
-material_override = SubResource("ShaderMaterial_rxvwe")
-multimesh = ExtResource("19_buy7u")
-script = ExtResource("20_d11xw")
-albedo = Color(0.5654406, 0.29156807, 1.92523e-07, 1)
-sgt_radius = 2.0
-sgt_density = 25
-sgt_scale = 0.5
-sgt_rotation = 0.0
-sgt_rotation_rand = 1.0
-sgt_dist_min = 0.25
-sgt_follow_normal = false
-sgt_slope = Vector2(0, 45)
-sgt_tool_shape = {
-"airbrush": 1,
-"eraser": 0,
-"pencil": 1
-}
-metadata/_custom_type_script = "uid://2juaclm8gc1n"
-metadata/SimpleGrassTextured = "2.0.5"
 
 [node name="altar" parent="." unique_id=1885183151 instance=ExtResource("22_d11xw")]
 transform = Transform3D(3.987014, 0, 9.170816, 0, 10.000003, 0, -9.170816, 0, 3.987014, -9.265695, -0.021242268, 0.7555058)
