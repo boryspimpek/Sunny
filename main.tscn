@@ -66,10 +66,17 @@ parameters/looping = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.769217, 10.193308, 84.73744)
 script = ExtResource("6_272bh")
 enemy_scene = ExtResource("7_272bh")
-spawn_points = [NodePath("CollisionShape3D/Marker3D")]
+max_spawns = 3
+spawn_points = [NodePath("CollisionShape3D/Marker3D"), NodePath("CollisionShape3D/Marker3D2"), NodePath("CollisionShape3D/Marker3D3")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1987519853]
 shape = SubResource("SphereShape3D_5vw27")
 
 [node name="Marker3D" type="Marker3D" parent="Area3D/CollisionShape3D" unique_id=1666186445]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1776543, -9.536743e-07, -3.7110443)
+
+[node name="Marker3D2" type="Marker3D" parent="Area3D/CollisionShape3D" unique_id=897226185]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9772053, -9.536743e-07, -3.8091583)
+
+[node name="Marker3D3" type="Marker3D" parent="Area3D/CollisionShape3D" unique_id=437891246]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3068275, -9.536743e-07, 0.45197296)
