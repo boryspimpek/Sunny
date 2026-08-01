@@ -8,6 +8,7 @@
 [resource]
 script = ExtResource("1_weapon_res")
 display_name = "Pistol"
+magazine_size = 10
 hit_effect_scene = ExtResource("2_i4ekl")
 fire_sound = ExtResource("1_xq21v")
 reload_sound = ExtResource("3_reload")

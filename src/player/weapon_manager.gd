@@ -18,8 +18,12 @@ func _ready() -> void:
 	for weapon in weapons:
 		ammo.append(weapon.magazine_size)
 	if current_weapon() != null:
-		EventBus.weapon_changed.emit(current_weapon())
-		EventBus.ammo_changed.emit(ammo[current_index], current_weapon().magazine_size)
+		_emit_initial_state.call_deferred()
+
+
+func _emit_initial_state() -> void:
+	EventBus.weapon_changed.emit(current_weapon())
+	EventBus.ammo_changed.emit(ammo[current_index], current_weapon().magazine_size)
 
 
 func current_weapon() -> WeaponResource:
