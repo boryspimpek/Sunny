@@ -14,4 +14,5 @@ magazine_size = 2
 hit_effect_scene = ExtResource("2_l7w0u")
 fire_sound = ExtResource("1_ok5mh")
 reload_sound = ExtResource("3_jbf80")
+use_aim_assist = false
 metadata/_custom_type_script = "uid://cvvv5c76nldjs"

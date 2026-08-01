@@ -35,7 +35,8 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 
-	if combat_mode:
+	var current_weapon := weapon_manager.current_weapon()
+	if combat_mode and (current_weapon == null or current_weapon.use_aim_assist):
 		aim_assist.apply(delta)
 	weapon_manager.update(delta, combat_mode and Input.is_action_pressed("fire"))
 

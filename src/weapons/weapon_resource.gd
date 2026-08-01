@@ -12,3 +12,4 @@ extends Resource
 @export var hit_effect_scene: PackedScene
 @export var fire_sound: AudioStream
 @export var reload_sound: AudioStream
+@export var use_aim_assist: bool = true

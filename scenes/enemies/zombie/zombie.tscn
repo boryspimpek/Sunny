@@ -932,7 +932,6 @@ script = ExtResource("4_jabed")
 script = ExtResource("7_7e2u1")
 detection_range = 12.0
 stop_distance = 1.0
-idle_animation = &"ZombieMoves/thriller2"
 walk_animation = &"ZombieMoves/run"
 separation_strength = 1.0
 

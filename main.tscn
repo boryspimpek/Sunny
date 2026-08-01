@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dgj0fo2egp0sy" path="res://scenes/player_2/player_2.tscn" id="3_272bh"]
 [ext_resource type="Texture2D" uid="uid://b5vpsa5hv018t" path="res://assets/sky box/moonless_golf_4k.exr" id="5_5vw27"]
 [ext_resource type="Script" uid="uid://ctpir6gh6tmsw" path="res://src/enemies/enemy_spawner.gd" id="6_272bh"]
-[ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="6_hud"]
+[ext_resource type="PackedScene" uid="uid://b5fjj6cs0u2t6" path="res://scenes/ui/hud.tscn" id="6_hud"]
 [ext_resource type="PackedScene" uid="uid://blfod00qqelea" path="res://scenes/enemies/zombie/zombie.tscn" id="7_272bh"]
 [ext_resource type="AudioStream" uid="uid://bytf04c1cd68t" path="res://assets/soundtrack/Temple of Ash (3).mp3" id="8_5vw27"]
 [ext_resource type="Script" uid="uid://blvnf6s7e3ft" path="res://src/enemies/ambient_enemy_spawner.gd" id="8_kek77"]
@@ -84,3 +84,6 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -5.059511, -0.9488363, 
 script = ExtResource("8_kek77")
 enemy_scene = ExtResource("7_272bh")
 max_spawn_count = 10
+
+[node name="zombie" parent="." unique_id=464793429 instance=ExtResource("7_272bh")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 14.5425415, 10.156159, 93.1946)
