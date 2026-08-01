@@ -4,9 +4,24 @@ extends AttackBehavior
 
 @export var attack_range: float = 1.5
 @export var attack_cooldown: float = 1.0
-@export var attack_animation: StringName = "ZombieMoves/punching_left"
+@export var attack_animations: Array[StringName] = [
+	"ZombieMoves/attack_left",
+	"ZombieMoves/attack_right",
+	"ZombieMoves/punching_left",
+	"ZombieMoves/punching_right"
+]
 
 var _cooldown: float = 0.0
+
+
+func _pick_attack() -> StringName:
+	if attack_animations.is_empty():
+		return &""
+	return attack_animations[randi() % attack_animations.size()]
+
+
+func _is_attack_animation(anim_name: StringName) -> bool:
+	return anim_name in attack_animations
 
 
 func try_attack(enemy: Enemy, target: Node3D, delta: float) -> void:
@@ -25,13 +40,17 @@ func try_attack(enemy: Enemy, target: Node3D, delta: float) -> void:
 	if anim == null:
 		return
 
-	if anim.current_animation == attack_animation and anim.is_playing():
+	if _is_attack_animation(anim.current_animation) and anim.is_playing():
 		return
 
-	anim.play(attack_animation)
+	var attack := _pick_attack()
+	if attack == &"":
+		return
+
+	anim.play(attack)
 	_cooldown = attack_cooldown
 
 
 func is_attacking(enemy: Enemy) -> bool:
 	var anim := enemy.get_node_or_null("AnimationPlayer") as AnimationPlayer
-	return anim != null and anim.current_animation == attack_animation and anim.is_playing()
+	return anim != null and _is_attack_animation(anim.current_animation) and anim.is_playing()

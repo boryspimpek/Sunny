@@ -938,7 +938,6 @@ separation_strength = 1.0
 
 [node name="AttackBehavior" type="Node" parent="." index="4" unique_id=278806177]
 script = ExtResource("8_7e2u1")
-attack_animation = &"ZombieMoves/attack_left"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="5" unique_id=1658878695]
 stream = ExtResource("9_leu6i")
