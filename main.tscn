@@ -8,16 +8,19 @@
 [ext_resource type="PackedScene" uid="uid://blfod00qqelea" path="res://scenes/enemies/zombie/zombie.tscn" id="7_272bh"]
 [ext_resource type="AudioStream" uid="uid://bytf04c1cd68t" path="res://assets/soundtrack/Temple of Ash (3).mp3" id="8_5vw27"]
 [ext_resource type="Script" uid="uid://blvnf6s7e3ft" path="res://src/enemies/ambient_enemy_spawner.gd" id="8_kek77"]
+[ext_resource type="PackedScene" uid="uid://cv0b82o70cme4" path="res://scenes/enemies/zombie/zombie_dancer.tscn" id="9_kek77"]
 
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_jyhfs"]
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_4c57u"]
 panorama = ExtResource("5_5vw27")
 
-[sub_resource type="Sky" id="Sky_tbgi4"]
-sky_material = SubResource("PanoramaSkyMaterial_jyhfs")
+[sub_resource type="Sky" id="Sky_5vw27"]
+sky_material = SubResource("PanoramaSkyMaterial_4c57u")
 
 [sub_resource type="Environment" id="Environment_0wfyh"]
 background_mode = 2
-sky = SubResource("Sky_tbgi4")
+background_color = Color(0.20152658, 0.20152658, 0.20152658, 1)
+sky = SubResource("Sky_5vw27")
+sky_rotation = Vector3(0, -1.0925761, 0)
 tonemap_mode = 3
 glow_enabled = true
 glow_intensity = 1.0
@@ -28,7 +31,7 @@ fog_density = 0.03
 fog_sky_affect = 0.987
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.028
-volumetric_fog_albedo = Color(1, 0, 0, 1)
+volumetric_fog_albedo = Color(0.57266915, 1.1792034e-06, 3.3691526e-07, 1)
 volumetric_fog_emission_energy = 977.53
 volumetric_fog_gi_inject = 0.44
 volumetric_fog_anisotropy = 0.9
@@ -60,6 +63,8 @@ directional_shadow_max_distance = 20.0
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=145163531]
 stream = ExtResource("8_5vw27")
+autoplay = true
+max_distance = 1000.0
 parameters/looping = true
 
 [node name="Area3D" type="Area3D" parent="." unique_id=335030576 node_paths=PackedStringArray("spawn_points")]
@@ -85,5 +90,14 @@ script = ExtResource("8_kek77")
 enemy_scene = ExtResource("7_272bh")
 max_spawn_count = 10
 
-[node name="zombie" parent="." unique_id=464793429 instance=ExtResource("7_272bh")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 14.5425415, 10.156159, 93.1946)
+[node name="zombie" parent="." unique_id=1513430575 instance=ExtResource("9_kek77")]
+transform = Transform3D(1.4686428, 0, 0.30510378, 0, 1.5, 0, -0.30510378, 0, 1.4686428, -9.7658825, 14.612109, 1.3808455)
+standup_animation = &"ZombieMoves/standup1"
+
+[node name="zombie2" parent="." unique_id=1225678154 instance=ExtResource("9_kek77")]
+transform = Transform3D(1.4686428, 0, 0.30510378, 0, 1.5, 0, -0.30510378, 0, 1.4686428, -7.532672, 14.612109, 2.2695556)
+standup_animation = &"ZombieMoves/standup1"
+
+[node name="zombie3" parent="." unique_id=1583239299 instance=ExtResource("9_kek77")]
+transform = Transform3D(1.4686428, 0, 0.30510378, 0, 1.5, 0, -0.30510378, 0, 1.4686428, -5.8206778, 14.612109, 0.31962729)
+standup_animation = &"ZombieMoves/standup1"

@@ -311,19 +311,19 @@ size = Vector3(47.886047, 3.1340332, 3.1798153)
 size = Vector3(5.325447, 3.1340332, 102.724304)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e0d2s"]
-size = Vector3(10.206391, 3.1340332, 14.260946)
+size = Vector3(30.180344, 3.1340332, 24.446218)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0n0ig"]
-size = Vector3(21.902264, 3.1340332, 22.304714)
+size = Vector3(46.27525, 3.1340332, 40.553963)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_m0mba"]
-size = Vector3(18.965292, 3.1340332, 12.873298)
+size = Vector3(30.009024, 3.1340332, 45.68416)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_velnv"]
 size = Vector3(4.2936254, 3.1340332, 14.260946)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jy4y4"]
-size = Vector3(17.436148, 3.1340332, 12.036833)
+size = Vector3(37.316925, 3.1340332, 28.22741)
 
 [node name="Arena" type="MeshInstance3D" unique_id=1919387517]
 script = ExtResource("1_6d7ox")
@@ -2168,24 +2168,24 @@ marker_group = &"house1"
 spawn_interval = 0.5
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Enemies/House1" unique_id=2108678404]
-transform = Transform3D(0.99138784, 0, 0.1309588, 0, 1, 0, -0.1309588, 0, 0.99138784, -0.58545685, 3.3004827, 2.6983757)
+transform = Transform3D(0.99138784, 0, 0.1309588, 0, 1, 0, -0.1309588, 0, 0.99138784, -10.658508, 3.3004827, 2.7035751)
 shape = SubResource("BoxShape3D_e0d2s")
 debug_color = Color(0, 0, 1, 1)
 
-[node name="Marker3D" type="Marker3D" parent="Enemies/House1/CollisionShape3D" unique_id=1671266895 groups=["house1"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.291191, 0.64938354, -1.8248405)
+[node name="Marker3D" type="Marker3D" parent="Enemies/House1" unique_id=1671266895 groups=["house1"]]
+transform = Transform3D(0.99138784, 0, 0.1309588, 0, 1, 0, -0.1309588, 0, 0.99138784, -14.002686, 3.9498663, 2.635048)
 gizmo_extents = 10.0
 
-[node name="Marker3D2" type="Marker3D" parent="Enemies/House1/CollisionShape3D" unique_id=116759510 groups=["house1"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.79763, 0.64938354, 2.784134)
+[node name="Marker3D2" type="Marker3D" parent="Enemies/House1" unique_id=116759510 groups=["house1"]]
+transform = Transform3D(0.99138784, 0, 0.1309588, 0, 1, 0, -0.1309588, 0, 0.99138784, -13.901176, 3.9498663, 7.270653)
 gizmo_extents = 10.0
 
-[node name="Marker3D4" type="Marker3D" parent="Enemies/House1/CollisionShape3D" unique_id=1825389611 groups=["house1"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0546875, 0.64938354, -2.8137321)
+[node name="Marker3D4" type="Marker3D" parent="Enemies/House1" unique_id=1825389611 groups=["house1"]]
+transform = Transform3D(0.99138784, 0, 0.1309588, 0, 1, 0, -0.1309588, 0, 0.99138784, -10.923561, 3.9498663, 1.2308235)
 gizmo_extents = 10.0
 
-[node name="Marker3D6" type="Marker3D" parent="Enemies/House1/CollisionShape3D" unique_id=1870112125 groups=["house1"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.956009, 0.64938354, 2.8731804)
+[node name="Marker3D6" type="Marker3D" parent="Enemies/House1" unique_id=1870112125 groups=["house1"]]
+transform = Transform3D(0.99138784, 0, 0.1309588, 0, 1, 0, -0.1309588, 0, 0.99138784, -8.098206, 3.9498663, 6.593918)
 gizmo_extents = 10.0
 
 [node name="House4" type="Area3D" parent="Enemies" unique_id=1477342388]
@@ -2197,36 +2197,36 @@ marker_group = &"house4"
 spawn_interval = 0.5
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Enemies/House4" unique_id=589052984]
-transform = Transform3D(0.99138784, 0, 0.13095883, 0, 1, 0, -0.13095883, 0, 0.99138784, -0.21853065, 3.3004827, 2.2711868)
+transform = Transform3D(0.99138784, 0, 0.13095883, 0, 1, 0, -0.13095883, 0, 0.99138784, -2.252943, 3.3004827, -6.663994)
 shape = SubResource("BoxShape3D_0n0ig")
 debug_color = Color(0, 0, 1, 1)
 
-[node name="Marker3D" type="Marker3D" parent="Enemies/House4/CollisionShape3D" unique_id=782794072 groups=["house4"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.597166, -0.6932106, -7.458164)
+[node name="Marker3D" type="Marker3D" parent="Enemies/House4" unique_id=782794072 groups=["house4"]]
+transform = Transform3D(0.99138784, 0, 0.13095883, 0, 1, 0, -0.13095883, 0, 0.99138784, -5.6222477, 2.6072721, -7.887123)
 gizmo_extents = 10.0
 
-[node name="Marker3D2" type="Marker3D" parent="Enemies/House4/CollisionShape3D" unique_id=863411650 groups=["house4"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6387558, -0.6932106, 0.3937645)
+[node name="Marker3D2" type="Marker3D" parent="Enemies/House4" unique_id=863411650 groups=["house4"]]
+transform = Transform3D(0.99138784, 0, 0.13095883, 0, 1, 0, -0.13095883, 0, 0.99138784, -3.643814, 2.6072721, -0.2283287)
 gizmo_extents = 10.0
 
-[node name="Marker3D4" type="Marker3D" parent="Enemies/House4/CollisionShape3D" unique_id=2103089486 groups=["house4"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4553242, -0.6932106, -6.3770905)
+[node name="Marker3D4" type="Marker3D" parent="Enemies/House4" unique_id=2103089486 groups=["house4"]]
+transform = Transform3D(0.99138784, 0, 0.13095883, 0, 1, 0, -0.13095883, 0, 0.99138784, 2.0764103, 2.6072721, -14.687008)
 gizmo_extents = 10.0
 
-[node name="Marker3D6" type="Marker3D" parent="Enemies/House4/CollisionShape3D" unique_id=453024068 groups=["house4"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15381622, -0.6932106, 4.193371)
+[node name="Marker3D6" type="Marker3D" parent="Enemies/House4" unique_id=453024068 groups=["house4"]]
+transform = Transform3D(0.99138784, 0, 0.13095883, 0, 1, 0, -0.13095883, 0, 0.99138784, -0.68268204, 2.6072721, 3.2131348)
 gizmo_extents = 10.0
 
-[node name="Marker3D7" type="Marker3D" parent="Enemies/House4/CollisionShape3D" unique_id=434398302 groups=["house4"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3437634, -0.6932106, 2.7356339)
+[node name="Marker3D7" type="Marker3D" parent="Enemies/House4" unique_id=434398302 groups=["house4"]]
+transform = Transform3D(0.99138784, 0, 0.13095883, 0, 1, 0, -0.13095883, 0, 0.99138784, 1.6024857, 2.6072721, 1.4408646)
 gizmo_extents = 10.0
 
-[node name="Marker3D8" type="Marker3D" parent="Enemies/House4/CollisionShape3D" unique_id=1604522684 groups=["house4"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5519257, -0.6932106, 5.0080338)
+[node name="Marker3D8" type="Marker3D" parent="Enemies/House4" unique_id=1604522684 groups=["house4"]]
+transform = Transform3D(0.99138784, 0, 0.13095883, 0, 1, 0, -0.13095883, 0, 0.99138784, 4.089224, 2.6072721, 3.4045105)
 gizmo_extents = 10.0
 
-[node name="Marker3D9" type="Marker3D" parent="Enemies/House4/CollisionShape3D" unique_id=425130817 groups=["house4"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.660288, -1.3833237, -9.528526)
+[node name="Marker3D9" type="Marker3D" parent="Enemies/House4" unique_id=425130817 groups=["house4"]]
+transform = Transform3D(0.99138784, 0, 0.13095883, 0, 1, 0, -0.13095883, 0, 0.99138784, -13.832613, 1.9171591, 5.7393036)
 gizmo_extents = 10.0
 
 [node name="House5" type="Area3D" parent="Enemies" unique_id=157569138]
@@ -2238,36 +2238,36 @@ marker_group = &"house5"
 spawn_interval = 0.5
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Enemies/House5" unique_id=1011119991]
-transform = Transform3D(0.99138784, 0, 0.13095883, 0, 1, 0, -0.13095883, 0, 0.99138784, -9.86713, 3.3004827, 3.622715)
+transform = Transform3D(0.99138784, 0, 0.13095883, 0, 1, 0, -0.13095883, 0, 0.99138784, -13.52124, 3.3004827, 4.6931343)
 shape = SubResource("BoxShape3D_m0mba")
 debug_color = Color(0, 0, 1, 1)
 
-[node name="Marker3D" type="Marker3D" parent="Enemies/House5/CollisionShape3D" unique_id=626528846 groups=["house5"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.35767, -1.4306889, 2.601921)
+[node name="Marker3D" type="Marker3D" parent="Enemies/House5" unique_id=626528846 groups=["house5"]]
+transform = Transform3D(0.99138784, 0, 0.13095883, 0, 1, 0, -0.13095883, 0, 0.99138784, -26.423126, 1.8697939, 9.021946)
 gizmo_extents = 10.0
 
-[node name="Marker3D2" type="Marker3D" parent="Enemies/House5/CollisionShape3D" unique_id=374744530 groups=["house5"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.348719, -1.4306889, -2.1044006)
+[node name="Marker3D2" type="Marker3D" parent="Enemies/House5" unique_id=374744530 groups=["house5"]]
+transform = Transform3D(0.99138784, 0, 0.13095883, 0, 1, 0, -0.13095883, 0, 0.99138784, -26.0392, 1.8697939, 4.2240257)
 gizmo_extents = 10.0
 
-[node name="Marker3D4" type="Marker3D" parent="Enemies/House5/CollisionShape3D" unique_id=1492142360 groups=["house5"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4968224, -1.363245, -11.469135)
+[node name="Marker3D4" type="Marker3D" parent="Enemies/House5" unique_id=1492142360 groups=["house5"]]
+transform = Transform3D(0.99138784, 0, 0.13095883, 0, 1, 0, -0.13095883, 0, 0.99138784, -11.556515, 1.9372377, -7.13517)
 gizmo_extents = 10.0
 
-[node name="Marker3D6" type="Marker3D" parent="Enemies/House5/CollisionShape3D" unique_id=254065120 groups=["house5"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9951057, 0.4684658, 1.9147568)
+[node name="Marker3D6" type="Marker3D" parent="Enemies/House5" unique_id=254065120 groups=["house5"]]
+transform = Transform3D(0.99138784, 0, 0.13095883, 0, 1, 0, -0.13095883, 0, 0.99138784, -9.309788, 3.7689486, 6.068203)
 gizmo_extents = 10.0
 
-[node name="Marker3D7" type="Marker3D" parent="Enemies/House5/CollisionShape3D" unique_id=1778473185 groups=["house5"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0725441, 0.4684658, -2.7487717)
+[node name="Marker3D7" type="Marker3D" parent="Enemies/House5" unique_id=1778473185 groups=["house5"]]
+transform = Transform3D(0.99138784, 0, 0.13095883, 0, 1, 0, -0.13095883, 0, 0.99138784, -9.635185, 3.7689486, 1.3181419)
 gizmo_extents = 10.0
 
-[node name="Marker3D8" type="Marker3D" parent="Enemies/House5/CollisionShape3D" unique_id=1936359660 groups=["house5"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.64748, 0.4684658, 2.9939575)
+[node name="Marker3D8" type="Marker3D" parent="Enemies/House5" unique_id=1936359660 groups=["house5"]]
+transform = Transform3D(0.99138784, 0, 0.13095883, 0, 1, 0, -0.13095883, 0, 0.99138784, -5.3978043, 3.7689486, 5.0320625)
 gizmo_extents = 10.0
 
-[node name="Marker3D9" type="Marker3D" parent="Enemies/House5/CollisionShape3D" unique_id=160988415 groups=["house5"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.262802, -0.22164726, -3.9607697)
+[node name="Marker3D9" type="Marker3D" parent="Enemies/House5" unique_id=160988415 groups=["house5"]]
+transform = Transform3D(0.99138784, 0, 0.13095883, 0, 1, 0, -0.13095883, 0, 0.99138784, -4.647461, 3.0788355, -0.14420319)
 gizmo_extents = 10.0
 
 [node name="House6" type="Area3D" parent="Enemies" unique_id=1384860880]
@@ -2279,36 +2279,36 @@ marker_group = &"house6"
 spawn_interval = 0.5
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Enemies/House6" unique_id=1417212232]
-transform = Transform3D(0.99138784, 0, 0.13095883, 0, 1, 0, -0.13095883, 0, 0.99138784, -9.86713, 3.3004827, 3.622715)
+transform = Transform3D(0.99138784, 0, 0.13095883, 0, 1, 0, -0.13095883, 0, 0.99138784, -8.20237, 3.3004827, 2.793335)
 shape = SubResource("BoxShape3D_m0mba")
 debug_color = Color(0, 0, 1, 1)
 
-[node name="Marker3D" type="Marker3D" parent="Enemies/House6/CollisionShape3D" unique_id=959881464 groups=["house6"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.35767, -1.4306889, 2.601921)
+[node name="Marker3D" type="Marker3D" parent="Enemies/House6" unique_id=959881464 groups=["house6"]]
+transform = Transform3D(0.99138784, 0, 0.13095883, 0, 1, 0, -0.13095883, 0, 0.99138784, -21.104254, 1.8697939, 7.122154)
 gizmo_extents = 10.0
 
-[node name="Marker3D2" type="Marker3D" parent="Enemies/House6/CollisionShape3D" unique_id=720132020 groups=["house6"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.348719, -1.4306889, -2.1044006)
+[node name="Marker3D2" type="Marker3D" parent="Enemies/House6" unique_id=720132020 groups=["house6"]]
+transform = Transform3D(0.99138784, 0, 0.13095883, 0, 1, 0, -0.13095883, 0, 0.99138784, -20.720325, 1.8697939, 2.3242302)
 gizmo_extents = 10.0
 
-[node name="Marker3D4" type="Marker3D" parent="Enemies/House6/CollisionShape3D" unique_id=440819633 groups=["house6"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6151056, -1.363245, -20.597746)
+[node name="Marker3D4" type="Marker3D" parent="Enemies/House6" unique_id=440819633 groups=["house6"]]
+transform = Transform3D(0.99138784, 0, 0.13095883, 0, 1, 0, -0.13095883, 0, 0.99138784, -12.50102, 1.9372377, -17.415508)
 gizmo_extents = 10.0
 
-[node name="Marker3D6" type="Marker3D" parent="Enemies/House6/CollisionShape3D" unique_id=427594269 groups=["house6"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9951067, -1.4104061, 1.914753)
+[node name="Marker3D6" type="Marker3D" parent="Enemies/House6" unique_id=427594269 groups=["house6"]]
+transform = Transform3D(0.99138784, 0, 0.13095883, 0, 1, 0, -0.13095883, 0, 0.99138784, -7.3149567, 1.8900766, 5.231388)
 gizmo_extents = 10.0
 
-[node name="Marker3D7" type="Marker3D" parent="Enemies/House6/CollisionShape3D" unique_id=226346632 groups=["house6"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0725431, -1.4151974, -2.7487755)
+[node name="Marker3D7" type="Marker3D" parent="Enemies/House6" unique_id=226346632 groups=["house6"]]
+transform = Transform3D(0.99138784, 0, 0.13095883, 0, 1, 0, -0.13095883, 0, 0.99138784, -7.4990387, 1.8852854, -0.07222748)
 gizmo_extents = 10.0
 
-[node name="Marker3D8" type="Marker3D" parent="Enemies/House6/CollisionShape3D" unique_id=500520108 groups=["house6"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7896185, -1.3799849, 10.866489)
+[node name="Marker3D8" type="Marker3D" parent="Enemies/House6" unique_id=500520108 groups=["house6"]]
+transform = Transform3D(0.99138784, 0, 0.13095883, 0, 1, 0, -0.13095883, 0, 0.99138784, -10.076416, 1.9204979, 3.3995056)
 gizmo_extents = 10.0
 
-[node name="Marker3D9" type="Marker3D" parent="Enemies/House6/CollisionShape3D" unique_id=221509199 groups=["house6"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.425311, -1.3301716, 7.9293823)
+[node name="Marker3D9" type="Marker3D" parent="Enemies/House6" unique_id=221509199 groups=["house6"]]
+transform = Transform3D(0.99138784, 0, 0.13095883, 0, 1, 0, -0.13095883, 0, 0.99138784, -10.7881775, 1.9703112, 0.71297836)
 gizmo_extents = 10.0
 
 [node name="House3" type="Area3D" parent="Enemies" unique_id=1998909952]
@@ -2349,42 +2349,42 @@ marker_group = &"house2"
 spawn_interval = 0.5
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Enemies/House2" unique_id=476935779]
-transform = Transform3D(0.9701182, 0, 0.24263312, 0, 1, 0, -0.24263312, 0, 0.9701182, 1.4076538, 3.3004827, 3.547079)
+transform = Transform3D(0.9701182, 0, 0.24263312, 0, 1, 0, -0.24263312, 0, 0.9701182, 2.3728294, 3.3004827, 2.4444427)
 shape = SubResource("BoxShape3D_jy4y4")
 debug_color = Color(0, 0, 1, 1)
 
-[node name="Marker3D" type="Marker3D" parent="Enemies/House2/CollisionShape3D" unique_id=1254142452 groups=["house2"]]
-transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, -5.001587, -1.3657799, -2.8394318)
+[node name="Marker3D" type="Marker3D" parent="Enemies/House2" unique_id=1254142452 groups=["house2"]]
+transform = Transform3D(0.9701179, 0, 0.24263304, 0, 1, 0, -0.24263304, 0, 0.9701179, -3.1682396, 1.9347029, 0.903409)
 gizmo_extents = 10.0
 
-[node name="Marker3D2" type="Marker3D" parent="Enemies/House2/CollisionShape3D" unique_id=1946973924 groups=["house2"]]
-transform = Transform3D(0.99999964, 0, 0, 0, 1, 0, 0, 0, 0.99999964, -1.9861107, -1.3657799, -3.1715536)
+[node name="Marker3D2" type="Marker3D" parent="Enemies/House2" unique_id=1946973924 groups=["house2"]]
+transform = Transform3D(0.97011787, 0, 0.24263303, 0, 1, 0, -0.24263303, 0, 0.97011787, -0.3234558, 1.9347029, -0.15044308)
 gizmo_extents = 10.0
 
-[node name="Marker3D3" type="Marker3D" parent="Enemies/House2/CollisionShape3D" unique_id=849620448 groups=["house2"]]
-transform = Transform3D(0.9999996, 0, 0, 0, 1, 0, 0, 0, 0.9999996, -2.2631264, -1.3657799, 0.1833334)
+[node name="Marker3D3" type="Marker3D" parent="Enemies/House2" unique_id=849620448 groups=["house2"]]
+transform = Transform3D(0.9701178, 0, 0.24263301, 0, 1, 0, -0.24263301, 0, 0.9701178, 0.2218132, 1.9347029, 3.1714067)
 gizmo_extents = 10.0
 
-[node name="Marker3D4" type="Marker3D" parent="Enemies/House2/CollisionShape3D" unique_id=992198061 groups=["house2"]]
-transform = Transform3D(0.9999994, 0, 0, 0, 1, 0, 0, 0, 0.9999994, 0.7562332, -1.3657799, 4.296877)
+[node name="Marker3D4" type="Marker3D" parent="Enemies/House2" unique_id=992198061 groups=["house2"]]
+transform = Transform3D(0.9701176, 0, 0.24263297, 0, 1, 0, -0.24263297, 0, 0.9701176, 4.149029, 1.9347029, 6.429435)
 gizmo_extents = 10.0
 
-[node name="Marker3D6" type="Marker3D" parent="Enemies/House2/CollisionShape3D" unique_id=1824378190 groups=["house2"]]
-transform = Transform3D(0.9999993, 0, 0, 0, 1, 0, 0, 0, 0.9999993, 7.081936, -1.3657799, 0.3692503)
+[node name="Marker3D6" type="Marker3D" parent="Enemies/House2" unique_id=1824378190 groups=["house2"]]
+transform = Transform3D(0.9701175, 0, 0.24263294, 0, 1, 0, -0.24263294, 0, 0.9701175, 9.332737, 1.9347029, 1.0843468)
 gizmo_extents = 10.0
 
-[node name="Marker3D7" type="Marker3D" parent="Enemies/House2/CollisionShape3D" unique_id=871843470 groups=["house2"]]
-transform = Transform3D(0.99999917, 0, 0, 0, 1, 0, 0, 0, 0.99999917, 5.1988297, -1.3657799, -2.559824)
+[node name="Marker3D7" type="Marker3D" parent="Enemies/House2" unique_id=871843470 groups=["house2"]]
+transform = Transform3D(0.9701174, 0, 0.24263291, 0, 1, 0, -0.24263291, 0, 0.9701174, 6.795212, 1.9347029, -1.3002977)
 gizmo_extents = 10.0
 
-[node name="Marker3D8" type="Marker3D" parent="Enemies/House2/CollisionShape3D" unique_id=689098510 groups=["house2"]]
-transform = Transform3D(0.9999991, 0, 0, 0, 1, 0, 0, 0, 0.9999991, 6.6862717, -1.3657799, -4.8322587)
+[node name="Marker3D8" type="Marker3D" parent="Enemies/House2" unique_id=689098510 groups=["house2"]]
+transform = Transform3D(0.97011733, 0, 0.2426329, 0, 1, 0, -0.2426329, 0, 0.97011733, 7.6868362, 1.9347029, -3.8657308)
 gizmo_extents = 10.0
 
-[node name="Marker3D9" type="Marker3D" parent="Enemies/House2/CollisionShape3D" unique_id=2119738251 groups=["house2"]]
-transform = Transform3D(0.99999905, 0, 0, 0, 1, 0, 0, 0, 0.99999905, -1.1653976, -1.3657799, -4.5382614)
+[node name="Marker3D9" type="Marker3D" parent="Enemies/House2" unique_id=2119738251 groups=["house2"]]
+transform = Transform3D(0.9701173, 0, 0.24263288, 0, 1, 0, -0.24263288, 0, 0.9701173, 0.14112473, 1.9347029, -1.6754427)
 gizmo_extents = 10.0
 
-[node name="Marker3D5" type="Marker3D" parent="Enemies/House2/CollisionShape3D" unique_id=631793631 groups=["house2"]]
-transform = Transform3D(0.99999934, 0, 0, 0, 1, 0, 0, 0, 0.99999934, 2.5308533, -1.3657799, 4.7592173)
+[node name="Marker3D5" type="Marker3D" parent="Enemies/House2" unique_id=631793631 groups=["house2"]]
+transform = Transform3D(0.97011757, 0, 0.24263296, 0, 1, 0, -0.24263296, 0, 0.97011757, 5.9827995, 1.9347029, 6.447377)
 gizmo_extents = 10.0
