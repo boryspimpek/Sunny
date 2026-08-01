@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://d3hfijajnemyo"]
 
 [ext_resource type="PackedScene" uid="uid://bynsau2pq1i3y" path="res://assets/guns/shotgun/12 Sci-Fi Weapons Asset Pack3.fbx" id="1_cjcv7"]
-[ext_resource type="PackedScene" uid="uid://cy5gj0qdc77u2" path="res://assets/BinbunVFX/muzzle_flash/effects/muzzle_flash/muzzle_flash_06.tscn" id="2_k4y4i"]
+[ext_resource type="PackedScene" uid="uid://dd7uf7xlh4l1w" path="res://assets/BinbunVFX/muzzle_flash/effects/muzzle_flash/muzzle_flash_01.tscn" id="2_k4y4i"]
 
 [node name="shotgun" unique_id=173738403 instance=ExtResource("1_cjcv7")]
 
 [node name="Gun_9" parent="." index="0" unique_id=309742801]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -0.00070273876, -0.19183888, 0)
 
-[node name="Marker3D" type="Marker3D" parent="." index="1" unique_id=234147751]
+[node name="Muzzle" type="Marker3D" parent="." index="1" unique_id=234147751]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.6522144)
 
-[node name="MuzzleFlash_06" parent="Marker3D" index="0" unique_id=792692937 instance=ExtResource("2_k4y4i")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+[node name="MuzzleFlash_01" parent="Muzzle" index="0" unique_id=517196648 instance=ExtResource("2_k4y4i")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -1.3021742)

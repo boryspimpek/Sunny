@@ -7,7 +7,8 @@
 
 [resource]
 script = ExtResource("1_v4xi8")
-damage = 50.0
+display_name = "Shotgun"
+damage = 100.0
 fire_interval = 1.0
 hit_effect_scene = ExtResource("2_l7w0u")
 fire_sound = ExtResource("1_ok5mh")

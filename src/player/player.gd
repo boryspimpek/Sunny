@@ -20,6 +20,7 @@ func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	health.health_changed.connect(_on_health_changed)
 	health.died.connect(_on_died)
+	weapon_manager.add_weapon(preload("res://resources/weapons/shotgun.tres"))
 
 
 func _physics_process(delta: float) -> void:
@@ -51,6 +52,8 @@ func _physics_process(delta: float) -> void:
 		weapon_manager.switch_weapon(0)
 	if Input.is_action_just_pressed("weapon_2"):
 		weapon_manager.switch_weapon(1)
+	if Input.is_action_just_pressed("weapon_3"):
+		weapon_manager.switch_weapon(2)
 	if Input.is_action_just_pressed("reload"):
 		weapon_manager.start_reload()
 
@@ -60,7 +63,7 @@ func _physics_process(delta: float) -> void:
 func _update_animations() -> void:
 	var current := weapon_manager.current_weapon()
 	var use_pistol := combat_mode and current != null and current.display_name == "Pistol"
-	var use_rifle := combat_mode and current != null and current.display_name == "Rifle"
+	var use_rifle := combat_mode and current != null and (current.display_name == "Rifle" or current.display_name == "Shotgun")
 	animator.set_combat_mode(use_pistol, use_rifle)
 
 	var mount := get_node_or_null("Skeleton3D/WeaponAttachment/PistolMount") as Node3D
