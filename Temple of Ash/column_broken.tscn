@@ -1,18 +1,31 @@
 [gd_scene format=3 uid="uid://coau6hysij5wy"]
 
-[ext_resource type="PackedScene" uid="uid://bkkqayuj42y4f" path="res://assets/maps/hunyuan/20260724063044_53a6247e.fbx" id="1_pg1cv"]
-[ext_resource type="Texture2D" uid="uid://cajg8gmhisimv" path="res://assets/maps/hunyuan/20260724063044_53a6247e_0.png" id="2_018x5"]
+[ext_resource type="PackedScene" uid="uid://djqay34xbfac7" path="res://assets/maps/hunyuan/20260724063044_53a6247e.fbx" id="1_pg1cv"]
+[ext_resource type="Texture2D" uid="uid://d165n5j225eku" path="res://assets/maps/hunyuan/20260724063044_53a6247e_fbx_basecolor.JPEG" id="2_p47vm"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qetwr"]
-diffuse_mode = 3
-specular_mode = 1
-albedo_texture = ExtResource("2_018x5")
-metallic = 1.0
-metallic_specular = 1.0
-roughness = 0.0
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t725x"]
+albedo_texture = ExtResource("2_p47vm")
+metallic = 0.6
+roughness = 0.3
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p47vm"]
+size = Vector3(0.7872925, 0.24957275, 0.22698975)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t725x"]
+size = Vector3(0.23950195, 0.82647705, 0.2565918)
 
 [node name="column_brokend" unique_id=636829561 instance=ExtResource("1_pg1cv")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 
-[node name="Mesh_0" parent="." index="0" unique_id=1013634514]
-surface_material_override/0 = SubResource("StandardMaterial3D_qetwr")
+[node name="tripo_node_bd912443" parent="." index="0" unique_id=536717071]
+surface_material_override/0 = SubResource("StandardMaterial3D_t725x")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=291565187]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=93181840]
+transform = Transform3D(0.95556176, 0, 0.29479095, 0, 1, 0, -0.29479095, 0, 0.95556176, 0.07252198, 0.12411499, 0.12991081)
+shape = SubResource("BoxShape3D_p47vm")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1" unique_id=1011969875]
+transform = Transform3D(0.9973591, 0, 0.07262895, 0, 1, 0, -0.07262895, 0, 0.9973591, -0.18123685, 0.41629028, -0.16119854)
+shape = SubResource("BoxShape3D_t725x")

@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bkkqayuj42y4f"
+uid="uid://djqay34xbfac7"
 path="res://.godot/imported/20260724063044_53a6247e.fbx-f7fd8fdb1a61a76878f377c67253cb87.scn"
 
 [deps]
@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/20260724063044_53a6247e.fbx-f7fd8fdb1a61a7687
 
 [params]
 
-nodes/root_type="MeshInstance3D"
+nodes/root_type=""
 nodes/root_name=""
 nodes/root_script=null
 nodes/apply_root_scale=true

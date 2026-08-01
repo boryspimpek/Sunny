@@ -1,13 +1,16 @@
 [gd_scene format=3 uid="uid://b307b541u0jyq"]
 
-[ext_resource type="PackedScene" uid="uid://bius1c1e0ue06" path="res://assets/maps/hunyuan/bones/20260725061608_723200ca.fbx" id="1_jeyva"]
-[ext_resource type="Texture2D" uid="uid://cxbg8ov0smkys" path="res://assets/maps/hunyuan/bones/20260725061608_723200ca_0.png" id="2_no6lm"]
+[ext_resource type="PackedScene" uid="uid://c663e3cdkpech" path="res://assets/maps/hunyuan/bones/20260725061608_723200ca.fbx" id="1_jeyva"]
+[ext_resource type="Texture2D" uid="uid://be0vmx6xbk246" path="res://assets/maps/hunyuan/bones/20260725061608_723200ca_fbx_basecolor.JPEG" id="2_tr8ex"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sgnmn"]
-albedo_texture = ExtResource("2_no6lm")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g1ges"]
+albedo_color = Color(0.5370113, 0.5370113, 0.5370113, 1)
+albedo_texture = ExtResource("2_tr8ex")
+metallic = 0.5
+roughness = 0.74
 
-[node name="bones" unique_id=1781122512 instance=ExtResource("1_jeyva")]
+[node name="bones" unique_id=919025719 instance=ExtResource("1_jeyva")]
 transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
 
-[node name="Mesh_0" parent="." index="0" unique_id=2094183477]
-surface_material_override/0 = SubResource("StandardMaterial3D_sgnmn")
+[node name="tripo_node_dc97e759" parent="." index="0" unique_id=850111448]
+surface_material_override/0 = SubResource("StandardMaterial3D_g1ges")
