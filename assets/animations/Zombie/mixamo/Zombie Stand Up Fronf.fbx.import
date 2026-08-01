@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://4kc4l4hbevph"
-path="res://.godot/imported/Zombie Stand Up Front.fbx-917508c670750d96094b7f89327ea186.scn"
+uid="uid://dqhu8vqq3iyij"
+path="res://.godot/imported/Zombie Stand Up Fronf.fbx-e7389536567e9f2962ee53929588ff42.scn"
 
 [deps]
 
-source_file="res://assets/animations/Zombie/mixamo/Zombie Stand Up Front.fbx"
-dest_files=["res://.godot/imported/Zombie Stand Up Front.fbx-917508c670750d96094b7f89327ea186.scn"]
+source_file="res://assets/animations/Zombie/mixamo/Zombie Stand Up Fronf.fbx"
+dest_files=["res://.godot/imported/Zombie Stand Up Fronf.fbx-e7389536567e9f2962ee53929588ff42.scn"]
 
 [params]
 
