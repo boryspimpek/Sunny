@@ -48,12 +48,10 @@ func _physics_process(delta: float) -> void:
 		print("toggle_flashlight action triggered")
 		flashlight.visible = not flashlight.visible
 
-	if Input.is_action_just_pressed("weapon_1"):
-		weapon_manager.switch_weapon(0)
-	if Input.is_action_just_pressed("weapon_2"):
-		weapon_manager.switch_weapon(1)
-	if Input.is_action_just_pressed("weapon_3"):
-		weapon_manager.switch_weapon(2)
+	if Input.is_action_just_pressed("weapon_previous"):
+		weapon_manager.switch_to_previous()
+	if Input.is_action_just_pressed("weapon_next"):
+		weapon_manager.switch_to_next()
 	if Input.is_action_just_pressed("reload"):
 		weapon_manager.start_reload()
 

@@ -69,6 +69,18 @@ func switch_weapon(index: int) -> void:
 	EventBus.ammo_changed.emit(ammo[current_index], current_weapon().magazine_size)
 
 
+func switch_to_next() -> void:
+	if weapons.is_empty():
+		return
+	switch_weapon((current_index + 1) % weapons.size())
+
+
+func switch_to_previous() -> void:
+	if weapons.is_empty():
+		return
+	switch_weapon((current_index - 1 + weapons.size()) % weapons.size())
+
+
 func add_ammo(amount: int) -> void:
 	var weapon := current_weapon()
 	if weapon == null:
