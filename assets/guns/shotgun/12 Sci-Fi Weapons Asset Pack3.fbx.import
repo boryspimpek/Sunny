@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bnbfw68g7l4qx"
-path="res://.godot/imported/12 Sci-Fi Weapons Asset Pack1.fbx-eb673ed2ee1c674213921c89c4910c67.scn"
+uid="uid://bynsau2pq1i3y"
+path="res://.godot/imported/12 Sci-Fi Weapons Asset Pack3.fbx-d0fcbfd3813741f183b78d38f45f9185.scn"
 
 [deps]
 
-source_file="res://assets/guns/rifle/12 Sci-Fi Weapons Asset Pack1.fbx"
-dest_files=["res://.godot/imported/12 Sci-Fi Weapons Asset Pack1.fbx-eb673ed2ee1c674213921c89c4910c67.scn"]
+source_file="res://assets/guns/shotgun/12 Sci-Fi Weapons Asset Pack3.fbx"
+dest_files=["res://.godot/imported/12 Sci-Fi Weapons Asset Pack3.fbx-d0fcbfd3813741f183b78d38f45f9185.scn"]
 
 [params]
 
@@ -51,6 +51,9 @@ _subresources={
 "PATH:Gun_2": {
 "import/skip_import": true
 },
+"PATH:Gun_3": {
+"import/skip_import": true
+},
 "PATH:Gun_4": {
 "import/skip_import": true
 },
@@ -64,9 +67,6 @@ _subresources={
 "import/skip_import": true
 },
 "PATH:Gun_8": {
-"import/skip_import": true
-},
-"PATH:Gun_9": {
 "import/skip_import": true
 },
 "PATH:Knife": {
